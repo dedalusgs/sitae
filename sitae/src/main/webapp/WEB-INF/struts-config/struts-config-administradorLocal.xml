@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config 
+ PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" 
+ "http://struts.apache.org/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+
+		<form-bean name="VisualizarUsuariosForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.visualizarUsuarios.forms.VisualizarUsuariosForm" />
+		<form-bean name="CrearUsuariosForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.crearUsuarios.forms.CrearUsuariosForm" />
+		<form-bean name="BajaUsuarioForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.bajaUsuario.forms.BajaUsuarioForm" />
+		<form-bean name="ModificarUsuariosForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.modificarUsuarios.forms.ModificarUsuariosForm" />
+		<form-bean name="AsignarCentrosUsuariosForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.modificarUsuarios.forms.ModificarUsuariosForm" />
+		<form-bean name="CrearTiposEdictosForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.crearTiposEdictos.forms.CrearTiposEdictosForm" />
+		<form-bean name="EliminarTiposEdictosForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.eliminarTiposEdictos.forms.EliminarTiposEdictosForm" />
+		<form-bean name="ModificarTiposEdictosForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.modificarTiposEdictos.forms.ModificarTiposEdictosForm" />
+		<form-bean name="VisualizarTiposEdictosForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.visualizarTiposEdictos.forms.VisualizarTiposEdictosForm" />
+		<form-bean name="AltaCentroForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.altaCentro.forms.AltaCentroForm" />
+		<form-bean name="BajaCentroForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.bajaCentro.forms.BajaCentroForm" />
+		<form-bean name="ModificarCentroForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.modificarCentro.forms.ModificarCentroForm" />
+		<form-bean name="VisualizarCentroForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.visualizarCentros.forms.VisualizarCentroForm" />
+		<form-bean name="MuestraInformacionCentroForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.muestraInformacionCentro.forms.MuestraInformacionCentroForm" />
+		<form-bean name="MuestraInformacionUsuarioForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.muestraInformacionUsuario.forms.MuestraInformacionUsuarioForm" />
+		<form-bean name="VisualizarUsuariosFirmantesForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.visualizarUsuariosFirmantes.forms.VisualizarUsuariosFirmantesForm" />
+		<form-bean name="CrearUsuariosFirmantesForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.crearUsuariosFirmantes.forms.CrearUsuariosFirmantesForm" />
+		<form-bean name="ModificarUsuariosFirmantesForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.modificarUsuariosFirmantes.forms.ModificarUsuariosFirmantesForm" />
+		<form-bean name="MuestraInformacionUsuarioFirmanteForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.muestraInformacionUsuarioFirmante.forms.MuestraInformacionUsuarioFirmanteForm" />
+		
+		<form-bean name="VisualizarFestivoForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.visualizarFestivo.forms.VisualizarFestivoForm" />
+		<form-bean name="AltaFestivoForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.altaFestivo.forms.AltaFestivoForm" />
+	   <form-bean name="EliminarFestivoForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.eliminarFestivo.forms.EliminarFestivoForm" />
+		<form-bean name="ModificarFestivoForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.modificarFestivo.forms.ModificarFestivoForm" />
+		<form-bean name="CopiarFestivoForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.visualizarFestivo.forms.VisualizarFestivoForm" />
+	     
+	     <form-bean name="EstadisticasPublicacionForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.estadisticasPublicacion.forms.EstadisticasPublicacionForm" />
+		
+	</form-beans>
+	
+
+	<action-mappings>
+
+		<!-- ADMINISTRADOR LOCAL -->
+
+		<!-- GESTION USUARIOS -->
+
+
+		<!-- CREAR USUARIOS -->
+
+		<action name="CrearUsuariosForm"
+			path="/CrearUsuariosFrontAction"
+			type="es.novasoft.sitae.perfiles.adminLocal.crearUsuarios.actions.CrearUsuariosFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.crearUsuarios.solicitud">
+			</forward>
+			<forward name="failure"
+				path="adminLocal.crearUsuarios.error" />
+		</action>
+
+		<action name="CrearUsuariosForm" path="/CrearUsuariosDo"
+			input="/CrearUsuariosFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminLocal.crearUsuarios.actions.CrearUsuariosDoAction"
+			scope="session" validate="true">
+			<forward name="success"
+				path="adminLocal.crearUsuarios.correcto" />
+			<forward name="success2"
+				path="adminLocal.crearUsuarios.solicitud" />
+			<forward name="failure"
+				path="adminLocal.crearUsuarios.error" />
+		</action>
+
+		<action name="CrearUsuariosForm"
+			path="/CrearUsuariosExternosFrontAction"
+			type="es.novasoft.sitae.perfiles.adminLocal.crearUsuarios.actions.CrearUsuariosFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.crearUsuariosExternos.solicitud">
+			</forward>
+			<forward name="failure"
+				path="adminLocal.crearUsuariosExternos.error" />
+		</action>
+
+		<action name="CrearUsuariosForm" path="/CrearUsuariosExternosDo"
+			input="/CrearUsuariosExternosFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminLocal.crearUsuarios.actions.CrearUsuariosDoAction"
+			scope="session" validate="true">
+			<forward name="success"
+				path="adminLocal.crearUsuariosExternos.correcto" />
+			<forward name="failure"
+				path="adminLocal.crearUsuariosExternos.error" />
+		</action>
+		<!-- MOSTRAR INFORMACION USUARIOS -->
+
+		<action name="MuestraInformacionUsuarioForm"
+			path="/MuestraInformacionUsuarioFrontAction"
+			type="es.novasoft.sitae.perfiles.adminLocal.muestraInformacionUsuario.actions.MuestraInformacionUsuarioFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.muestraInformacionUsuarios.solicitud">
+			</forward>
+			<forward name="successExterno"
+				path="adminLocal.muestraInformacionUsuariosExternos.solicitud">
+			</forward>
+		</action>
+
+		<!-- VISUALIZAR USUARIOS -->
+
+		<action name="VisualizarUsuariosForm"
+			path="/VisualizarUsuariosFrontAction"
+			type="es.novasoft.sitae.perfiles.adminLocal.visualizarUsuarios.actions.VisualizarUsuariosFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.visualizarUsuarios.solicitud">
+			</forward>
+		</action>
+
+		<!-- BAJA USUARIO -->
+
+		<action name="BajaUsuarioForm" path="/BajaUsuarioDo"
+			type="es.novasoft.sitae.perfiles.adminLocal.bajaUsuario.actions.BajaUsuarioDoAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.bajaUsuario.correcto" />
+			<forward name="success2"
+				path="adminLocal.bajaUsuario.correcto2" />
+			<forward name="failure" path="adminLocal.bajaUsuario.error" />
+		</action>
+
+
+		<!-- MODIFICAR USUARIO PUBLICADOR Y REDACTOR -->
+
+		<action name="ModificarUsuariosForm"
+			path="/ModificarUsuariosFrontAction"
+			type="es.novasoft.sitae.perfiles.adminLocal.modificarUsuarios.actions.ModificarUsuariosFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.modificarUsuarios.solicitud">
+			</forward>
+			<forward name="successExterno"
+				path="adminLocal.modificarUsuariosExternos.solicitud">
+			</forward>
+			<forward name="failure"
+				path="adminLocal.modificarUsuarios.error" />
+		</action>
+
+		<action name="ModificarUsuariosForm" path="/ModificarUsuariosDo"
+			input="/ModificarUsuariosFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminLocal.modificarUsuarios.actions.ModificarUsuariosDoAction"
+			scope="session" validate="true">
+			<forward name="success"
+				path="adminLocal.modificarUsuarios.correcto" />
+			<forward name="success2"
+				path="adminLocal.modificarUsuarios.correcto2" />
+			<forward name="failure"
+				path="adminLocal.modificarUsuarios.error" />
+		</action>
+
+		<action name="AsignarCentrosUsuariosForm"
+			path="/AsignarCentrosUsuariosDo"
+			input="/ModificarUsuariosFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminLocal.modificarUsuarios.actions.AsignarCentrosUsuariosDoAction"
+			scope="session" validate="true">
+			<forward name="success"
+				path="/ModificarUsuariosFrontAction.do" />
+			<forward name="failure"
+				path="adminLocal.modificarUsuarios.error" />
+		</action>
+
+		<!--EXTERNOS-->
+		<action name="ModificarUsuariosForm"
+			path="/ModificarUsuariosExternosFrontAction"
+			type="es.novasoft.sitae.perfiles.adminLocal.modificarUsuarios.actions.ModificarUsuariosFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.modificarUsuariosExternos.solicitud" />
+			<forward name="failure"
+				path="adminLocal.modificarUsuariosExternos.error" />
+		</action>
+
+		<action name="ModificarUsuariosForm"
+			path="/ModificarUsuariosExternosDo"
+			input="/ModificarUsuariosExternosFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminLocal.modificarUsuarios.actions.ModificarUsuariosDoAction"
+			scope="session" validate="true">
+			<forward name="success"
+				path="adminLocal.modificarUsuariosExternos.correcto" />
+			<forward name="success2"
+				path="adminLocal.modificarUsuariosExternos.correcto2" />
+			<forward name="success3"
+				path="/ModificarUsuariosExternosFrontAction.do" />
+			<forward name="failure"
+				path="adminLocal.modificarUsuariosExternos.error" />
+		</action>
+
+		<action name="AsignarCentrosUsuariosForm"
+			path="/AsignarCentrosUsuariosExternosDo"
+			input="/ModificarUsuariosFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminLocal.modificarUsuarios.actions.AsignarCentrosUsuariosDoAction"
+			scope="session" validate="true">
+			<forward name="success"
+				path="/ModificarUsuariosFrontAction.do" />
+			<forward name="failure"
+				path="adminLocal.modificarUsuarios.error" />
+		</action>
+		<!--		FIN EXTERNOS-->
+		<!-- FIN GESTION USUARIOS -->
+
+
+		<!-- GESTION TIPOS DE EDICTOS -->
+
+		<!-- CREAR TIPO DE EDICTO -->
+
+		<action name="CrearTiposEdictosForm"
+			path="/CrearTiposEdictosFrontAction"
+			type="es.novasoft.sitae.perfiles.adminLocal.crearTiposEdictos.actions.CrearTiposEdictosFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.crearTiposEdictos.solicitud">
+			</forward>
+			<forward name="failure"
+				path="adminLocal.crearTiposEdictos.error" />
+		</action>
+
+		<action name="CrearTiposEdictosForm" path="/CrearTiposEdictosDo"
+			input="/CrearTiposEdictosFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminLocal.crearTiposEdictos.actions.CrearTiposEdictosDoAction"
+			scope="session" validate="true">
+			<forward name="success"
+				path="adminLocal.crearTiposEdictos.correcto" />
+			<forward name="failure"
+				path="adminLocal.crearTiposEdictos.error" />
+		</action>
+
+		<!-- ELIMINAR TIPO DE EDICTO -->
+
+		<action name="EliminarTiposEdictosForm"
+			path="/EliminarTiposEdictosDo"
+			type="es.novasoft.sitae.perfiles.adminLocal.eliminarTiposEdictos.actions.EliminarTiposEdictosDoAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.eliminarTiposEdictos.correcto" />
+			<forward name="failure"
+				path="adminLocal.eliminarTiposEdictos.error" />
+		</action>
+
+
+
+		<!-- MODIFICAR TIPOS DE EDICTOS -->
+
+		<action name="ModificarTiposEdictosForm"
+			path="/ModificarTiposEdictosFrontAction"
+			type="es.novasoft.sitae.perfiles.adminLocal.modificarTiposEdictos.actions.ModificarTiposEdictosFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.modificarTiposEdictos.solicitud">
+			</forward>
+			<forward name="failure"
+				path="adminLocal.modificarTiposEdictos.error" />
+		</action>
+
+		<action name="ModificarTiposEdictosForm"
+			path="/ModificarTiposEdictosDo"
+			input="/ModificarTiposEdictosFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminLocal.modificarTiposEdictos.actions.ModificarTiposEdictosDoAction"
+			scope="session" validate="true">
+			<forward name="success"
+				path="adminLocal.modificarTiposEdictos.correcto" />
+			<forward name="failure"
+				path="adminLocal.modificarTiposEdictos.error" />
+		</action>
+
+
+
+		<!-- VISUALIZAR TIPOS DE EDICTOS -->
+
+		<action name="VisualizarTiposEdictosForm"
+			path="/VisualizarTiposEdictosFrontAction"
+			type="es.novasoft.sitae.perfiles.adminLocal.visualizarTiposEdictos.actions.VisualizarTiposEdictosFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.visualizarTiposEdictos.solicitud">
+			</forward>
+		</action>
+
+
+		<!-- FIN GESTION TIPOS DE EDICTOS -->
+
+		<!-- GESTION TIPOS DE CENTROS DE PROCEDENCIA -->
+
+		<!-- ALTA CENTRO -->
+
+		<action name="AltaCentroForm" path="/AltaCentroFrontAction"
+			type="es.novasoft.sitae.perfiles.adminLocal.altaCentro.actions.AltaCentroFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.altaCentroProcedencia.solicitud">
+			</forward>
+			<forward name="cancel" path="/AltaCentroFront" />
+			<forward name="failure"
+				path="adminLocal.altaCentroProcedencia.error" />
+		</action>
+
+		<action name="AltaCentroForm" path="/AltaCentroDo"
+			input="/AltaCentroFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminLocal.altaCentro.actions.AltaCentroDoAction"
+			scope="session" validate="true">
+			<forward name="success"
+				path="adminLocal.altaCentroProcedencia.correcto" />
+			<forward name="failure"
+				path="adminLocal.altaCentroProcedencia.error" />
+			<forward name="errorAcceso" path=" " />
+			<forward name="cancel" path="/AltaCentroFront" />
+		</action>
+
+		<!-- BAJA CENTRO -->
+
+		<action name="BajaCentroForm" path="/BajaCentroDo"
+			type="es.novasoft.sitae.perfiles.adminLocal.bajaCentro.actions.BajaCentroDoAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.bajaCentro.correcto" />
+			<forward name="failure" path="adminLocal.bajaCentro.error" />
+		</action>
+
+		<!-- MODIFICAR CENTRO -->
+
+		<action name="ModificarCentroForm"
+			path="/ModificarCentroFrontAction"
+			type="es.novasoft.sitae.perfiles.adminLocal.modificarCentro.actions.ModificarCentroFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.modificarCentroProcedencia.solicitud">
+			</forward>
+			<forward name="cancel" path="/ModificarCentroFront" />
+			<forward name="failure"
+				path="adminLocal.modificarCentroProcedencia.error" />
+		</action>
+
+		<action name="ModificarCentroForm" path="/ModificarCentroDo"
+			input="/ModificarCentroFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminLocal.modificarCentro.actions.ModificarCentroDoAction"
+			scope="session" validate="true">
+			<forward name="success"
+				path="adminLocal.modificarCentroProcedencia.correcto" />
+			<forward name="failure"
+				path="adminLocal.modificarCentroProcedencia.error" />
+			<forward name="errorAcceso" path=" " />
+			<forward name="cancel" path="/ModificarCentroFront" />
+		</action>
+
+		<!-- VISUALIZAR CENTRO -->
+
+		<action name="VisualizarCentroForm"
+			path="/VisualizarCentroFrontAction"
+			type="es.novasoft.sitae.perfiles.adminLocal.visualizarCentros.actions.VisualizarCentroFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.visualizarCentroProcedencia.solicitud">
+			</forward>
+			<forward name="cancel" path="/VisualizarCentroFront" />
+		</action>
+
+
+		<!-- MOSTRAR INFORMACION CENTRO -->
+
+		<action name="MuestraInformacionCentroForm"
+			path="/MuestraInformacionCentroFrontAction"
+			type="es.novasoft.sitae.perfiles.adminLocal.muestraInformacionCentro.actions.MuestraInformacionCentroFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.muestraInformacionCentroProcedencia.solicitud">
+			</forward>
+		</action>
+
+
+		<!-- FIN GESTION TIPOS DE CENTROS DE PROCEDENCIA -->
+
+
+
+<!-- GESTION DIAS FESTIVOS -->
+
+		<!-- ALTA DIA -->
+
+		<action name="AltaFestivoForm" path="/AltaFestivoFrontAction"
+			type="es.novasoft.sitae.perfiles.adminLocal.altaFestivo.actions.AltaFestivoFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.altaFestivo.solicitud">
+			</forward>
+			<forward name="cancel" path="/VisualizarFestivoFrontAction.do" />
+			<forward name="failure"
+				path="adminLocal.altaFestivo.error" />
+		</action>
+
+		<action name="AltaFestivoForm" path="/AltaFestivoDo"
+			input="/AltaFestivoFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminLocal.altaFestivo.actions.AltaFestivoDoAction"
+			scope="session" validate="true">
+			<forward name="success"
+				path="adminLocal.altaFestivo.correcto" />
+			<forward name="failure"
+				path="adminLocal.altaFestivo.error" />
+			<forward name="errorAcceso" path=" " />
+			<forward name="cancel" path="/VisualizarFestivoFrontAction.do" />
+		</action>
+
+		<!-- BAJA Festivo -->
+
+		<action name="EliminarFestivoForm" path="/EliminarFestivoDo"
+			type="es.novasoft.sitae.perfiles.adminLocal.eliminarFestivo.actions.EliminarFestivoDoAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.eliminarFestivo.correcto" />
+			<forward name="failure" path="adminLocal.eliminarFestivo.error" />
+		</action>
+
+		<!-- MODIFICAR Festivo -->
+
+		<action name="ModificarFestivoForm"
+			path="/ModificarFestivoFrontAction"
+			type="es.novasoft.sitae.perfiles.adminLocal.modificarFestivo.actions.ModificarFestivoFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.modificarFestivo.solicitud">
+			</forward>
+			<forward name="cancel" path="/VisualizarFestivoFrontAction.do" />
+			<forward name="failure"
+				path="adminLocal.modificarFestivo.error" />
+		</action>
+
+		<action name="ModificarFestivoForm" path="/ModificarFestivoDo"
+			input="/ModificarFestivoFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminLocal.modificarFestivo.actions.ModificarFestivoDoAction"
+			scope="session" validate="true">
+			<forward name="success"
+				path="adminLocal.modificarFestivo.correcto" />
+			<forward name="failure"
+				path="adminLocal.modificarFestivo.error" />
+			<forward name="errorAcceso" path=" " />
+			<forward name="cancel" path="/VisualizarFestivoFrontAction.do" />
+		</action>
+
+		<!-- VISUALIZAR Festivo -->
+
+		<action name="VisualizarFestivoForm"
+			path="/VisualizarFestivoFrontAction"
+			type="es.novasoft.sitae.perfiles.adminLocal.visualizarFestivo.actions.VisualizarFestivoFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.visualizarFestivo.solicitud">
+			</forward>
+			<forward name="cancel" path="/VisualizarFestivoFront" />
+		</action>
+
+
+		<!-- CopiarFestivo -->
+
+		<action 
+			path="/CopiarFestivoDoAction" name="CopiarFestivoForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.copiarFestivo.actions.CopiarFestivoDoAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.copiarFestivo.solicitud">
+			</forward>
+			<forward name="failure"
+				path="adminLocal.copiarFestivo.error">
+			</forward>
+			<forward name="failure2"
+				path="adminLocal.copiarFestivo.errorNoExistenDias">
+			</forward>
+		</action>
+
+
+		<!-- FIN Festivos -->
+
+<!--  Estadísticas -->
+<action 
+			path="/EstadisticasPublicacionLocFrontAction" name="EstadisticasPublicacionForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.estadisticasPublicacion.actions.EstadisticasPublicacionFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.estadisticasPublicacion.solicitud">
+			</forward>
+			<forward name="failure"
+				path="adminLocal.estadisticasPublicacion.error">
+			</forward>
+			
+		</action>
+		
+		<action 
+			path="/EstadisticasPublicacionLocDoAction" name="EstadisticasPublicacionForm"
+			type="es.novasoft.sitae.perfiles.adminLocal.estadisticasPublicacion.actions.EstadisticasPublicacionDoAction"
+			input="/EstadisticasPublicacionLocFrontAction.do"
+			scope="session" validate="true">
+			<forward name="success"
+				path="adminLocal.estadisticasPublicacion.solicitud">
+			</forward>
+			<forward name="failure"
+				path="adminLocal.estadisticasPublicacion.error">
+			</forward>
+			
+		</action>
+
+
+
+
+
+		<!-- GESTION USUARIOS FIRMANTES -->
+
+		<!-- VISUALIZAR USUARIOS FIRMANTES -->
+
+		<action name="VisualizarUsuariosFirmantesForm"
+			path="/VisualizarUsuariosFirmantesFrontAction"
+			type="es.novasoft.sitae.perfiles.adminLocal.visualizarUsuariosFirmantes.actions.VisualizarUsuariosFirmantesFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.visualizarUsuariosFirmantes.solicitud">
+			</forward>
+		</action>
+
+		<!-- CREAR USUARIOS FIRMANTES -->
+
+		<action name="CrearUsuariosFirmantesForm"
+			path="/CrearUsuariosFirmantesFrontAction"
+			type="es.novasoft.sitae.perfiles.adminLocal.crearUsuariosFirmantes.actions.CrearUsuariosFirmantesFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.crearUsuariosFirmantes.solicitud">
+			</forward>
+		</action>
+
+		<action name="CrearUsuariosFirmantesForm"
+			path="/CrearUsuariosFirmantesDo"
+			input="/CrearUsuariosFirmantesFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminLocal.crearUsuariosFirmantes.actions.CrearUsuariosFirmantesDoAction"
+			scope="session" validate="true">
+			<forward name="success"
+				path="adminLocal.crearUsuariosFirmantes.correcto" />
+			<forward name="success2"
+				path="adminLocal.crearUsuariosFirmantes.solicitud" />
+			<forward name="failure" path="adminLocal.crearUsues.error" />
+		</action>
+
+		<!-- MOSTRAR INFORMACION USUARIOS FIRMANTES -->
+
+
+		<action name="MuestraInformacionUsuarioFirmanteForm"
+			path="/MuestraInformacionUsuarioFirmanteFrontAction"
+			type="es.novasoft.sitae.perfiles.adminLocal.muestraInformacionUsuarioFirmante.actions.MuestraInformacionUsuarioFirmanteFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.muestraInformacionUsuariosFirmantes.solicitud">
+			</forward>
+		</action>
+
+		<!-- MODIFICAR USUARIOS FIRMANTES -->
+
+		<action name="ModificarUsuariosFirmantesForm"
+			path="/ModificarUsuariosFirmantesFrontAction"
+			type="es.novasoft.sitae.perfiles.adminLocal.modificarUsuariosFirmantes.actions.ModificarUsuariosFirmantesFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.modificarUsuariosFirmantes.solicitud">
+			</forward>
+			<forward name="failure"
+				path="adminLocal.modificarUsuariosFirmantes.error" />
+		</action>
+
+		<action name="ModificarUsuariosFirmantesForm"
+			path="/ModificarUsuariosFirmantesDo"
+			input="/ModificarUsuariosFirmantesFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminLocal.modificarUsuariosFirmantes.actions.ModificarUsuariosFirmantesDoAction"
+			scope="session" validate="true">
+			<forward name="success"
+				path="adminLocal.modificarUsuariosFirmantes.correcto" />
+			<forward name="failure"
+				path="adminLocal.modificarUsuariosFirmantes.error" />
+		</action>
+
+		<!-- BAJA USUARIO FIRMANTE -->
+
+		<action name="BajaUsuarioFirmanteForm"
+			path="/BajaUsuarioFirmanteDo"
+			type="es.novasoft.sitae.perfiles.adminLocal.bajaUsuarioFirmante.actions.BajaUsuarioFirmanteDoAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.bajaUsuarioFirmante.correcto" />
+			<forward name="success2"
+				path="adminLocal.bajaUsuarioFirmante.correcto2" />
+			<forward name="failure"
+				path="adminLocal.bajaUsuarioFirmante.error" />
+		</action>
+
+		<!-- FIN GESTION USUARIOS FIRMANTES -->
+	
+		<!--  REDES SOCIALES -->
+		<action name="VisualizarRedesFront"
+			path="/VisualizarRedesFront"
+			type="es.novasoft.sitae.perfiles.adminLocal.social.base.VisualizarRedesFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.visualizarRedes.correcto" />
+			<forward name="failure"
+				path="adminLocal.visualizarRedes.error" />
+		</action>
+		
+		<action name="ConfigurarFacebookFront"
+			path="/ConfigurarFacebookFront"
+			type="es.novasoft.sitae.perfiles.adminLocal.social.facebook.ConfigurarFacebookFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.configurarFacebook.correcto" />
+			
+		</action>
+		
+		<action name="CancelarFacebookFront"
+			path="/CancelarFacebookFront"
+			type="es.novasoft.sitae.perfiles.adminLocal.social.facebook.CancelarFacebookFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.cancelarFacebook.correcto" />
+			
+		</action>
+		
+		<action name="CallBackFacebook"
+			path="/CallBackFacebook"
+			type="es.novasoft.sitae.perfiles.adminLocal.social.facebook.CallBackFacebookAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.callbackFacebook.correcto1" />
+			<forward name="success2"
+				path="adminLocal.callbackFacebook.correcto2" />
+			<forward name="success3"
+				path="adminLocal.callbackFacebook.correcto3" />
+			<forward name="failure"
+				path="adminLocal.callbackFacebook.error" />
+		</action>
+		
+		
+		<action name="ConfigurarTwitterFront"
+			path="/ConfigurarTwitterFront"
+			type="es.novasoft.sitae.perfiles.adminLocal.social.twitter.ConfigurarTwitterFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.configurarTwitter.correcto" />
+			<forward name="success2"
+				path="adminLocal.configurarTwitter.correcto2" />
+			<forward name="failure"
+				path="adminLocal.configurarTwitter.error" />
+		</action>
+		
+		<action name="CallBackTwitter"
+			path="/TwitterCallbackAction"
+			type="es.novasoft.sitae.perfiles.adminLocal.social.twitter.TwitterCallbackAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.callbackTwitter.correcto" />
+			<forward name="success2"
+				path="adminLocal.callbackTwitter.correcto2" />
+			<forward name="failure"
+				path="adminLocal.callbackTwitter.error" />
+		</action>
+	
+		<action name="CancelarTwitterFront"
+			path="/CancelarTwitterFront"
+			type="es.novasoft.sitae.perfiles.adminLocal.social.twitter.CancelarTwitterFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.cancelarTwitter.correcto" />
+			
+		</action>
+		
+		<action name="ConfigurarGooglePlusFront"
+			path="/ConfigurarGooglePlusFront"
+			type="es.novasoft.sitae.perfiles.adminLocal.social.googleplus.ConfigurarGooglePlusFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.configurarGooglePlus.correcto" />
+			<forward name="success2"
+				path="adminLocal.configurarGooglePlus.correcto2" />
+			
+			<forward name="failure"
+				path="adminLocal.configurarGooglePlus.error" />
+		</action>
+		
+		<action name="CallBackGooglePlus"
+			path="/GooglePlusCallbackAction"
+			type="es.novasoft.sitae.perfiles.adminLocal.social.googleplus.GooglePlusCallbackAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.callbackGooglePlus.correcto" />
+				
+		</action>
+	
+		<action name="CancelarGooglePlusFront"
+			path="/CancelarGooglePlusFront"
+			type="es.novasoft.sitae.perfiles.adminLocal.social.googleplus.CancelarGooglePlusFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminLocal.cancelarGooglePlus.correcto" />
+			
+		</action>
+		
+		
+	</action-mappings>
+
+	<controller nocache="true"
+		processorClass="org.apache.struts.tiles.TilesRequestProcessor" />
+
+</struts-config>

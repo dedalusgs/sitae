@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/ListarUsuarios.do" location="0,996" dimension="426,96" />
+  <StrutsActivity path="/ListarUsuariosDo.do" location="526,996" dimension="413,96" />
+  <StrutsActivity path="/ListarPerfiles.do" location="1125,412" dimension="376,96" />
+  <StrutsActivity path="/EditarPerfil.do" location="0,0" dimension="377,96" />
+  <StrutsActivity path="/InsertarPerfil.do" location="1120,216" dimension="386,96" />
+  <StrutsActivity path="/ActualizarPerfil.do" location="1606,216" dimension="399,96" />
+  <StrutsActivity path="/RectificaPerfil.do" location="712,0" dimension="392,96" />
+  <StrutsActivity path="/EditarPermisosPerfil.do" location="0,704" dimension="425,96" />
+  <StrutsActivity path="/GuardarPermisosPerfil.do" location="583,216" dimension="437,96" />
+  <StrutsActivity path="/CopiarPermisosPerfil.do" location="525,704" dimension="430,96" />
+  <StrutsActivity path="system_error;6" location="984,996" dimension="113,81" />
+  <StrutsActivity path="listaUsuarios" location="271,1192" dimension="96,51" />
+  <StrutsActivity path="listaPerfiles" location="1268,608" dimension="89,51" />
+  <StrutsActivity path="crearPerfil" location="73,238" dimension="83,51" />
+  <StrutsActivity path="modificarPerfil" location="375,238" dimension="108,51" />
+  <StrutsActivity path="editarPermisos" location="422,900" dimension="108,51" />
+  <StrutsActivity path="error" location="1013,1177" dimension="55,51" />
+  <StrutsTransition id="/RectificaPerfil.do,null,/InsertarPerfil.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="957,96" />
+      <AbsolutePoint location="957,156" />
+      <AbsolutePoint location="1313,156" />
+      <AbsolutePoint location="1313,216" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/EditarPermisosPerfil.do,success,editarPermisos,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="212,800" />
+      <AbsolutePoint location="212,850" />
+      <AbsolutePoint location="449,850" />
+      <AbsolutePoint location="449,900" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ListarPerfiles.do,success,listaPerfiles,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1313,508" />
+      <AbsolutePoint location="1313,608" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ListarUsuarios.do,success,listaUsuarios,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="319,1092" />
+      <AbsolutePoint location="319,1192" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ListarUsuariosDo.do,success,listaUsuarios,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="732,1092" />
+      <AbsolutePoint location="732,1142" />
+      <AbsolutePoint location="351,1142" />
+      <AbsolutePoint location="351,1192" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ActualizarPerfil.do,success,/ListarPerfiles.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1805,312" />
+      <AbsolutePoint location="1805,362" />
+      <AbsolutePoint location="1438,362" />
+      <AbsolutePoint location="1438,412" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/InsertarPerfil.do,success,/ListarPerfiles.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1313,312" />
+      <AbsolutePoint location="1313,412" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="system_error;6,null,error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1040,1077" />
+      <AbsolutePoint location="1040,1177" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/EditarPerfil.do,success_crear,crearPerfil,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="94,96" />
+      <AbsolutePoint location="93,238" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/RectificaPerfil.do,success_modificar,modificarPerfil,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="859,96" />
+      <AbsolutePoint location="859,186" />
+      <AbsolutePoint location="456,186" />
+      <AbsolutePoint location="456,238" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/GuardarPermisosPerfil.do,success,/ListarPerfiles.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="801,312" />
+      <AbsolutePoint location="801,362" />
+      <AbsolutePoint location="1188,362" />
+      <AbsolutePoint location="1188,412" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/RectificaPerfil.do,null,/ActualizarPerfil.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1055,96" />
+      <AbsolutePoint location="1055,126" />
+      <AbsolutePoint location="1805,126" />
+      <AbsolutePoint location="1805,216" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/RectificaPerfil.do,success_crear,crearPerfil,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="761,96" />
+      <AbsolutePoint location="761,156" />
+      <AbsolutePoint location="135,156" />
+      <AbsolutePoint location="135,238" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/EditarPerfil.do,success_modificar,modificarPerfil,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="282,96" />
+      <AbsolutePoint location="282,126" />
+      <AbsolutePoint location="402,126" />
+      <AbsolutePoint location="402,238" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CopiarPermisosPerfil.do,success,editarPermisos,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="740,800" />
+      <AbsolutePoint location="740,850" />
+      <AbsolutePoint location="503,850" />
+      <AbsolutePoint location="503,900" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ListarUsuarios.do,error,listaUsuarios,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="106,1092" />
+      <AbsolutePoint location="106,1142" />
+      <AbsolutePoint location="287,1142" />
+      <AbsolutePoint location="287,1192" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

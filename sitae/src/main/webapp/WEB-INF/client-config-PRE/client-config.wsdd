@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+ <transport name="http" pivot="java:org.apache.axis.transport.http.HTTPSender"/>
+  <globalConfiguration >
+   <requestFlow >
+    <handler type="java:org.apache.ws.axis.security.WSDoAllSender" >
+     <parameter name="action" value="Signature"/>
+     <parameter name="user" value="aplicacion_profile"/>
+     <parameter name="passwordCallbackClass" value="es.accv.fandango.test.wss4j.PasswordHandler"/>
+     <parameter name="signaturePropFile" value="outsecurity_sign.properties"/>
+     <parameter name="signatureKeyIdentifier" value="DirectReference" />
+    </handler>
+   </requestFlow >
+  </globalConfiguration >
+</deployment>

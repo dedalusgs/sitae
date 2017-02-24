@@ -1,0 +1,215 @@
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+ "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="LoginCertificadoForm"
+			type="es.novasoft.sitae.login.forms.LoginCertificadoForm" />
+		<form-bean name="CambiarLenguajeForm"
+			type="es.novasoft.sitae.lenguaje.forms.CambiarLenguajeForm" />
+		<form-bean name="ServiciosPortalForm"
+			type="es.novasoft.sitae.serviciosportal.forms.ServiciosPortalForm" />
+		<form-bean name="InitForm"
+			type="es.novasoft.sitae.init.forms.InitForm" />
+		<form-bean name="DescargarForm"
+			type="es.novasoft.sitae.servlet.forms.DescargarForm" />
+	</form-beans>
+
+	<action-mappings>
+
+		<action path="/ErrorAcceso" forward="errorAcceso"></action>
+
+		<!-- PUNTO DE ENTRADA A LA APLICACION PUBLICA -->
+
+		<action name="InitForm" path="/InitDoAction" scope="session"
+			type="es.novasoft.sitae.init.actions.InitDoAction"
+			validate="false">
+			<forward name="success" path="init.pantallaInicio"></forward>
+			<forward name="failure" path="init.pantallaError"></forward>
+			<forward name="failure2" path="init.pantallaError2"></forward>
+			<forward name="mobile" redirect="true" path="/mobile/HomeFrontAction.do"></forward>
+		</action>
+
+		<!-- SERVICIOS DEL PORTAL -->
+
+		<action name="ServiciosPortalForm"
+			path="/ServiciosPortalFrontAction" scope="request"
+			type="es.novasoft.sitae.serviciosportal.actions.ServiciosPortalFrontAction"
+			validate="false">
+			<forward name="contacto" path="contacto.solicitud"></forward>
+			<forward name="ayuda_es" path="ayuda_es.solicitud"></forward>
+			<forward name="ayuda_va" path="ayuda_va.solicitud"></forward>
+			<forward name="mapaWeb" path="mapaWeb.solicitud"></forward>
+			<forward name="accesibilidad_es"
+				path="accesibilidad_es.solicitud">
+			</forward>
+			<forward name="accesibilidad_va"
+				path="accesibilidad_va.solicitud">
+			</forward>
+			<forward name="avisoLegal_es"
+				path="avisoLegal_es.solicitud">
+			</forward>
+			<forward name="avisoLegal_va"
+				path="avisoLegal_va.solicitud">
+			</forward>
+			<forward name="acercaDe_es" path="acercaDe_es.solicitud"></forward>
+			<forward name="acercaDe_va" path="acercaDe_va.solicitud"></forward>
+		</action>
+
+		<!-- CAMBIO DE IDIOMA DE LA APLICACION -->
+
+		<action name="CambiarLenguajeForm"
+			path="/CambiarLenguajeDoAction" scope="session"
+			type="es.novasoft.sitae.lenguaje.actions.CambiarLenguajeDoAction"
+			validate="false">
+			<forward name="success" path="lenguaje.pantallaInicio"></forward>
+		</action>
+
+		<!--
+			PUNTO DE ENTRADA A LA APLICACION PRIVADA AUTENTICACION Y SELECCION DE
+			PERFIL
+		-->
+		<!-- forward para mensaje de error de permisos -->
+
+		<action path="/ErrorSinPermisos"
+			type="org.apache.struts.actions.ForwardAction"
+			parameter="login.error2" scope="request" validate="false" />
+
+		<action name="LoginCertificadoForm"
+			path="/LoginCertificadoFront"
+			type="es.novasoft.sitae.login.actions.LoginCertificadoFrontAction"
+			scope="session" validate="false">
+			<forward name="pantallaInicio"
+				path="login.pantallaInicio">
+			</forward>
+			<forward name="failure" path="login.error" />
+			<forward name="failure2" path="login.error2" />
+		</action>
+
+		<action name="LoginCertificadoForm"
+			path="/LoginConCertificadoFront"
+			type="es.novasoft.sitae.login.actions.LoginConCertificadoFrontAction"
+			scope="session" validate="false">
+			<forward name="error" path="login.errorCert" />
+			<forward name="success" path="login.indexCertificado" />
+		</action>
+
+		<action name="LoginCertificadoForm"
+			path="/LoginConCertificadoDoAction"
+			type="es.novasoft.sitae.login.actions.LoginConCertificadoDoAction"
+			scope="session" validate="false">
+			<forward name="error" path="login.errorCert" />
+			<forward name="success" path="/LoginCertificadoFront.do" />
+		</action>
+		
+		<action name="LoginCertificadoForm"
+			path="/EntrarConCertificadoDoAction"
+			type="es.novasoft.sitae.login.actions.EntrarConCertificadoDoAction"
+			scope="session" validate="false">
+			<forward name="error" path="login.errorCert" />
+			<forward name="success" path="/LoginCertificadoFront.do" />
+		</action>
+
+		<!--		SERVLETS         -->
+
+		<action name="DescargarForm" path="/DescargarBorrador"
+			type="es.novasoft.sitae.servlet.actions.DescargarBorrador"
+			scope="session" validate="false">
+			<exception key="failure" type="org.apache.axis.AxisFault"
+				path="servlet.error" />
+			<exception key="failure"
+				type="java.lang.NullPointerException" path="servlet.error" />
+			<forward name="failure" path="servlet.error" />
+		</action>
+		<action name="DescargarForm" path="/DescargarAnuncio"
+			type="es.novasoft.sitae.servlet.actions.DescargarAnuncio"
+			scope="session" validate="false">
+			<exception key="failure" type="org.apache.axis.AxisFault"
+				path="servlet.error" />
+			<exception key="failure" type="java.lang.NullPointerException"
+			path="servlet.error"/>
+			<forward name="failure" path="servlet.error" />
+		</action>
+		<action name="DescargarForm" path="/DescargarAnuncioRetirado"
+			type="es.novasoft.sitae.servlet.actions.DescargarAnuncioRetirado"
+			scope="session" validate="false">
+			<exception key="failure" type="org.apache.axis.AxisFault"
+				path="servlet.error" />
+			<exception key="failure"
+				type="java.lang.NullPointerException" path="servlet.error" />
+			<forward name="failure" path="servlet.error" />
+		</action>
+		<action name="DescargarForm"
+			path="/DescargarCertificadoPublicacion"
+			type="es.novasoft.sitae.servlet.actions.DescargarCertificadoPublicacion"
+			scope="session" validate="false">
+			<exception key="failure" type="org.apache.axis.AxisFault"
+				path="servlet.error" />
+			<exception key="failure"
+				type="java.lang.NullPointerException" path="servlet.error" />
+			<forward name="failure" path="servlet.error" />
+		</action>
+		<action name="DescargarForm" path="/DescargarInformeRevision"
+			type="es.novasoft.sitae.servlet.actions.DescargarInformeRevision"
+			scope="session" validate="false">
+			<exception key="failure" type="org.apache.axis.AxisFault"
+				path="servlet.error" />
+			<exception key="failure"
+				type="java.lang.NullPointerException" path="servlet.error" />
+			<forward name="failure" path="servlet.error" />
+		</action>
+		<action name="DescargarForm" path="/DescargarDiligencia"
+			type="es.novasoft.sitae.servlet.actions.DescargarDiligencia"
+			scope="session" validate="false">
+			<exception key="failure" type="org.apache.axis.AxisFault"
+				path="servlet.error" />
+			<exception key="failure"
+				type="java.lang.NullPointerException" path="servlet.error" />
+			<forward name="failure" path="servlet.error" />
+		</action>
+		
+		<action name="DescargarForm" path="/DescargarEstadisticasCSV"
+			type="es.novasoft.sitae.perfiles.adminGlobal.estadisticasPublicacion.actions.DescargarEstadisticasCSV"
+			scope="session" validate="false">
+			<exception key="failure" type="org.apache.axis.AxisFault"
+				path="servlet.error" />
+			<exception key="failure"
+				type="java.lang.NullPointerException" path="servlet.error" />
+			<forward name="failure" path="servlet.error" />
+		</action>
+		
+		<action name="DescargarForm" path="/DescargarEstadisticasPDF"
+			type="es.novasoft.sitae.perfiles.adminGlobal.estadisticasPublicacion.actions.DescargarEstadisticasPDF"
+			scope="session" validate="false">
+			<exception key="failure" type="org.apache.axis.AxisFault"
+				path="servlet.error" />
+			<exception key="failure"
+				type="java.lang.NullPointerException" path="servlet.error" />
+			<forward name="failure" path="servlet.error" />
+		</action>
+
+	</action-mappings>
+
+	<controller nocache="true"
+		processorClass="org.apache.struts.tiles.TilesRequestProcessor" />
+
+	<message-resources parameter="configuracion.properties"></message-resources>
+	<message-resources parameter="codigoAyuntamientos.properties" />
+	<message-resources null="false" parameter="resources.validation" />
+	<message-resources parameter="ApplicationResources" key="resources" />
+
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config"
+			value="/WEB-INF/tiles/tiles-defs.xml,
+            	   /WEB-INF/tiles/tiles-def-administradorGlobal.xml,
+            	   /WEB-INF/tiles/tiles-def-administradorLocal.xml,
+            	   /WEB-INF/tiles/tiles-def-redactor.xml,
+            	   /WEB-INF/tiles/tiles-def-publicador.xml,
+            	   /WEB-INF/tiles/tiles-def-publico.xml,
+            	   /WEB-INF/tiles/tiles-def-mobile.xml             	   
+            	  " />
+	</plug-in>
+
+</struts-config>
+

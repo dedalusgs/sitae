@@ -1,0 +1,457 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>SITAE - Tablón de Anuncios Electrónico</title>
+		<link rel="stylesheet" href="jquerymob/themes/sitae-azul.min.css" />
+		<link rel="stylesheet" href="jquerymob/themes/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet" href="jquerymob/themes/custom.css" />
+		<link rel="stylesheet" href="jquerymob/jquery.mobile.structure-1.4.0.min.css" />
+		<script src="jquerymob/jquery-1.10.2.min.js"></script>
+		<script src="jquerymob/jquery.mobile-1.4.0.min.js"></script>
+		<script type="text/javascript">
+		
+		$(document).ready(function(){
+			$.mobile.pageLoadErrorMessage = 'Esta pagina no esxiste';
+			$.mobile.fixedToolbars.show(true);
+			$.mobile.defaultDialogTransition='slideup';
+			$.mobile.defaultPageTransition='flip';
+			$("#mostrar").click(function(e){
+			    $.mobile.loadingMessage = "Cargando. . .";
+			$.mobile.showPageLoadingMsg('');
+			});
+
+			$("#ocultar").click(function(e){
+			$.mobile.hidePageLoadingMsg();
+			});
+			});
+		$( document ).on( "pagecreate", ".jqm-demos", function( event ) {
+			var search,
+				page = $( this ),
+				that = this,
+				searchUrl = ( $( this ).hasClass( "jqm-home" ) ) ? "_search/" : "../_search/",
+				searchContents = $( ".jqm-search ul.jqm-list" ).find( "li:not(.ui-collapsible)" ),
+				version = $.mobile.version || "dev",
+				words = version.split( "-" ),
+				ver = words[0],
+				str = words[1] || "",
+				text = ver;
+
+// 			// Insert jqm version in header
+// 			if ( str.indexOf( "rc" ) == -1 ) {
+// 				str = str.charAt( 0 ).toUpperCase() + str.slice( 1 );
+// 			} else {
+// 				str = str.toUpperCase().replace( ".", "" );
+// 			}
+
+// 			if ( $.mobile.version && str ) {
+// 				text += " " + str;
+// 			}
+
+// 			$( ".jqm-version" ).html( text );
+
+// 			// Global navmenu panel
+			$( ".jqm-navmenu-panel ul" ).listview();
+
+			$( document ).on( "panelopen", ".jqm-search-panel", function() {
+				$( this ).find( "input" ).focus();
+			})
+
+			$( ".jqm-navmenu-link" ).on( "click", function() {
+				page.find( ".jqm-navmenu-panel:not(.jqm-panel-page-nav)" ).panel( "open" );
+			});
+
+// 			// Turn off autocomplete / correct for demos search
+// 			$( this ).find( ".jqm-search input" ).attr( "autocomplete", "off" ).attr( "autocorrect", "off" );
+
+// 			// Global search
+// 			$( ".jqm-search-link" ).on( "click", function() {
+// 				page.find( ".jqm-search-panel" ).panel( "open" );
+// 			});
+
+// 			// Initalize search panel list and filter also remove collapsibles
+// 			$( this ).find( ".jqm-search ul.jqm-list" ).html( searchContents ).listview({
+// 				inset: false,
+// 				theme: null,
+// 				dividerTheme: null,
+// 				icon: false,
+// 				autodividers: true,
+// 				autodividersSelector: function ( li ) {
+// 					return "";
+// 				},
+// 				arrowKeyNav: true,
+// 				enterToNav: true,
+// 				highlight: true,
+// 				submitTo: searchUrl
+// 			}).filterable();
+
+// 			// Initalize search page list and remove collapsibles
+// 			$( this ).find( ".jqm-search-results-wrap ul.jqm-list" ).html( searchContents ).listview({
+// 				inset: true,
+// 				theme: null,
+// 				dividerTheme: null,
+// 				icon: false,
+// 				arrowKeyNav: true,
+// 				enterToNav: true,
+// 				highlight: true
+// 			}).filterable();
+
+// 			// Fix links on homepage to point to sub directories
+// 			if ( $( event.target ).hasClass( "jqm-home") ) {
+// 				$( this ).find( "a" ).each( function() {
+// 					$( this ).attr( "href", $( this ).attr( "href" ).replace( "../", "" ) );
+// 				});
+// 			}
+
+// 			// Search results page get search query string and enter it into filter then trigger keyup to filter
+// 			if ( $( event.target ).hasClass( "jqm-demos-search-results") ) {
+// 				search = $.mobile.path.parseUrl( window.location.href ).search.split( "=" )[ 1 ];
+// 				setTimeout(function() {
+// 					e = $.Event( "keyup" );
+// 					e.which = 65;
+// 					$( that ).find( ".jqm-content .jqm-search-results-wrap input" ).val( search ).trigger(e).trigger( "change" );
+// 				}, 0 );
+// 			}
+// 		});
+
+// 		// Append keywords list to each list item
+// 		$( document ).one( "pagecreate", ".jqm-demos", function( event ) {
+// 			$( this ).find( ".jqm-search-results-list li, .jqm-search li" ).each(function() {
+// 				var text = $( this ).attr( "data-filtertext" );
+
+// 				$( this )
+// 					.find( "a" )
+// 					.append( "<span class='jqm-search-results-keywords ui-li-desc'>" + text + "</span>" );
+// 			});
+		});
+		
+		</script>
+	</head>
+	<body>
+		<div data-role="page" class="jqm-demos jqm-home">
+			<div data-role="header" class="jqm-header">
+				<h2> <span class="texto">Tablón de Anuncios Electrónicos</span><br/> <span class="titulo">SITAE</span> </h2><h3>Ayuntamiento de Nules</h3>
+				
+				<a href="#" id="jqm-navmenu-link" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+				<a href="#popupMenu" data-rel="popup" data-transition="flip" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-comment ui-nodisc-icon ui-alt-icon ui-btn-right">Idioma</a>
+			</div>
+			<div role="main" class="ui-content jqm-content">
+			<div class="redesSociales">
+			<a href="https://www.facebook.com/yopepeperez" ><img src="imagenes/facebook-32.png"/></a>
+			<a href="https://www.twitter.com/PepeClaves" ><img src="imagenes/google+-32.png"/></a>
+			<a href="https://plus.google.com" ><img src="imagenes/twitter-32.png"/></a>
+			</div>
+			<h4>Búsqueda Avanzada</h4>
+			<h5>Resultado de la búsqueda</h5>
+			<p ><a href ="busqueda-avanzada.html" data-icon="back" data-role="button" data-inline="true"  data-direction="reverse" data-transition="slidefade">Volver al Buscador</a> </p>
+			
+			<div id="PieListado"><div id="PagInicio"><a class="ui-btn ui-btn-inline ui-mini ui-shadow ui-corner-all" href="#"><img src="imagenes/ico16_siguiente.gif" alt="Ir al Siguiente" title="Ir al Siguiente"></a><a  class="ui-btn ui-btn-inline ui-mini ui-shadow ui-corner-all" href="#"><img src="imagenes/ico16_ultimo.gif" alt="Ir al Último" title="Ir al Último"></a></div><div id="NumPag"><span class="PaginaSelec">1 de 2</span></div></div>
+					<table class="ui-responsive sitae" id="movie-table2" data-role="table" >
+		<thead>
+			<tr>
+				<th>
+					Título
+				</th>
+				<th >
+					Tipo
+				</th>
+				<th>
+					Procedencia
+				</th>
+				<th>
+					F.Publicación
+				</th>
+				<th>
+					F.Retirada
+				</th>
+			
+				<th></th>
+				
+				
+			</tr>
+		</thead>
+		<tbody>
+			
+				
+					<tr>
+						<td>
+							NOTIFICACION A D. LUIS SOS CALDUCH DEL CAMBIO DE TITULARIDAD DE BAR SIN AUDICION MUSICAL EN C/ SAN LUCAS, 40. (EXPT. 29/2013 ACTCAT)
+
+							
+						</td>
+						<td>
+							Bando
+						</td>
+						<td>
+							Alcaldia
+						</td>
+						<td>
+							09/02/2014
+						</td>
+						<td>
+							26/02/2014
+						</td>
+						<td>
+							
+								<a data-role="button" data-transition="slidefade" href="detalle.html"   data-theme="b" class=" ui-btn ui-btn-icon-notext ui-corner-all ui-icon-action ui-nodisc-icon ui-alt-icon"></a>
+							
+						</td>
+						
+
+					</tr>
+				
+				
+
+
+			
+				
+				
+					<tr class="FilaPar">
+						<td>
+							ANUNCIO AUDIENCIA ORDEN DE EJECUCION 258-2013
+
+							
+						</td>
+						<td>
+							Bando
+						</td>
+						<td>
+							Alcaldia
+						</td>
+						<td>
+							09/02/2014
+						</td>
+						<td>
+							26/02/2014
+						</td>
+						<td>
+							
+								<a href="detalle.html" data-transition="slidefade" class=" ui-btn ui-btn-icon-notext ui-corner-all ui-icon-action ui-nodisc-icon ui-alt-icon"></a>
+							
+						</td>
+						
+
+					</tr>
+					<tr>
+						<td>
+							 EDICTO RELATIVO A RELACIÓN POR COMPARECENCIA VARIOS EXPTES - AYUNTAMIENTO DE BORRIOL
+
+							
+						</td>
+						<td>
+							Bando
+						</td>
+						<td>
+							Alcaldia
+						</td>
+						<td>
+							09/02/2014
+						</td>
+						<td>
+							26/02/2014
+						</td>
+						<td>
+							
+								<a href="detalle.html"  data-transition="slidefade" class=" ui-btn ui-btn-icon-notext ui-corner-all ui-icon-action ui-nodisc-icon ui-alt-icon"></a>
+							
+						</td>
+						
+
+					</tr>
+				
+				
+
+
+			
+				
+				
+					<tr class="FilaPar">
+						<td>
+							 EDICTO RELATIVO A DECRETO DE INCOACIÓN EXPTE. SANCIONADOR Nº 623/2013- AYUNTAMIENTO DE CASTELLON
+						</td>
+						<td>
+							Bando
+						</td>
+						<td>
+							Alcaldia
+						</td>
+						<td>
+							09/02/2014
+						</td>
+						<td>
+							26/02/2014
+						</td>
+						<td>
+							
+								<a href="detalle.html"  data-transition="slidefade" class=" ui-btn ui-btn-icon-notext ui-corner-all ui-icon-action ui-nodisc-icon ui-alt-icon"></a>
+							
+						</td>
+						
+
+					</tr>	
+				
+					<tr>
+						<td>
+							NOTIFICACION A D. LUIS SOS CALDUCH DEL CAMBIO DE TITULARIDAD DE BAR SIN AUDICION MUSICAL EN C/ SAN LUCAS, 40. (EXPT. 29/2013 ACTCAT)
+
+							
+						</td>
+						<td>
+							Bando
+						</td>
+						<td>
+							Alcaldia
+						</td>
+						<td>
+							09/02/2014
+						</td>
+						<td>
+							26/02/2014
+						</td>
+						<td>
+							
+								<a data-role="button" data-transition="slidefade" href="detalle.html"  data-theme="b" class=" ui-btn ui-btn-icon-notext ui-corner-all ui-icon-action ui-nodisc-icon ui-alt-icon"></a>
+							
+						</td>
+						
+
+					</tr>
+				
+				
+
+
+			
+				
+				
+					<tr class="FilaPar">
+						<td>
+							ANUNCIO AUDIENCIA ORDEN DE EJECUCION 258-2013
+
+							
+						</td>
+						<td>
+							Bando
+						</td>
+						<td>
+							Alcaldia
+						</td>
+						<td>
+							09/02/2014
+						</td>
+						<td>
+							26/02/2014
+						</td>
+						<td>
+							
+								<a href="detalle.html" data-transition="slidefade" class=" ui-btn ui-btn-icon-notext ui-corner-all ui-icon-action ui-nodisc-icon ui-alt-icon"></a>
+							
+						</td>
+						
+
+					</tr>
+					<tr>
+						<td>
+							 EDICTO RELATIVO A RELACIÓN POR COMPARECENCIA VARIOS EXPTES - AYUNTAMIENTO DE BORRIOL
+
+							
+						</td>
+						<td>
+							Bando
+						</td>
+						<td>
+							Alcaldia
+						</td>
+						<td>
+							09/02/2014
+						</td>
+						<td>
+							26/02/2014
+						</td>
+						<td>
+							
+								<a href="detalle.html" data-transition="slidefade"  class=" ui-btn ui-btn-icon-notext ui-corner-all ui-icon-action ui-nodisc-icon ui-alt-icon"></a>
+							
+						</td>
+						
+
+					</tr>
+				
+				
+
+
+			
+				
+				
+					<tr class="FilaPar">
+						<td>
+							 EDICTO RELATIVO A DECRETO DE INCOACIÓN EXPTE. SANCIONADOR Nº 623/2013- AYUNTAMIENTO DE CASTELLON
+						</td>
+						<td>
+							Bando
+						</td>
+						<td>
+							Alcaldia
+						</td>
+						<td>
+							09/02/2014
+						</td>
+						<td>
+							26/02/2014
+						</td>
+						<td>
+							
+								<a href="detalle.html" data-transition="slidefade" class=" ui-btn ui-btn-icon-notext ui-corner-all ui-icon-action ui-nodisc-icon ui-alt-icon"></a>
+							
+						</td>
+						
+
+					</tr>	
+
+
+			
+		</tbody>
+	</table>
+	<div id="PieListado"><div id="PagInicio"><div id="NumPag"><span class="PaginaSelec">1 de 2</span></div><a class="ui-btn ui-btn-inline ui-mini ui-shadow ui-corner-all" href="#"><img src="imagenes/ico16_siguiente.gif" alt="Ir al Siguiente" title="Ir al Siguiente"></a><a class="ui-btn ui-btn-inline ui-mini ui-shadow ui-corner-all" href="#"><img src="imagenes/ico16_ultimo.gif" alt="Ir al Último" title="Ir al Último"></a></div></div>
+	<p ><a href ="busqueda-avanzada.html" data-icon="back" data-role="button" data-inline="true"  data-direction="reverse" data-transition="slidefade">Volver al Buscador</a> </p>
+	</div>
+			
+			 <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
+			  	<ul class="jqm-list ui-alt-icon ui-nodisc-icon">
+<li data-icon="home"><a href="./index.html">Inicio</a></li>
+<li><a data-transition="slidefade" href="./anucios-vigor.html" >Anuncios en Vigor</a></li>
+<li><a data-transition="slidefade" href="./historico.html" data-ajax="false">Histórico de Anuncios</a></li>
+<li><a data-transition="slidefade" href="./busqueda-avanzada.html" data-ajax="false">Búsqueda Avanzada</a></li>
+</ul>
+			</div>
+			<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
+			<div data-role="navbar" data-theme="b">
+			<ul>
+				<li> 
+					<a href="Contacto.html" data-icon="user" data-theme="b">Contacto</a>
+				</li>
+				<li> 
+					<a href="avisoLegal.html" data-icon="alert" data-theme="b" >Aviso Legal</a>
+				</li>
+<li> 
+					<a href="acercade.html" data-icon="info" data-theme="b" >Acerca de</a>
+				</li>
+				<li> 
+					<a href="/vfe" rel="external" data-icon="action" data-theme="b" >Validación Firma Electrónica</a>
+				</li>
+			
+			</ul>
+			</div>
+			
+</div>
+<div data-role="popup" id="popupMenu" data-theme="a">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;">
+            <li data-role="list-divider" data-theme="a">Elija Idioma</li>
+            <li><a  data-transition="pop" data-inset="true" rel="external"  href="index.html?lang=es">Valenciano</a></li>
+            <li><a data-transition="pop"  rel="external" href="index.html?lang=va" >Castellano</a></li>
+           
+        </ul>
+</div>
+	</body>
+</html>

@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/CrearUsuariosFrontAction.do" location="650,50" dimension="455,88" />
+  <StrutsActivity path="/CrearUsuariosDo.do" location="650,250" dimension="442,88" />
+  <StrutsActivity path="/MuestraInformacionUsuarioFrontAction.do" location="1550,1550" dimension="585,88" />
+  <StrutsActivity path="/VisualizarUsuariosFrontAction.do" location="60,0" dimension="452,88" />
+  <StrutsActivity path="/BajaUsuarioDo.do" location="50,1750" dimension="422,88" />
+  <StrutsActivity path="/ModificarUsuariosFrontAction.do" location="2150,950" dimension="489,88" />
+  <StrutsActivity path="/ModificarUsuariosDo.do" location="1250,1850" dimension="489,88" />
+  <StrutsActivity path="/AsignarCentrosUsuariosDo.do" location="1850,1850" dimension="538,88" />
+  <StrutsActivity path="/ModificarUsuariosExternosFrontAction.do" location="2450,50" dimension="539,96" />
+  <StrutsActivity path="/ModificarUsuariosExternosDo.do" location="2750,950" dimension="526,96" />
+  <StrutsActivity path="/CrearTiposEdictosFrontAction.do" location="350,450" dimension="491,88" />
+  <StrutsActivity path="/CrearTiposEdictosDo.do" location="950,450" dimension="478,88" />
+  <StrutsActivity path="/EliminarTiposEdictosDo.do" location="50,650" dimension="498,88" />
+  <StrutsActivity path="/ModificarTiposEdictosFrontAction.do" location="1250,650" dimension="525,88" />
+  <StrutsActivity path="/ModificarTiposEdictosDo.do" location="350,850" dimension="512,88" />
+  <StrutsActivity path="/VisualizarTiposEdictosFrontAction.do" location="1250,150" dimension="527,88" />
+  <StrutsActivity path="/AltaCentroFrontAction.do" location="1620,795" dimension="424,88" />
+  <StrutsActivity path="/AltaCentroDo.do" location="1605,930" dimension="411,88" />
+  <StrutsActivity path="/BajaCentroDo.do" location="1275,1035" dimension="416,88" />
+  <StrutsActivity path="/ModificarCentroFrontAction.do" location="50,1150" dimension="473,88" />
+  <StrutsActivity path="/ModificarCentroDo.do" location="795,1140" dimension="460,88" />
+  <StrutsActivity path="/VisualizarCentroFrontAction.do" location="1250,1250" dimension="480,88" />
+  <StrutsActivity path="/MuestraInformacionCentroFrontAction.do" location="50,1350" dimension="579,88" />
+  <StrutsActivity path="/VisualizarUsuariosFirmantesFrontAction.do" location="2450,1150" dimension="585,88" />
+  <StrutsActivity path="/CrearUsuariosFirmantesFrontAction.do" location="2450,1350" dimension="455,88" />
+  <StrutsActivity path="/CrearUsuariosFirmantesDo.do" location="2450,1550" dimension="442,88" />
+  <StrutsActivity path="/MuestraInformacionUsuarioFirmanteFrontAction.do" location="2450,1750" dimension="669,88" />
+  <StrutsActivity path="/ModificarUsuariosFirmantesFrontAction.do" location="2450,350" dimension="489,88" />
+  <StrutsActivity path="/ModificarUsuariosFirmantesDo.do" location="650,2150" dimension="570,88" />
+  <StrutsActivity path="/BajaUsuarioFirmanteDo.do" location="2750,750" dimension="547,96" />
+  <StrutsActivity path="adminLocal.crearUsuarios.solicitud" location="50,350" dimension="193,49" />
+  <StrutsActivity path="adminLocal.crearUsuarios.error" location="350,350" dimension="179,49" />
+  <StrutsActivity path="adminLocal.crearUsuarios.correcto" location="50,450" dimension="195,49" />
+  <StrutsActivity path="adminLocal.muestraInformacionUsuarios.solicitud" location="2450,250" dimension="264,49" />
+  <StrutsActivity path="adminLocal.visualizarUsuarios.solicitud" location="180,195" dimension="212,49" />
+  <StrutsActivity path="adminLocal.bajaUsuario.correcto2" location="1250,350" dimension="192,49" />
+  <StrutsActivity path="adminLocal.bajaUsuario.correcto" location="1550,350" dimension="186,49" />
+  <StrutsActivity path="adminLocal.bajaUsuario.error" location="1850,350" dimension="170,49" />
+  <StrutsActivity path="adminLocal.modificarUsuarios.solicitud" location="2150,1750" dimension="211,49" />
+  <StrutsActivity path="adminLocal.modificarUsuarios.error" location="950,1850" dimension="197,49" />
+  <StrutsActivity path="adminLocal.modificarUsuarios.correcto2" location="1850,450" dimension="219,49" />
+  <StrutsActivity path="adminLocal.modificarUsuarios.correcto" location="2150,350" dimension="213,49" />
+  <StrutsActivity path="adminLocal.modificarUsuariosExternos.solicitud" location="50,2250" dimension="283,51" />
+  <StrutsActivity path="adminLocal.modificarUsuariosExternos.error" location="2450,2250" dimension="263,51" />
+  <StrutsActivity path="adminLocal.modificarUsuariosExternos.correcto2" location="650,2350" dimension="288,51" />
+  <StrutsActivity path="adminLocal.modificarUsuariosExternos.correcto" location="1250,2350" dimension="282,51" />
+  <StrutsActivity path="adminLocal.crearTiposEdictos.solicitud" location="650,650" dimension="211,49" />
+  <StrutsActivity path="adminLocal.crearTiposEdictos.error" location="950,650" dimension="197,49" />
+  <StrutsActivity path="adminLocal.crearTiposEdictos.correcto" location="650,750" dimension="213,49" />
+  <StrutsActivity path="adminLocal.eliminarTiposEdictos.correcto" location="950,750" dimension="224,49" />
+  <StrutsActivity path="adminLocal.eliminarTiposEdictos.error" location="50,850" dimension="208,49" />
+  <StrutsActivity path="adminLocal.modificarTiposEdictos.solicitud" location="950,850" dimension="229,49" />
+  <StrutsActivity path="adminLocal.modificarTiposEdictos.error" location="1250,850" dimension="215,49" />
+  <StrutsActivity path="adminLocal.modificarTiposEdictos.correcto" location="950,950" dimension="231,49" />
+  <StrutsActivity path="adminLocal.visualizarTiposEdictos.solicitud" location="350,1550" dimension="230,49" />
+  <StrutsActivity path="adminLocal.altaCentroProcedencia.solicitud" location="1550,450" dimension="236,49" />
+  <StrutsActivity path="/AltaCentroFront" location="950,1550" dimension="111,49" />
+  <StrutsActivity path="adminLocal.altaCentroProcedencia.error" location="50,550" dimension="222,49" />
+  <StrutsActivity path=" " location="650,1050" dimension="32,49" />
+  <StrutsActivity path="adminLocal.altaCentroProcedencia.correcto" location="1550,550" dimension="238,49" />
+  <StrutsActivity path="adminLocal.bajaCentro.correcto" location="350,1650" dimension="183,49" />
+  <StrutsActivity path="adminLocal.bajaCentro.error" location="650,1650" dimension="167,49" />
+  <StrutsActivity path="adminLocal.modificarCentroProcedencia.solicitud" location="1850,1250" dimension="261,49" />
+  <StrutsActivity path="/ModificarCentroFront" location="600,1125" dimension="135,49" />
+  <StrutsActivity path="adminLocal.modificarCentroProcedencia.error" location="950,1450" dimension="247,49" />
+  <StrutsActivity path="adminLocal.modificarCentroProcedencia.correcto" location="1250,1450" dimension="263,49" />
+  <StrutsActivity path="adminLocal.visualizarCentroProcedencia.solicitud" location="1850,650" dimension="262,49" />
+  <StrutsActivity path="/VisualizarCentroFront" location="950,1750" dimension="136,49" />
+  <StrutsActivity path="adminLocal.muestraInformacionCentroProcedencia.solicitud" location="1850,1150" dimension="314,49" />
+  <StrutsActivity path="adminLocal.visualizarUsuariosFirmantes.solicitud" location="2450,650" dimension="259,49" />
+  <StrutsActivity path="adminLocal.crearUsuariosFirmantes.solicitud" location="2150,750" dimension="240,49" />
+  <StrutsActivity path="adminLocal.crearUsuariosFirmantes.correcto" location="2450,850" dimension="242,49" />
+  <StrutsActivity path="adminLocal.crearUsues.error" location="950,1950" dimension="167,49" />
+  <StrutsActivity path="adminLocal.muestraInformacionUsuariosFirmantes.solicitud" location="1250,2050" dimension="311,49" />
+  <StrutsActivity path="adminLocal.modificarUsuariosFirmantes.solicitud" location="1850,2050" dimension="258,49" />
+  <StrutsActivity path="adminLocal.modificarUsuariosFirmantes.error" location="2450,2050" dimension="244,49" />
+  <StrutsActivity path="adminLocal.modificarUsuariosFirmantes.correcto" location="50,2150" dimension="260,49" />
+  <StrutsActivity path="adminLocal.bajaUsuarioFirmante.correcto2" location="2750,2050" dimension="257,51" />
+  <StrutsActivity path="adminLocal.bajaUsuarioFirmante.correcto" location="1550,2150" dimension="251,51" />
+  <StrutsActivity path="adminLocal.bajaUsuarioFirmante.error" location="2150,2150" dimension="232,51" />
+  <StrutsActivity path="adminLocal.crearUsuariosFirmantes.error" location="2450,750" dimension="226,49" />
+  <StrutsActivity path="adminLocal.muestraInformacionUsuario.solicitud" location="1850,250" dimension="259,49" />
+  <StrutsActivity path="adminLocal.altaCentro.solicitud" location="650,1550" dimension="178,49" />
+  <StrutsActivity path="adminLocal.altaCentro.error" location="1250,1550" dimension="164,49" />
+  <StrutsActivity path="adminLocal.altaCentro.correcto" location="1710,1440" dimension="180,49" />
+  <StrutsActivity path="adminLocal.modificarCentro.solicitud" location="480,1260" dimension="203,49" />
+  <StrutsActivity path="adminLocal.modificarCentro.error" location="-150,1260" dimension="189,49" />
+  <StrutsActivity path="adminLocal.modificarCentro.correcto" location="735,1260" dimension="205,49" />
+  <StrutsActivity path="adminLocal.muestraInformacionCentro.solicitud" location="1250,1750" dimension="256,49" />
+  <StrutsActivity path="adminGlobal.modificarCentro.error" location="1410,1170" dimension="194,49" />
+  <StrutsActivity path="adminLocal.visualizarCentros.solicitud" location="650,1750" dimension="209,49" />
+  <StrutsActivity path="adminGlobal.modificarAdmLocal.solicitud" location="50,950" dimension="220,49" />
+  <StrutsActivity path="/ModificarAdmLocalFront" location="50,1050" dimension="147,49" />
+  <StrutsActivity path="adminGlobal.modificarAdmLocal.error" location="350,1050" dimension="206,49" />
+  <StrutsActivity path="adminGlobal.modificarAdmLocal.correcto" location="950,1050" dimension="222,49" />
+  <StrutsActivity path="adminGlobal.muestraInformacionUsuario.solicitud" location="950,1650" dimension="264,49" />
+  <StrutsActivity path="adminL.muestraInformacionUsuario.solicitud" location="50,1550" dimension="240,49" />
+  <StrutsActivity path="adminGlobal.bajaAdmLocal.correcto" location="1850,1750" dimension="200,49" />
+  <StrutsActivity path="adminGlobal.bajaAdmLocal.error" location="650,1850" dimension="184,49" />
+  <StrutsActivity path="adminLocal.crearUsuarios.correcto2" location="2150,850" dimension="201,49" />
+  <StrutsActivity path="adminGlobal.modificarUsuario.solicitud" location="2150,1350" dimension="211,49" />
+  <StrutsActivity path="adminGlobal.modificarUsuarios.solicitud" location="2150,1450" dimension="216,49" />
+  <StrutsActivity path="adminGlobal.modificarUsuarios.error" location="50,1650" dimension="202,49" />
+  <StrutsActivity path="adminLocal.asignarCentrosUsuarios.solicitud" location="50,1950" dimension="241,49" />
+  <StrutsActivity path="" location="350,1950" dimension="29,49" />
+  <StrutsActivity path="adminLocal." location="650,1950" dimension="85,49" />
+  <StrutsActivity path="adminLocal.muestra InformacionUsuarios.solicitud" location="2450,1950" dimension="267,49" />
+  <StrutsActivity path="adminLocal.muestra    InformacionUsuarios.solicitud" location="50,2050" dimension="276,49" />
+  <StrutsActivity path="adminLocal.muestra      InformacionUsuarios.solicitud" location="650,2050" dimension="282,49" />
+  <StrutsActivity path="/CrearUsuariosExternosFrontAction.do" location="1850,2350" dimension="491,96" />
+  <StrutsActivity path="/CrearUsuariosExternosDo.do" location="50,2450" dimension="478,96" />
+  <StrutsActivity path="adminLocal.crearUsuariosExternos.solicitud" location="2450,2450" dimension="258,51" />
+  <StrutsActivity path="adminLocal.crearUsuariosExternos.error" location="650,2550" dimension="238,51" />
+  <StrutsActivity path="adminLocal.crearUsuariosExternos.correcto" location="950,2550" dimension="257,51" />
+  <StrutsTransition id="/MuestraInformacionUsuarioFirmanteFrontAction.do,success,adminLocal.muestraInformacionUsuariosFirmantes.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2784,1838" />
+      <AbsolutePoint location="2784,2183" />
+      <AbsolutePoint location="1405,2183" />
+      <AbsolutePoint location="1405,2099" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/BajaUsuarioFirmanteDo.do,success2,adminLocal.bajaUsuarioFirmante.correcto2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarUsuariosFirmantesFrontAction.do,success,adminLocal.modificarUsuariosFirmantes.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2694,438" />
+      <AbsolutePoint location="2694,565" />
+      <AbsolutePoint location="3530,565" />
+      <AbsolutePoint location="3530,2116" />
+      <AbsolutePoint location="1979,2116" />
+      <AbsolutePoint location="1979,2099" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarUsuariosExternosFrontAction.do,success,adminLocal.modificarUsuariosExternos.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarUsuariosExternosFrontAction.do,failure,adminLocal.modificarUsuariosExternos.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/VisualizarUsuariosFirmantesFrontAction.do,success,adminLocal.visualizarUsuariosFirmantes.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2742,1194" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/BajaUsuarioDo.do,success,adminLocal.bajaUsuario.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1824" />
+      <AbsolutePoint location="-195,1824" />
+      <AbsolutePoint location="-195,-75" />
+      <AbsolutePoint location="1833,-75" />
+      <AbsolutePoint location="1833,374" />
+      <AbsolutePoint location="1736,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarTiposEdictosDo.do,failure,adminLocal.modificarTiposEdictos.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="862,914" />
+      <AbsolutePoint location="1357,914" />
+      <AbsolutePoint location="1357,899" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearUsuariosExternosDo.do,failure,adminLocal.crearUsuariosExternos.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="528,2516" />
+      <AbsolutePoint location="769,2516" />
+      <AbsolutePoint location="769,2550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearUsuariosExternosFrontAction.do,failure,adminLocal.crearUsuariosExternos.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1850,2416" />
+      <AbsolutePoint location="799,2416" />
+      <AbsolutePoint location="799,2550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AsignarCentrosUsuariosDo.do,success,/ModificarUsuariosFrontAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2388,1914" />
+      <AbsolutePoint location="3140,1914" />
+      <AbsolutePoint location="3140,1024" />
+      <AbsolutePoint location="2639,1024" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarCentroFrontAction.do,success,adminLocal.modificarCentroProcedencia.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1194" />
+      <AbsolutePoint location="-45,1194" />
+      <AbsolutePoint location="-45,-150" />
+      <AbsolutePoint location="3260,-150" />
+      <AbsolutePoint location="3260,1274" />
+      <AbsolutePoint location="2111,1274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearUsuariosFirmantesFrontAction.do,success,adminLocal.crearUsuariosFirmantes.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2677,1394" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarCentroFrontAction.do,failure,adminLocal.modificarCentroProcedencia.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="286,1238" />
+      <AbsolutePoint location="286,1324" />
+      <AbsolutePoint location="1073,1324" />
+      <AbsolutePoint location="1073,1450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarUsuariosExternosDo.do,success3,/ModificarUsuariosExternosFrontAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaCentroDo.do,success,adminLocal.altaCentroProcedencia.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1810,974" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/VisualizarCentroFrontAction.do,success,adminLocal.visualizarCentroProcedencia.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1730,1314" />
+      <AbsolutePoint location="3200,1314" />
+      <AbsolutePoint location="3200,765" />
+      <AbsolutePoint location="1981,765" />
+      <AbsolutePoint location="1981,699" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarUsuariosExternosFrontAction.do,null,/ModificarUsuariosExternosDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearTiposEdictosFrontAction.do,success,adminLocal.crearTiposEdictos.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="665,538" />
+      <AbsolutePoint location="665,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarTiposEdictosFrontAction.do,success,adminLocal.modificarTiposEdictos.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,684" />
+      <AbsolutePoint location="1226,684" />
+      <AbsolutePoint location="1226,874" />
+      <AbsolutePoint location="1179,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearUsuariosExternosDo.do,success,adminLocal.crearUsuariosExternos.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="528,2486" />
+      <AbsolutePoint location="1078,2486" />
+      <AbsolutePoint location="1078,2550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearTiposEdictosFrontAction.do,null,/CrearTiposEdictosDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="841,494" />
+      <AbsolutePoint location="950,494" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarUsuariosFrontAction.do,success,adminLocal.modificarUsuarios.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2394,1038" />
+      <AbsolutePoint location="2394,1756" />
+      <AbsolutePoint location="2361,1756" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaCentroDo.do,errorAcceso, ,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1605,1014" />
+      <AbsolutePoint location="666,1014" />
+      <AbsolutePoint location="666,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarUsuariosDo.do,success2,adminLocal.modificarUsuarios.correcto2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1494,1894" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaCentroFrontAction.do,cancel,/AltaCentroFront,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2044,835" />
+      <AbsolutePoint location="3080,835" />
+      <AbsolutePoint location="3080,1514" />
+      <AbsolutePoint location="1005,1514" />
+      <AbsolutePoint location="1005,1550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearUsuariosFirmantesDo.do,failure,adminLocal.crearUsues.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2671,1638" />
+      <AbsolutePoint location="2671,1665" />
+      <AbsolutePoint location="1784,1665" />
+      <AbsolutePoint location="1784,1974" />
+      <AbsolutePoint location="1117,1974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarUsuariosExternosDo.do,failure,adminLocal.modificarUsuariosExternos.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarUsuariosDo.do,success,adminLocal.modificarUsuarios.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1494,1894" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarCentroFrontAction.do,null,/ModificarCentroDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="523,1194" />
+      <AbsolutePoint location="795,1194" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearTiposEdictosDo.do,failure,adminLocal.crearTiposEdictos.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1132,538" />
+      <AbsolutePoint location="1132,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarUsuariosExternosDo.do,success,adminLocal.modificarUsuariosExternos.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AsignarCentrosUsuariosDo.do,failure,adminLocal.modificarUsuariosExternos.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2119,1894" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearUsuariosFirmantesDo.do,success,adminLocal.crearUsuariosFirmantes.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2671,1594" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearUsuariosExternosFrontAction.do,success,adminLocal.crearUsuariosExternos.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2341,2398" />
+      <AbsolutePoint location="2579,2398" />
+      <AbsolutePoint location="2579,2450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarUsuariosFrontAction.do,null,/AsignarCentrosUsuariosDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2424,1038" />
+      <AbsolutePoint location="2424,1864" />
+      <AbsolutePoint location="2388,1864" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarCentroDo.do,cancel,/ModificarCentroFront,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="795,1159" />
+      <AbsolutePoint location="735,1159" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarUsuariosFirmantesDo.do,failure,adminLocal.modificarUsuariosFirmantes.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="2572,2074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaCentroFrontAction.do,null,/AltaCentroDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1802,883" />
+      <AbsolutePoint location="1802,930" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearUsuariosFrontAction.do,failure,adminLocal.crearUsuarios.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,133" />
+      <AbsolutePoint location="437,133" />
+      <AbsolutePoint location="437,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearTiposEdictosFrontAction.do,failure,adminLocal.crearTiposEdictos.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="841,524" />
+      <AbsolutePoint location="908,524" />
+      <AbsolutePoint location="908,674" />
+      <AbsolutePoint location="950,674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarCentroFrontAction.do,cancel,/ModificarCentroFront,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="523,1159" />
+      <AbsolutePoint location="600,1159" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/VisualizarCentroFrontAction.do,cancel,/VisualizarCentroFront,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1528,1338" />
+      <AbsolutePoint location="1528,1814" />
+      <AbsolutePoint location="1018,1814" />
+      <AbsolutePoint location="1018,1799" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearUsuariosDo.do,success,adminLocal.crearUsuarios.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="846,338" />
+      <AbsolutePoint location="846,414" />
+      <AbsolutePoint location="147,414" />
+      <AbsolutePoint location="147,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarTiposEdictosFrontAction.do,failure,adminLocal.modificarTiposEdictos.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1450,738" />
+      <AbsolutePoint location="1450,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/VisualizarUsuariosFrontAction.do,success,adminLocal.visualizarUsuarios.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="286,88" />
+      <AbsolutePoint location="286,195" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarUsuariosFirmantesFrontAction.do,failure,adminLocal.modificarUsuariosFirmantes.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2939,354" />
+      <AbsolutePoint location="3290,354" />
+      <AbsolutePoint location="3290,2074" />
+      <AbsolutePoint location="2694,2074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarTiposEdictosDo.do,success,adminLocal.modificarTiposEdictos.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="615,938" />
+      <AbsolutePoint location="615,974" />
+      <AbsolutePoint location="950,974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaCentroFrontAction.do,failure,adminLocal.altaCentroProcedencia.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1832,839" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarUsuariosFirmantesDo.do,success,adminLocal.modificarUsuariosFirmantes.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="180,2174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarCentroDo.do,errorAcceso, ,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="847,1140" />
+      <AbsolutePoint location="847,1074" />
+      <AbsolutePoint location="682,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/EliminarTiposEdictosDo.do,failure,adminLocal.eliminarTiposEdictos.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="243,738" />
+      <AbsolutePoint location="243,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearUsuariosDo.do,success2,adminLocal.crearUsuarios.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="871,294" />
+      <AbsolutePoint location="146,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarUsuariosFirmantesFrontAction.do,null,/ModificarUsuariosFirmantesDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2694,394" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaCentroDo.do,cancel,/AltaCentroFront,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1810,1018" />
+      <AbsolutePoint location="1810,1365" />
+      <AbsolutePoint location="907,1365" />
+      <AbsolutePoint location="907,1574" />
+      <AbsolutePoint location="950,1574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AsignarCentrosUsuariosDo.do,success,/ModificarUsuariosExternosFrontAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2119,1894" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/VisualizarTiposEdictosFrontAction.do,success,adminLocal.visualizarTiposEdictos.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,180" />
+      <AbsolutePoint location="-225,180" />
+      <AbsolutePoint location="-225,1465" />
+      <AbsolutePoint location="465,1465" />
+      <AbsolutePoint location="465,1550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/MuestraInformacionUsuarioFrontAction.do,success,adminLocal.muestraInformacionUsuarios.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1842,1594" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearTiposEdictosDo.do,success,adminLocal.crearTiposEdictos.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,464" />
+      <AbsolutePoint location="878,464" />
+      <AbsolutePoint location="878,774" />
+      <AbsolutePoint location="863,774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/BajaCentroDo.do,success,adminLocal.bajaCentro.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1691,1079" />
+      <AbsolutePoint location="3350,1079" />
+      <AbsolutePoint location="3350,2344" />
+      <AbsolutePoint location="495,2344" />
+      <AbsolutePoint location="495,1699" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarTiposEdictosFrontAction.do,null,/ModificarTiposEdictosDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,714" />
+      <AbsolutePoint location="606,714" />
+      <AbsolutePoint location="606,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearUsuariosFirmantesFrontAction.do,null,/CrearUsuariosFirmantesDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2677,1438" />
+      <AbsolutePoint location="2677,1550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/BajaUsuarioDo.do,success2,adminLocal.bajaUsuario.correcto2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1794" />
+      <AbsolutePoint location="-360,1794" />
+      <AbsolutePoint location="-360,614" />
+      <AbsolutePoint location="1487,614" />
+      <AbsolutePoint location="1487,374" />
+      <AbsolutePoint location="1442,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearUsuariosExternosFrontAction.do,null,/CrearUsuariosExternosDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2095,2446" />
+      <AbsolutePoint location="2095,2676" />
+      <AbsolutePoint location="289,2676" />
+      <AbsolutePoint location="289,2546" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarUsuariosFrontAction.do,null,/ModificarUsuariosDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2405,950" />
+      <AbsolutePoint location="2405,-225" />
+      <AbsolutePoint location="-435,-225" />
+      <AbsolutePoint location="-435,1914" />
+      <AbsolutePoint location="1250,1914" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/BajaUsuarioDo.do,failure,adminLocal.bajaUsuario.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="273,1750" />
+      <AbsolutePoint location="273,1714" />
+      <AbsolutePoint location="3110,1714" />
+      <AbsolutePoint location="3110,414" />
+      <AbsolutePoint location="1935,414" />
+      <AbsolutePoint location="1935,399" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarUsuariosExternosFrontAction.do,null,/AsignarCentrosUsuariosDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="2119,1894" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearUsuariosFirmantesDo.do,success2,adminLocal.crearUsuariosFirmantes.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2671,1594" />
+      <AbsolutePoint location="2270,774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaCentroDo.do,failure,adminLocal.altaCentroProcedencia.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1810,974" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/EliminarTiposEdictosDo.do,success,adminLocal.eliminarTiposEdictos.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="299,738" />
+      <AbsolutePoint location="299,814" />
+      <AbsolutePoint location="1062,814" />
+      <AbsolutePoint location="1062,799" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarUsuariosFrontAction.do,failure,adminLocal.modificarUsuarios.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2639,964" />
+      <AbsolutePoint location="3440,964" />
+      <AbsolutePoint location="3440,2254" />
+      <AbsolutePoint location="1133,2254" />
+      <AbsolutePoint location="1133,1899" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/MuestraInformacionCentroFrontAction.do,success,adminLocal.muestraInformacionCentroProcedencia.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="339,1394" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/BajaCentroDo.do,failure,adminLocal.bajaCentro.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1691,1109" />
+      <AbsolutePoint location="1775,1109" />
+      <AbsolutePoint location="1775,1395" />
+      <AbsolutePoint location="843,1395" />
+      <AbsolutePoint location="843,1674" />
+      <AbsolutePoint location="817,1674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarCentroDo.do,failure,adminLocal.modificarCentroProcedencia.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1025,1228" />
+      <AbsolutePoint location="1025,1450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/BajaUsuarioFirmanteDo.do,success,adminLocal.bajaUsuarioFirmante.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/BajaUsuarioFirmanteDo.do,failure,adminLocal.bajaUsuarioFirmante.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearUsuariosDo.do,failure,adminLocal.crearUsuarios.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,294" />
+      <AbsolutePoint location="467,294" />
+      <AbsolutePoint location="467,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarCentroDo.do,success,adminLocal.modificarCentroProcedencia.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1103,1228" />
+      <AbsolutePoint location="1103,1425" />
+      <AbsolutePoint location="1381,1425" />
+      <AbsolutePoint location="1381,1450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearUsuariosFrontAction.do,null,/CrearUsuariosDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="877,138" />
+      <AbsolutePoint location="877,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarUsuariosExternosDo.do,success2,adminLocal.modificarUsuariosExternos.correcto2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarUsuariosDo.do,failure,adminLocal.modificarUsuarios.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,1884" />
+      <AbsolutePoint location="1147,1884" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AsignarCentrosUsuariosDo.do,failure,adminLocal.modificarUsuarios.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2119,1938" />
+      <AbsolutePoint location="2119,2014" />
+      <AbsolutePoint location="907,2014" />
+      <AbsolutePoint location="907,1874" />
+      <AbsolutePoint location="950,1874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaCentroFrontAction.do,success,adminLocal.altaCentroProcedencia.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1832,839" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearUsuariosFrontAction.do,success,adminLocal.crearUsuarios.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,103" />
+      <AbsolutePoint location="105,103" />
+      <AbsolutePoint location="105,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

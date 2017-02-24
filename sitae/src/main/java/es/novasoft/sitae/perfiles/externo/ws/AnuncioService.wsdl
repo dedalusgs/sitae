@@ -1,0 +1,203 @@
+<wsdl:definitions targetNamespace="http://ttdev.com/ss" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://ttdev.com/ss" xmlns:intf="http://ttdev.com/ss" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema targetNamespace="http://ttdev.com/ss" xmlns="http://www.w3.org/2001/XMLSchema">
+   <complexType name="solicitudRequest">
+    <sequence>
+     <element name="NOMBRE_USUARIO" type="xsd:string"/>
+     <element name="PASSWORD_USUARIO" type="xsd:string"/>
+     <element name="TITULO_ES" type="xsd:string"/>
+     <element name="TITULO_VA" type="xsd:string"/>
+	 <element name="COD_ORGANISMO" type="xsd:string"/>
+     <element name="DESCRIPCION_ES" type="xsd:string"/>
+     <element name="DESCRIPCION_VA" type="xsd:string"/>
+     <element name="AREA_PROCEDENCIA" type="xsd:string"/>
+     <element name="ORGANISMO_EXTERNO" type="xsd:string"/>
+     <element name="TIPO_ANUNCIO" type="xsd:string"/>
+     <element name="NUM_EXP" type="xsd:string"/>
+     <element name="NOMBRE_ADJUNTO" type="xsd:string"/>
+     <element name="DOC_ADJUNTO" type="xsd:string"/>
+     <element name="FECHA_PUBLICACION" type="xsd:string"/>
+     <element name="DIAS_PUBLICACION" type="xsd:integer"/>
+    </sequence>
+   </complexType>
+      <complexType name="cancelarSolicitudRequest">
+    <sequence>
+     <element name="NOMBRE_USUARIO" type="xsd:string"/>
+     <element name="PASSWORD_USUARIO" type="xsd:string"/>
+     <element name="ID_ANUNCIO" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="publicarRequest" type="impl:solicitudRequest"/>
+   <complexType name="typeError">
+    <sequence>
+     <element name="COD_ERROR" type="xsd:string"/>
+     <element name="DESCRIPCION_ES" type="xsd:string"/>
+     <element name="DESCRIPCION_VA" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="publicarResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="idAnuncio" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="instanciaSolicitud" type="impl:typeError"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="solicitarPublicacionRequest" type="impl:solicitudRequest"/>
+   <element name="solicitarPublicacionResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="idAnuncio" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="instanciaSolicitud" type="impl:typeError"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="cancelarSolicitudPublicacionRequest" type="impl:cancelarSolicitudRequest"/>
+   <element name="cancelarSolicitudPublicacionResponse" >
+    <complexType>
+     <sequence>
+	 <element maxOccurs="unbounded" name="correcto" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="instanciaSolicitud" type="impl:typeError"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="publicarAnuncioRequest">
+
+      <wsdl:part element="intf:publicarRequest" name="publicarRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="solicitarPublicacionAnuncioResponse">
+
+      <wsdl:part element="intf:solicitarPublicacionResponse" name="solicitarPublicacionResponse"/>
+
+   </wsdl:message>
+
+   
+   <wsdl:message name="cancelarSolicitudPublicacionAnuncioResponse">
+
+      <wsdl:part element="intf:cancelarSolicitudPublicacionResponse" name="cancelarSolicitudPublicacionResponse"/>
+
+   </wsdl:message>
+   
+   <wsdl:message name="publicarAnuncioResponse">
+
+      <wsdl:part element="intf:publicarResponse" name="publicarResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="solicitarPublicacionAnuncioRequest">
+
+      <wsdl:part element="intf:solicitarPublicacionRequest" name="solicitarPublicacionRequest"/>
+
+   </wsdl:message>
+
+      <wsdl:message name="cancelarSolicitudPublicacionAnuncioRequest">
+
+      <wsdl:part element="intf:cancelarSolicitudPublicacionRequest" name="cancelarSolicitudPublicacionRequest"/>
+
+   </wsdl:message>
+   <wsdl:portType name="AnuncioService">
+
+      <wsdl:operation name="publicarAnuncio" parameterOrder="publicarRequest">
+
+         <wsdl:input message="intf:publicarAnuncioRequest" name="publicarAnuncioRequest"/>
+
+         <wsdl:output message="intf:publicarAnuncioResponse" name="publicarAnuncioResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="solicitarPublicacionAnuncio" parameterOrder="solicitarPublicacionRequest">
+
+         <wsdl:input message="intf:solicitarPublicacionAnuncioRequest" name="solicitarPublicacionAnuncioRequest"/>
+
+         <wsdl:output message="intf:solicitarPublicacionAnuncioResponse" name="solicitarPublicacionAnuncioResponse"/>
+
+      </wsdl:operation>
+	  
+	  <wsdl:operation name="cancelarSolicitudPublicacionAnuncio" parameterOrder="cancelarSolicitudPublicacionRequest">
+
+         <wsdl:input message="intf:cancelarSolicitudPublicacionAnuncioRequest" name="cancelarSolicitudPublicacionAnuncioRequest"/>
+
+         <wsdl:output message="intf:cancelarSolicitudPublicacionAnuncioResponse" name="cancelarSolicitudPublicacionAnuncioResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="AnuncioServiceSoapBinding" type="intf:AnuncioService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="publicarAnuncio">
+
+         <wsdlsoap:operation soapAction="http://ttdev.com/ss/publicarAnuncio"/>
+
+         <wsdl:input name="publicarAnuncioRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="publicarAnuncioResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="solicitarPublicacionAnuncio">
+
+         <wsdlsoap:operation soapAction="http://ttdev.com/ss/solicitarPublicacionAnuncio"/>
+
+         <wsdl:input name="solicitarPublicacionAnuncioRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="solicitarPublicacionAnuncioResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+	  
+	  <wsdl:operation name="cancelarSolicitudPublicacionAnuncio">
+
+         <wsdlsoap:operation soapAction="http://ttdev.com/ss/cancelarSolicitudPublicacionAnuncio"/>
+
+         <wsdl:input name="cancelarSolicitudPublicacionAnuncioRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="cancelarSolicitudPublicacionAnuncioResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="AnuncioService">
+
+      <wsdl:port binding="intf:AnuncioServiceSoapBinding" name="AnuncioService">
+
+         <wsdlsoap:address location="http://webgesdes.uv.es/uvTaeWeb/services/AnuncioService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+<!--	Definimos el listado de verificadores que implementan IVerificaService	-->
+
+	<bean id="CSVMule"
+		class="es.novasoft.castellon.vfe.verificar.ws.CSVMuleVerificaService" singleton="false">
+		<constructor-arg value="(\w{8})-(\w{8})-(\w{8})-(\w{7})" />
+		<constructor-arg value="http://mule.dipcas.es:80/services/GetDocumentCsvSN" />
+		<property name="endpointCreacionCSV" value="http://mule.dipcas.es:80/services/CreateDocumentCsvSN" />
+		<property name="extensionFirma" value="xml" />
+	</bean>
+	
+	<bean id="CSVLocal"
+		class="es.novasoft.castellon.vfe.verificar.ws.LocalVerificaService"  singleton="false">
+		<constructor-arg value="(\w{8})-(\w{8})-(\w{8})-(\w{7})" />
+		<property name="extensionFirma" value="xml" />
+	</bean>
+
+	<bean id="PFirma"
+		class="es.novasoft.castellon.vfe.verificar.ws.PFirmaVerificaService"  singleton="false">
+		<constructor-arg value="(\w{22})==" />
+		<constructor-arg value="http://preeadminweb.dipcas.es/pfirmav2/services/PfServicioWS" />
+		<property name="key" value="0x81,0x98,0xD9,0x49,0x17,0x00,0xD6,0xD7,0x24,0xD6,0x52,0x69,0x6E,0x6E,0x4C,0x17,0xDD,0x83,0xB8,0x55,0xEC,0x67,0x42,0xA0" />
+		<property name="extensionFirma" value="xml" />
+	</bean>
+
+<!--	Definimos el listado de verificadores que utilizara la aplicacion	-->
+	<bean id="verificadoresList"
+		class="org.springframework.beans.factory.config.ListFactoryBean">
+		<property name="sourceList">
+			<list>
+				<ref bean="CSVLocal" />
+				<ref bean="PFirma" />
+			</list>
+		</property>
+	</bean>
+</beans> 
+
+
+

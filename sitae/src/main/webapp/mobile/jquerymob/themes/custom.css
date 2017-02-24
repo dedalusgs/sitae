@@ -1,0 +1,13 @@
+ul.listaResponsive  {
+    width: 100%;
+    margin:0;padding:0; /* CSS Reset */
+    max-width: 1000px; /* restrict the width */
+    margin: auto; /* center it */
+}
+ul.listaResponsive  li {
+    width: 33.3333%;
+    float:left; /* squish them together */
+    list-style-type: none; /* remove the dots */
+    display:inline-block; /* IMPORTANT */
+    min-width: 300px;
+}

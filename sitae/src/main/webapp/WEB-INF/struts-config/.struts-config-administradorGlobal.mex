@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/AltaOrganismoFrontAction.do" location="828,175" dimension="392,88" />
+  <StrutsActivity path="/AltaOrganismoDo.do" location="213,175" dimension="379,88" />
+  <StrutsActivity path="/AltaAdmLocalFrontAction.do" location="50,750" dimension="386,88" />
+  <StrutsActivity path="/AltaAdmLocalDo.do" location="650,750" dimension="373,88" />
+  <StrutsActivity path="/BajaAdmLocalDo.do" location="650,550" dimension="373,88" />
+  <StrutsActivity path="/BajaOrganismoDo.do" location="1250,550" dimension="457,88" />
+  <StrutsActivity path="/ModificarAdmLocalFrontAction.do" location="1250,750" dimension="502,88" />
+  <StrutsActivity path="/ModificarAdmLocalDo.do" location="1250,950" dimension="489,88" />
+  <StrutsActivity path="/AsignarOrganismosAdmLocalDo.do" location="1850,750" dimension="538,88" />
+  <StrutsActivity path="/ModificarOrganismoFrontAction.do" location="50,1150" dimension="514,88" />
+  <StrutsActivity path="/ModificarOrganismoDo.do" location="650,1150" dimension="501,88" />
+  <StrutsActivity path="/VisualizarAdmLocalFrontAction.do" location="1850,550" dimension="515,88" />
+  <StrutsActivity path="/VisualizarOrganismoFrontAction.do" location="1850,950" dimension="521,88" />
+  <StrutsActivity path="/MuestraInformacionUsuarioAdmLocalFrontAction.do" location="1550,1550" dimension="590,88" />
+  <StrutsActivity path="/MuestraInformacionOrganismoFrontAction.do" location="1850,150" dimension="620,88" />
+  <StrutsActivity path="/VisualizarOrganismoExternoFrontAction.do" location="1250,1750" dimension="521,88" />
+  <StrutsActivity path="/MuestraInformacionOrganismoExternoFrontAction.do" location="1850,1750" dimension="620,88" />
+  <StrutsActivity path="/AltaOrganismoExternoFrontAction.do" location="650,1850" dimension="465,88" />
+  <StrutsActivity path="/AltaOrganismoExternoDo.do" location="50,1950" dimension="452,88" />
+  <StrutsActivity path="/ModificarOrganismoExternoFrontAction.do" location="2150,1950" dimension="514,88" />
+  <StrutsActivity path="/ModificarOrganismoExternoDo.do" location="1550,2050" dimension="501,88" />
+  <StrutsActivity path="/BajaOrganismoExternoDo.do" location="2150,350" dimension="533,88" />
+  <StrutsActivity path="adminGlobal.altaOrg.solicitud" location="940,363" dimension="168,49" />
+  <StrutsActivity path="/AltaOrganismoFront" location="711,363" dimension="129,49" />
+  <StrutsActivity path="adminGlobal.altaOrg.error" location="457,363" dimension="154,49" />
+  <StrutsActivity path=" " location="650,150" dimension="32,49" />
+  <StrutsActivity path="adminGlobal.altaOrg.correcto" location="187,363" dimension="170,49" />
+  <StrutsActivity path="adminGlobal.altaAdmLocal.solicitud" location="350,1050" dimension="195,49" />
+  <StrutsActivity path="/AltaAdmLocalFront" location="50,1050" dimension="123,49" />
+  <StrutsActivity path="adminGlobal.altaAdmLocal.error" location="650,1050" dimension="181,49" />
+  <StrutsActivity path="adminGlobal.altaAdmLocal.correcto" location="950,1050" dimension="197,49" />
+  <StrutsActivity path="adminGlobal.bajaAdmLocal.error2" location="1250,1650" dimension="190,49" />
+  <StrutsActivity path="adminGlobal.bajaAdmLocal.correcto" location="950,950" dimension="200,49" />
+  <StrutsActivity path="adminGlobal.bajaAdmLocal.error" location="650,950" dimension="184,49" />
+  <StrutsActivity path="adminGlobal.bajaOrganismo.error2" location="650,1750" dimension="196,49" />
+  <StrutsActivity path="adminGlobal.bajaOrganismo.correcto" location="1550,1250" dimension="206,49" />
+  <StrutsActivity path="adminGlobal.bajaOrganismo.error" location="1250,1250" dimension="190,49" />
+  <StrutsActivity path="adminGlobal.modificarAdmLocal.solicitud" location="50,1350" dimension="220,49" />
+  <StrutsActivity path="adminGlobal.modificarAdmLocal.error" location="650,1350" dimension="206,49" />
+  <StrutsActivity path="adminGlobal.modificarAdmLocal.correcto" location="950,1350" dimension="222,49" />
+  <StrutsActivity path="adminGlobal.modificarAdmLocal.error2" location="950,1750" dimension="212,49" />
+  <StrutsActivity path="adminGlobal.modificarOrganismo.solicitud" location="1250,1350" dimension="226,49" />
+  <StrutsActivity path="/ModificarOrganismoFront" location="1550,1350" dimension="153,49" />
+  <StrutsActivity path="adminGlobal.modificarOrganismo.error" location="50,1450" dimension="212,49" />
+  <StrutsActivity path="adminGlobal.modificarOrganismo.correcto" location="350,1450" dimension="228,49" />
+  <StrutsActivity path="adminGlobal.visualizarAdmLocales.solicitud" location="950,1450" dimension="232,49" />
+  <StrutsActivity path="/VisualizarAdmLocalFront" location="1250,1450" dimension="148,49" />
+  <StrutsActivity path="adminGlobal.visualizarOrganismos.solicitud" location="1550,1450" dimension="232,49" />
+  <StrutsActivity path="/VisualizarOrganismoFront" location="1850,1450" dimension="154,49" />
+  <StrutsActivity path="adminGlobal.muestraInformacionUsuario.solicitud" location="50,1650" dimension="264,49" />
+  <StrutsActivity path="adminGlobal.muestraInformacionOrganismo.solicitud" location="650,1650" dimension="279,49" />
+  <StrutsActivity path="adminGlobal.visualizarOrganismosExternos.solicitud" location="2150,1250" dimension="275,49" />
+  <StrutsActivity path="adminGlobal.visualizarOrganismosExternos.error" location="2150,1350" dimension="261,49" />
+  <StrutsActivity path="adminGlobal.muestraInformacionOrganismoExterno.solicitud" location="2150,1450" dimension="317,49" />
+  <StrutsActivity path="adminGlobal.muestraInformacionOrganismoExterno.error" location="50,1850" dimension="303,49" />
+  <StrutsActivity path="adminGlobal.altaOrganismoExterno.solicitud" location="1250,1950" dimension="239,49" />
+  <StrutsActivity path="adminGlobal.altaOrganismoExterno.error" location="1550,1950" dimension="225,49" />
+  <StrutsActivity path="adminGlobal.altaOrganismoExterno.correcto" location="1850,1950" dimension="241,49" />
+  <StrutsActivity path="adminGlobal.modificarOrganismoExterno.solicitud" location="650,2050" dimension="264,49" />
+  <StrutsActivity path="adminGlobal.modificarOrganismoExterno.error" location="1250,2050" dimension="250,49" />
+  <StrutsActivity path="adminGlobal.modificarOrganismoExterno.correcto" location="50,2150" dimension="266,49" />
+  <StrutsActivity path="adminGlobal.bajaOrganismoExterno.error2" location="2450,850" dimension="234,49" />
+  <StrutsActivity path="adminGlobal.bajaOrganismoExterno.correcto" location="2450,950" dimension="244,49" />
+  <StrutsActivity path="adminGlobal.bajaOrganismoExterno.error" location="2450,1050" dimension="228,49" />
+  <StrutsActivity path="/ModificarAdmLocalFront" location="350,1350" dimension="147,49" />
+  <StrutsActivity path="adminGlobal.asignarOrganismosAdmLocal.solicitud" location="1850,1150" dimension="268,49" />
+  <StrutsActivity path="/asignarOrganismosAdmLocalFront" location="1850,1250" dimension="195,49" />
+  <StrutsActivity path="adminGlobal.asignarOrganismosAdmLocal.error" location="50,1750" dimension="254,49" />
+  <StrutsActivity path="/BajaAdmLocalFront" location="350,950" dimension="125,49" />
+  <StrutsActivity path="/BajaOrganismoFront" location="1550,1150" dimension="131,49" />
+  <StrutsActivity path="adminGlobal.visualizarAdmLocales.error" location="650,1450" dimension="218,49" />
+  <StrutsActivity path="adminGlobal.visualizarOrganismos.error" location="50,1550" dimension="218,49" />
+  <StrutsActivity path="/BajaAdmLocalFrontAction" location="50,550" dimension="388,88" />
+  <StrutsActivity path="adminGlobal.bajaAdmLocal.solicitud" location="50,950" dimension="198,49" />
+  <StrutsActivity path="adminGlobal.visualizarAdmLocales.correcto" location="1850,1350" dimension="234,49" />
+  <StrutsActivity path="/jsp/sitae/adminGlobal/visualizarOrganismos/formulario.jsp" location="950,1550" dimension="309,49" />
+  <StrutsActivity path="adminGlobal.altaAdmLocal.errorExistencia" location="650,1550" dimension="229,49" />
+  <StrutsActivity path="/BajaOrganismoFrontAction" location="1550,350" dimension="470,88" />
+  <StrutsActivity path="adminGlobal.bajaOrganismo.solicitud" location="1250,1150" dimension="204,49" />
+  <StrutsActivity path="adminGlobal.visualizarOrganismos.correcto" location="350,1550" dimension="234,49" />
+  <StrutsActivity path="extranet.conoba.error" location="1208,363" dimension="138,49" />
+  <StrutsActivity path="errorAcceso" location="0,363" dimension="87,49" />
+  <StrutsActivity path="adminGlobal.muestraInformacionOrganismo.error" location="2450,1150" dimension="265,49" />
+  <StrutsTransition id="/ModificarAdmLocalFrontAction.do,null,/ModificarAdmLocalDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1531,838" />
+      <AbsolutePoint location="1531,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaOrganismoDo.do,success,adminGlobal.altaOrg.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="342,263" />
+      <AbsolutePoint location="342,363" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/BajaAdmLocalDo.do,failure2,adminGlobal.bajaAdmLocal.error2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="836,594" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AsignarOrganismosAdmLocalDo.do,failure2,adminGlobal.modificarAdmLocal.error2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2388,764" />
+      <AbsolutePoint location="2914,764" />
+      <AbsolutePoint location="2914,2144" />
+      <AbsolutePoint location="1130,2144" />
+      <AbsolutePoint location="1130,1799" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarOrganismoDo.do,success,adminGlobal.modificarOrganismo.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,1224" />
+      <AbsolutePoint location="626,1224" />
+      <AbsolutePoint location="626,1474" />
+      <AbsolutePoint location="578,1474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/VisualizarOrganismoExternoFrontAction.do,failure,adminGlobal.visualizarOrganismosExternos.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1540,1838" />
+      <AbsolutePoint location="1540,1904" />
+      <AbsolutePoint location="2674,1904" />
+      <AbsolutePoint location="2674,1374" />
+      <AbsolutePoint location="2411,1374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/VisualizarAdmLocalFrontAction.do,cancel,/VisualizarAdmLocalFront,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2365,624" />
+      <AbsolutePoint location="2854,624" />
+      <AbsolutePoint location="2854,1665" />
+      <AbsolutePoint location="1455,1665" />
+      <AbsolutePoint location="1455,1474" />
+      <AbsolutePoint location="1398,1474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarAdmLocalDo.do,failure,adminGlobal.modificarAdmLocal.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1524,1038" />
+      <AbsolutePoint location="1524,1414" />
+      <AbsolutePoint location="753,1414" />
+      <AbsolutePoint location="753,1399" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/BajaAdmLocalDo.do,success,adminGlobal.bajaAdmLocal.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1023,594" />
+      <AbsolutePoint location="1050,594" />
+      <AbsolutePoint location="1050,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/MuestraInformacionUsuarioAdmLocalFrontAction.do,success,adminGlobal.muestraInformacionUsuario.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1845,1638" />
+      <AbsolutePoint location="1845,1714" />
+      <AbsolutePoint location="182,1714" />
+      <AbsolutePoint location="182,1699" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarOrganismoFrontAction.do,success,adminGlobal.modificarOrganismo.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="299,1238" />
+      <AbsolutePoint location="299,1614" />
+      <AbsolutePoint location="1413,1614" />
+      <AbsolutePoint location="1413,1399" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarOrganismoDo.do,failure,adminGlobal.modificarOrganismo.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="900,1238" />
+      <AbsolutePoint location="900,1514" />
+      <AbsolutePoint location="156,1514" />
+      <AbsolutePoint location="156,1499" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/VisualizarOrganismoFrontAction.do,cancel,/VisualizarOrganismoFront,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2140,1038" />
+      <AbsolutePoint location="2140,1474" />
+      <AbsolutePoint location="2004,1474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/BajaAdmLocalDo.do,failure,adminGlobal.bajaAdmLocal.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,624" />
+      <AbsolutePoint location="520,624" />
+      <AbsolutePoint location="520,974" />
+      <AbsolutePoint location="650,974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaOrganismoDo.do,errorAcceso, ,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="592,184" />
+      <AbsolutePoint location="650,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarOrganismoExternoDo.do,success,adminGlobal.modificarOrganismoExterno.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1800,2138" />
+      <AbsolutePoint location="1800,2174" />
+      <AbsolutePoint location="316,2174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaOrganismoFrontAction.do,null,/AltaOrganismoDo.do,2" routingType="1">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="828,219" />
+      <AbsolutePoint location="592,219" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaAdmLocalFrontAction.do,success,adminGlobal.altaAdmLocal.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="263,838" />
+      <AbsolutePoint location="263,1074" />
+      <AbsolutePoint location="350,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/VisualizarOrganismoExternoFrontAction.do,success,adminGlobal.visualizarOrganismosExternos.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1696,1838" />
+      <AbsolutePoint location="1696,1874" />
+      <AbsolutePoint location="2794,1874" />
+      <AbsolutePoint location="2794,1274" />
+      <AbsolutePoint location="2425,1274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/BajaOrganismoExternoDo.do,failure,adminGlobal.bajaOrganismoExterno.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/BajaOrganismoDo.do,failure,adminGlobal.bajaOrganismo.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,594" />
+      <AbsolutePoint location="1223,594" />
+      <AbsolutePoint location="1223,1274" />
+      <AbsolutePoint location="1250,1274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarOrganismoFrontAction.do,cancel,/ModificarOrganismoFront,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="321,1238" />
+      <AbsolutePoint location="321,1306" />
+      <AbsolutePoint location="1626,1306" />
+      <AbsolutePoint location="1626,1350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaAdmLocalDo.do,success,adminGlobal.altaAdmLocal.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="922,838" />
+      <AbsolutePoint location="922,1074" />
+      <AbsolutePoint location="950,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AsignarOrganismosAdmLocalDo.do,success,/ModificarAdmLocalFrontAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1850,764" />
+      <AbsolutePoint location="1752,764" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaOrganismoDo.do,cancel,/AltaOrganismoFront,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="592,249" />
+      <AbsolutePoint location="775,249" />
+      <AbsolutePoint location="775,363" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/BajaOrganismoDo.do,success,adminGlobal.bajaOrganismo.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1707,594" />
+      <AbsolutePoint location="1797,594" />
+      <AbsolutePoint location="1797,1274" />
+      <AbsolutePoint location="1756,1274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaAdmLocalDo.do,failure,adminGlobal.altaAdmLocal.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="849,838" />
+      <AbsolutePoint location="849,1052" />
+      <AbsolutePoint location="831,1052" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaOrganismoFrontAction.do,cancel,/AltaOrganismoFront,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="828,249" />
+      <AbsolutePoint location="805,249" />
+      <AbsolutePoint location="805,363" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarAdmLocalFrontAction.do,null,/AsignarOrganismosAdmLocalDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1752,794" />
+      <AbsolutePoint location="1850,794" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarOrganismoDo.do,cancel,/ModificarOrganismoFront,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1151,1224" />
+      <AbsolutePoint location="1827,1224" />
+      <AbsolutePoint location="1827,1374" />
+      <AbsolutePoint location="1703,1374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaOrganismoExternoFrontAction.do,null,/AltaOrganismoExternoDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="882,1938" />
+      <AbsolutePoint location="882,1954" />
+      <AbsolutePoint location="502,1954" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaOrganismoExternoFrontAction.do,success,adminGlobal.altaOrganismoExterno.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1115,1904" />
+      <AbsolutePoint location="1369,1904" />
+      <AbsolutePoint location="1369,1950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarAdmLocalFrontAction.do,failure,adminGlobal.modificarAdmLocal.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1531,750" />
+      <AbsolutePoint location="1531,654" />
+      <AbsolutePoint location="-15,654" />
+      <AbsolutePoint location="-15,1414" />
+      <AbsolutePoint location="723,1414" />
+      <AbsolutePoint location="723,1399" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaOrganismoDo.do,failure,adminGlobal.altaOrg.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="472,263" />
+      <AbsolutePoint location="472,363" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/BajaOrganismoExternoDo.do,success,adminGlobal.bajaOrganismoExterno.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaAdmLocalFrontAction.do,failure,adminGlobal.altaAdmLocal.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="436,824" />
+      <AbsolutePoint location="599,824" />
+      <AbsolutePoint location="599,1074" />
+      <AbsolutePoint location="650,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaAdmLocalDo.do,success2,adminGlobal.altaAdmLocal.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="836,794" />
+      <AbsolutePoint location="447,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarOrganismoFrontAction.do,failure,adminGlobal.modificarOrganismo.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1194" />
+      <AbsolutePoint location="-45,1194" />
+      <AbsolutePoint location="-45,1474" />
+      <AbsolutePoint location="50,1474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarOrganismoExternoFrontAction.do,success,adminGlobal.modificarOrganismoExterno.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2407,2038" />
+      <AbsolutePoint location="2407,2414" />
+      <AbsolutePoint location="782,2414" />
+      <AbsolutePoint location="782,2099" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/BajaOrganismoExternoDo.do,failure2,adminGlobal.bajaOrganismoExterno.error2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/VisualizarAdmLocalFrontAction.do,success,adminGlobal.visualizarAdmLocales.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2365,594" />
+      <AbsolutePoint location="3004,594" />
+      <AbsolutePoint location="3004,1514" />
+      <AbsolutePoint location="1066,1514" />
+      <AbsolutePoint location="1066,1499" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarOrganismoExternoDo.do,failure,adminGlobal.modificarOrganismoExterno.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1550,2084" />
+      <AbsolutePoint location="1500,2084" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaOrganismoFrontAction.do,success,adminGlobal.altaOrg.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1054,263" />
+      <AbsolutePoint location="1054,363" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AsignarOrganismosAdmLocalDo.do,failure,adminGlobal.modificarAdmLocal.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2386,838" />
+      <AbsolutePoint location="2386,1114" />
+      <AbsolutePoint location="599,1114" />
+      <AbsolutePoint location="599,1374" />
+      <AbsolutePoint location="650,1374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/BajaOrganismoDo.do,failure2,adminGlobal.bajaOrganismo.error2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1478,638" />
+      <AbsolutePoint location="1478,714" />
+      <AbsolutePoint location="-150,714" />
+      <AbsolutePoint location="-150,1814" />
+      <AbsolutePoint location="748,1814" />
+      <AbsolutePoint location="748,1799" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaOrganismoExternoFrontAction.do,failure,adminGlobal.altaOrganismoExterno.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1115,1874" />
+      <AbsolutePoint location="1662,1874" />
+      <AbsolutePoint location="1662,1950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarAdmLocalDo.do,success,adminGlobal.modificarAdmLocal.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,984" />
+      <AbsolutePoint location="1166,984" />
+      <AbsolutePoint location="1166,1350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaOrganismoExternoDo.do,success,adminGlobal.altaOrganismoExterno.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="502,2014" />
+      <AbsolutePoint location="1970,2014" />
+      <AbsolutePoint location="1970,1999" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarOrganismoDo.do,errorAcceso, ,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="892,1150" />
+      <AbsolutePoint location="892,854" />
+      <AbsolutePoint location="472,854" />
+      <AbsolutePoint location="472,483" />
+      <AbsolutePoint location="666,483" />
+      <AbsolutePoint location="666,199" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaAdmLocalFrontAction.do,null,/AltaAdmLocalDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="436,794" />
+      <AbsolutePoint location="650,794" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarOrganismoFrontAction.do,null,/ModificarOrganismoDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="564,1194" />
+      <AbsolutePoint location="650,1194" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaOrganismoFrontAction.do,failure,adminGlobal.altaOrg.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1024,263" />
+      <AbsolutePoint location="1024,309" />
+      <AbsolutePoint location="534,309" />
+      <AbsolutePoint location="534,363" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/MuestraInformacionOrganismoExternoFrontAction.do,failure,adminGlobal.muestraInformacionOrganismoExterno.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2135,1838" />
+      <AbsolutePoint location="2135,2234" />
+      <AbsolutePoint location="-225,2234" />
+      <AbsolutePoint location="-225,1874" />
+      <AbsolutePoint location="50,1874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/VisualizarOrganismoFrontAction.do,failure,adminGlobal.visualizarOrganismos.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1850,994" />
+      <AbsolutePoint location="1827,994" />
+      <AbsolutePoint location="1827,513" />
+      <AbsolutePoint location="-300,513" />
+      <AbsolutePoint location="-300,1574" />
+      <AbsolutePoint location="50,1574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaOrganismoExternoDo.do,failure,adminGlobal.altaOrganismoExterno.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="502,1984" />
+      <AbsolutePoint location="1217,1984" />
+      <AbsolutePoint location="1217,1934" />
+      <AbsolutePoint location="1632,1934" />
+      <AbsolutePoint location="1632,1950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/VisualizarOrganismoFrontAction.do,success,adminGlobal.visualizarOrganismos.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2121,1038" />
+      <AbsolutePoint location="2121,1414" />
+      <AbsolutePoint location="1666,1414" />
+      <AbsolutePoint location="1666,1450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarOrganismoExternoFrontAction.do,failure,adminGlobal.modificarOrganismoExterno.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2377,2038" />
+      <AbsolutePoint location="2377,2504" />
+      <AbsolutePoint location="1375,2504" />
+      <AbsolutePoint location="1375,2099" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/MuestraInformacionOrganismoFrontAction.do,success,adminGlobal.muestraInformacionOrganismo.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/MuestraInformacionOrganismoFrontAction.do,failure,adminGlobal.muestraInformacionOrganismo.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2470,194" />
+      <AbsolutePoint location="2709,194" />
+      <AbsolutePoint location="2709,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarAdmLocalFrontAction.do,success,adminGlobal.modificarAdmLocal.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1501,838" />
+      <AbsolutePoint location="1501,913" />
+      <AbsolutePoint location="15,913" />
+      <AbsolutePoint location="15,1374" />
+      <AbsolutePoint location="50,1374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AltaAdmLocalFrontAction.do,cancel,/AltaAdmLocalFront,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,794" />
+      <AbsolutePoint location="-75,794" />
+      <AbsolutePoint location="-75,1074" />
+      <AbsolutePoint location="50,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/MuestraInformacionOrganismoExternoFrontAction.do,success,adminGlobal.muestraInformacionOrganismoExterno.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2170,1750" />
+      <AbsolutePoint location="2170,1499" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarOrganismoExternoFrontAction.do,null,/ModificarOrganismoExternoDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2437,2038" />
+      <AbsolutePoint location="2437,2064" />
+      <AbsolutePoint location="2051,2064" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

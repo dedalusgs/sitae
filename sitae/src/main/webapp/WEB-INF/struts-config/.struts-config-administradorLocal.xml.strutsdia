@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM ID="#ModificarUsuariosFirmantesFrontAction"
+  NAME="action0" PATH="/ModificarUsuariosFirmantesFrontAction"
+  SHAPE="32,17,0,0" TITLE="ModificarUsuariosFirmantesForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.modificarUsuariosFirmantes.error" TARGET="page0"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="adminLocal.modificarUsuariosFirmantes.solicitud" TARGET="page1"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#CrearUsuariosFirmantesFrontAction" NAME="action1"
+  PATH="/CrearUsuariosFirmantesFrontAction" SHAPE="32,417,0,0"
+  TITLE="CrearUsuariosFirmantesForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="adminLocal.crearUsuariosFirmantes.solicitud" TARGET="page2"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#ModificarTiposEdictosFrontAction" NAME="action2"
+  PATH="/ModificarTiposEdictosFrontAction" SHAPE="32,817,0,0"
+  TITLE="ModificarTiposEdictosForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.modificarTiposEdictos.error" TARGET="page3"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="adminLocal.modificarTiposEdictos.solicitud" TARGET="page4"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#VisualizarCentroFrontAction" NAME="action3"
+  PATH="/VisualizarCentroFrontAction" SHAPE="32,1217,0,0"
+  TITLE="VisualizarCentroForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="cancel" NAME="forward0"
+   PATH="/VisualizarCentroFront" TARGET="action52" TITLE="cancel"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="adminLocal.visualizarCentroProcedencia.solicitud"
+   TARGET="page5" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#CallBackFacebook" NAME="action4"
+  PATH="/CallBackFacebook" SHAPE="32,1473,0,0" TITLE="CallBackFacebook"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.callbackFacebook.error" TARGET="page6"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success3" NAME="forward1"
+   PATH="adminLocal.callbackFacebook.correcto3" TARGET="page7"
+   TITLE="success3" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success2" NAME="forward2"
+   PATH="adminLocal.callbackFacebook.correcto2" TARGET="page8"
+   TITLE="success2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward3"
+   PATH="adminLocal.callbackFacebook.correcto1" TARGET="page9"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#CrearUsuariosExternosDo" NAME="action5"
+  PATH="/CrearUsuariosExternosDo" SHAPE="32,2017,0,0"
+  TITLE="CrearUsuariosForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.crearUsuariosExternos.error" TARGET="page10"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="adminLocal.crearUsuariosExternos.correcto" TARGET="page11"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#ModificarUsuariosExternosDo" NAME="action6"
+  PATH="/ModificarUsuariosExternosDo" SHAPE="32,2417,0,0"
+  TITLE="ModificarUsuariosForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.modificarUsuariosExternos.error" TARGET="page12"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success3" NAME="forward1"
+   PATH="/ModificarUsuariosExternosFrontAction.do" TARGET="action28"
+   TITLE="success3" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success2" NAME="forward2"
+   PATH="adminLocal.modificarUsuariosExternos.correcto2" TARGET="page13"
+   TITLE="success2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward3"
+   PATH="adminLocal.modificarUsuariosExternos.correcto" TARGET="page14"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#ModificarFestivoFrontAction" NAME="action7"
+  PATH="/ModificarFestivoFrontAction" SHAPE="32,3345,0,0"
+  TITLE="ModificarFestivoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.modificarFestivo.error" TARGET="page15"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="cancel" NAME="forward1"
+   PATH="/VisualizarFestivoFrontAction.do" TARGET="action51"
+   TITLE="cancel" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward2"
+   PATH="adminLocal.modificarFestivo.solicitud" TARGET="page16"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#ModificarCentroFrontAction" NAME="action8"
+  PATH="/ModificarCentroFrontAction" SHAPE="32,3937,0,0"
+  TITLE="ModificarCentroForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.modificarCentroProcedencia.error" TARGET="page17"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="cancel" NAME="forward1"
+   PATH="/ModificarCentroFront" TARGET="action53" TITLE="cancel"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward2"
+   PATH="adminLocal.modificarCentroProcedencia.solicitud"
+   TARGET="page18" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#VisualizarUsuariosFrontAction" NAME="action9"
+  PATH="/VisualizarUsuariosFrontAction" SHAPE="32,6033,0,0"
+  TITLE="VisualizarUsuariosForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="adminLocal.visualizarUsuarios.solicitud" TARGET="page19"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#AltaCentroFrontAction" NAME="action10"
+  PATH="/AltaCentroFrontAction" SHAPE="32,4641,0,0"
+  TITLE="AltaCentroForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.altaCentroProcedencia.error" TARGET="page20"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="cancel" NAME="forward1"
+   PATH="/AltaCentroFront" TARGET="action54" TITLE="cancel"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward2"
+   PATH="adminLocal.altaCentroProcedencia.solicitud" TARGET="page21"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#CancelarGooglePlusFront" NAME="action11"
+  PATH="/CancelarGooglePlusFront" SHAPE="32,6145,0,0"
+  TITLE="CancelarGooglePlusFront" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="adminLocal.cancelarGooglePlus.correcto" TARGET="page22"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#CancelarFacebookFront" NAME="action12"
+  PATH="/CancelarFacebookFront" SHAPE="32,6257,0,0"
+  TITLE="CancelarFacebookFront" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="adminLocal.cancelarFacebook.correcto" TARGET="page23"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#EstadisticasPublicacionLocDoAction" NAME="action13"
+  PATH="/EstadisticasPublicacionLocDoAction" SHAPE="32,6369,0,0"
+  TITLE="EstadisticasPublicacionForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.estadisticasPublicacion.error" TARGET="page24"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="adminLocal.estadisticasPublicacion.solicitud" TARGET="page25"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#CrearUsuariosFirmantesDo" NAME="action14"
+  PATH="/CrearUsuariosFirmantesDo" SHAPE="32,529,0,0"
+  TITLE="CrearUsuariosFirmantesForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.crearUsues.error" TARGET="page26" TITLE="failure"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success2" NAME="forward1"
+   PATH="adminLocal.crearUsuariosFirmantes.solicitud" TARGET="page2"
+   TITLE="success2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward2"
+   PATH="adminLocal.crearUsuariosFirmantes.correcto" TARGET="page27"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#CancelarTwitterFront" NAME="action15"
+  PATH="/CancelarTwitterFront" SHAPE="32,6657,0,0"
+  TITLE="CancelarTwitterFront" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="adminLocal.cancelarTwitter.correcto" TARGET="page28"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#ModificarUsuariosDo" NAME="action16"
+  PATH="/ModificarUsuariosDo" SHAPE="32,2801,0,0"
+  TITLE="ModificarUsuariosForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.modificarUsuarios.error" TARGET="page29"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success2" NAME="forward1"
+   PATH="adminLocal.modificarUsuarios.correcto2" TARGET="page30"
+   TITLE="success2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward2"
+   PATH="adminLocal.modificarUsuarios.correcto" TARGET="page31"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#ModificarUsuariosFirmantesDo" NAME="action17"
+  PATH="/ModificarUsuariosFirmantesDo" SHAPE="32,161,0,0"
+  TITLE="ModificarUsuariosFirmantesForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.modificarUsuariosFirmantes.error" TARGET="page0"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="adminLocal.modificarUsuariosFirmantes.correcto" TARGET="page32"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#ModificarFestivoDo" NAME="action18"
+  PATH="/ModificarFestivoDo" SHAPE="32,3521,0,0"
+  TITLE="ModificarFestivoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="errorAcceso" NAME="forward0" PATH=" "
+   TARGET="page33" TITLE="errorAcceso" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward1"
+   PATH="adminLocal.modificarFestivo.error" TARGET="page15"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="cancel" NAME="forward2"
+   PATH="/VisualizarFestivoFrontAction.do" TARGET="action51"
+   TITLE="cancel" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward3"
+   PATH="adminLocal.modificarFestivo.correcto" TARGET="page34"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#ModificarCentroDo" NAME="action19"
+  PATH="/ModificarCentroDo" SHAPE="32,3729,0,0"
+  TITLE="ModificarCentroForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="errorAcceso" NAME="forward0" PATH=" "
+   TARGET="page33" TITLE="errorAcceso" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward1"
+   PATH="adminLocal.modificarCentroProcedencia.error" TARGET="page17"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="cancel" NAME="forward2"
+   PATH="/ModificarCentroFront" TARGET="action55" TITLE="cancel"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward3"
+   PATH="adminLocal.modificarCentroProcedencia.correcto" TARGET="page35"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#CrearUsuariosDo" NAME="action20"
+  PATH="/CrearUsuariosDo" SHAPE="32,6769,0,0" TITLE="CrearUsuariosForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.crearUsuarios.error" TARGET="page36" TITLE="failure"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success2" NAME="forward1"
+   PATH="adminLocal.crearUsuarios.solicitud" TARGET="page37"
+   TITLE="success2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward2"
+   PATH="adminLocal.crearUsuarios.correcto" TARGET="page38"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#EstadisticasPublicacionLocFrontAction"
+  NAME="action21" PATH="/EstadisticasPublicacionLocFrontAction"
+  SHAPE="32,6513,0,0" TITLE="EstadisticasPublicacionForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.estadisticasPublicacion.error" TARGET="page24"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="adminLocal.estadisticasPublicacion.solicitud" TARGET="page25"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#AsignarCentrosUsuariosExternosDo" NAME="action22"
+  PATH="/AsignarCentrosUsuariosExternosDo" SHAPE="32,2625,0,0"
+  TITLE="AsignarCentrosUsuariosForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.modificarUsuarios.error" TARGET="page29"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="/ModificarUsuariosFrontAction.do" TARGET="action24"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#BajaUsuarioFirmanteDo" NAME="action23"
+  PATH="/BajaUsuarioFirmanteDo" SHAPE="32,7201,0,0"
+  TITLE="BajaUsuarioFirmanteForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.bajaUsuarioFirmante.error" TARGET="page39"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success2" NAME="forward1"
+   PATH="adminLocal.bajaUsuarioFirmante.correcto2" TARGET="page40"
+   TITLE="success2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward2"
+   PATH="adminLocal.bajaUsuarioFirmante.correcto" TARGET="page41"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#ModificarUsuariosFrontAction" NAME="action24"
+  PATH="/ModificarUsuariosFrontAction" SHAPE="288,2641,0,0"
+  TITLE="ModificarUsuariosForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.modificarUsuarios.error" TARGET="page29"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="successExterno" NAME="forward1"
+   PATH="adminLocal.modificarUsuariosExternos.solicitud" TARGET="page42"
+   TITLE="successExterno" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward2"
+   PATH="adminLocal.modificarUsuarios.solicitud" TARGET="page43"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#ConfigurarFacebookFront" NAME="action25"
+  PATH="/ConfigurarFacebookFront" SHAPE="32,7601,0,0"
+  TITLE="ConfigurarFacebookFront" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="adminLocal.configurarFacebook.correcto" TARGET="page44"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#VisualizarRedesFront" NAME="action26"
+  PATH="/VisualizarRedesFront" SHAPE="32,7713,0,0"
+  TITLE="VisualizarRedesFront" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.visualizarRedes.error" TARGET="page45"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="adminLocal.visualizarRedes.correcto" TARGET="page46"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#AsignarCentrosUsuariosDo" NAME="action27"
+  PATH="/AsignarCentrosUsuariosDo" SHAPE="32,2977,0,0"
+  TITLE="AsignarCentrosUsuariosForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.modificarUsuarios.error" TARGET="page29"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="/ModificarUsuariosFrontAction.do" TARGET="action24"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#ModificarUsuariosExternosFrontAction"
+  NAME="action28" PATH="/ModificarUsuariosExternosFrontAction"
+  SHAPE="288,2433,0,0" TITLE="ModificarUsuariosForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.modificarUsuariosExternos.error" TARGET="page12"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="adminLocal.modificarUsuariosExternos.solicitud" TARGET="page42"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#MuestraInformacionCentroFrontAction" NAME="action29"
+  PATH="/MuestraInformacionCentroFrontAction" SHAPE="32,7969,0,0"
+  TITLE="MuestraInformacionCentroForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="adminLocal.muestraInformacionCentroProcedencia.solicitud"
+   TARGET="page47" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#TwitterCallbackAction" NAME="action30"
+  PATH="/TwitterCallbackAction" SHAPE="32,8081,0,0"
+  TITLE="CallBackTwitter" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.callbackTwitter.error" TARGET="page48"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success2" NAME="forward1"
+   PATH="adminLocal.callbackTwitter.correcto2" TARGET="page49"
+   TITLE="success2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward2"
+   PATH="adminLocal.callbackTwitter.correcto" TARGET="page50"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#CopiarFestivoDoAction" NAME="action31"
+  PATH="/CopiarFestivoDoAction" SHAPE="32,8481,0,0"
+  TITLE="CopiarFestivoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.copiarFestivo.error" TARGET="page51" TITLE="failure"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="adminLocal.copiarFestivo.solicitud" TARGET="page52"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure2" NAME="forward2"
+   PATH="adminLocal.copiarFestivo.errorNoExistenDias" TARGET="page53"
+   TITLE="failure2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#CrearTiposEdictosFrontAction" NAME="action32"
+  PATH="/CrearTiposEdictosFrontAction" SHAPE="32,8881,0,0"
+  TITLE="CrearTiposEdictosForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.crearTiposEdictos.error" TARGET="page54"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="adminLocal.crearTiposEdictos.solicitud" TARGET="page55"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#ConfigurarGooglePlusFront" NAME="action33"
+  PATH="/ConfigurarGooglePlusFront" SHAPE="32,9281,0,0"
+  TITLE="ConfigurarGooglePlusFront" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="adminLocal.configurarGooglePlus.correcto" TARGET="page56"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success2" NAME="forward1"
+   PATH="adminLocal.configurarGooglePlus.correcto2" TARGET="page85"
+   TITLE="success2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward2"
+   PATH="adminLocal.configurarGooglePlus.error" TARGET="page86"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#AltaCentroDo" NAME="action34" PATH="/AltaCentroDo"
+  SHAPE="32,4113,0,0" TITLE="AltaCentroForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="errorAcceso" NAME="forward0" PATH=" "
+   TARGET="page33" TITLE="errorAcceso" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward1"
+   PATH="adminLocal.altaCentroProcedencia.error" TARGET="page20"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="cancel" NAME="forward2"
+   PATH="/AltaCentroFront" TARGET="action56" TITLE="cancel"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward3"
+   PATH="adminLocal.altaCentroProcedencia.correcto" TARGET="page57"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#BajaCentroDo" NAME="action35" PATH="/BajaCentroDo"
+  SHAPE="32,9393,0,0" TITLE="BajaCentroForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.bajaCentro.error" TARGET="page58" TITLE="failure"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="adminLocal.bajaCentro.correcto" TARGET="page59" TITLE="success"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#CrearTiposEdictosDo" NAME="action36"
+  PATH="/CrearTiposEdictosDo" SHAPE="32,9025,0,0"
+  TITLE="CrearTiposEdictosForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.crearTiposEdictos.error" TARGET="page54"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="adminLocal.crearTiposEdictos.correcto" TARGET="page60"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#AltaFestivoDo" NAME="action37" PATH="/AltaFestivoDo"
+  SHAPE="32,4321,0,0" TITLE="AltaFestivoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="errorAcceso" NAME="forward0" PATH=" "
+   TARGET="page33" TITLE="errorAcceso" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward1"
+   PATH="adminLocal.altaFestivo.error" TARGET="page61" TITLE="failure"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="cancel" NAME="forward2"
+   PATH="/VisualizarFestivoFrontAction.do" TARGET="action51"
+   TITLE="cancel" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward3"
+   PATH="adminLocal.altaFestivo.correcto" TARGET="page62"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#MuestraInformacionUsuarioFirmanteFrontAction"
+  NAME="action38" PATH="/MuestraInformacionUsuarioFirmanteFrontAction"
+  SHAPE="32,9649,0,0" TITLE="MuestraInformacionUsuarioFirmanteForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="adminLocal.muestraInformacionUsuariosFirmantes.solicitud"
+   TARGET="page63" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#ModificarTiposEdictosDo" NAME="action39"
+  PATH="/ModificarTiposEdictosDo" SHAPE="32,961,0,0"
+  TITLE="ModificarTiposEdictosForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.modificarTiposEdictos.error" TARGET="page3"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="adminLocal.modificarTiposEdictos.correcto" TARGET="page64"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#MuestraInformacionUsuarioFrontAction"
+  NAME="action40" PATH="/MuestraInformacionUsuarioFrontAction"
+  SHAPE="32,9761,0,0" TITLE="MuestraInformacionUsuarioForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="successExterno" NAME="forward0"
+   PATH="adminLocal.muestraInformacionUsuariosExternos.solicitud"
+   TARGET="page65" TITLE="successExterno" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="adminLocal.muestraInformacionUsuarios.solicitud"
+   TARGET="page66" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#CrearUsuariosExternosFrontAction" NAME="action41"
+  PATH="/CrearUsuariosExternosFrontAction" SHAPE="32,2161,0,0"
+  TITLE="CrearUsuariosForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.crearUsuariosExternos.error" TARGET="page10"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="adminLocal.crearUsuariosExternos.solicitud" TARGET="page67"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#VisualizarUsuariosFirmantesFrontAction"
+  NAME="action42" PATH="/VisualizarUsuariosFirmantesFrontAction"
+  SHAPE="32,10017,0,0" TITLE="VisualizarUsuariosFirmantesForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="adminLocal.visualizarUsuariosFirmantes.solicitud"
+   TARGET="page68" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#EliminarTiposEdictosDo" NAME="action43"
+  PATH="/EliminarTiposEdictosDo" SHAPE="32,10129,0,0"
+  TITLE="EliminarTiposEdictosForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.eliminarTiposEdictos.error" TARGET="page69"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="adminLocal.eliminarTiposEdictos.correcto" TARGET="page70"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#BajaUsuarioDo" NAME="action44" PATH="/BajaUsuarioDo"
+  SHAPE="32,10385,0,0" TITLE="BajaUsuarioForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.bajaUsuario.error" TARGET="page71" TITLE="failure"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success2" NAME="forward1"
+   PATH="adminLocal.bajaUsuario.correcto2" TARGET="page72"
+   TITLE="success2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward2"
+   PATH="adminLocal.bajaUsuario.correcto" TARGET="page73"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#AltaFestivoFrontAction" NAME="action45"
+  PATH="/AltaFestivoFrontAction" SHAPE="32,5265,0,0"
+  TITLE="AltaFestivoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.altaFestivo.error" TARGET="page61" TITLE="failure"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="cancel" NAME="forward1"
+   PATH="/VisualizarFestivoFrontAction.do" TARGET="action51"
+   TITLE="cancel" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward2"
+   PATH="adminLocal.altaFestivo.solicitud" TARGET="page74"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#VisualizarTiposEdictosFrontAction" NAME="action46"
+  PATH="/VisualizarTiposEdictosFrontAction" SHAPE="32,10785,0,0"
+  TITLE="VisualizarTiposEdictosForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="adminLocal.visualizarTiposEdictos.solicitud" TARGET="page75"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#ConfigurarTwitterFront" NAME="action47"
+  PATH="/ConfigurarTwitterFront" SHAPE="32,10897,0,0"
+  TITLE="ConfigurarTwitterFront" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.configurarTwitter.error" TARGET="page76"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success2" NAME="forward1"
+   PATH="adminLocal.configurarTwitter.correcto2" TARGET="page77"
+   TITLE="success2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward2"
+   PATH="adminLocal.configurarTwitter.correcto" TARGET="page78"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#CrearUsuariosFrontAction" NAME="action48"
+  PATH="/CrearUsuariosFrontAction" SHAPE="32,6945,0,0"
+  TITLE="CrearUsuariosForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.crearUsuarios.error" TARGET="page36" TITLE="failure"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="adminLocal.crearUsuarios.solicitud" TARGET="page37"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#EliminarFestivoDo" NAME="action49"
+  PATH="/EliminarFestivoDo" SHAPE="32,11297,0,0"
+  TITLE="EliminarFestivoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="adminLocal.eliminarFestivo.error" TARGET="page79"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="adminLocal.eliminarFestivo.correcto" TARGET="page80"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#GooglePlusCallbackAction" NAME="action50"
+  PATH="/GooglePlusCallbackAction" SHAPE="32,11553,0,0"
+  TITLE="CallBackGooglePlus" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="adminLocal.callbackGooglePlus.correcto" TARGET="page82"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#VisualizarFestivoFrontAction" NAME="action51"
+  PATH="/VisualizarFestivoFrontAction" SHAPE="288,5457,0,0"
+  TITLE="VisualizarFestivoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="cancel" NAME="forward0"
+   PATH="/VisualizarFestivoFront" TARGET="action57" TITLE="cancel"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="adminLocal.visualizarFestivo.solicitud" TARGET="page83"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page0"
+  PATH="adminLocal.modificarUsuariosFirmantes.error" SHAPE="256,34,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.modificarUsuariosFirmantes.error"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page1"
+  PATH="adminLocal.modificarUsuariosFirmantes.solicitud"
+  SHAPE="256,322,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.modificarUsuariosFirmantes.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page2"
+  PATH="adminLocal.crearUsuariosFirmantes.solicitud" SHAPE="272,434,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.crearUsuariosFirmantes.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page3"
+  PATH="adminLocal.modificarTiposEdictos.error" SHAPE="256,834,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.modificarTiposEdictos.error"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page4"
+  PATH="adminLocal.modificarTiposEdictos.solicitud" SHAPE="256,1122,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.modificarTiposEdictos.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#VisualizarCentroFront" NAME="action52"
+  PATH="/VisualizarCentroFront" SHAPE="256,1233,0,0" SUBTYPE="unknown"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page5"
+  PATH="adminLocal.visualizarCentroProcedencia.solicitud"
+  SHAPE="256,1378,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.visualizarCentroProcedencia.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page6" PATH="adminLocal.callbackFacebook.error"
+  SHAPE="288,1490,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.callbackFacebook.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page7" PATH="adminLocal.callbackFacebook.correcto3"
+  SHAPE="288,1698,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.callbackFacebook.correcto3" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page8" PATH="adminLocal.callbackFacebook.correcto2"
+  SHAPE="288,1810,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.callbackFacebook.correcto2" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page9" PATH="adminLocal.callbackFacebook.correcto1"
+  SHAPE="288,1922,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.callbackFacebook.correcto1" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page10"
+  PATH="adminLocal.crearUsuariosExternos.error" SHAPE="256,2034,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.crearUsuariosExternos.error"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page11"
+  PATH="adminLocal.crearUsuariosExternos.correcto" SHAPE="256,2322,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.crearUsuariosExternos.correcto"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page12"
+  PATH="adminLocal.modificarUsuariosExternos.error" SHAPE="544,2418,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.modificarUsuariosExternos.error"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page13"
+  PATH="adminLocal.modificarUsuariosExternos.correcto2"
+  SHAPE="288,3138,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.modificarUsuariosExternos.correcto2" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page14"
+  PATH="adminLocal.modificarUsuariosExternos.correcto"
+  SHAPE="288,3250,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.modificarUsuariosExternos.correcto" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page15" PATH="adminLocal.modificarFestivo.error"
+  SHAPE="288,3362,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.modificarFestivo.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page16"
+  PATH="adminLocal.modificarFestivo.solicitud" SHAPE="288,5938,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.modificarFestivo.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page17"
+  PATH="adminLocal.modificarCentroProcedencia.error"
+  SHAPE="288,3746,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.modificarCentroProcedencia.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page18"
+  PATH="adminLocal.modificarCentroProcedencia.solicitud"
+  SHAPE="288,4130,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.modificarCentroProcedencia.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page19"
+  PATH="adminLocal.visualizarUsuarios.solicitud" SHAPE="240,6050,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.visualizarUsuarios.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page20"
+  PATH="adminLocal.altaCentroProcedencia.error" SHAPE="288,4658,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.altaCentroProcedencia.error"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page21"
+  PATH="adminLocal.altaCentroProcedencia.solicitud" SHAPE="288,4946,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.altaCentroProcedencia.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page22"
+  PATH="adminLocal.cancelarGooglePlus.correcto" SHAPE="240,6162,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.cancelarGooglePlus.correcto"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page23" PATH="adminLocal.cancelarFacebook.correcto"
+  SHAPE="240,6274,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.cancelarFacebook.correcto" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page24"
+  PATH="adminLocal.estadisticasPublicacion.error" SHAPE="256,6386,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.estadisticasPublicacion.error"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page25"
+  PATH="adminLocal.estadisticasPublicacion.solicitud"
+  SHAPE="256,6530,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.estadisticasPublicacion.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page26" PATH="adminLocal.crearUsues.error"
+  SHAPE="272,546,0,0" SUBTYPE="tile" TITLE="adminLocal.crearUsues.error"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page27"
+  PATH="adminLocal.crearUsuariosFirmantes.correcto" SHAPE="272,722,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.crearUsuariosFirmantes.correcto"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page28" PATH="adminLocal.cancelarTwitter.correcto"
+  SHAPE="240,6674,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.cancelarTwitter.correcto" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page29" PATH="adminLocal.modificarUsuarios.error"
+  SHAPE="544,2802,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.modificarUsuarios.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page30"
+  PATH="adminLocal.modificarUsuarios.correcto2" SHAPE="288,2818,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.modificarUsuarios.correcto2"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page31"
+  PATH="adminLocal.modificarUsuarios.correcto" SHAPE="288,2994,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.modificarUsuarios.correcto"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page32"
+  PATH="adminLocal.modificarUsuariosFirmantes.correcto"
+  SHAPE="256,178,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.modificarUsuariosFirmantes.correcto" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page33" PATH=" " SHAPE="288,3538,0,0"
+  SUBTYPE="tile" TITLE=" " TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page34" PATH="adminLocal.modificarFestivo.correcto"
+  SHAPE="288,5826,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.modificarFestivo.correcto" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page35"
+  PATH="adminLocal.modificarCentroProcedencia.correcto"
+  SHAPE="288,4546,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.modificarCentroProcedencia.correcto" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page36" PATH="adminLocal.crearUsuarios.error"
+  SHAPE="272,6786,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.crearUsuarios.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page37" PATH="adminLocal.crearUsuarios.solicitud"
+  SHAPE="272,6962,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.crearUsuarios.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page38" PATH="adminLocal.crearUsuarios.correcto"
+  SHAPE="272,7106,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.crearUsuarios.correcto" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page39" PATH="adminLocal.bajaUsuarioFirmante.error"
+  SHAPE="272,7218,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.bajaUsuarioFirmante.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page40"
+  PATH="adminLocal.bajaUsuarioFirmante.correcto2" SHAPE="272,7394,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.bajaUsuarioFirmante.correcto2"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page41"
+  PATH="adminLocal.bajaUsuarioFirmante.correcto" SHAPE="272,7506,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.bajaUsuarioFirmante.correcto"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page42"
+  PATH="adminLocal.modificarUsuariosExternos.solicitud"
+  SHAPE="544,2626,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.modificarUsuariosExternos.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page43"
+  PATH="adminLocal.modificarUsuarios.solicitud" SHAPE="544,2978,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.modificarUsuarios.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page44"
+  PATH="adminLocal.configurarFacebook.correcto" SHAPE="240,7618,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.configurarFacebook.correcto"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page45" PATH="adminLocal.visualizarRedes.error"
+  SHAPE="256,7730,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.visualizarRedes.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page46" PATH="adminLocal.visualizarRedes.correcto"
+  SHAPE="256,7874,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.visualizarRedes.correcto" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page47"
+  PATH="adminLocal.muestraInformacionCentroProcedencia.solicitud"
+  SHAPE="240,7986,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.muestraInformacionCentroProcedencia.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page48" PATH="adminLocal.callbackTwitter.error"
+  SHAPE="272,8098,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.callbackTwitter.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page49" PATH="adminLocal.callbackTwitter.correcto2"
+  SHAPE="272,8274,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.callbackTwitter.correcto2" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page50" PATH="adminLocal.callbackTwitter.correcto"
+  SHAPE="272,8386,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.callbackTwitter.correcto" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page51" PATH="adminLocal.copiarFestivo.error"
+  SHAPE="272,8498,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.copiarFestivo.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page52" PATH="adminLocal.copiarFestivo.solicitud"
+  SHAPE="272,8674,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.copiarFestivo.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page53"
+  PATH="adminLocal.copiarFestivo.errorNoExistenDias"
+  SHAPE="272,8786,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.copiarFestivo.errorNoExistenDias" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page54" PATH="adminLocal.crearTiposEdictos.error"
+  SHAPE="256,8898,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.crearTiposEdictos.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page55"
+  PATH="adminLocal.crearTiposEdictos.solicitud" SHAPE="256,9186,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.crearTiposEdictos.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page56"
+  PATH="adminLocal.configurarGooglePlus.correcto" SHAPE="240,9298,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.configurarGooglePlus.correcto"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page57"
+  PATH="adminLocal.altaCentroProcedencia.correcto" SHAPE="288,5170,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.altaCentroProcedencia.correcto"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page58" PATH="adminLocal.bajaCentro.error"
+  SHAPE="256,9410,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.bajaCentro.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page59" PATH="adminLocal.bajaCentro.correcto"
+  SHAPE="256,9554,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.bajaCentro.correcto" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page60"
+  PATH="adminLocal.crearTiposEdictos.correcto" SHAPE="256,9042,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.crearTiposEdictos.correcto"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page61" PATH="adminLocal.altaFestivo.error"
+  SHAPE="288,5282,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.altaFestivo.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page62" PATH="adminLocal.altaFestivo.correcto"
+  SHAPE="288,5714,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.altaFestivo.correcto" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page63"
+  PATH="adminLocal.muestraInformacionUsuariosFirmantes.solicitud"
+  SHAPE="240,9666,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.muestraInformacionUsuariosFirmantes.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page64"
+  PATH="adminLocal.modificarTiposEdictos.correcto" SHAPE="256,978,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.modificarTiposEdictos.correcto"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page65"
+  PATH="adminLocal.muestraInformacionUsuariosExternos.solicitud"
+  SHAPE="256,9778,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.muestraInformacionUsuariosExternos.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page66"
+  PATH="adminLocal.muestraInformacionUsuarios.solicitud"
+  SHAPE="256,9922,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.muestraInformacionUsuarios.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page67"
+  PATH="adminLocal.crearUsuariosExternos.solicitud" SHAPE="256,2178,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.crearUsuariosExternos.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page68"
+  PATH="adminLocal.visualizarUsuariosFirmantes.solicitud"
+  SHAPE="240,10034,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.visualizarUsuariosFirmantes.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page69"
+  PATH="adminLocal.eliminarTiposEdictos.error" SHAPE="256,10146,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.eliminarTiposEdictos.error"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page70"
+  PATH="adminLocal.eliminarTiposEdictos.correcto" SHAPE="256,10290,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.eliminarTiposEdictos.correcto"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page71" PATH="adminLocal.bajaUsuario.error"
+  SHAPE="272,10402,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.bajaUsuario.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page72" PATH="adminLocal.bajaUsuario.correcto2"
+  SHAPE="272,10578,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.bajaUsuario.correcto2" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page73" PATH="adminLocal.bajaUsuario.correcto"
+  SHAPE="272,10690,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.bajaUsuario.correcto" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page74" PATH="adminLocal.altaFestivo.solicitud"
+  SHAPE="288,5602,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.altaFestivo.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page75"
+  PATH="adminLocal.visualizarTiposEdictos.solicitud"
+  SHAPE="240,10802,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.visualizarTiposEdictos.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page76" PATH="adminLocal.configurarTwitter.error"
+  SHAPE="272,10914,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.configurarTwitter.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page77"
+  PATH="adminLocal.configurarTwitter.correcto2" SHAPE="272,11090,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.configurarTwitter.correcto2"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page78"
+  PATH="adminLocal.configurarTwitter.correcto" SHAPE="272,11202,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.configurarTwitter.correcto"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page79" PATH="adminLocal.eliminarFestivo.error"
+  SHAPE="256,11314,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.eliminarFestivo.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page80" PATH="adminLocal.eliminarFestivo.correcto"
+  SHAPE="256,11458,0,0" SUBTYPE="tile"
+  TITLE="adminLocal.eliminarFestivo.correcto" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page82"
+  PATH="adminLocal.callbackGooglePlus.correcto" SHAPE="256,11714,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.callbackGooglePlus.correcto"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#VisualizarFestivoFront" NAME="action57"
+  PATH="/VisualizarFestivoFront" SHAPE="512,5441,0,0" SUBTYPE="unknown"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page83"
+  PATH="adminLocal.visualizarFestivo.solicitud" SHAPE="512,5586,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.visualizarFestivo.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#AltaCentroFront" NAME="action54"
+  PATH="/AltaCentroFront" SHAPE="240,4225,0,0" SUBTYPE="unknown"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#ModificarCentroFront" NAME="action53"
+  PATH="/ModificarCentroFront" SHAPE="240,3841,0,0" SUBTYPE="unknown"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#AltaCentroFront" NAME="action56"
+  PATH="/AltaCentroFront" SHAPE="448,4113,0,0" SUBTYPE="unknown"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#ModificarCentroFront" NAME="action55"
+  PATH="/ModificarCentroFront" SHAPE="448,3729,0,0" SUBTYPE="unknown"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page85"
+  PATH="adminLocal.configurarGooglePlus.correcto2" SHAPE="448,9281,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.configurarGooglePlus.correcto2"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page86"
+  PATH="adminLocal.configurarGooglePlus.error" SHAPE="448,9393,0,0"
+  SUBTYPE="tile" TITLE="adminLocal.configurarGooglePlus.error"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+</PROCESS>

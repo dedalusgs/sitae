@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>SITAE - Tablón de Anuncios Electrónico</title>
+		<link rel="stylesheet" href="jquerymob/themes/sitae-azul.min.css" />
+		<link rel="stylesheet" href="jquerymob/themes/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet" href="jquerymob/themes/custom.css" />
+		<link rel="stylesheet" href="jquerymob/jquery.mobile.structure-1.4.0.min.css" />
+		<script src="jquerymob/jquery-1.10.2.min.js"></script>
+		<script src="jquerymob/jquery.mobile-1.4.0.min.js"></script>
+		<script type="text/javascript">
+		
+		$(document).ready(function(){
+			$.mobile.pageLoadErrorMessage = 'Esta pagina no esxiste';
+			$.mobile.fixedToolbars.show(true);
+			$.mobile.defaultDialogTransition='slideup';
+			$.mobile.defaultPageTransition='flip';
+			$("#mostrar").click(function(e){
+			    $.mobile.loadingMessage = "Cargando. . .";
+			$.mobile.showPageLoadingMsg('');
+			});
+
+			$("#ocultar").click(function(e){
+			$.mobile.hidePageLoadingMsg();
+			});
+			});
+		$( document ).on( "pagecreate", ".jqm-demos", function( event ) {
+			var search,
+				page = $( this ),
+				that = this,
+				searchUrl = ( $( this ).hasClass( "jqm-home" ) ) ? "_search/" : "../_search/",
+				searchContents = $( ".jqm-search ul.jqm-list" ).find( "li:not(.ui-collapsible)" ),
+				version = $.mobile.version || "dev",
+				words = version.split( "-" ),
+				ver = words[0],
+				str = words[1] || "",
+				text = ver;
+
+// 			// Insert jqm version in header
+// 			if ( str.indexOf( "rc" ) == -1 ) {
+// 				str = str.charAt( 0 ).toUpperCase() + str.slice( 1 );
+// 			} else {
+// 				str = str.toUpperCase().replace( ".", "" );
+// 			}
+
+// 			if ( $.mobile.version && str ) {
+// 				text += " " + str;
+// 			}
+
+// 			$( ".jqm-version" ).html( text );
+
+// 			// Global navmenu panel
+			$( ".jqm-navmenu-panel ul" ).listview();
+
+			$( document ).on( "panelopen", ".jqm-search-panel", function() {
+				$( this ).find( "input" ).focus();
+			})
+
+			$( ".jqm-navmenu-link" ).on( "click", function() {
+				page.find( ".jqm-navmenu-panel:not(.jqm-panel-page-nav)" ).panel( "open" );
+			});
+
+// 			// Turn off autocomplete / correct for demos search
+// 			$( this ).find( ".jqm-search input" ).attr( "autocomplete", "off" ).attr( "autocorrect", "off" );
+
+// 			// Global search
+// 			$( ".jqm-search-link" ).on( "click", function() {
+// 				page.find( ".jqm-search-panel" ).panel( "open" );
+// 			});
+
+// 			// Initalize search panel list and filter also remove collapsibles
+// 			$( this ).find( ".jqm-search ul.jqm-list" ).html( searchContents ).listview({
+// 				inset: false,
+// 				theme: null,
+// 				dividerTheme: null,
+// 				icon: false,
+// 				autodividers: true,
+// 				autodividersSelector: function ( li ) {
+// 					return "";
+// 				},
+// 				arrowKeyNav: true,
+// 				enterToNav: true,
+// 				highlight: true,
+// 				submitTo: searchUrl
+// 			}).filterable();
+
+// 			// Initalize search page list and remove collapsibles
+// 			$( this ).find( ".jqm-search-results-wrap ul.jqm-list" ).html( searchContents ).listview({
+// 				inset: true,
+// 				theme: null,
+// 				dividerTheme: null,
+// 				icon: false,
+// 				arrowKeyNav: true,
+// 				enterToNav: true,
+// 				highlight: true
+// 			}).filterable();
+
+// 			// Fix links on homepage to point to sub directories
+// 			if ( $( event.target ).hasClass( "jqm-home") ) {
+// 				$( this ).find( "a" ).each( function() {
+// 					$( this ).attr( "href", $( this ).attr( "href" ).replace( "../", "" ) );
+// 				});
+// 			}
+
+// 			// Search results page get search query string and enter it into filter then trigger keyup to filter
+// 			if ( $( event.target ).hasClass( "jqm-demos-search-results") ) {
+// 				search = $.mobile.path.parseUrl( window.location.href ).search.split( "=" )[ 1 ];
+// 				setTimeout(function() {
+// 					e = $.Event( "keyup" );
+// 					e.which = 65;
+// 					$( that ).find( ".jqm-content .jqm-search-results-wrap input" ).val( search ).trigger(e).trigger( "change" );
+// 				}, 0 );
+// 			}
+// 		});
+
+// 		// Append keywords list to each list item
+// 		$( document ).one( "pagecreate", ".jqm-demos", function( event ) {
+// 			$( this ).find( ".jqm-search-results-list li, .jqm-search li" ).each(function() {
+// 				var text = $( this ).attr( "data-filtertext" );
+
+// 				$( this )
+// 					.find( "a" )
+// 					.append( "<span class='jqm-search-results-keywords ui-li-desc'>" + text + "</span>" );
+// 			});
+		});
+		
+		</script>
+	</head>
+	<body>
+		<div data-role="page" class="jqm-demos jqm-home">
+			<div data-role="header" class="jqm-header">
+				<h2> <span class="texto">Tablón de Anuncios Electrónicos</span><br/> <span class="titulo">SITAE</span> </h2><h3>Ayuntamiento de Nules</h3>
+				
+				<a href="#" id="jqm-navmenu-link" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+				<a href="#popupMenu" data-rel="popup" data-transition="flip" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-comment ui-nodisc-icon ui-alt-icon ui-btn-right">Idioma</a>
+			</div>
+			<div role="main" class="ui-content jqm-content">
+			<div class="redesSociales">
+			<a href="https://www.facebook.com/yopepeperez" ><img src="imagenes/facebook-32.png"/></a>
+			<a href="https://www.twitter.com/PepeClaves" ><img src="imagenes/google+-32.png"/></a>
+			<a href="https://plus.google.com" ><img src="imagenes/twitter-32.png"/></a>
+			</div>
+			<h4>Aviso Legal</h4>
+			<div >
+							<p>Mediante este aviso legal, la institución titular de este sitio web declara el objetivo y términos de uso de este sitio web. También se describe la política de privacidad que sigue esta institución.</p>
+
+							<h5>Política de Privacidad</h5>
+							<p>Esta institución tiene como una de sus prioridades garantizar el derecho fundamental a la protección de los datos personales, tanto de los usuarios que se relacionen con su Administración como de los propios empleados públicos a su servicio.</p><p>En este sentido, el tratamiento de los datos de carácter personal que se recogen a través de este dominio se sujeta a lo dispuesto en la Ley Orgánica de Protección de Datos de carácter personal. El interesado podrá ejercer sus derechos de acceso, rectificación, cancelación y oposición en los términos establecidos por la legislación vigente.</p><p>Para cualquier duda sobre la política de privacidad anteriormente expresada puede ponerse en contacto con esta institución mediante los medios descritos en el apartado de "Contacto". </p>
+	
+							
+	
+							<h5>Objeto </h5>
+
+							<p>Esta Institución, a través de este espacio web, pone a disposición de los diferentes usuarios el acceso y utilización de servicios e información referidos tanto a su ámbito de actuación como, en su caso, proporcionados por terceros.</p>
+							
+							<h5>Términos y condiciones de uso </h5>
+							<p>Se considera usuario del presente sitio web a cualquiera que acceda y utilice el mismo. La condición de usuario conlleva la total aceptación de las condiciones establecidas en el presente Aviso Legal y en las especiales que puedan establecerse para determinados servicios y utilidades. Los usuarios adquieren el compromiso de ajustar su actuación a las citadas condiciones y a observar lo dispuesto por la normativa legal, así como a las instrucciones y avisos que se pongan en su conocimiento. </p><p>Cuando sea necesaria la utilización de una contraseña o nombre de usuario para acceder a algún contenido o servicio de este sitio web, el usuario queda obligado a mantenerla en secreto y a hacer de ella un uso diligente. En caso de pérdida o utilización negligente de la contraseña el usuario responderá de la utilización que de ella hayan podido hacer terceras personas. </p><p>Esta institución no es responsable de los contenidos enlazados y que se encuentren fuera de su web, en webs de terceros, a los que se pueda acceder mediante enlaces situación para la ampliación de información o como ayuda complementaria. Este tipo de enlaces permiten ampliar la información relativa a una materia que se está tratando, en ningún momento esta sugerencia se convierte en obligatoriedad, siendo el titular de esta web no responsable del contenido ni de la prestación de servicios realizada por terceros. En relación con la protección de datos, esta institución no será responsable de los ficheros proporcionados por el usuario a terceros aunque estos se encuentren enlazados desde este sitio.</p><p>Esta institución no se hace responsable de daños o perjuicios derivados de interferencias, averías, omisiones, interrupciones o desconexiones del funcionamiento del sistema electrónico, siempre que estos hechos sean motivados por causas ajenas, inherentes por problemas de ajuste o técnicos. La intromisión de terceras personas así como el daño causado por virus informáticos quedan fuera del control de esta Institución.</p><p>La información administrativa facilitada a través de esta web no sustituye la publicidad legal de las leyes, de las disposiciones y actos que hayan de ser publicados en los diarios oficiales.</p>
+						</div>
+			
+			</div>
+			
+			 <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
+			  	<ul class="jqm-list ui-alt-icon ui-nodisc-icon">
+<li data-icon="home"><a href="./index.html">Inicio</a></li>
+<li><a data-transition="slidefade" href="./anucios-vigor.html" >Anuncios en Vigor</a></li>
+<li><a data-transition="slidefade" href="./historico.html" >Histórico de Anuncios</a></li>
+<li><a data-transition="slidefade" href="./busqueda-avanzada.html">Búsqueda Avanzada</a></li>
+</ul>
+			</div>
+			<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
+			<div data-role="navbar" data-theme="b">
+			<ul>
+				<li> 
+					<a href="Contacto.html" data-icon="user" data-theme="b">Contacto</a>
+				</li>
+				<li> 
+					<a href="avisoLegal.html" data-icon="alert" data-theme="b" >Aviso Legal</a>
+				</li>
+<li> 
+					<a href="acercade.html" data-icon="info" data-theme="b" >Acerca de</a>
+				</li>
+				<li> 
+					<a href="/vfe" rel="external" data-icon="action" data-theme="b" >Validación Firma Electrónica</a>
+				</li>
+			
+			</ul>
+			</div>
+			
+</div>
+<div data-role="popup" id="popupMenu" data-theme="a">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;">
+            <li data-role="list-divider">Elija Idioma</li>
+            <li><a  data-transition="pop" data-inset="true" rel="external"  href="index.html?lang=es">Valenciano</a></li>
+            <li><a data-transition="pop"  rel="external" href="index.html?lang=va" >Castellano</a></li>
+           
+        </ul>
+</div>
+	</body>
+</html>

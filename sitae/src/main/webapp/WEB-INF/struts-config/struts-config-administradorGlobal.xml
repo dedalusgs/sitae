@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config 
+ PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" 
+ "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="AltaAdmLocalForm" type="es.novasoft.sitae.perfiles.adminGlobal.altaAdmLocal.forms.AltaAdmLocalForm"/>
+		<form-bean name="AltaOrganismoForm" type="es.novasoft.sitae.perfiles.adminGlobal.altaOrganismo.forms.AltaOrganismoForm"/>		
+		<form-bean name="BajaAdmLocalForm" type="es.novasoft.sitae.perfiles.adminGlobal.bajaAdmLocal.forms.BajaAdmLocalForm"/>
+		<form-bean name="BajaOrganismoForm" type="es.novasoft.sitae.perfiles.adminGlobal.bajaOrganismo.forms.BajaOrganismoForm"/>
+		<form-bean name="ModificarAdmLocalForm" type="es.novasoft.sitae.perfiles.adminGlobal.modificarAdmLocal.forms.ModificarAdmLocalForm"/>
+		<form-bean name="ModificarOrganismoForm" type="es.novasoft.sitae.perfiles.adminGlobal.modificarOrganismo.forms.ModificarOrganismoForm"/>
+		<form-bean name="VisualizarAdmLocalForm" type="es.novasoft.sitae.perfiles.adminGlobal.visualizarAdmLocales.forms.VisualizarAdmLocalForm"/>
+		<form-bean name="VisualizarOrganismoForm" type="es.novasoft.sitae.perfiles.adminGlobal.visualizarOrganismos.forms.VisualizarOrganismoForm"/>		
+		<form-bean name="MuestraInformacionUsuarioAdmLocalForm" type="es.novasoft.sitae.perfiles.adminGlobal.muestraInformacionUsuario.forms.MuestraInformacionUsuarioForm"/>
+		<form-bean name="MuestraInformacionOrganismoForm" type="es.novasoft.sitae.perfiles.adminGlobal.muestraInformacionOrganismo.forms.MuestraInformacionOrganismoForm"/>
+		<form-bean name="VisualizarOrganismoExternoForm" type="es.novasoft.sitae.perfiles.adminGlobal.visualizarOrganismosExternos.forms.VisualizarOrganismoExternoForm"/>
+		<form-bean name="MuestraInformacionOrganismoExternoForm" type="es.novasoft.sitae.perfiles.adminGlobal.muestraInformacionOrganismoExterno.forms.MuestraInformacionOrganismoExternoForm"/>
+		<form-bean name="AltaOrganismoExternoForm" type="es.novasoft.sitae.perfiles.adminGlobal.altaOrganismoExterno.forms.AltaOrganismoExternoForm"/>		
+		<form-bean name="ModificarOrganismoExternoForm" type="es.novasoft.sitae.perfiles.adminGlobal.modificarOrganismoExterno.forms.ModificarOrganismoExternoForm"/>
+	
+	    <form-bean name="VisualizarFestivoGlobForm"
+			type="es.novasoft.sitae.perfiles.adminGlobal.visualizarFestivo.forms.VisualizarFestivoForm" />
+		<form-bean name="AltaFestivoGlobForm"
+			type="es.novasoft.sitae.perfiles.adminGlobal.altaFestivo.forms.AltaFestivoForm" />
+	   <form-bean name="EliminarFestivoGlobForm"
+			type="es.novasoft.sitae.perfiles.adminGlobal.eliminarFestivo.forms.EliminarFestivoForm" />
+		<form-bean name="ModificarFestivoGlobForm"
+			type="es.novasoft.sitae.perfiles.adminGlobal.modificarFestivo.forms.ModificarFestivoForm" />
+		<form-bean name="CopiarFestivoGlobForm"
+			type="es.novasoft.sitae.perfiles.adminGlobal.visualizarFestivo.forms.VisualizarFestivoForm" />
+	
+		<form-bean name="EstadisticasPublicacionForm"
+			type="es.novasoft.sitae.perfiles.adminGlobal.estadisticasPublicacion.forms.EstadisticasPublicacionForm" />
+		
+	</form-beans>
+
+	<action-mappings>
+				
+		<!-- ADMINISTRADOR GLOBAL -->
+		
+		 <!-- ALTA ORGANISMO -->
+	
+		 <action name="AltaOrganismoForm" 
+			path="/AltaOrganismoFrontAction"
+			type="es.novasoft.sitae.perfiles.adminGlobal.altaOrganismo.actions.AltaOrganismoFrontAction"
+			scope="session" validate="false">
+			<forward name="success" path="adminGlobal.altaOrg.solicitud"></forward>
+			<forward name="cancel" path="/AltaOrganismoFront"/>	
+			<forward name="failure" path="adminGlobal.altaOrg.error"/>	
+		</action> 
+
+		<action name="AltaOrganismoForm" 
+			path="/AltaOrganismoDo"
+			input="/AltaOrganismoFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminGlobal.altaOrganismo.actions.AltaOrganismoDoAction"
+			scope="session" validate="true" >
+			<forward name="success" path="adminGlobal.altaOrg.correcto"/>
+			<forward name="failure" path="adminGlobal.altaOrg.error"/>			
+			<forward name="cancel" path="/AltaOrganismoFront"/>	
+		</action>
+		
+		
+		<!-- ALTA ADMINISTRADOR LOCAL -->
+	
+		<action name="AltaAdmLocalForm" 
+			path="/AltaAdmLocalFrontAction"
+			type="es.novasoft.sitae.perfiles.adminGlobal.altaAdmLocal.actions.AltaAdmLocalFrontAction"
+			scope="session" validate="false">
+			<forward name="success" path="adminGlobal.altaAdmLocal.solicitud"></forward>
+			<forward name="cancel" path="/AltaAdmLocalFront"/>	
+			<forward name="failure" path="adminGlobal.altaAdmLocal.error"/>	
+		</action> 
+
+		<action name="AltaAdmLocalForm" 
+			path="/AltaAdmLocalDo"
+			input="/AltaAdmLocalFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminGlobal.altaAdmLocal.actions.AltaAdmLocalDoAction"
+			scope="session" validate="true" >
+			<forward name="success" path="adminGlobal.altaAdmLocal.correcto"/>
+			<forward name="success2" path="adminGlobal.altaAdmLocal.solicitud"/>
+			<forward name="failure" path="adminGlobal.altaAdmLocal.error"/>
+			
+		</action>
+				
+		<!-- BAJA ADMINISTRADOR LOCAL -->
+	
+		<action name="BajaAdmLocalForm" 
+			path="/BajaAdmLocalDo"
+			type="es.novasoft.sitae.perfiles.adminGlobal.bajaAdmLocal.actions.BajaAdmLocalDoAction"
+			scope="session" validate="false" >
+			<forward name="success" path="adminGlobal.bajaAdmLocal.correcto"/>			
+			<forward name="failure" path="adminGlobal.bajaAdmLocal.error"/>
+			<forward name="failure2" path="adminGlobal.bajaAdmLocal.error2"/>
+		</action>
+		
+		<!-- BAJA ORGANISMO -->
+
+		<action name="BajaOrganismoForm" 
+			path="/BajaOrganismoDo"
+			type="es.novasoft.sitae.perfiles.adminGlobal.bajaOrganismo.actions.BajaOrganismoDoAction"
+			scope="session" validate="false" >
+			<forward name="success" path="adminGlobal.bajaOrganismo.correcto"/>
+			<forward name="failure" path="adminGlobal.bajaOrganismo.error"/>
+			<forward name="failure2" path="adminGlobal.bajaOrganismo.error2"/>
+		</action>
+		
+		
+		<!-- MODIFICAR ADMINISTRADOR LOCAL -->
+	
+		<action name="ModificarAdmLocalForm" 
+			path="/ModificarAdmLocalFrontAction"
+			type="es.novasoft.sitae.perfiles.adminGlobal.modificarAdmLocal.actions.ModificarAdmLocalFrontAction"
+			scope="session" validate="false">
+			<forward name="success" path="adminGlobal.modificarAdmLocal.solicitud"></forward>			
+			<forward name="failure" path="adminGlobal.modificarAdmLocal.error"/>	
+		</action> 
+
+		<action name="ModificarAdmLocalForm" 
+			path="/ModificarAdmLocalDo"
+			input="/ModificarAdmLocalFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminGlobal.modificarAdmLocal.actions.ModificarAdmLocalDoAction"
+			scope="session" validate="true" >
+			<forward name="success" path="adminGlobal.modificarAdmLocal.correcto"/>
+			<forward name="failure" path="adminGlobal.modificarAdmLocal.error"/>						
+		</action>
+		
+		<action name="ModificarAdmLocalForm" 
+			path="/AsignarOrganismosAdmLocalDo"
+			input="/ModificarAdmLocalFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminGlobal.modificarAdmLocal.actions.AsignarOrganismosAdmLocalDoAction"
+			scope="session" validate="true" >
+			<forward name="success" path="/ModificarAdmLocalFrontAction.do"/>
+			<forward name="failure" path="adminGlobal.modificarAdmLocal.error"/>
+			<forward name="failure2" path="adminGlobal.modificarAdmLocal.error2"/>						
+		</action>
+			
+		<!-- MODIFICAR ORGANISMO -->
+	
+		<action name="ModificarOrganismoForm" 
+			path="/ModificarOrganismoFrontAction"
+			type="es.novasoft.sitae.perfiles.adminGlobal.modificarOrganismo.actions.ModificarOrganismoFrontAction"
+			scope="session" validate="false">
+			<forward name="success" path="adminGlobal.modificarOrganismo.solicitud"></forward>			
+			<forward name="failure" path="adminGlobal.modificarOrganismo.error"/>	
+		</action> 
+
+		<action name="ModificarOrganismoForm" 
+			path="/ModificarOrganismoDo"
+			input="/ModificarOrganismoFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminGlobal.modificarOrganismo.actions.ModificarOrganismoDoAction"
+			scope="session" validate="true" >
+			<forward name="success" path="adminGlobal.modificarOrganismo.correcto"/>
+			<forward name="failure" path="adminGlobal.modificarOrganismo.error"/>						
+		</action>
+		
+		<!-- VISUALIZAR ADMINISTRADORES LOCALES -->
+	
+		<action name="VisualizarAdmLocalForm" 
+			path="/VisualizarAdmLocalFrontAction"
+			type="es.novasoft.sitae.perfiles.adminGlobal.visualizarAdmLocales.actions.VisualizarAdmLocalFrontAction"
+			scope="session" validate="false">
+			<forward name="success" path="adminGlobal.visualizarAdmLocales.solicitud"></forward>
+			<forward name="cancel" path="/VisualizarAdmLocalFront"/>	
+		</action> 
+
+		<!-- VISUALIZAR ORGANISMOS -->
+	
+		<action name="VisualizarOrganismoForm" 
+			path="/VisualizarOrganismoFrontAction"
+			type="es.novasoft.sitae.perfiles.adminGlobal.visualizarOrganismos.actions.VisualizarOrganismoFrontAction"
+			scope="session" validate="false">
+			<forward name="success" path="adminGlobal.visualizarOrganismos.solicitud"></forward>			
+			<forward name="failure" path="adminGlobal.visualizarOrganismos.error"></forward>	
+		</action> 
+		
+		<!-- MOSTRAR INFORMACION USUARIOS LOCALES -->
+	
+		<action name="MuestraInformacionUsuarioAdmLocalForm" 
+			path="/MuestraInformacionUsuarioAdmLocalFrontAction"
+			type="es.novasoft.sitae.perfiles.adminGlobal.muestraInformacionUsuario.actions.MuestraInformacionUsuarioFrontAction"
+			scope="session" validate="false">
+			<forward name="success" path="adminGlobal.muestraInformacionUsuario.solicitud"></forward>
+		</action> 
+		
+		<!-- MOSTRAR INFORMACION ORGANISMOS -->
+	
+		<action name="MuestraInformacionOrganismoForm" 
+			path="/MuestraInformacionOrganismoFrontAction"
+			type="es.novasoft.sitae.perfiles.adminGlobal.muestraInformacionOrganismo.actions.MuestraInformacionOrganismoFrontAction"
+			scope="session" validate="false">
+			<forward name="success" path="adminGlobal.muestraInformacionOrganismo.solicitud"></forward>
+			<forward name="failure" path="adminGlobal.muestraInformacionOrganismo.error"></forward>	
+		</action> 
+		
+		<!-- VISUALIZAR ORGANISMOS EXTERNOS -->
+	
+		<action name="VisualizarOrganismoExternoForm" 
+			path="/VisualizarOrganismoExternoFrontAction"
+			type="es.novasoft.sitae.perfiles.adminGlobal.visualizarOrganismosExternos.actions.VisualizarOrganismoExternoFrontAction"
+			scope="session" validate="false">
+			<forward name="success" path="adminGlobal.visualizarOrganismosExternos.solicitud"></forward>
+			<forward name="failure" path="adminGlobal.visualizarOrganismosExternos.error"></forward>	
+		</action>
+		 
+		<!-- MOSTRAR INFORMACION ORGANISMO EXTERNO -->
+	
+		<action name="MuestraInformacionOrganismoExternoForm" 
+			path="/MuestraInformacionOrganismoExternoFrontAction"
+			type="es.novasoft.sitae.perfiles.adminGlobal.muestraInformacionOrganismoExterno.actions.MuestraInformacionOrganismoExternoFrontAction"
+			scope="session" validate="false">
+			<forward name="success" path="adminGlobal.muestraInformacionOrganismoExterno.solicitud"></forward>
+			<forward name="failure" path="adminGlobal.muestraInformacionOrganismoExterno.error"></forward>	
+		</action> 
+		
+		 <!-- ALTA ORGANISMO EXTERNO -->
+	
+		 <action name="AltaOrganismoExternoForm" 
+			path="/AltaOrganismoExternoFrontAction"
+			type="es.novasoft.sitae.perfiles.adminGlobal.altaOrganismoExterno.actions.AltaOrganismoExternoFrontAction"
+			scope="session" validate="false">
+			<forward name="success" path="adminGlobal.altaOrganismoExterno.solicitud"></forward>			
+			<forward name="failure" path="adminGlobal.altaOrganismoExterno.error"/>	
+		</action> 
+
+		<action name="AltaOrganismoExternoForm" 
+			path="/AltaOrganismoExternoDo"
+			input="/AltaOrganismoExternoFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminGlobal.altaOrganismoExterno.actions.AltaOrganismoExternoDoAction"
+			scope="session" validate="true" >
+			<forward name="success" path="adminGlobal.altaOrganismoExterno.correcto"/>
+			<forward name="failure" path="adminGlobal.altaOrganismoExterno.error"/>			
+		</action>
+		
+		<!-- MODIFICAR ORGANISMO EXTERNO -->
+	
+		<action name="ModificarOrganismoExternoForm" 
+			path="/ModificarOrganismoExternoFrontAction"
+			type="es.novasoft.sitae.perfiles.adminGlobal.modificarOrganismoExterno.actions.ModificarOrganismoExternoFrontAction"
+			scope="session" validate="false">
+			<forward name="success" path="adminGlobal.modificarOrganismoExterno.solicitud"></forward>			
+			<forward name="failure" path="adminGlobal.modificarOrganismoExterno.error"/>	
+		</action> 
+
+		<action name="ModificarOrganismoExternoForm" 
+			path="/ModificarOrganismoExternoDo"
+			input="/ModificarOrganismoExternoFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminGlobal.modificarOrganismoExterno.actions.ModificarOrganismoExternoDoAction"
+			scope="session" validate="true" >
+			<forward name="success" path="adminGlobal.modificarOrganismoExterno.correcto"/>
+			<forward name="failure" path="adminGlobal.modificarOrganismoExterno.error"/>			
+		</action>
+		
+		<!-- BAJA ORGANISMO EXTERNO -->
+
+		<action name="BajaOrganismoExternoForm" 
+			path="/BajaOrganismoExternoDo"
+			type="es.novasoft.sitae.perfiles.adminGlobal.bajaOrganismoExterno.actions.BajaOrganismoExternoDoAction"
+			scope="session" validate="false" >
+			<forward name="success" path="adminGlobal.bajaOrganismoExterno.correcto"/>
+			<forward name="failure" path="adminGlobal.bajaOrganismoExterno.error"/>
+			<forward name="failure2" path="adminGlobal.bajaOrganismoExterno.error2"/>
+		</action>
+
+<!-- GESTION DIAS FESTIVOS -->
+
+		<!-- ALTA DIA -->
+
+		<action name="AltaFestivoGlobForm" path="/AltaFestivoGlobFrontAction"
+			type="es.novasoft.sitae.perfiles.adminGlobal.altaFestivo.actions.AltaFestivoFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminGlobal.altaFestivo.solicitud">
+			</forward>
+			<forward name="cancel" path="/VisualizarFestivoGlobFrontAction.do" />
+			<forward name="failure"
+				path="adminGlobal.altaFestivo.error" />
+		</action>
+
+		<action name="AltaFestivoGlobForm" path="/AltaFestivoGlobDo"
+			input="/AltaFestivoGlobFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminGlobal.altaFestivo.actions.AltaFestivoDoAction"
+			scope="session" validate="true">
+			<forward name="success"
+				path="adminGlobal.altaFestivo.correcto" />
+			<forward name="failure"
+				path="adminGlobal.altaFestivo.error" />
+			<forward name="errorAcceso" path=" " />
+			<forward name="cancel" path="/VisualizarFestivoGlobFrontAction.do" />
+		</action>
+
+		<!-- BAJA Festivo -->
+
+		<action name="EliminarFestivoGlobForm" path="/EliminarFestivoGlobDo"
+			type="es.novasoft.sitae.perfiles.adminGlobal.eliminarFestivo.actions.EliminarFestivoDoAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminGlobal.eliminarFestivo.correcto" />
+			<forward name="failure" path="adminGlobal.eliminarFestivo.error" />
+		</action>
+
+		<!-- MODIFICAR Festivo -->
+
+		<action name="ModificarFestivoGlobForm"
+			path="/ModificarFestivoGlobFrontAction"
+			type="es.novasoft.sitae.perfiles.adminGlobal.modificarFestivo.actions.ModificarFestivoFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminGlobal.modificarFestivo.solicitud">
+			</forward>
+			<forward name="cancel" path="/VisualizarFestivoGlobFrontAction.do" />
+			<forward name="failure"
+				path="adminGlobal.modificarFestivo.error" />
+		</action>
+
+		<action name="ModificarFestivoGlobForm" path="/ModificarFestivoGlobDo"
+			input="/ModificarFestivoGlobFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminGlobal.modificarFestivo.actions.ModificarFestivoDoAction"
+			scope="session" validate="true">
+			<forward name="success"
+				path="adminGlobal.modificarFestivo.correcto" />
+			<forward name="failure"
+				path="adminGlobal.modificarFestivo.error" />
+			<forward name="errorAcceso" path=" " />
+			<forward name="cancel" path="/VisualizarFestivoGlobFrontAction.do" />
+		</action>
+
+		<!-- VISUALIZAR Festivo -->
+
+		<action name="VisualizarFestivoGlobForm"
+			path="/VisualizarFestivoGlobFrontAction"
+			type="es.novasoft.sitae.perfiles.adminGlobal.visualizarFestivo.actions.VisualizarFestivoFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminGlobal.visualizarFestivo.solicitud">
+			</forward>
+			<forward name="cancel" path="/VisualizarFestivoGlobFront" />
+		</action>
+
+
+		<!-- CopiarFestivo -->
+
+		<action 
+			path="/CopiarFestivoGlobDoAction" name="CopiarFestivoGlobForm"
+			type="es.novasoft.sitae.perfiles.adminGlobal.copiarFestivo.actions.CopiarFestivoDoAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminGlobal.copiarFestivo.solicitud">
+			</forward>
+			<forward name="failure"
+				path="adminGlobal.copiarFestivo.error">
+			</forward>
+			<forward name="failure2"
+				path="adminGlobal.copiarFestivo.errorNoExistenDias">
+			</forward>
+		</action>
+
+
+
+<!--  Estadísticas -->
+<action 
+			path="/EstadisticasPublicacionFrontAction" name="EstadisticasPublicacionForm"
+			type="es.novasoft.sitae.perfiles.adminGlobal.estadisticasPublicacion.actions.EstadisticasPublicacionFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminGlobal.estadisticasPublicacion.solicitud">
+			</forward>
+			<forward name="failure"
+				path="adminGlobal.estadisticasPublicacion.error">
+			</forward>
+			
+		</action>
+		
+		<action 
+			path="/EstadisticasPublicacionDoAction" name="EstadisticasPublicacionForm"
+			input="/EstadisticasPublicacionFrontAction.do"
+			type="es.novasoft.sitae.perfiles.adminGlobal.estadisticasPublicacion.actions.EstadisticasPublicacionDoAction"
+			scope="session" validate="true">
+			<forward name="success"
+				path="adminGlobal.estadisticasPublicacion.solicitud">
+			</forward>
+			<forward name="failure"
+				path="adminGlobal.estadisticasPublicacion.error">
+			</forward>
+			
+		</action>
+		
+		<action 
+			path="/ActualizarFirmaDoAction" 
+			input="/ActualizarFirmaDoAction.do"
+			type="es.novasoft.sitae.perfiles.adminGlobal.ActualizarFirma.ActualizarFirmaDoAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminGlobal.estadisticasPublicacion.solicitud">
+			</forward>
+			
+			
+		</action>
+
+
+
+
+	</action-mappings>
+	
+	<controller nocache="true" processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+</struts-config>

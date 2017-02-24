@@ -1,0 +1,19 @@
+/* Estilos IE7 */
+legend {
+	margin:-8px 0 0 -8px;
+}
+#contenido_central form {
+	margin-top:24px;
+}
+.botonera.right {
+	width: 50%;
+}
+.botonera input {
+	padding-top: 1px;
+}
+#contenido dt, #contenido dd {
+	display: inline !important;
+}
+#contenido-menu {
+	height: 36px;
+}

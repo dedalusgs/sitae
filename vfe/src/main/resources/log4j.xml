@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+	debug="false">
+
+
+	<appender name="FILE" class="org.apache.log4j.RollingFileAppender">
+
+		<param name="File" value="${catalina.home}/logs/vfe.log" />
+		<param name="Append" value="false" />
+		<param name="DatePattern" value="yyyy-MM" />
+		<param name="MaxFileSize" value="5000KB" />
+		<param name="MaxBackupIndex" value="4" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p [%t] %C{2} (%F:%L) - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p [%t] %C{2} (%F:%L) - %m%n" />
+		</layout>
+	</appender>
+	<!--
+		Decrease the priority threshold for the org.jboss.varia category
+	-->
+
+	<category name="org.springframework">
+		<priority value="WARN" />
+	</category>
+	<category name="org.apache.axis">
+		<priority value="WARN" />
+	</category>
+	<category name="es.novasoft">
+		<priority value="INFO" />
+	</category>
+
+	<!--
+		Valor por defecto es INFO para no sobrecargar la información en
+		consola
+	-->
+	<root>
+		<priority value="WARN" />
+		<appender-ref ref="FILE"/>
+		<appender-ref ref="CONSOLE"/>
+	</root>
+</log4j:configuration>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM ID="#DescargarEstadisticasPDF" NAME="action0"
+  PATH="/DescargarEstadisticasPDF" SHAPE="32,17,0,0"
+  TITLE="DescargarForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0" PATH="servlet.error"
+   TARGET="page0" TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="java.lang.NullPointerException"
+   NAME="exception0" PATH="servlet.error" TARGET="page0"
+   TITLE="NullPointerException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="org.apache.axis.AxisFault" NAME="exception1"
+   PATH="servlet.error" TARGET="page0" TITLE="AxisFault"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#DescargarAnuncio" NAME="action1"
+  PATH="/DescargarAnuncio" SHAPE="32,193,0,0" TITLE="DescargarForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0" PATH="servlet.error"
+   TARGET="page0" TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="java.lang.NullPointerException"
+   NAME="exception0" PATH="servlet.error" TARGET="page0"
+   TITLE="NullPointerException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="org.apache.axis.AxisFault" NAME="exception1"
+   PATH="servlet.error" TARGET="page0" TITLE="AxisFault"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#ServiciosPortalFrontAction" NAME="action2"
+  PATH="/ServiciosPortalFrontAction" SHAPE="32,1425,0,0"
+  TITLE="ServiciosPortalForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="accesibilidad_es" NAME="forward0"
+   PATH="accesibilidad_es.solicitud" TARGET="page1"
+   TITLE="accesibilidad_es" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="mapaWeb" NAME="forward1"
+   PATH="mapaWeb.solicitud" TARGET="page2" TITLE="mapaWeb"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="contacto" NAME="forward2"
+   PATH="contacto.solicitud" TARGET="page3" TITLE="contacto"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="ayuda_va" NAME="forward3"
+   PATH="ayuda_va.solicitud" TARGET="page4" TITLE="ayuda_va"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="ayuda_es" NAME="forward4"
+   PATH="ayuda_es.solicitud" TARGET="page5" TITLE="ayuda_es"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="acercaDe_va" NAME="forward5"
+   PATH="acercaDe_va.solicitud" TARGET="page6" TITLE="acercaDe_va"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="accesibilidad_va" NAME="forward6"
+   PATH="accesibilidad_va.solicitud" TARGET="page7"
+   TITLE="accesibilidad_va" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="acercaDe_es" NAME="forward7"
+   PATH="acercaDe_es.solicitud" TARGET="page8" TITLE="acercaDe_es"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="avisoLegal_va" NAME="forward8"
+   PATH="avisoLegal_va.solicitud" TARGET="page9" TITLE="avisoLegal_va"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="avisoLegal_es" NAME="forward9"
+   PATH="avisoLegal_es.solicitud" TARGET="page10" TITLE="avisoLegal_es"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#LoginConCertificadoDoAction" NAME="action3"
+  PATH="/LoginConCertificadoDoAction" SHAPE="32,2833,0,0"
+  TITLE="LoginCertificadoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="error" NAME="forward0" PATH="login.errorCert"
+   TARGET="page11" TITLE="error" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="/LoginCertificadoFront.do" TARGET="action15" TITLE="success"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#DescargarCertificadoPublicacion" NAME="action4"
+  PATH="/DescargarCertificadoPublicacion" SHAPE="32,369,0,0"
+  TITLE="DescargarForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0" PATH="servlet.error"
+   TARGET="page0" TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="java.lang.NullPointerException"
+   NAME="exception0" PATH="servlet.error" TARGET="page0"
+   TITLE="NullPointerException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="org.apache.axis.AxisFault" NAME="exception1"
+   PATH="servlet.error" TARGET="page0" TITLE="AxisFault"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#InitDoAction" NAME="action5" PATH="/InitDoAction"
+  SHAPE="32,3409,0,0" TITLE="InitForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="init.pantallaError" TARGET="page12" TITLE="failure"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="init.pantallaInicio" TARGET="page13" TITLE="success"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure2" NAME="forward2"
+   PATH="init.pantallaError2" TARGET="page14" TITLE="failure2"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="mobile" NAME="forward3"
+   PATH="/mobile/HomeFrontAction.do" TARGET="action17" TITLE="mobile"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#DescargarEstadisticasCSV" NAME="action6"
+  PATH="/DescargarEstadisticasCSV" SHAPE="32,545,0,0"
+  TITLE="DescargarForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0" PATH="servlet.error"
+   TARGET="page0" TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="java.lang.NullPointerException"
+   NAME="exception0" PATH="servlet.error" TARGET="page0"
+   TITLE="NullPointerException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="org.apache.axis.AxisFault" NAME="exception1"
+   PATH="servlet.error" TARGET="page0" TITLE="AxisFault"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#DescargarBorrador" NAME="action7"
+  PATH="/DescargarBorrador" SHAPE="32,721,0,0" TITLE="DescargarForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0" PATH="servlet.error"
+   TARGET="page0" TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="java.lang.NullPointerException"
+   NAME="exception0" PATH="servlet.error" TARGET="page0"
+   TITLE="NullPointerException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="org.apache.axis.AxisFault" NAME="exception1"
+   PATH="servlet.error" TARGET="page0" TITLE="AxisFault"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#ErrorSinPermisos" NAME="action8"
+  PATH="/ErrorSinPermisos" SHAPE="256,3313,0,0" SUBTYPE="parameter"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action8" PATH="login.error2"
+   TARGET="page15" TITLE="parameter" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#DescargarAnuncioRetirado" NAME="action9"
+  PATH="/DescargarAnuncioRetirado" SHAPE="32,897,0,0"
+  TITLE="DescargarForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0" PATH="servlet.error"
+   TARGET="page0" TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="java.lang.NullPointerException"
+   NAME="exception0" PATH="servlet.error" TARGET="page0"
+   TITLE="NullPointerException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="org.apache.axis.AxisFault" NAME="exception1"
+   PATH="servlet.error" TARGET="page0" TITLE="AxisFault"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#CambiarLenguajeDoAction" NAME="action10"
+  PATH="/CambiarLenguajeDoAction" SHAPE="32,3809,0,0"
+  TITLE="CambiarLenguajeForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="lenguaje.pantallaInicio" TARGET="page16" TITLE="success"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#DescargarDiligencia" NAME="action11"
+  PATH="/DescargarDiligencia" SHAPE="32,1073,0,0" TITLE="DescargarForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0" PATH="servlet.error"
+   TARGET="page0" TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="java.lang.NullPointerException"
+   NAME="exception0" PATH="servlet.error" TARGET="page0"
+   TITLE="NullPointerException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="org.apache.axis.AxisFault" NAME="exception1"
+   PATH="servlet.error" TARGET="page0" TITLE="AxisFault"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#LoginConCertificadoFront" NAME="action12"
+  PATH="/LoginConCertificadoFront" SHAPE="32,2977,0,0"
+  TITLE="LoginCertificadoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="error" NAME="forward0" PATH="login.errorCert"
+   TARGET="page11" TITLE="error" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="login.indexCertificado" TARGET="page17" TITLE="success"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#ErrorAcceso" NAME="action13" PATH="/ErrorAcceso"
+  SHAPE="32,3921,0,0" SUBTYPE="forward" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action13" PATH="errorAcceso"
+   TARGET="page18" TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#DescargarInformeRevision" NAME="action14"
+  PATH="/DescargarInformeRevision" SHAPE="32,1249,0,0"
+  TITLE="DescargarForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0" PATH="servlet.error"
+   TARGET="page0" TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="java.lang.NullPointerException"
+   NAME="exception0" PATH="servlet.error" TARGET="page0"
+   TITLE="NullPointerException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="org.apache.axis.AxisFault" NAME="exception1"
+   PATH="servlet.error" TARGET="page0" TITLE="AxisFault"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#LoginCertificadoFront" NAME="action15"
+  PATH="/LoginCertificadoFront" SHAPE="256,3137,0,0"
+  TITLE="LoginCertificadoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="pantallaInicio" NAME="forward0"
+   PATH="login.pantallaInicio" TARGET="page19" TITLE="pantallaInicio"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward1" PATH="login.error"
+   TARGET="page20" TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure2" NAME="forward2" PATH="login.error2"
+   TARGET="page15" TITLE="failure2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page0" PATH="servlet.error" SHAPE="304,34,0,0"
+  SUBTYPE="tile" TITLE="servlet.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page1" PATH="accesibilidad_es.solicitud"
+  SHAPE="304,1442,0,0" SUBTYPE="tile" TITLE="accesibilidad_es.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page2" PATH="mapaWeb.solicitud"
+  SHAPE="304,1842,0,0" SUBTYPE="tile" TITLE="mapaWeb.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page3" PATH="contacto.solicitud"
+  SHAPE="304,1954,0,0" SUBTYPE="tile" TITLE="contacto.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page4" PATH="ayuda_va.solicitud"
+  SHAPE="304,2066,0,0" SUBTYPE="tile" TITLE="ayuda_va.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page5" PATH="ayuda_es.solicitud"
+  SHAPE="304,2178,0,0" SUBTYPE="tile" TITLE="ayuda_es.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page6" PATH="acercaDe_va.solicitud"
+  SHAPE="304,2290,0,0" SUBTYPE="tile" TITLE="acercaDe_va.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page7" PATH="accesibilidad_va.solicitud"
+  SHAPE="304,2402,0,0" SUBTYPE="tile" TITLE="accesibilidad_va.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page8" PATH="acercaDe_es.solicitud"
+  SHAPE="304,2514,0,0" SUBTYPE="tile" TITLE="acercaDe_es.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page9" PATH="avisoLegal_va.solicitud"
+  SHAPE="304,2626,0,0" SUBTYPE="tile" TITLE="avisoLegal_va.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page10" PATH="avisoLegal_es.solicitud"
+  SHAPE="304,2738,0,0" SUBTYPE="tile" TITLE="avisoLegal_es.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page11" PATH="login.errorCert" SHAPE="256,2850,0,0"
+  SUBTYPE="tile" TITLE="login.errorCert" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page12" PATH="init.pantallaError"
+  SHAPE="272,3426,0,0" SUBTYPE="tile" TITLE="init.pantallaError"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page13" PATH="init.pantallaInicio"
+  SHAPE="272,3602,0,0" SUBTYPE="tile" TITLE="init.pantallaInicio"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page14" PATH="init.pantallaError2"
+  SHAPE="272,3714,0,0" SUBTYPE="tile" TITLE="init.pantallaError2"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page15" PATH="login.error2" SHAPE="496,2978,0,0"
+  SUBTYPE="tile" TITLE="login.error2" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page16" PATH="lenguaje.pantallaInicio"
+  SHAPE="240,3826,0,0" SUBTYPE="tile" TITLE="lenguaje.pantallaInicio"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page17" PATH="login.indexCertificado"
+  SHAPE="256,2994,0,0" SUBTYPE="tile" TITLE="login.indexCertificado"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page18" PATH="errorAcceso" SHAPE="240,3938,0,0"
+  SUBTYPE="tile" TITLE="errorAcceso" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page19" PATH="login.pantallaInicio"
+  SHAPE="496,3122,0,0" SUBTYPE="tile" TITLE="login.pantallaInicio"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page20" PATH="login.error" SHAPE="496,3298,0,0"
+  SUBTYPE="tile" TITLE="login.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#EntrarConCertificadoDoAction" NAME="action16"
+  PATH="/EntrarConCertificadoDoAction" SHAPE="32,3905,0,0"
+  TITLE="LoginCertificadoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="error" NAME="forward0" PATH="login.errorCert"
+   TARGET="page11" TITLE="error" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="/LoginCertificadoFront.do" TARGET="action15" TITLE="success"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#mobile#HomeFrontAction" NAME="action17"
+  PATH="/mobile/HomeFrontAction" SHAPE="240,3521,0,0" SUBTYPE="unknown"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+</PROCESS>

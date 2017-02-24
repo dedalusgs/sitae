@@ -1,0 +1,1 @@
+En esta carpeta se almacenaran las diligencias, para evitar la carga en la bbdd

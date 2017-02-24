@@ -1,0 +1,128 @@
+/* H1, H2, H3, H4, 
+/********************************************************************/
+h1{
+	width:282px;
+	margin:15px 0 0 84px;
+}
+h1 a{
+	height:34px;
+	background:transparent url(verde/img/h1.gif) no-repeat;
+}
+
+/* Cabecera
+/********************************************************************/
+#cabecera{
+	background:url(../img/bg_cabecera_index.jpg) repeat-x left bottom;
+	float:left;
+	width:100%;
+	padding:30px 0 44px 0;
+}
+
+/* Celda izquierda */
+#celda_izq{ margin-right:256px;}
+
+/* Contenido
+/********************************************************************/
+#contenido{
+	background:#fff;
+	float:left;
+	width:100%;
+	border-right:1px solid #fff;
+	border-left:1px solid #fff
+}
+
+/* Celda01
+/********************************************************************/
+#celda01{
+	background:url(verde/img/bg_celda01.jpg) no-repeat left bottom #78a2b0;
+	border-top:1px solid #6e939f;
+	float:left;
+	width:100%;
+	min-height:299px;
+}
+
+#celda01 h2{
+	background:url(verde/img_cas/h2_celda01_butano.jpg) no-repeat left top;
+	margin:14px 0 0 85px;
+	padding-bottom:9px;
+	text-indent:-5000px;
+}
+
+/* Servicios */
+#servicios{ margin-left:76px;}
+#servicios li{
+	width:201px;
+	float:left;
+}
+
+
+#servicios p{
+	background:url(../img/bg_separador_celda01.gif) no-repeat left top;
+	clear:left;
+	color:#8d8d8d;
+	padding-left:33px;
+	margin-left:3px;
+	min-height:86px;
+}
+#servicios p.first{ background:none;}
+
+#servicios p strong {
+	clear:left;
+	color:#404040;
+	display:block;
+	font-size:1.1em;
+	margin:0 0 5px -27px;
+	padding:2px 0 0 24px;
+}
+#servicios p.lupa strong	{ background:url(verde/img/ico_lupa.jpg) no-repeat left 0px;}
+#servicios p.pagina strong	{ background:url(verde/img/ico_pagina.jpg) no-repeat left 0px;}
+#servicios p.corazon strong	{ background:url(verde/img/ico_estrella.jpg) no-repeat left 0px;}
+#servicios p.carpeta strong	{ background:url(verde/img/ico_carpeta.jpg) no-repeat left 0px;}
+a.btn_entrar{
+	background:url(verde/img/bg_btn_entrar.gif) no-repeat right top;
+	color:#fff;
+	margin:5px 0 0 36px;
+	padding:4px 25px 5px 6px;
+	float:left;
+
+}
+a.btn_entrar:hover{ background:url(verde/img/bg_btn_entrar.gif) no-repeat right bottom;}
+
+
+
+/* Celda02
+/********************************************************************/
+#celda02{
+	float:left;
+	width:100%;
+}
+#celda02 h2{
+	background:url(verde/img_cas/tit_servicios_destacados.jpg) no-repeat 85px 15px #F1EBE5;
+	text-indent:-5000px;
+	margin:0;
+	padding:8px 0 17px 0;
+}
+
+/* Destacados */
+.destacados{
+	margin:26px 0 0 55px;
+	display:inline; /* IE6 fix */
+}
+.destacados li{
+	background:url(verde/img/bg_separador_destacados.gif) repeat-x left bottom;
+	float:left;
+	width:228px;
+	padding:0 20px 19px 29px;
+	min-height:102px;
+	height:102px;
+}
+.destacados li.no_padding{ padding-left:0;}
+.destacados li p a{
+	font-size:1em;
+	margin-bottom:0;
+}
+
+.destacados li div {
+float:left;
+width:130px;
+}

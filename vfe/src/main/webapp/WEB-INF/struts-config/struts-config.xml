@@ -1,0 +1,240 @@
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+ "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+
+	<form-beans>
+		<form-bean name="ServiciosPortalForm"
+			type="es.novasoft.castellon.vfe.serviciosportal.forms.ServiciosPortalForm" />
+		<form-bean name="InitForm"
+			type="es.novasoft.castellon.vfe.init.forms.InitForm" />
+		<form-bean name="LoginForm"
+			type="es.novasoft.castellon.vfe.login.forms.LoginForm" />
+		<form-bean name="VerificarForm"
+			type="es.novasoft.castellon.vfe.verificar.forms.VerificarForm" />
+		<form-bean name="CambiarLenguajeForm"
+			type="es.novasoft.castellon.vfe.lenguaje.forms.CambiarLenguajeForm" />
+		<form-bean name="AdminGestionUsuarioForm"
+			type="es.novasoft.castellon.vfe.admin.usuario.forms.AdminGestionUsuarioForm" />
+		<form-bean name="AltaOrganismoForm"
+			type="es.novasoft.castellon.vfe.admin.organismo.altaOrganismo.forms.AltaOrganismoForm" />
+		<form-bean name="BajaOrganismoForm"
+			type="es.novasoft.castellon.vfe.admin.organismo.bajaOrganismo.forms.BajaOrganismoForm" />
+		<form-bean name="ModificarOrganismoForm"
+			type="es.novasoft.castellon.vfe.admin.organismo.modificarOrganismo.forms.ModificarOrganismoForm" />
+		<form-bean name="VisualizarOrganismoForm"
+			type="es.novasoft.castellon.vfe.admin.organismo.visualizarOrganismos.forms.VisualizarOrganismoForm" />
+		<form-bean name="MuestraInformacionOrganismoForm"
+			type="es.novasoft.castellon.vfe.admin.organismo.muestraInformacionOrganismo.forms.MuestraInformacionOrganismoForm" />
+	</form-beans>
+
+	<action-mappings>
+
+		<action path="/ErrorAcceso" forward="errorAcceso"></action>
+
+		<!-- PUNTO DE ENTRADA A LA APLICACION PUBLICA -->
+
+		<action name="InitForm" path="/InitDoAction" scope="session"
+			type="es.novasoft.castellon.vfe.init.actions.InitDoAction" validate="false">
+			<forward name="success" path="init.pantallaInicio"></forward>
+			<forward name="failure" path="init.pantallaError"></forward>
+		</action>
+
+		<!-- SERVICIOS DEL PORTAL -->
+
+		<action name="ServiciosPortalForm" path="/ServiciosPortalFrontAction"
+			scope="request"
+			type="es.novasoft.castellon.vfe.serviciosportal.actions.ServiciosPortalFrontAction"
+			validate="false">
+			<forward name="contacto" path="contacto.solicitud"></forward>
+			<forward name="ayuda_es" path="ayuda_es.solicitud"></forward>
+			<forward name="ayuda_va" path="ayuda_va.solicitud"></forward>
+		</action>
+
+		<!-- CAMBIO DE IDIOMA DE LA APLICACION -->
+
+		<action name="CambiarLenguajeForm" path="/CambiarLenguajeDoAction"
+			scope="session"
+			type="es.novasoft.castellon.vfe.lenguaje.actions.CambiarLenguajeDoAction"
+			validate="false">
+			<forward name="success" path="lenguaje.pantallaInicio"></forward>
+		</action>
+
+		<!--
+			PUNTO DE ENTRADA A LA APLICACION PRIVADA AUTENTICACION 
+		-->
+		<!-- forward para mensaje de error de permisos -->
+
+		<action path="/ErrorSinPermisos" type="org.apache.struts.actions.ForwardAction"
+			parameter="login.error2" scope="request" validate="false" />
+
+		<action name="LoginForm" path="/LoginFront"
+			type="es.novasoft.castellon.vfe.login.actions.LoginFrontAction"
+			scope="session" validate="false">
+			<forward name="success" path="login.acceso"></forward>
+		</action>
+
+		<action name="LoginForm" path="/LoginDoAction"
+			type="es.novasoft.castellon.vfe.login.actions.LoginDoAction" scope="session"
+			validate="false">
+			<forward name="failure" path="/LoginFront.do" />
+			<forward name="success" path="/IndexAdmin.do" />
+		</action>
+
+		<action name="LoginForm" path="/Logout"
+			type="es.novasoft.castellon.vfe.login.actions.LogoutFrontAction"
+			scope="session" validate="false">
+			<forward name="success" path="/InitDoAction.do"></forward>
+		</action>
+		<!--
+			ADMINISTRACION
+		-->
+        <action name="LoginForm" path="/IndexAdmin"
+			type="es.novasoft.castellon.vfe.admin.actions.IndexAdminFrontAction"
+			scope="session" validate="false">
+			<forward name="success" path="admin.index"></forward>
+			<forward name="errorAcceso" path="acceso.restringido" />
+		</action>
+		
+
+		<action name="AdminGestionUsuarioForm" path="/AdminGestionUsuarioFront"
+			type="es.novasoft.castellon.vfe.admin.usuario.actions.AdminGestionUsuarioFrontAction"
+			scope="session" validate="false">
+			<forward name="success" path="admin.usuario"></forward>
+			<forward name="errorAcceso" path="acceso.restringido" />
+		</action>
+
+		<action name="AdminGestionUsuarioForm" path="/AdminGestionUsuarioDoAction"
+			type="es.novasoft.castellon.vfe.admin.usuario.actions.AdminGestionUsuarioDoAction"
+			scope="session" validate="false">
+			<forward name="failure" path="/AdminGestionUsuarioFront.do" />
+			<forward name="success" path="/IndexAdmin.do" />
+			<forward name="errorAcceso" path="acceso.restringido" />
+		</action>
+		<!-- MOSTRAR INFORMACION ORGANISMOS -->
+
+		<action name="MuestraInformacionOrganismoForm" path="/MuestraInformacionOrganismoFrontAction"
+			type="es.novasoft.castellon.vfe.admin.organismo.muestraInformacionOrganismo.actions.MuestraInformacionOrganismoFrontAction"
+			scope="session" validate="false">
+			<forward name="success"
+				path="adminGlobal.muestraInformacionOrganismo.solicitud"></forward>
+			<forward name="failure" path="adminGlobal.muestraInformacionOrganismo.error"></forward>
+			<forward name="errorAcceso" path="acceso.restringido" />
+		</action>
+
+		<!-- MODIFICAR ORGANISMO -->
+
+		<action name="ModificarOrganismoForm" path="/ModificarOrganismoFrontAction"
+			type="es.novasoft.castellon.vfe.admin.organismo.modificarOrganismo.actions.ModificarOrganismoFrontAction"
+			scope="session" validate="false">
+			<forward name="success" path="adminGlobal.modificarOrganismo.solicitud"></forward>
+			<forward name="failure" path="adminGlobal.modificarOrganismo.error" />
+			<forward name="errorAcceso" path="acceso.restringido" />
+		</action>
+
+		<action name="ModificarOrganismoForm" path="/ModificarOrganismoDo"
+			input="/ModificarOrganismoFrontAction.do"
+			type="es.novasoft.castellon.vfe.admin.organismo.modificarOrganismo.actions.ModificarOrganismoDoAction"
+			scope="session" validate="true">
+			<forward name="success" path="adminGlobal.modificarOrganismo.correcto" />
+			<forward name="failure" path="adminGlobal.modificarOrganismo.error" />
+		    <forward name="errorAcceso" path="acceso.restringido" />
+		</action>
+
+		<!-- BAJA ORGANISMO -->
+
+		<action name="BajaOrganismoForm" path="/BajaOrganismoDo"
+			type="es.novasoft.castellon.vfe.admin.organismo.bajaOrganismo.actions.BajaOrganismoDoAction"
+			scope="session" validate="false">
+			<forward name="success" path="adminGlobal.bajaOrganismo.correcto" />
+			<forward name="failure" path="adminGlobal.bajaOrganismo.error" />
+			<forward name="failure2" path="adminGlobal.bajaOrganismo.error2" />
+			<forward name="errorAcceso" path="acceso.restringido" />
+		</action>
+
+
+		<!-- ALTA ORGANISMO -->
+
+		<action name="AltaOrganismoForm" path="/AltaOrganismoFrontAction"
+			type="es.novasoft.castellon.vfe.admin.organismo.altaOrganismo.actions.AltaOrganismoFrontAction"
+			scope="session" validate="false">
+			<forward name="success" path="adminGlobal.altaOrg.solicitud"></forward>
+			<forward name="cancel" path="/AltaOrganismoFront" />
+			<forward name="failure" path="adminGlobal.altaOrg.error" />
+			<forward name="errorAcceso" path="acceso.restringido" />	
+		</action>
+
+		<action name="AltaOrganismoForm" path="/AltaOrganismoDo"
+			input="/AltaOrganismoFrontAction.do"
+			type="es.novasoft.castellon.vfe.admin.organismo.altaOrganismo.actions.AltaOrganismoDoAction"
+			scope="session" validate="true">
+			<forward name="success" path="adminGlobal.altaOrg.correcto" />
+			<forward name="failure" path="adminGlobal.altaOrg.error" />
+			<forward name="cancel" path="/AltaOrganismoFront" />
+			<forward name="errorAcceso" path="acceso.restringido" />
+		</action>
+
+		<action name="VisualizarOrganismoForm" path="/VisualizarOrganismoFrontAction"
+			type="es.novasoft.castellon.vfe.admin.organismo.visualizarOrganismos.actions.VisualizarOrganismoFrontAction"
+			scope="session" validate="false">
+			<forward name="success" path="adminGlobal.visualizarOrganismos.solicitud"></forward>
+			<forward name="failure" path="adminGlobal.visualizarOrganismos.error"></forward>
+			<forward name="errorAcceso" path="acceso.restringido" />
+		</action>
+
+		<!--
+			VFE 
+		-->
+		<action name="VerificarForm" path="/VerificarFrontAction"
+			type="es.novasoft.castellon.vfe.verificar.actions.VerificarFrontAction"
+			input="/InitDoAction.do" scope="session">
+			<forward name="failure" path="verificar.error" />
+			<forward name="success" path="vfe.pantallaSeleccion" />
+		</action>
+
+		<!--		SERVLETS         -->
+
+		<action name="VerificarForm" path="/DescargarDocumentoOriginal"
+			type="es.novasoft.castellon.vfe.servlet.DescargaDocumentoOriginalServlet"
+			input="/VerificarFrontAction.do" validate="false">
+			<exception key="verificar.errorCodigo"
+				type="java.lang.NullPointerException" path="verificar.error" />
+			<exception key="verificar.errorCodigo" type="org.apache.axis.AxisFault"
+				path="verificar.error2" />
+		</action>
+		
+		<action name="VerificarForm" path="/DescargarFirmaElectronica"
+			type="es.novasoft.castellon.vfe.servlet.DescargaFirmaElectronicaServlet"
+			input="/VerificarFrontAction.do" validate="false">
+			<exception key="verificar.errorCodigo"
+				type="java.lang.NullPointerException" path="verificar.error" />
+			<exception key="verificar.errorCodigo" type="org.apache.axis.AxisFault"
+				path="verificar.error2" />
+		</action>
+		
+		<action name="VerificarForm" path="/DescargarDocumentoFirmado"
+			type="es.novasoft.castellon.vfe.servlet.DescargaDocumentoFirmadoServlet"
+			input="/VerificarFrontAction.do" validate="false">
+			<exception key="verificar.errorCodigo"
+				type="java.lang.NullPointerException" path="verificar.error" />
+			<exception key="verificar.errorCodigo" type="org.apache.axis.AxisFault"
+				path="verificar.error2" />
+		</action>
+	</action-mappings>
+
+	<controller nocache="true"
+		processorClass="org.apache.struts.tiles.TilesRequestProcessor" />
+
+	<message-resources parameter="configuracion.properties"></message-resources>
+	<message-resources parameter="firma.properties"></message-resources>
+	<message-resources null="false" parameter="resources.validation" />
+	<message-resources parameter="ApplicationResources"
+		key="resources" />
+
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config" value="/WEB-INF/tiles/tiles-defs.xml" />
+	</plug-in>
+
+</struts-config>
+

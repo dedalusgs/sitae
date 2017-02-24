@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN" "http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+
+<tiles-definitions>
+
+	<!-- ============================ LAYOUTS ======================== -->
+
+	<!-- General Layout -->
+	
+	<definition name="layoutExtranet" template="/jsp/layouts/layoutIntranet.jsp">
+		<put name="scripts" value="/jsp/layouts/scripts.jsp" />
+		<put name="titulo" value=""/>
+		<put name="top" value="/jsp/layouts/topExtranet.jsp" />
+	    <put name="cabecera" value="/jsp/layouts/cabeceraExtranet.jsp"/>
+	    <put name="menuSuperior" value="/jsp/layouts/menuSuperiorExtranet.jsp"/>
+	    <put name="migaDePan" value="/jsp/layouts/migaDePan.jsp"/>
+	    <put name="botonera" value="/jsp/layouts/botonera.jsp"/>
+	    <put name="menuPublico" value="/jsp/layouts/menuPublicoExtranet.jsp" />
+	    <put name="menuAdministracion" value="/jsp/layouts/menuAdministracionExtranet.jsp" />
+		<put name="cuerpo" value="/VisualizarEdictoPublicoUltimosFrontAction.do"/>
+		<put name="pie" value="/jsp/layouts/pieExtranet.jsp"/>  
+		
+		
+	</definition>  
+  	
+	<!-- ADMINISTRADOR GLOBAL -->
+		
+    <!-- ALTA ORGANISMO -->
+		 
+    <definition name="adminGlobal.altaOrg.solicitud" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/adminGlobal/altaOrganismo/altaOrg.jsp"/>
+  	</definition>
+  	
+  	<definition name="adminGlobal.altaOrg.correcto" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/altaOrganismo/correcto.jsp"/>
+  	</definition>
+  	
+  	<definition name="adminGlobal.altaOrg.error" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/altaOrganismo/error.jsp"/>
+  	</definition>
+  	
+  		<!-- ALTA ADMINISTRADOR LOCAL -->
+		 
+    <definition name="adminGlobal.altaAdmLocal.solicitud" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/adminGlobal/altaAdmLocal/formulario.jsp"/>
+  	</definition>
+  	
+  	<definition name="adminGlobal.altaAdmLocal.correcto" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/altaAdmLocal/correcto.jsp"/>
+  	</definition>
+  	
+  	<definition name="adminGlobal.altaAdmLocal.error" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/altaAdmLocal/error.jsp"/>
+  	</definition>
+  	
+  	<!-- ASIGNAR A ORGANISMOS ADMINISTRADOR LOCAL -->
+	<!-- 	 
+    <definition name="adminGlobal.asignarOrganismosAdmLocal.solicitud" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/adminGlobal/asignarOrganismosAdmLocal/formulario.jsp"/>
+  	</definition>
+  	
+  	<definition name="adminGlobal.asignarOrganismosAdmLocal.correcto" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/asignarOrganismosAdmLocal/correcto.jsp"/>
+  	</definition>
+  	
+  	<definition name="adminGlobal.asignarOrganismosAdmLocal.error" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/asignarOrganismosAdmLocal/error.jsp"/>
+  	</definition>
+   	-->
+  		<!-- BAJA ADMINISTRADOR LOCAL -->
+		 
+  	<definition name="adminGlobal.bajaAdmLocal.correcto" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/bajaAdmLocal/correcto.jsp"/>
+  	</definition>
+  	
+  	<definition name="adminGlobal.bajaAdmLocal.error" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/bajaAdmLocal/error.jsp"/>
+  	</definition>
+  	
+  	<definition name="adminGlobal.bajaAdmLocal.error2" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/bajaAdmLocal/error2.jsp"/>
+  	</definition>
+  	  	  	
+  	<!-- BAJA ORGANISMO -->
+  	
+  	<definition name="adminGlobal.bajaOrganismo.correcto" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/bajaOrganismo/correcto.jsp"/>
+  	</definition>
+  	
+  	<definition name="adminGlobal.bajaOrganismo.error" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/bajaOrganismo/error.jsp"/>
+  	</definition>
+  	
+  	 <definition name="adminGlobal.bajaOrganismo.error2" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/bajaOrganismo/error2.jsp"/>
+  	</definition>
+  	
+  	  	  	<!-- MODIFICAR ADMINISTRADOR LOCAL -->
+		 
+    <definition name="adminGlobal.modificarAdmLocal.solicitud" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/adminGlobal/modificarAdmLocal/formulario.jsp"/>
+  	</definition>
+  	
+  	<definition name="adminGlobal.modificarAdmLocal.correcto" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/modificarAdmLocal/correcto.jsp"/>
+  	</definition>
+  	
+  	<definition name="adminGlobal.modificarAdmLocal.error" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/modificarAdmLocal/error.jsp"/>
+  	</definition>
+  	
+  	<definition name="adminGlobal.modificarAdmLocal.error2" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/modificarAdmLocal/error2.jsp"/>
+  	</definition>
+  	
+  	  	    <!-- MODIFICAR ORGANISMO -->
+		 
+    <definition name="adminGlobal.modificarOrganismo.solicitud" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/adminGlobal/modificarOrganismo/formulario.jsp"/>
+  	</definition>
+  	
+  	<definition name="adminGlobal.modificarOrganismo.correcto" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/modificarOrganismo/correcto.jsp"/>
+  	</definition>
+  	
+  	<definition name="adminGlobal.modificarOrganismo.error" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/modificarOrganismo/error.jsp"/>
+  	</definition>
+  	
+  	<!-- VISUALIZAR ADMINISTRADORES LOCALES -->
+		 
+    <definition name="adminGlobal.visualizarAdmLocales.solicitud" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/adminGlobal/visualizarAdmLocales/formulario2.jsp"/>
+  	</definition>
+  	
+  	
+  	<!-- VISUALIZAR ORGANISMOS -->
+		 
+    <definition name="adminGlobal.visualizarOrganismos.solicitud" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/adminGlobal/visualizarOrganismos/formulario.jsp"/>
+  	</definition>
+  	
+  	<definition name="adminGlobal.visualizarOrganismos.error" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/adminGlobal/visualizarOrganismos/error.jsp"/>
+  	</definition>
+  	  
+  	
+  	<!-- MOSTRAR INFORMACION USUARIOS -->
+  			
+  	<definition name="adminGlobal.muestraInformacionUsuario.solicitud" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/adminGlobal/muestraInformacionUsuario/formulario.jsp"/>
+  	</definition>
+  	
+  	<!-- MOSTRAR INFORMACION ORGANISMOS -->
+  			
+  	<definition name="adminGlobal.muestraInformacionOrganismo.solicitud" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/adminGlobal/muestraInformacionOrganismo/formulario.jsp"/>
+  	</definition>
+  	
+  	<definition name="adminGlobal.muestraInformacionOrganismo.error" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/adminGlobal/muestraInformacionOrganismo/error.jsp"/>
+  	</definition>
+  
+  
+  	<!-- VISUALIZAR ORGANISMOS EXTERNOS -->
+		 
+    <definition name="adminGlobal.visualizarOrganismosExternos.solicitud" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/adminGlobal/visualizarOrganismosExternos/formulario.jsp"/>
+  	</definition>
+  	
+  	<definition name="adminGlobal.visualizarOrganismosExternos.error" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/adminGlobal/visualizarOrganismosExternos/error.jsp"/>
+  	</definition>
+  
+  	<!-- MOSTRAR INFORMACION ORGANISMO EXTERNO -->
+  			
+  	<definition name="adminGlobal.muestraInformacionOrganismoExterno.solicitud" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/adminGlobal/muestraInformacionOrganismoExterno/formulario.jsp"/>
+  	</definition>
+  	
+  	<definition name="adminGlobal.muestraInformacionOrganismoExterno.error" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/adminGlobal/muestraInformacionOrganismoExterno/error.jsp"/>
+  	</definition>
+  	
+  	 <!-- ALTA ORGANISMO EXTERNO -->
+		 
+    <definition name="adminGlobal.altaOrganismoExterno.solicitud" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/adminGlobal/altaOrganismoExterno/formulario.jsp"/>
+  	</definition>
+  	
+  	<definition name="adminGlobal.altaOrganismoExterno.correcto" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/altaOrganismoExterno/correcto.jsp"/>
+  	</definition>
+  	
+  	<definition name="adminGlobal.altaOrganismoExterno.error" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/altaOrganismoExterno/error.jsp"/>
+  	</definition>
+  	
+  	<!-- MODIFICAR ORGANISMO EXTERNO -->
+		 
+    <definition name="adminGlobal.modificarOrganismoExterno.solicitud" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/adminGlobal/modificarOrganismoExterno/formulario.jsp"/>
+  	</definition>
+  	
+  	<definition name="adminGlobal.modificarOrganismoExterno.correcto" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/modificarOrganismoExterno/correcto.jsp"/>
+  	</definition>
+  	
+  	<definition name="adminGlobal.modificarOrganismoExterno.error" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/modificarOrganismoExterno/error.jsp"/>
+  	</definition>
+  	
+  	<!-- BAJA ORGANISMO EXTERNO -->
+  	
+  	<definition name="adminGlobal.bajaOrganismoExterno.correcto" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/bajaOrganismoExterno/correcto.jsp"/>
+  	</definition>
+  	
+  	<definition name="adminGlobal.bajaOrganismoExterno.error" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/bajaOrganismoExterno/error.jsp"/>
+  	</definition>
+  	
+  	 <definition name="adminGlobal.bajaOrganismoExterno.error2" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/adminGlobal/bajaOrganismoExterno/error2.jsp"/>
+  	</definition>
+  	
+  
+  
+  	   <!-- GESTION FESTIVOS -->
+	    
+	    <!-- ALTA FESTIVOS -->
+		 
+      <definition name="adminGlobal.altaFestivo.solicitud" extends="layoutExtranet">
+	   	  <put name="cuerpo" value="/jsp/sitae/adminGlobal/altaFestivo/altaFestivo.jsp"/>
+  	  </definition>
+  	
+  	   <definition name="adminGlobal.altaFestivo.correcto" extends="layoutExtranet">
+    	  <put name="cuerpo" value="/jsp/sitae/adminGlobal/altaFestivo/correcto.jsp"/>
+  	   </definition>
+  	
+  	   <definition name="adminGlobal.altaFestivo.error" extends="layoutExtranet">
+    	  <put name="cuerpo" value="/jsp/sitae/adminGlobal/altaFestivo/error.jsp"/>
+  	    </definition>
+  	    
+  	    <!-- BAJA FESTIVO  -->
+  	
+  	        <definition name="adminGlobal.eliminarFestivo.correcto" extends="layoutExtranet">
+    	       <put name="cuerpo" value="/jsp/sitae/adminGlobal/eliminarFestivo/correcto.jsp"/>
+  	        </definition>
+  	
+  	        <definition name="adminGlobal.eliminarFestivo.error" extends="layoutExtranet">
+    	       <put name="cuerpo" value="/jsp/sitae/adminGlobal/eliminarFestivo/error.jsp"/>
+  	       </definition>
+  	       
+  	    <!-- MODIFICAR FESTIVO  -->
+		 
+            <definition name="adminGlobal.modificarFestivo.solicitud" extends="layoutExtranet">
+	   	       <put name="cuerpo" value="/jsp/sitae/adminGlobal/modificarFestivo/formulario.jsp"/>
+  	         </definition>
+  	
+  			<definition name="adminGlobal.modificarFestivo.correcto" extends="layoutExtranet">
+    			<put name="cuerpo" value="/jsp/sitae/adminGlobal/modificarFestivo/correcto.jsp"/>
+  			</definition>
+  	
+  			<definition name="adminGlobal.modificarFestivo.error" extends="layoutExtranet">
+    			<put name="cuerpo" value="/jsp/sitae/adminGlobal/modificarFestivo/error.jsp"/>
+  			</definition>  			
+  	       
+  	     <!-- copiar FESTIVO  -->
+		 
+    		<definition name="adminGlobal.copiarFestivo.solicitud" extends="layoutExtranet">
+	   			<put name="cuerpo" value="/jsp/sitae/adminGlobal/copiarFestivo/correcto.jsp"/>
+  			</definition>
+  			<definition name="adminGlobal.copiarFestivo.error" extends="layoutExtranet">
+    			<put name="cuerpo" value="/jsp/sitae/adminGlobal/copiarFestivo/error.jsp"/>
+  			</definition> 
+  			<definition name="adminGlobal.copiarFestivo.errorNoExistenDias" extends="layoutExtranet">
+    			<put name="cuerpo" value="/jsp/sitae/adminGlobal/copiarFestivo/errorNoHayCopias.jsp"/>
+  			</definition>
+  
+  		<!-- visualizar FESTIVO  -->
+  			
+  			<definition name="adminGlobal.visualizarFestivo.solicitud" extends="layoutExtranet">
+	   			<put name="cuerpo" value="/jsp/sitae/adminGlobal/visualizarFestivo/formulario.jsp"/>
+  			</definition>
+	  
+	  <!-- FIN FESTIVOS -->
+	  <!-- Estadísticas  -->
+  			
+  		<definition name="adminGlobal.estadisticasPublicacion.solicitud" extends="layoutExtranet">
+	   			<put name="cuerpo" value="/jsp/sitae/adminGlobal/estadisticasPublicacion/formulario.jsp"/>
+  			</definition>
+  			<definition name="adminGlobal.estadisticasPublicacion.error" extends="layoutExtranet">
+    			<put name="cuerpo" value="/jsp/sitae/adminGlobal/estadisticasPublicacion/error.jsp"/>
+  			</definition> 
+  
+  
+</tiles-definitions> 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dwr>
+  <allow>
+  
+    <create creator="new" javascript="JDate">
+      <param name="class" value="java.util.Date"/>
+    </create>
+  
+    <create creator="new" javascript="AjaxSitae">
+      <param name="class" value="es.novasoft.sitae.ajax.AjaxSitae"/>
+    </create>
+    
+  </allow>
+</dwr>

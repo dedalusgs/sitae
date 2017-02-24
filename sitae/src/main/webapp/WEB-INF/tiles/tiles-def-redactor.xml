@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN" "http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+
+<tiles-definitions>
+
+	<!-- ============================ LAYOUTS ======================== -->
+
+	<!-- General Layout -->
+	
+	<definition name="layoutExtranet" template="/jsp/layouts/layoutIntranet.jsp">
+	    <put name="scripts" value="/jsp/layouts/scripts.jsp" />
+		<put name="titulo" value=""/>
+	    <put name="cabecera" value="/jsp/layouts/cabeceraExtranet.jsp"/>
+	    <put name="top" value="/jsp/layouts/topExtranet.jsp" />
+	    <put name="menuSuperior" value="/jsp/layouts/menuSuperiorExtranet.jsp"/>
+	    <put name="migaDePan" value="/jsp/layouts/migaDePan.jsp"/>
+	    <put name="botonera" value="/jsp/layouts/botonera.jsp"/>
+	    <put name="menuPublico" value="/jsp/layouts/menuPublicoExtranet.jsp" />
+	    <put name="menuAdministracion" value="/jsp/layouts/menuAdministracionExtranet.jsp" />
+   	    <put name="cuerpo" value="/VisualizarEdictoPublicoUltimosFrontAction.do"/>
+		<put name="pie" value="/jsp/layouts/pieExtranet.jsp"/>  
+		
+		
+	</definition>  
+  	
+	<!-- REDACTOR -->
+		
+		 <!-- CREAR EDICTO -->
+		 
+    <definition name="redactor.crearEdicto.solicitud" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/redactor/crearEdicto/formulario.jsp"/>
+  	</definition>
+  	
+  	<definition name="redactor.crearEdicto.correcto" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/redactor/crearEdicto/correcto.jsp"/>
+  	</definition>
+  	
+  	<definition name="redactor.crearEdicto.error" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/redactor/crearEdicto/error.jsp"/>
+  	</definition>
+  	
+  	  	<!-- MODIFICAR EDICTOS -->
+  	
+  	<definition name="redactor.modificarEdicto.solicitud" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/redactor/modificarEdicto/formulario.jsp"/>
+  	</definition>
+  	
+  	<definition name="redactor.modificarEdicto.error" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/redactor/modificarEdicto/error.jsp"/>
+  	</definition>
+  	
+  	<definition name="redactor.modificarEdicto.correcto" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/redactor/modificarEdicto/correcto.jsp"/>
+  	</definition>
+  	
+  		<!-- ELIMINAR EDICTOS -->
+  	
+  	<definition name="redactor.eliminarEdicto.correcto" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/redactor/eliminarEdicto/correcto.jsp"/>
+  	</definition>
+  	
+  	<definition name="redactor.eliminarEdicto.error" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/redactor/eliminarEdicto/error.jsp"/>
+  	</definition>
+  	
+  	<definition name="redactor.eliminarEdicto.error2" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/redactor/eliminarEdicto/error2.jsp"/>
+  	</definition>
+  	
+  	
+  	 	<!-- SOLICITAR PUBLICACION EDICTOS -->
+  	
+  	<definition name="redactor.solicitarPublicacion.correcto" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/redactor/solicitarPublicacion/correcto.jsp"/>
+  	</definition>
+  	
+  	<definition name="redactor.solicitarPublicacion.error" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/redactor/solicitarPublicacion/error.jsp"/>
+  	</definition>
+  	
+  	<definition name="redactor.solicitarPublicacion.error2" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/redactor/solicitarPublicacion/error2.jsp"/>
+  	</definition>
+  	
+  	  	<!-- CANCELAR PUBLICACION EDICTOS -->
+  	
+  	<definition name="redactor.cancelarPublicacion.correcto" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/redactor/cancelarPublicacion/correcto.jsp"/>
+  	</definition>
+  	
+  	<definition name="redactor.cancelarPublicacion.error" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/redactor/cancelarPublicacion/error.jsp"/>
+  	</definition>
+  	
+  	<definition name="redactor.cancelarPublicacion.error2" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/redactor/cancelarPublicacion/error2.jsp"/>
+  	</definition>
+  	
+  	
+  	   <!-- VISUALIZAR EDICTOS -->
+		 
+    <definition name="redactor.visualizarEdictos.solicitud" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/redactor/visualizarEdictos/formulario.jsp"/>
+  	</definition>
+  	
+  	<definition name="redactor.visualizarEdictos.error" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/redactor/visualizarEdictos/error.jsp"/>
+  	</definition>
+  	  	   	
+  	 <!-- MOSTRAR INFORMACION EDICTOS -->
+  			
+  	<definition name="redactor.muestraInformacionEdictos.solicitud" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/redactor/muestraInformacionEdicto/formulario.jsp"/>
+  	</definition>
+  	
+  	<definition name="redactor.muestraInformacionEdictos.error" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/redactor/muestraInformacionEdicto/error.jsp"/>
+  	</definition>
+  	
+  
+</tiles-definitions> 

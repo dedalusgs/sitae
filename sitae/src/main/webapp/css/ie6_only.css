@@ -1,0 +1,27 @@
+BODY { behavior: url(css/csshover2.htc);}
+/* Activa las pseudo clases en IE6
+/********************************************************************/
+
+/* PNG fix
+/********************************************************************/
+/*#celda01 span.shadow{
+	background-image: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/shadow.png', sizingMethod='crop');
+}*/
+
+/* Height fix
+/********************************************************************/
+#celda01{ height:299px;}
+#servicios p{ height:86px;}
+#destacados li{ height:72px;}
+#bloque-verde{ height:189px;}
+.destacados li{ height:102px;}
+#contenido_central.fondo_gris{ height:634px;}
+#contenido-cuerpo{
+	height: 600px;
+}
+
+
+/* Otros
+/********************************************************************/
+.buscador form fieldset ul.radios li.ico_naranja{ background:url(../img/ico_naranja.gif) no-repeat right 3px;}

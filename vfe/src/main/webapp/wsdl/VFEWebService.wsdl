@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://ws.vfe.castellon.novasoft.es" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://ws.vfe.castellon.novasoft.es" xmlns:intf="http://ws.vfe.castellon.novasoft.es" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://ws.vfe.castellon.novasoft.es" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="eliminarRegistrarDocumento">
+    <complexType>
+     <sequence>
+      <element name="peticion" type="impl:PeticionRegistro"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="PeticionRegistro">
+    <sequence>
+     <element name="contrasenia" nillable="true" type="xsd:string"/>
+     <element name="csv" nillable="true" type="xsd:string"/>
+     <element name="idDocumento" nillable="true" type="xsd:string"/>
+     <element name="idFirma" nillable="true" type="xsd:string"/>
+     <element name="idMunicipio" nillable="true" type="xsd:string"/>
+     <element name="nombreDocumento" nillable="true" type="xsd:string"/>
+     <element name="nombreFirma" nillable="true" type="xsd:string"/>
+     <element name="tipoDocumento" nillable="true" type="xsd:string"/>
+     <element name="tipoFirma" nillable="true" type="xsd:string"/>
+     <element name="usuario" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="eliminarRegistrarDocumentoResponse">
+    <complexType>
+     <sequence>
+      <element name="eliminarRegistrarDocumentoReturn" type="impl:RespuestaRegistro"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="RespuestaRegistro">
+    <sequence>
+     <element name="codigoERROR" nillable="true" type="xsd:string"/>
+     <element name="csv" nillable="true" type="xsd:string"/>
+     <element name="mensajeError" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="registrarDocumento">
+    <complexType>
+     <sequence>
+      <element name="peticion" type="impl:PeticionRegistro"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="registrarDocumentoResponse">
+    <complexType>
+     <sequence>
+      <element name="registrarDocumentoReturn" type="impl:RespuestaRegistro"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="obtenerDocumentoCSV">
+    <complexType>
+     <sequence>
+      <element name="peticion" type="impl:PeticionDocumentoCSV"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="PeticionDocumentoCSV">
+    <sequence>
+     <element name="contrasenia" nillable="true" type="xsd:string"/>
+     <element name="csv" nillable="true" type="xsd:string"/>
+     <element name="idAyto" nillable="true" type="xsd:string"/>
+     <element name="idDocumento" nillable="true" type="xsd:string"/>
+     <element name="usuario" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="obtenerDocumentoCSVResponse">
+    <complexType>
+     <sequence>
+      <element name="obtenerDocumentoCSVReturn" type="impl:RespuestaDocumentoCSV"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="RespuestaDocumentoCSV">
+    <sequence>
+     <element name="codigoERROR" nillable="true" type="xsd:string"/>
+     <element name="documento" nillable="true" type="xsd:base64Binary"/>
+     <element name="mensajeError" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="eliminarRegistrarDocumentoRequest">
+
+      <wsdl:part element="impl:eliminarRegistrarDocumento" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="registrarDocumentoRequest">
+
+      <wsdl:part element="impl:registrarDocumento" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="registrarDocumentoResponse">
+
+      <wsdl:part element="impl:registrarDocumentoResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="eliminarRegistrarDocumentoResponse">
+
+      <wsdl:part element="impl:eliminarRegistrarDocumentoResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="obtenerDocumentoCSVRequest">
+
+      <wsdl:part element="impl:obtenerDocumentoCSV" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="obtenerDocumentoCSVResponse">
+
+      <wsdl:part element="impl:obtenerDocumentoCSVResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="VFEWebService">
+
+      <wsdl:operation name="eliminarRegistrarDocumento">
+
+         <wsdl:input message="impl:eliminarRegistrarDocumentoRequest" name="eliminarRegistrarDocumentoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:eliminarRegistrarDocumentoResponse" name="eliminarRegistrarDocumentoResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="registrarDocumento">
+
+         <wsdl:input message="impl:registrarDocumentoRequest" name="registrarDocumentoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:registrarDocumentoResponse" name="registrarDocumentoResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="obtenerDocumentoCSV">
+
+         <wsdl:input message="impl:obtenerDocumentoCSVRequest" name="obtenerDocumentoCSVRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:obtenerDocumentoCSVResponse" name="obtenerDocumentoCSVResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="VFEWebServiceSoapBinding" type="impl:VFEWebService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="eliminarRegistrarDocumento">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="eliminarRegistrarDocumentoRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="eliminarRegistrarDocumentoResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="registrarDocumento">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="registrarDocumentoRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="registrarDocumentoResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="obtenerDocumentoCSV">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="obtenerDocumentoCSVRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="obtenerDocumentoCSVResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="VFEWebServiceService">
+
+      <wsdl:port binding="impl:VFEWebServiceSoapBinding" name="VFEWebService">
+
+         <wsdlsoap:address location="http://localhost:8080/vfe/services/VFEWebService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

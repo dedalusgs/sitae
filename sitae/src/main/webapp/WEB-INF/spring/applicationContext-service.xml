@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+<!-- <bean id="propertyConfigurer" -->
+<!-- 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"> -->
+<!-- 		<property name="location"> -->
+<!-- 			<value>classpath:/configuracion.properties</value> -->
+<!-- 		</property> -->
+<!-- 	</bean> -->
+
+	<bean id="PerfilService"
+		class="es.novasoft.sitae.business.services.impl.PerfilServiceImpl">
+		<property name="perfilDAO">
+			<ref bean="PerfilDAO" />
+		</property>
+	</bean>
+
+	<bean id="UsuarioService"
+		class="es.novasoft.sitae.business.services.impl.UsuarioServiceImpl">
+		<property name="usuarioDAO">
+			<ref bean="UsuarioDAO" />
+		</property>
+	</bean>
+
+	<bean id="OrganismoService"
+		class="es.novasoft.sitae.business.services.impl.OrganismoServiceImpl">
+		<property name="organismoDAO">
+			<ref bean="OrganismoDAO" />
+		</property>
+	</bean>
+
+	<bean id="OrganismoExternoService"
+		class="es.novasoft.sitae.business.services.impl.OrganismoExternoServiceImpl">
+		<property name="organismoExternoDAO">
+			<ref bean="OrganismoExternoDAO" />
+		</property>
+	</bean>
+
+	<bean id="CentroProcedenciaService"
+		class="es.novasoft.sitae.business.services.impl.CentroProcedenciaServiceImpl">
+		<property name="centroProcedenciaDAO">
+			<ref bean="CentroProcedenciaDAO" />
+		</property>
+	</bean>
+
+	<bean id="RelacionUsuOrgCentroPerfService"
+		class="es.novasoft.sitae.business.services.impl.RelacionUsuOrgCentroPerfServiceImpl">
+		<property name="relacionUsuOrgCentroPerfDAO">
+			<ref bean="RelacionUsuOrgCentroPerfDAO" />
+		</property>
+	</bean>
+
+	<bean id="FuncionalidadService"
+		class="es.novasoft.sitae.business.services.impl.FuncionalidadServiceImpl">
+		<property name="funcionalidadDAO">
+			<ref bean="FuncionalidadDAO" />
+		</property>
+	</bean>
+
+	<bean id="RelPerfFuncService"
+		class="es.novasoft.sitae.business.services.impl.RelPerfFuncServiceImpl">
+		<property name="relPerfFuncDAO">
+			<ref bean="RelPerfFuncDAO" />
+		</property>
+	</bean>
+
+	<bean id="RelacionEdictosService"
+		class="es.novasoft.sitae.business.services.impl.RelacionEdictosServiceImpl">
+		<property name="relacionEdictosDAO">
+			<ref bean="RelacionEdictosDAO" />
+		</property>
+	</bean>
+
+
+	<bean id="TipoEdictoService"
+		class="es.novasoft.sitae.business.services.impl.TipoEdictoServiceImpl">
+		<property name="tipoEdictoDAO">
+			<ref bean="TipoEdictoDAO" />
+		</property>
+	</bean>
+
+	<bean id="EstadoService"
+		class="es.novasoft.sitae.business.services.impl.EstadoServiceImpl">
+		<property name="estadoDAO">
+			<ref bean="EstadoDAO" />
+		</property>
+	</bean>
+
+	<!--  Servicio para almacenar documentos en Alfresco 	-->
+	<bean id="EdictoService"
+		class="es.novasoft.sitae.business.services.impl.EdictoServiceImpl">
+
+		<!--  Servicio para almacenar documentos en base de datos -->
+		<!--	<bean id="EdictoService"-->
+		<!--		class="es.novasoft.sitae.business.services.impl.EdictoServiceImpl">-->
+		<property name="edictoDAO">
+			<ref bean="EdictoDAO" />
+		</property>
+	</bean>
+
+	<bean id="UsuarioExternoService"
+		class="es.novasoft.sitae.business.services.impl.UsuarioExternoServiceImpl">
+		<property name="usuarioExternoDAO">
+			<ref bean="UsuarioExternoDAO" />
+		</property>
+	</bean>
+
+	<bean id="UsuarioFirmanteService"
+		class="es.novasoft.sitae.business.services.impl.UsuarioFirmanteServiceImpl">
+		<property name="usuarioFirmanteDAO">
+			<ref bean="UsuarioFirmanteDAO" />
+		</property>
+	</bean>
+
+	<bean id="TipoFirmaService"
+		class="es.novasoft.sitae.business.services.impl.TipoFirmaServiceImpl">
+		<property name="tipoFirmaDAO">
+			<ref bean="TipoFirmaDAO" />
+		</property>
+	</bean>
+
+	<!-- Password Encrypted Service	-->
+	<bean id="PasswordService"
+		class="es.novasoft.sitae.business.services.impl.PasswordServiceImpl" />
+    
+    <bean id="FestivoService"
+		class="es.novasoft.sitae.business.services.impl.FestivoServiceImpl">
+		<property name="festivoDAO">
+			<ref bean="FestivoDAO" />
+		</property>
+	</bean>
+	
+	 <bean id="FacebookService"
+		class="es.novasoft.comun.socialservice.FacebookService">
+		<property name="idAplicacion" value="${social.facebook.idAplicacion}" />
+		<property name="claveSecreta" value="${social.facebook.appSecret}" />
+		<property name="permisos" value="${social.facebook.permisos}" />
+		<property name="urlCallback" value="${social.facebook.url.vuelta}" />
+	</bean>
+	
+	<bean id="TwitterService"
+		class="es.novasoft.comun.socialservice.TwitterService">
+		<property name="consumerKey" value="${social.twitter.consumerKey}" />
+		<property name="consumerSecret" value="${social.twitter.consumerSecret}" />		
+	</bean>
+	
+	<bean id="GooglePlusService"
+		class="es.novasoft.comun.socialservice.GooglePlusService">
+		<property name="consumerKey" value="${social.googleplus.clientid}" />
+		<property name="consumerSecret" value="${social.googleplus.clientSecret}" />
+		<property name="appName" value="${social.googleplus.app}" />
+		<property name="urlCallBack" value="${social.googleplus.callback}" />		
+	</bean>
+	
+	<bean id="GoogleShortenerService"
+		class="es.novasoft.comun.socialservice.GoogleShortenerService">
+		<property name="clientId" value="${social.googleshortener.clientid}" />
+		<property name="clientSecret" value="${social.googleshortener.clientSecret}" />		
+		<property name="appName" value="${social.googleshortener.app}" />
+		
+	</bean>
+	
+	<bean id="RedSocialService"
+		class="es.novasoft.sitae.business.services.impl.RedSocialServiceImpl">
+		<property name="redSocialDAO">
+			<ref bean="RedSocialDAO" />
+		</property>
+	</bean>
+	
+	<bean id="InteresadoService"
+		class="es.novasoft.sitae.business.services.impl.InteresadoServiceImpl">
+		<property name="interesadoDAO">
+			<ref bean="InteresadoDAO" />
+		</property>
+	</bean>
+	
+	<bean id="PublicacionRedesSocialesService"
+		class="es.novasoft.sitae.business.services.impl.PublicacionRedesSocialesServiceImpl">
+		<property name="publicacionRedesSocialesDAO">
+			<ref bean="PublicacionRedesSocialesDAO" />
+		</property>
+	</bean>
+	<bean id="log4jInitializer" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">  
+   		<property name="staticMethod" value="org.springframework.util.Log4jConfigurer.initLogging" />  
+   		<property name="arguments">  
+      	<list>  
+         <value>${sitae.confbase.rutaLog4j}</value>  
+      </list>  
+   	</property>  
+	</bean> 
+	<bean id="ConfiguracionService"
+		class="es.novasoft.sitae.business.services.impl.ConfiguracionServiceImpl">
+		<property name="configuracionDAO">
+			<ref bean="ConfiguracionDAO" />
+		</property>
+	</bean>
+	
+	
+	
+	<bean id="SystemFileService"
+		class="es.novasoft.sitae.business.files.FileSystemService">
+		
+		<property name="rutaAlmacenamientoBorrador" value="${system.fileservice.ruta.borrador}"/>
+		<property name="rutaAlmacenamientoPublicado" value="${system.fileservice.ruta.publicado}"/>	
+		<property name="patronIdentificacion" value="${system.fileservice.patron}"/>
+	
+		
+	</bean>
+	<bean id="FactoryFileServices"
+      class="es.novasoft.sitae.business.files.FactoryFileService">
+    <property name="listadoFileService">
+        <list value-type="es.novasoft.uvtae.business.services.interfaz.FileService">
+            <ref bean="SystemFileService"/>
+        </list>
+    </property>
+</bean>
+</beans>

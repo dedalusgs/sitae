@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!-- GESTION DE AUTORIZACIONES -->
+	<bean id="AuthorizationManager" 
+		class="es.novasoft.sitae.autorizacion.AuthorizationManager">
+		<property name="authorizationRules">
+			<map>
+				<entry key=".*/AltaOrganismoFrontAction.*" value="1" />
+				<entry key=".*/AltaOrganismoFront.*" value="1" />
+				<entry key=".*/AltaOrganismoDo.*" value="1" />
+				<entry key=".*/AltaOrganismoFront.*" value="1" />
+				<entry key=".*/AltaAdmLocalFrontAction.*" value="1" />
+				<entry key=".*/AltaAdmLocalFront.*" value="1" />
+				<entry key=".*/AltaAdmLocalDo.*" value="1" />
+				<entry key=".*/BajaAdmLocalDo.*" value="1" />
+				<entry key=".*/BajaOrganismoDo.*" value="1" />
+				<entry key=".*/ModificarAdmLocalFrontAction.*" value="1" />
+				<entry key=".*/ModificarAdmLocalDo.*" value="1" />
+				<entry key=".*/AsignarOrganismosAdmLocalDo.*" value="1" />
+				<entry key=".*/ModificarOrganismoFrontAction.*" value="1" />
+				<entry key=".*/ModificarOrganismoDo.*" value="1" />
+				<entry key=".*/VisualizarAdmLocalFrontAction.*" value="1" />
+				<entry key=".*/VisualizarAdmLocalFront.*" value="1" />
+				<entry key=".*/VisualizarOrganismoFrontAction.*" value="1" />
+				<entry key=".*/MuestraInformacionUsuarioAdmLocalFrontAction.*"
+					value="1" />
+				<entry key=".*/MuestraInformacionOrganismoFrontAction.*"
+					value="1" />
+				<entry key=".*/VisualizarOrganismoExternoFrontAction.*" value="1" />
+				<entry key=".*/MuestraInformacionOrganismoExternoFrontAction.*"
+					value="1" />
+				<entry key=".*/AltaOrganismoExternoFrontAction.*" value="1" />
+				<entry key=".*/AltaOrganismoExternoDo.*" value="1" />
+				<entry key=".*/ModificarOrganismoExternoFrontAction.*" value="1" />
+				<entry key=".*/ModificarOrganismoExternoDo.*" value="1" />
+				<entry key=".*/BajaOrganismoExternoDo.*" value="1" />
+				<entry key=".*/VisualizarFestivoGlobFrontAction.*" value="1" />
+				<entry key=".*/AltaFestivoGlobFrontAction.*" value="1" />
+				<entry key=".*/AltaFestivoGlobDoAction.*" value="1" />
+				<entry key=".*/AltaFestivoGlobFrontAction.*" value="1" />
+				<entry key=".*/ModificarFestivoGlobDoAction.*" value="1" />
+				<entry key=".*/ModificarFestivoGlobFrontAction.*" value="1" />
+				<entry key=".*/EliminarFestivoGlobDoAction.*" value="1" />
+				<entry key=".*/CopiarFestivoGlobDoAction.*" value="1" />
+				<entry key=".*/EstadisticasPublicacionFrontAction.*" value="1" />
+				<entry key=".*/EstadisticasPublicacionDoAction.*" value="1" />
+
+
+
+
+
+				<!-- Admin Local -->
+				<entry key=".*/CrearUsuariosFrontAction.*" value="2" />
+				<entry key=".*/CrearUsuariosDo.*" value="2" />
+				<entry key=".*/MuestraInformacionUsuarioFrontAction.*" value="2" />
+				<entry key=".*/VisualizarUsuariosFrontAction.*" value="2" />
+				<entry key=".*/BajaUsuarioDo.*" value="2" />
+				<entry key=".*/ModificarUsuariosFrontAction.*" value="2" />
+				<entry key=".*/ModificarUsuariosDo.*" value="2" />
+				<entry key=".*/AsignarCentrosUsuariosDo.*" value="2" />
+				<entry key=".*/CrearTiposEdictosFrontAction.*" value="2" />
+				<entry key=".*/CrearTiposEdictosDo.*" value="2" />
+				<entry key=".*/EliminarTiposEdictosDo.*" value="2" />
+				<entry key=".*/ModificarTiposEdictosFrontAction.*" value="2" />
+				<entry key=".*/ModificarTiposEdictosDo.*" value="2" />
+				<entry key=".*/VisualizarTiposEdictosFrontAction.*" value="2" />
+				<entry key=".*/AltaCentroFrontAction.*" value="2" />
+				<entry key=".*/AltaCentroFront.*" value="2" />
+				<entry key=".*/AltaCentroDo.*" value="2" />
+				<entry key=".*/AltaCentroFront.*" value="2" />
+				<entry key=".*/BajaCentroDo.*" value="2" />
+				<entry key=".*/ModificarCentroFrontAction.*" value="2" />
+				<entry key=".*/ModificarCentroFront.*" value="2" />
+				<entry key=".*/ModificarCentroDo.*" value="2" />
+				<entry key=".*/ModificarCentroFront.*" value="2" />
+				<entry key=".*/VisualizarCentroFrontAction.*" value="2" />
+				<entry key=".*/VisualizarCentroFront.*" value="2" />
+				<entry key=".*/MuestraInformacionCentroFrontAction.*" value="2" />
+				<entry key=".*/VisualizarUsuariosFirmantesFrontAction.*"
+					value="2" />
+				<entry key=".*/CrearUsuariosFirmantesFrontAction.*" value="2" />
+				<entry key=".*/CrearUsuariosFirmantesDo.*" value="2" />
+				<entry key=".*/MuestraInformacionUsuarioFirmanteFrontAction.*"
+					value="2" />
+				<entry key=".*/ModificarUsuariosFirmantesFrontAction.*" value="2" />
+				<entry key=".*/ModificarUsuariosFirmantesDo.*" value="2" />
+				<entry key=".*/BajaUsuarioFirmanteDo.*" value="2" />
+				<entry key=".*/VisualizarCentroFrontAction.*" value="2" />
+				
+				<entry key=".*/VisualizarFestivoFrontAction.*" value="2" />
+				<entry key=".*/AltaFestivoFrontAction.*" value="2" />
+				<entry key=".*/AltaFestivoDoAction.*" value="2" />
+				<entry key=".*/AltaFestivoFrontAction.*" value="2" />
+				<entry key=".*/ModificarFestivoDoAction.*" value="2" />
+				<entry key=".*/ModificarFestivoFrontAction.*" value="2" />
+				<entry key=".*/EliminarFestivoDoAction.*" value="2" />
+				<entry key=".*/CopiarFestivoDoAction.*" value="2" />
+				<entry key=".*/EstadisticasPublicacionLocFrontAction.*" value="2" />
+				<entry key=".*/EstadisticasPublicacionLocDoAction.*" value="2" />
+				<entry key=".*/VisualizarRedesFront.*" value="2" />
+				
+
+				<!-- Publicador -->
+				<entry key=".*/ActualizarEdictoPublicadoFrontAction.*" value="3" />
+				<entry key=".*/ActualizarEdictoPublicadoDo.*" value="3" />
+				<entry key=".*/DarBajaPublicacionFrontAction.*" value="3" />
+				<entry key=".*/DarBajaPublicacionDo.*" value="3" />
+				<entry key=".*/PublicarEdictoFrontAction.*" value="3" />
+				<entry key=".*/PublicarEdictoDo.*" value="3" />
+				<entry key=".*/RechazarPublicacionFrontAction.*" value="3" />
+				<entry key=".*/RechazarPublicacionDo.*" value="3" />
+				<entry key=".*/LiberarPublicacionFrontAction.*" value="3" />
+				<entry key=".*/LiberarPublicacionDo.*" value="3" />
+				<entry key=".*/VisualizarEdictoPublicadorFrontAction.*" value="3" />
+				<entry key=".*/VisualizarPublicacionesSinAsignarFrontAction.*"
+					value="3" />
+				<entry key=".*/AsignarPublicacionPendienteDoAction.*" value="3" />
+				<entry key=".*/MuestraInformacionEdictoFrontAction.*" value="3" />
+				<entry key=".*/VisualizarMisRedaccionesFrontAction.*" value="3" />
+				<entry key=".*/CrearEdictoMisRedaccionesFrontAction.*" value="3" />
+				<entry key=".*/CrearEdictoMisRedaccionesDo.*" value="3" />
+				<entry key=".*/PublicarEdictoCrearDo.*" value="3" />
+				<entry key=".*/ModificarMisRedaccionesFrontAction.*" value="3" />
+				<entry key=".*/ModificarMisRedaccionesDo.*" value="3" />
+				<entry key=".*/EliminarMisRedaccionesDo.*" value="3" />
+				<entry key=".*/SolicitarPublicacionMisRedaccionesDoAction.*"
+					value="3" />
+				<entry key=".*/CancelarPublicacionMisRedaccionesDoAction.*"
+					value="3" />
+
+				<!-- Redactor -->
+				<entry key=".*/CrearEdictoDo.*" value="4" />
+				<entry key=".*/ModificarEdictoFrontAction.*" value="4" />
+				<entry key=".*/ModificarEdictoDo.*" value="4" />
+				<entry key=".*/EliminarEdictoDo.*" value="4" />
+				<entry key=".*/SolicitarPublicacionDoAction.*" value="4" />
+				<entry key=".*/CancelarPublicacionDoAction.*" value="4" />
+				<entry key=".*/VisualizarEdictoFrontAction.*" value="4" />
+				<entry key=".*/MuestraInformacionEdictoRedactorFrontAction.*"
+					value="4" />
+			</map>
+		</property>
+	</bean>
+
+
+
+	<!-- INTEGRACION DEL CONTEXTO EN SESSION HTTP -->
+
+	<bean id="httpSessionContextIntegrationFilter"
+		class="org.acegisecurity.context.HttpSessionContextIntegrationFilter" />
+
+	<bean id="sessionRegistry" class="org.acegisecurity.concurrent.SessionRegistryImpl" />
+
+	<!-- LOGOUT -->
+
+	<bean id="logoutFilter" class="org.acegisecurity.ui.logout.LogoutFilter">
+		<constructor-arg value="/InitIndex.do" /> <!-- URL redirected to after logout -->
+		<constructor-arg>
+			<list>
+				<bean class="org.acegisecurity.ui.logout.SecurityContextLogoutHandler" />
+			</list>
+		</constructor-arg>
+	</bean>
+
+
+	<!-- AUTENTICACION -->
+
+	<bean id="authenticationProcessingFilter"
+		class="org.acegisecurity.ui.webapp.AuthenticationProcessingFilter">
+		<property name="authenticationManager">
+			<ref bean="authenticationManager" />
+		</property>
+		<property name="authenticationFailureUrl">
+			<value>/ErrorLogin.do</value>
+		</property>
+		<property name="defaultTargetUrl">
+			<value>/LoginOn.do</value>
+		</property>
+		<property name="filterProcessesUrl">
+			<value>/j_acegi_security_check.do</value>
+		</property>
+		<property name="alwaysUseDefaultTargetUrl">
+			<value>true</value>
+		</property>
+		<property name="exceptionMappings">
+			<props>
+				<prop key="org.acegisecurity.concurrent.ConcurrentLoginException">/ConcurrentLoginException.do</prop>
+				<prop key="org.acegisecurity.AuthenticationServiceException">/CaptchaServiceException.do</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="concurrentSessionFilter" class="org.acegisecurity.concurrent.ConcurrentSessionFilter">
+		<property name="expiredUrl" value="/InitIndex.do" />
+		<property name="sessionRegistry" ref="sessionRegistry" />
+	</bean>
+
+	<bean id="authenticationManager" class="org.acegisecurity.providers.ProviderManager">
+		<property name="providers">
+			<list>
+				<ref local="daoAuthenticationProvider" />
+				<ref local="daoAuthenticationProviderMd5PasswordEncoder" />
+			</list>
+		</property>
+		<property name="sessionController">
+			<bean id="concurrentSessionController"
+				class="org.acegisecurity.concurrent.ConcurrentSessionControllerImpl">
+				<property name="maximumSessions">
+					<value>1</value>
+				</property>
+				<property name="sessionRegistry">
+					<ref local="sessionRegistry" />
+				</property>
+				<property name="exceptionIfMaximumExceeded" value="true" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="daoAuthenticationProvider"
+		class="org.acegisecurity.providers.dao.DaoAuthenticationProvider">
+		<property name="userDetailsService" ref="authenticationDao" />
+		<property name="userCache" ref="userCache" />
+	</bean>
+
+	<bean id="daoAuthenticationProviderMd5PasswordEncoder"
+		class="org.acegisecurity.providers.dao.DaoAuthenticationProvider">
+		<property name="userDetailsService" ref="authenticationDao" />
+		<property name="userCache" ref="userCache" />
+		<property name="passwordEncoder">
+			<ref local="passwordEncoder" />
+		</property>
+	</bean>
+
+	<bean id="authenticationDao" class="org.acegisecurity.userdetails.jdbc.JdbcDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="passwordEncoder" class="org.acegisecurity.providers.encoding.Md5PasswordEncoder" />
+
+	<bean id="userCache"
+		class="org.acegisecurity.providers.dao.cache.EhCacheBasedUserCache">
+		<property name="cache">
+			<ref local="userCacheBackend" />
+		</property>
+	</bean>
+
+	<bean id="userCacheBackend" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+		<property name="cacheManager">
+			<ref local="cacheManager" />
+		</property>
+		<property name="cacheName">
+			<value>userCache</value>
+		</property>
+	</bean>
+
+	<bean id="cacheManager"
+		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+		<property name="configLocation">
+			<value>classpath:/ehcache-failsafe.xml</value>
+		</property>
+	</bean>
+
+
+	<!-- EXCEPCION SECURITY FILTER -->
+
+	<bean id="authenticationProcessingFilterEntryPoint"
+		class="org.acegisecurity.ui.webapp.AuthenticationProcessingFilterEntryPoint">
+		<property name="loginFormUrl">
+			<value>/</value>
+		</property>
+		<property name="forceHttps">
+			<value>false</value>
+		</property>
+	</bean>
+
+	<bean id="exceptionTranslationFilter" class="org.acegisecurity.ui.ExceptionTranslationFilter">
+		<property name="authenticationEntryPoint">
+			<ref bean="authenticationProcessingFilterEntryPoint" />
+		</property>
+		<property name="accessDeniedHandler">
+			<bean class="org.acegisecurity.ui.AccessDeniedHandlerImpl">
+				<property name="errorPage" value="/ErrorAcceso.do" />
+			</bean>
+		</property>
+	</bean>
+
+	<!-- ACEGI HTTP REQUEST SECURITY FILTER -->
+
+	<bean id="roleVoter" class="org.acegisecurity.vote.RoleVoter" />
+
+	<bean id="accessDecisionManager" class="org.acegisecurity.vote.AffirmativeBased">
+		<property name="allowIfAllAbstainDecisions">
+			<value>false</value>
+		</property>
+		<property name="decisionVoters">
+			<list>
+				<ref local="roleVoter" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="filterInvocationInterceptor"
+		class="org.acegisecurity.intercept.web.FilterSecurityInterceptor">
+		<property name="authenticationManager">
+			<ref bean="authenticationManager" />
+		</property>
+		<property name="accessDecisionManager">
+			<ref local="accessDecisionManager" />
+		</property>
+		<property name="objectDefinitionSource">
+			<value>
+				CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON
+				PATTERN_TYPE_APACHE_ANT
+
+
+				<!--
+					Ejemplos de uso
+				-->
+				<!--      /acegilogin.jsp*=ROLE_ANONYMOUS,ROLE_USER-->
+				<!--      /**=ROLE_USER-->
+			</value>
+		</property>
+	</bean>
+
+
+</beans>

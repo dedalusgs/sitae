@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/VisualizarEdictoPublicoFrontAction.do" location="950,550" dimension="448,88" />
+  <StrutsActivity path="/MuestraInformacionEdictoPublicoFrontAction.do" location="350,50" dimension="585,88" />
+  <StrutsActivity path="/VisualizarEdictoPublicoUltimosFrontAction.do" location="650,1050" dimension="549,88" />
+  <StrutsActivity path="publico.visualizarEdictosPublico.error2" location="1250,50" dimension="211,49" />
+  <StrutsActivity path="publico.visualizarEdictosPublico.solicitud" location="950,850" dimension="219,49" />
+  <StrutsActivity path="publico.visualizarEdictosPublico.error" location="1250,950" dimension="205,49" />
+  <StrutsActivity path="publico.muestraInformacionEdictosPublico.solicitud" location="1250,750" dimension="271,49" />
+  <StrutsActivity path="publico.muestraInformacionEdictosPublico.error" location="950,250" dimension="257,49" />
+  <StrutsActivity path="publico.visualizarEdictosPublicoUltimos.error2" location="1550,550" dimension="245,49" />
+  <StrutsActivity path="/jsp/sitae/publico/visualizarEdictosUltimos/formulario.jsp" location="1550,950" dimension="297,49" />
+  <StrutsActivity path="publico.visualizarEdictosPublicoUltimos.error" location="1550,850" dimension="239,49" />
+  <StrutsActivity path="publico.visualizarEdictosPublicoUltimos.solicitud" location="1550,650" dimension="253,49" />
+  <StrutsActivity path="final.visualizarEdictos.solicitud" location="50,250" dimension="173,49" />
+  <StrutsActivity path="publico.muestraInformacionEdictos.solicitud" location="350,550" dimension="238,49" />
+  <StrutsActivity path="final.muestraInformacionEdictos.solicitud" location="350,250" dimension="225,49" />
+  <StrutsActivity path="redactor.crearEdicto.solicitud" location="660,207" dimension="170,49" />
+  <StrutsActivity path="redactor.crearEdicto.error" location="0,376" dimension="156,49" />
+  <StrutsActivity path=" " location="730,376" dimension="32,49" />
+  <StrutsActivity path="redactor.crearEdicto.correcto" location="256,376" dimension="172,49" />
+  <StrutsActivity path="redactor.modificarEdicto.solicitud" location="1519,207" dimension="188,49" />
+  <StrutsActivity path="redactor.modificarEdicto.error" location="1358,376" dimension="174,49" />
+  <StrutsActivity path="redactor.modificarEdicto.correcto" location="1068,376" dimension="190,49" />
+  <StrutsActivity path="redactor.eliminarEdicto.error2" location="0,1222" dimension="173,49" />
+  <StrutsActivity path="redactor.eliminarEdicto.correcto" location="273,1222" dimension="183,49" />
+  <StrutsActivity path="redactor.eliminarEdicto.error" location="556,1222" dimension="167,49" />
+  <StrutsActivity path="redactor.solicitarPublicacion.error2" location="0,940" dimension="196,49" />
+  <StrutsActivity path="redactor.solicitarPublicacion.correcto" location="296,940" dimension="206,49" />
+  <StrutsActivity path="redactor.solicitarPublicacion.error" location="602,940" dimension="190,49" />
+  <StrutsActivity path="redactor.cancelarPublicacion.error2" location="0,658" dimension="200,49" />
+  <StrutsActivity path="redactor.cancelarPublicacion.correcto" location="300,658" dimension="210,49" />
+  <StrutsActivity path="redactor.cancelarPublicacion.error" location="610,658" dimension="194,49" />
+  <StrutsActivity path="redactor.visualizarEdictos.solicitud" location="736,1504" dimension="194,49" />
+  <StrutsActivity path="redactor.muestraInformacionEdictos.solicitud" location="157,1504" dimension="246,49" />
+  <StrutsActivity path="publico.visualizarEdictos.solicitud" location="50,550" dimension="186,49" />
+  <StrutsActivity path="final.visualizarEdictosPublicos.solicitud" location="650,550" dimension="211,49" />
+  <StrutsActivity path="publico.visualizarEdictosPublicos.solicitud" location="950,750" dimension="224,49" />
+  <StrutsActivity path="publico.crearEdicto.error" location="1250,850" dimension="148,49" />
+  <StrutsActivity path="publico.visualizarEdictosPublicoAcceso.error" location="950,950" dimension="239,49" />
+  <StrutsActivity path="/jsp/sitae/publico/visualizarEdictos/error.jsp" location="50,1050" dimension="239,49" />
+  <StrutsActivity path="" location="350,1050" dimension="29,49" />
+  <StrutsActivity path="/jsp/sitae/publico/visualizarEdictosUltimos/error.jsp" />
+  <StrutsTransition id="/VisualizarEdictoPublicoFrontAction.do,success,publico.visualizarEdictosPublico.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1204,638" />
+      <AbsolutePoint location="1204,874" />
+      <AbsolutePoint location="1169,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/VisualizarEdictoPublicoUltimosFrontAction.do,failure,/jsp/sitae/publico/visualizarEdictosUltimos/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="924,1094" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/VisualizarEdictoPublicoUltimosFrontAction.do,success,/jsp/sitae/publico/visualizarEdictosUltimos/formulario.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1199,1094" />
+      <AbsolutePoint location="1698,1094" />
+      <AbsolutePoint location="1698,999" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/MuestraInformacionEdictoPublicoFrontAction.do,failure,publico.muestraInformacionEdictosPublico.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="642,94" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/VisualizarEdictoPublicoUltimosFrontAction.do,failure2,publico.visualizarEdictosPublicoUltimos.error2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="890,1050" />
+      <AbsolutePoint location="890,500" />
+      <AbsolutePoint location="1672,500" />
+      <AbsolutePoint location="1672,550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/MuestraInformacionEdictoPublicoFrontAction.do,success,publico.muestraInformacionEdictosPublico.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1385,774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/VisualizarEdictoPublicoFrontAction.do,failure,publico.visualizarEdictosPublico.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1234,638" />
+      <AbsolutePoint location="1234,974" />
+      <AbsolutePoint location="1250,974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/VisualizarEdictoPublicoUltimosFrontAction.do,failure,publico.visualizarEdictosPublicoUltimos.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="920,1050" />
+      <AbsolutePoint location="920,914" />
+      <AbsolutePoint location="1669,914" />
+      <AbsolutePoint location="1669,899" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/VisualizarEdictoPublicoFrontAction.do,failure2,publico.visualizarEdictosPublico.error2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1174,594" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

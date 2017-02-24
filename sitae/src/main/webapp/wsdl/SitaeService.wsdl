@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://novasoft.es/sitae/perfiles/ws" xmlns:intf="http://novasoft.es/sitae/perfiles/ws" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://novasoft.es/sitae/perfiles/ws">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://novasoft.es/sitae/perfiles/ws">
+   <complexType name="solicitudRequest">
+    <sequence>
+     <element name="NOMBRE_USUARIO" type="xsd:string"/>
+     <element name="PASSWORD_USUARIO" type="xsd:string"/>
+     <element name="TITULO_ES" type="xsd:string"/>
+     <element name="TITULO_VA" type="xsd:string"/>
+	 <element name="COD_ORGANISMO" type="xsd:string"/>
+     <element name="DESCRIPCION_ES" type="xsd:string"/>
+     <element name="DESCRIPCION_VA" type="xsd:string"/>
+     <element name="AREA_PROCEDENCIA" type="xsd:string"/>
+     <element name="ORGANISMO_EXTERNO" type="xsd:string"/>
+     <element name="TIPO_ANUNCIO" type="xsd:string"/>
+     <element name="NUM_EXP" type="xsd:string"/>
+     <element name="NOMBRE_ADJUNTO" type="xsd:string"/>
+     <element name="DOC_ADJUNTO" type="xsd:string"/>
+     <element name="FECHA_PUBLICACION" type="xsd:string"/>
+     <element name="DIAS_PUBLICACION" type="xsd:integer"/> 
+     <element name="TIPO_CONT_DIAS" type="xsd:string"/>
+     <element name="REDES_SOCIALES" type="xsd:string"/>
+     <element name="LISTA_CORREO" type="xsd:string"/>
+    </sequence>
+   </complexType>
+      <complexType name="cancelarSolicitudRequest">
+    <sequence>
+     <element name="NOMBRE_USUARIO" type="xsd:string"/>
+     <element name="PASSWORD_USUARIO" type="xsd:string"/>
+     <element name="COD_ORGANISMO" type="xsd:string"/>
+     <element name="ID_ANUNCIO" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="publicarRequest" type="impl:solicitudRequest"/>
+   <complexType name="typeError">
+    <sequence>
+     <element name="COD_ERROR" type="xsd:string"/>
+     <element name="DESCRIPCION_ES" type="xsd:string"/>
+     <element name="DESCRIPCION_VA" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="respuestaSolicitudPubli">
+    <sequence>
+     <element name="ID_ANUNCIO" type="xsd:string"/>
+     <element name="FECHA_INICIO" type="date"/>
+     <element name="FECHA_FIN" type="date"/>
+    </sequence>
+   </complexType>
+   <complexType name="infoAnuncio">
+    <sequence>
+    	<element name="ID_ANUNCIO" type="string"/>
+    	<element name="COD_ANUNCIO" type="string"/>
+    	<element name="TITULO_ES" type="xsd:string"/>
+    	<element name="TITULO_VA" type="xsd:string"/>
+    	<element name="COD_ORGANISMO" type="xsd:string"/>
+    	<element name="DESCRIPCION_ES" type="xsd:string"/>
+    	<element name="DESCRIPCION_VA" type="xsd:string"/>
+    	<element name="AREA_PROCEDENCIA" type="xsd:string"/>
+    	<element name="ORGANISMO_EXTERNO" type="xsd:string"/>
+    	<element name="TIPO_ANUNCIO" type="xsd:string"/>
+    	<element name="NUM_EXP" type="xsd:string"/>
+    	<element name="NOMBRE_DOC_ANUNCIO" type="xsd:string"/>
+    	<element name="ANUNCIO_FICHERO" type="xsd:string"/>
+    	<element name="NOMBRE_DILIGENCIA_ANUNCIO" type="xsd:string"/>
+    	<element name="DILIGENCIA_FICHERO" type="xsd:string"/>
+    	<element name="NOMBRE_FIRMA_DILIGENCIA" type="xsd:string"/>
+    	<element name="FIRMA_DILIGENCIA_FICHERO" type="xsd:string"/>
+    	<element name="NOMBRE_CERTIFICADO_PUBLICACION" type="xsd:string"/>
+    	<element name="CERTIFICADO_PUBLICACION_FICHERO" type="xsd:string"/>
+    	<element maxOccurs="1" minOccurs="0" name="FECHA_PUBLICACION" type="xsd:date"/>
+    	<element maxOccurs="1" minOccurs="0" name="FECHA_PUBLICACON_ESTIMADA" type="xsd:date"/>
+    	<element maxOccurs="1" minOccurs="0" name="FECHA_RETIRADA" type="xsd:date"/>
+    	<element maxOccurs="1" minOccurs="0" name="FECHA_RETIRADA_ESTIMADA" type="xsd:date"/>
+    	<element name="DIAS_PUBLICACION" type="xsd:integer"/>
+    	<element name="ESTADO" type="xsd:string"/>
+    	<element name="TIPO_CONT_DIAS" type="xsd:string"/>
+    	<element name="REDES_SOCIALES" type="xsd:string"/>
+    	<element name="LISTA_CORREO" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="publicarResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="1" minOccurs="0" name="respuestaSolicitudPubli" type="impl:respuestaSolicitudPubli"/>
+      <element maxOccurs="unbounded" minOccurs="0" name="instanciaSolicitud" type="impl:typeError"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="solicitarPublicacionRequest" type="impl:solicitudRequest"/>
+   <element name="solicitarPublicacionResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="1" minOccurs="0" name="respuestaSolicitudPubli" type="impl:respuestaSolicitudPubli"/>
+      <element maxOccurs="unbounded" minOccurs="0" name="instanciaSolicitud" type="impl:typeError"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="cancelarSolicitudPublicacionRequest" type="impl:cancelarSolicitudRequest"/>
+   <element name="cancelarSolicitudPublicacionResponse">
+    <complexType>
+     <sequence>
+	 <element maxOccurs="1" name="correcto" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="instanciaSolicitud" type="impl:typeError"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="consultarAnuncioRequest">
+   	<complexType>
+   		<sequence>
+   			<element name="NOMBRE_USUARIO" type="xsd:string"/>
+   			<element name="PASSWORD_USUARIO" type="xsd:string"/>
+   			<element name="ID_ANUNCIO" type="string"/>
+   			<element name="COD_ANUNCIO" type="xsd:string"/>
+   			<element name="COD_ORGANISMO" type="xsd:string"/>
+   		</sequence>
+   	</complexType>
+   </element>
+   <element name="consultarAnuncioResponse">
+   	<complexType>
+   		<sequence>
+   			<element maxOccurs="1" name="datosAnuncio" type="impl:infoAnuncio"/>
+      		<element maxOccurs="unbounded" name="instanciaSolicitud" type="impl:typeError"/>
+   		</sequence>
+   	</complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="publicarAnuncioRequest">
+
+      <wsdl:part element="intf:publicarRequest" name="publicarRequest"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="solicitarPublicacionAnuncioResponse">
+
+      <wsdl:part element="intf:solicitarPublicacionResponse" name="solicitarPublicacionResponse"/>
+
+   </wsdl:message>
+
+   
+   <wsdl:message name="cancelarSolicitudPublicacionAnuncioResponse">
+
+      <wsdl:part element="intf:cancelarSolicitudPublicacionResponse" name="cancelarSolicitudPublicacionResponse"/>
+
+   </wsdl:message>
+   
+   <wsdl:message name="publicarAnuncioResponse">
+
+      <wsdl:part element="intf:publicarResponse" name="publicarResponse"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="solicitarPublicacionAnuncioRequest">
+
+      <wsdl:part element="intf:solicitarPublicacionRequest" name="solicitarPublicacionRequest"/>
+
+   </wsdl:message>
+
+      <wsdl:message name="cancelarSolicitudPublicacionAnuncioRequest">
+
+      <wsdl:part element="intf:cancelarSolicitudPublicacionRequest" name="cancelarSolicitudPublicacionRequest"/>
+
+   </wsdl:message>
+      <wsdl:message name="consultarAnuncioRequest">
+      	<wsdl:part element="impl:consultarAnuncioRequest" name="consultarRequest"/>
+      </wsdl:message>
+      <wsdl:message name="consultarAnuncioResponse">
+      	<wsdl:part element="impl:consultarAnuncioResponse" name="consultarResponse"/>
+      </wsdl:message>
+      <wsdl:portType name="SitaeService">
+
+      <wsdl:operation name="publicarAnuncio" parameterOrder="publicarRequest">
+
+         <wsdl:input message="intf:publicarAnuncioRequest" name="publicarAnuncioRequest"/>
+
+         <wsdl:output message="intf:publicarAnuncioResponse" name="publicarAnuncioResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="solicitarPublicacionAnuncio" parameterOrder="solicitarPublicacionRequest">
+
+         <wsdl:input message="intf:solicitarPublicacionAnuncioRequest" name="solicitarPublicacionAnuncioRequest"/>
+
+         <wsdl:output message="intf:solicitarPublicacionAnuncioResponse" name="solicitarPublicacionAnuncioResponse"/>
+
+      </wsdl:operation>
+	  
+	  <wsdl:operation name="cancelarSolicitudPublicacionAnuncio" parameterOrder="cancelarSolicitudPublicacionRequest">
+
+         <wsdl:input message="intf:cancelarSolicitudPublicacionAnuncioRequest" name="cancelarSolicitudPublicacionAnuncioRequest"/>
+
+         <wsdl:output message="intf:cancelarSolicitudPublicacionAnuncioResponse" name="cancelarSolicitudPublicacionAnuncioResponse"/>
+
+      </wsdl:operation>
+
+	  <wsdl:operation name="consultarAnuncio">
+	  	<wsdl:input message="impl:consultarAnuncioRequest">
+	  	
+         </wsdl:input>
+	  	<wsdl:output message="impl:consultarAnuncioResponse">
+	  	
+	  	</wsdl:output>
+	  </wsdl:operation>
+      </wsdl:portType>
+
+   <wsdl:binding name="SitaeServiceSoapBinding" type="intf:SitaeService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="publicarAnuncio">
+
+         <wsdlsoap:operation soapAction="http://novasoft.es/sitae/perfiles/ws/publicarAnuncio"/>
+
+         <wsdl:input name="publicarAnuncioRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="publicarAnuncioResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="solicitarPublicacionAnuncio">
+
+         <wsdlsoap:operation soapAction="http://novasoft.es/sitae/perfiles/ws/solicitarPublicacionAnuncio"/>
+
+         <wsdl:input name="solicitarPublicacionAnuncioRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="solicitarPublicacionAnuncioResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+	  
+	  <wsdl:operation name="cancelarSolicitudPublicacionAnuncio">
+
+         <wsdlsoap:operation soapAction="http://novasoft.es/sitae/perfiles/ws/cancelarSolicitudPublicacionAnuncio"/>
+
+         <wsdl:input name="cancelarSolicitudPublicacionAnuncioRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="cancelarSolicitudPublicacionAnuncioResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+      <wsdl:operation name="consultarAnuncio">
+
+         <wsdlsoap:operation soapAction="http://novasoft.es/sitae/perfiles/ws/consultarAnuncio"/>
+
+         <wsdl:input name="consultarAnuncioRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>      
+ 
+         <wsdl:output name="consultarAnuncioResponse">
+
+            <wsdlsoap:body use="literal"/>
+ 
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="SitaeService">
+
+      <wsdl:port binding="intf:SitaeServiceSoapBinding" name="SitaeService">
+
+         <wsdlsoap:address location="http://localhost:8080/sitae/services/SitaeService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

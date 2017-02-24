@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/ActualizarEdictoPublicadoFrontAction.do" location="2150,50" dimension="559,88" />
+  <StrutsActivity path="/ActualizarEdictoPublicadoDo.do" location="2150,250" dimension="546,88" />
+  <StrutsActivity path="/DarBajaPublicacionFrontAction.do" location="1850,450" dimension="497,88" />
+  <StrutsActivity path="/DarBajaPublicacionDo.do" location="1850,1350" dimension="484,88" />
+  <StrutsActivity path="/PublicarEdictoFrontAction.do" location="950,1550" dimension="450,88" />
+  <StrutsActivity path="/PublicarEdictoDo.do" location="50,1750" dimension="437,88" />
+  <StrutsActivity path="/RechazarPublicacionFrontAction.do" location="650,1150" dimension="509,88" />
+  <StrutsActivity path="/RechazarPublicacionDo.do" location="1250,1350" dimension="496,88" />
+  <StrutsActivity path="/RelacionarPublicacionesFrontAction.do" location="2450,2050" dimension="590,96" />
+  <StrutsActivity path="/RelacionarPublicacionesDo.do" location="950,2150" dimension="577,96" />
+  <StrutsActivity path="/SustituirPublicacionesFrontAction.do" location="1850,2250" dimension="568,96" />
+  <StrutsActivity path="/SustituirPublicacionesDo.do" location="950,2350" dimension="555,96" />
+  <StrutsActivity path="/LiberarPublicacionFrontAction.do" location="2450,450" dimension="530,96" />
+  <StrutsActivity path="/LiberarPublicacionDo.do" location="2450,650" dimension="517,96" />
+  <StrutsActivity path="/VisualizarEdictoPublicadorFrontAction.do" location="50,50" dimension="513,88" />
+  <StrutsActivity path="/VisualizarPublicacionesSinAsignarFrontAction.do" location="950,50" dimension="548,88" />
+  <StrutsActivity path="/AsignarPublicacionPendienteDoAction.do" location="650,250" dimension="576,88" />
+  <StrutsActivity path="/MuestraInformacionEdictoFrontAction.do" location="50,450" dimension="568,88" />
+  <StrutsActivity path="/VisualizarMisRedaccionesFrontAction.do" location="50,650" dimension="510,88" />
+  <StrutsActivity path="/CrearEdictoMisRedaccionesFrontAction.do" location="1550,50" dimension="503,88" />
+  <StrutsActivity path="/CrearEdictoMisRedaccionesDo.do" location="1550,250" dimension="490,88" />
+  <StrutsActivity path="/PublicarEdictoCrearDo.do" location="2150,1550" dimension="464,88" />
+  <StrutsActivity path="/ModificarMisRedaccionesFrontAction.do" location="950,750" dimension="554,88" />
+  <StrutsActivity path="/ModificarMisRedaccionesDo.do" location="50,850" dimension="541,88" />
+  <StrutsActivity path="/EliminarMisRedaccionesDo.do" location="1250,550" dimension="527,88" />
+  <StrutsActivity path="/SolicitarPublicacionMisRedaccionesDoAction.do" location="350,1350" dimension="557,88" />
+  <StrutsActivity path="/CancelarPublicacionMisRedaccionesDoAction.do" location="1550,1150" dimension="641,88" />
+  <StrutsActivity path="/PublicarEdictoMisRedaccionesDo.do" location="650,1750" dimension="512,88" />
+  <StrutsActivity path="publicador.actualizarEdictoPublicado.solicitud" location="2150,650" dimension="244,49" />
+  <StrutsActivity path="publicador.actualizarEdictoPublicado.error" location="2150,750" dimension="230,49" />
+  <StrutsActivity path="publicador.actualizarEdictoPublicado.correcto" location="2150,850" dimension="246,49" />
+  <StrutsActivity path="publicador.darBajaPublicacion.solicitud" location="1850,650" dimension="213,49" />
+  <StrutsActivity path="publicador.darBajaPublicacion.error" location="1850,750" dimension="199,49" />
+  <StrutsActivity path="publicador.darBajaPublicacion.error2" location="1850,850" dimension="205,49" />
+  <StrutsActivity path="publicador.darBajaPublicacion.correcto" location="1850,950" dimension="215,49" />
+  <StrutsActivity path="publicador.publicarEdicto.solicitud" location="1850,1550" dimension="190,49" />
+  <StrutsActivity path="publicador.publicarEdicto.error" location="650,1650" dimension="176,49" />
+  <StrutsActivity path="publicador.publicarEdicto.correcto2" location="1550,1950" dimension="219,51" />
+  <StrutsActivity path="publicador.publicarEdicto.error2" location="1550,1650" dimension="182,49" />
+  <StrutsActivity path="publicador.publicarEdicto.correcto3" location="2450,850" dimension="219,51" />
+  <StrutsActivity path="publicador.publicarEdicto.correcto" location="1850,1650" dimension="192,49" />
+  <StrutsActivity path="publicador.rechazarPublicacion.solicitud" location="1550,1550" dimension="218,49" />
+  <StrutsActivity path="publicador.rechazarPublicacion.error" location="50,1650" dimension="204,49" />
+  <StrutsActivity path="publicador.rechazarPublicacion.error2" location="50,1450" dimension="210,49" />
+  <StrutsActivity path="publicador.rechazarPublicacion.correcto" location="350,1650" dimension="220,49" />
+  <StrutsActivity path="publicador.relacionarPublicaciones.solicitud" location="50,2150" dimension="263,51" />
+  <StrutsActivity path="publicador.relacionarPublicaciones.error" location="650,2150" dimension="243,51" />
+  <StrutsActivity path="publicador.relacionarPublicaciones.error2" location="950,2550" dimension="249,51" />
+  <StrutsActivity path="publicador.relacionarPublicaciones.redirect" location="2750,1150" dimension="258,51" />
+  <StrutsActivity path="publicador.sustituirPublicaciones.solicitud" location="50,2350" dimension="253,51" />
+  <StrutsActivity path="publicador.sustituirPublicaciones.error" location="650,2350" dimension="233,51" />
+  <StrutsActivity path="publicador.liberarPublicacion.solicitud" location="2450,1250" dimension="233,51" />
+  <StrutsActivity path="publicador.liberarPublicacion.error" location="2450,1050" dimension="213,51" />
+  <StrutsActivity path="publicador.liberarPublicacion.error2" location="1250,1950" dimension="219,51" />
+  <StrutsActivity path="publicador.liberarPublicacion.correcto" location="2450,1850" dimension="232,51" />
+  <StrutsActivity path="publicador.visualizarEdictos.solicitud" location="650,50" dimension="202,49" />
+  <StrutsActivity path="publicador.visualizarPublicacionesSinAsignar.solicitud" location="50,250" dimension="281,49" />
+  <StrutsActivity path="publicador.asignarPublicacionPendiente.correcto" location="50,350" dimension="261,49" />
+  <StrutsActivity path="publicador.asignarPublicacionPendiente.error" location="650,750" dimension="245,49" />
+  <StrutsActivity path="publicador.muestraInformacionEdicto.solicitud" location="950,550" dimension="249,49" />
+  <StrutsActivity path="publicador.visualizarMisRedacciones.solicitud" location="950,650" dimension="243,49" />
+  <StrutsActivity path="publicador.crearEdicto.solicitud" location="1550,450" dimension="178,49" />
+  <StrutsActivity path="publicador.crearEdicto.error" location="1550,950" dimension="164,49" />
+  <StrutsActivity path="publicador.crearEdicto.correcto2" location="50,1950" dimension="186,49" />
+  <StrutsActivity path="publicador.crearEdicto.error2" location="1850,1050" dimension="170,49" />
+  <StrutsActivity path="publicador.crearEdicto.correcto" location="1550,1050" dimension="180,49" />
+  <StrutsActivity path="publicador.modificarMisRedacciones.solicitud" location="650,1050" dimension="242,49" />
+  <StrutsActivity path="publicador.modificarMisRedacciones.error" location="950,1050" dimension="228,49" />
+  <StrutsActivity path="publicador.modificarMisRedacciones.correcto2" location="350,1950" dimension="250,49" />
+  <StrutsActivity path="publicador.modificarMisRedacciones.error2" location="650,1950" dimension="260,51" />
+  <StrutsActivity path="publicador.modificarMisRedacciones.correcto" location="50,1150" dimension="244,49" />
+  <StrutsActivity path="publicador.eliminarEdicto.error2" location="1250,950" dimension="181,49" />
+  <StrutsActivity path="publicador.eliminarEdicto.correcto" location="1250,1050" dimension="191,49" />
+  <StrutsActivity path="publicador.eliminarEdicto.error" location="350,1150" dimension="175,49" />
+  <StrutsActivity path="publicador.solicitarPublicacion.error2" location="50,1350" dimension="204,49" />
+  <StrutsActivity path="publicador.solicitarPublicacion.correcto" location="350,1250" dimension="214,49" />
+  <StrutsActivity path="publicador.solicitarPublicacion.error" location="1250,1250" dimension="198,49" />
+  <StrutsActivity path="publicador.cancelarPublicacion.error2" location="50,1550" dimension="208,49" />
+  <StrutsActivity path="publicador.cancelarPublicacion.correcto" location="350,1550" dimension="218,49" />
+  <StrutsActivity path="publicador.cancelarPublicacion.error" location="650,1550" dimension="202,49" />
+  <StrutsActivity path="publicador.publicarEdictoMisRedacciones.correcto2" location="1850,1850" dimension="273,49" />
+  <StrutsActivity path="publicador.publicarEdictoMisRedacciones.error2" location="1550,1750" dimension="257,49" />
+  <StrutsActivity path="publicador.publicarEdictoMisRedacciones.correcto3" location="1850,1950" dimension="304,51" />
+  <StrutsActivity path="publicador.publicarEdictoMisRedacciones.correcto" location="2150,1750" dimension="267,49" />
+  <StrutsActivity path="publicador.publicarEdictoMisRedacciones.error" location="1250,1850" dimension="251,49" />
+  <StrutsActivity path="publicador.relacionarPublicaciones.correcto" location="1250,2550" dimension="262,51" />
+  <StrutsActivity path="publicador.crearEdicto.publicarAlCrear" location="2150,950" dimension="213,49" />
+  <StrutsActivity path="publicador.publicarEdictoMisRed.correcto" location="1250,1750" dimension="226,49" />
+  <StrutsActivity path="publicador.asignarPublicacionPendiente.solicitud" location="950,450" dimension="259,49" />
+  <StrutsActivity path="publicador.m.correcto" location="650,650" dimension="134,49" />
+  <StrutsActivity path="redactor.modificarEdicto.solicitud" location="650,850" dimension="188,49" />
+  <StrutsActivity path="/ModificarEdictoFront" location="650,950" dimension="131,49" />
+  <StrutsActivity path="redactor.modificarEdicto.error" location="950,950" dimension="174,49" />
+  <StrutsActivity path=" " location="50,1050" dimension="32,49" />
+  <StrutsActivity path="redactor.modificarEdicto.correcto" location="350,1050" dimension="190,49" />
+  <StrutsActivity path="redactor.solicitarPublicacion.correcto" location="1250,1150" dimension="206,49" />
+  <StrutsActivity path="redactor.solicitarPublicacion.error" location="50,1250" dimension="190,49" />
+  <StrutsActivity path="publicador.publicarEdictoMisRe.correcto" location="2150,1050" dimension="220,49" />
+  <StrutsActivity path="publicador.relaciona" location="1850,2450" dimension="138,51" />
+  <StrutsActivity path="publicador.relacionaRPub" location="2150,2450" dimension="166,51" />
+  <StrutsActivity path="p" location="2750,950" dimension="37,51" />
+  <StrutsTransition id="/EliminarMisRedaccionesDo.do,failure,publicador.eliminarEdicto.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1579,638" />
+      <AbsolutePoint location="1579,1374" />
+      <AbsolutePoint location="437,1374" />
+      <AbsolutePoint location="437,1199" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/VisualizarEdictoPublicadorFrontAction.do,success,publicador.visualizarEdictos.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/DarBajaPublicacionFrontAction.do,failure,publicador.darBajaPublicacion.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1949,774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/DarBajaPublicacionFrontAction.do,null,/DarBajaPublicacionDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AsignarPublicacionPendienteDoAction.do,success,publicador.asignarPublicacionPendiente.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="935,338" />
+      <AbsolutePoint location="935,374" />
+      <AbsolutePoint location="311,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PublicarEdictoMisRedaccionesDo.do,success2,publicador.publicarEdictoMisRedacciones.correcto2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="906,1794" />
+      <AbsolutePoint location="1986,1874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CancelarPublicacionMisRedaccionesDoAction.do,failure,publicador.cancelarPublicacion.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/LiberarPublicacionDo.do,failure2,publicador.liberarPublicacion.error2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/RelacionarPublicacionesDo.do,failure,publicador.relacionarPublicaciones.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="771,2175" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/RelacionarPublicacionesDo.do,success,publicador.relacionarPublicaciones.redirect,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1238,2198" />
+      <AbsolutePoint location="2879,1175" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarMisRedaccionesDo.do,failure,publicador.modificarMisRedacciones.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="320,938" />
+      <AbsolutePoint location="320,1014" />
+      <AbsolutePoint location="1064,1014" />
+      <AbsolutePoint location="1064,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PublicarEdictoFrontAction.do,success,publicador.publicarEdicto.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1945,1574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarMisRedaccionesDo.do,success2,publicador.modificarMisRedacciones.correcto2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="320,894" />
+      <AbsolutePoint location="475,1974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/DarBajaPublicacionDo.do,failure,publicador.darBajaPublicacion.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1949,774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PublicarEdictoDo.do,failure,publicador.publicarEdicto.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="738,1674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/SustituirPublicacionesDo.do,success,publicador.relacionarPublicaciones.redirect,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1227,2398" />
+      <AbsolutePoint location="2879,1175" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearEdictoMisRedaccionesFrontAction.do,failure,publicador.crearEdicto.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/RechazarPublicacionFrontAction.do,success,publicador.rechazarPublicacion.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="904,1194" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PublicarEdictoCrearDo.do,failure2,publicador.crearEdicto.error2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2441,1550" />
+      <AbsolutePoint location="2441,595" />
+      <AbsolutePoint location="2110,595" />
+      <AbsolutePoint location="2110,1074" />
+      <AbsolutePoint location="2020,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/RechazarPublicacionDo.do,failure2,publicador.rechazarPublicacion.error2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1498,1438" />
+      <AbsolutePoint location="1498,1474" />
+      <AbsolutePoint location="260,1474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/SustituirPublicacionesFrontAction.do,null,/SustituirPublicacionesDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2134,2298" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/RechazarPublicacionDo.do,failure,publicador.rechazarPublicacion.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ActualizarEdictoPublicadoFrontAction.do,success,publicador.actualizarEdictoPublicado.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearEdictoMisRedaccionesDo.do,failure,publicador.crearEdicto.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/LiberarPublicacionDo.do,success,publicador.liberarPublicacion.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PublicarEdictoDo.do,failure2,publicador.publicarEdicto.error2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1641,1674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/MuestraInformacionEdictoFrontAction.do,success,publicador.muestraInformacionEdicto.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="334,538" />
+      <AbsolutePoint location="334,574" />
+      <AbsolutePoint location="950,574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/LiberarPublicacionFrontAction.do,failure,publicador.liberarPublicacion.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarMisRedaccionesFrontAction.do,success,publicador.modificarMisRedacciones.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,784" />
+      <AbsolutePoint location="935,784" />
+      <AbsolutePoint location="935,1074" />
+      <AbsolutePoint location="892,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearEdictoMisRedaccionesFrontAction.do,success,publicador.crearEdicto.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PublicarEdictoFrontAction.do,null,/PublicarEdictoDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PublicarEdictoMisRedaccionesDo.do,failure,publicador.publicarEdictoMisRedacciones.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="906,1794" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/LiberarPublicacionFrontAction.do,null,/LiberarPublicacionDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PublicarEdictoCrearDo.do,failure,publicador.crearEdicto.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2411,1550" />
+      <AbsolutePoint location="2411,1014" />
+      <AbsolutePoint location="1632,1014" />
+      <AbsolutePoint location="1632,999" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/EliminarMisRedaccionesDo.do,success,publicador.eliminarEdicto.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1549,638" />
+      <AbsolutePoint location="1549,1074" />
+      <AbsolutePoint location="1441,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/RelacionarPublicacionesFrontAction.do,failure,publicador.relacionarPublicaciones.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2450,2128" />
+      <AbsolutePoint location="771,2128" />
+      <AbsolutePoint location="771,2150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarMisRedaccionesFrontAction.do,null,/ModificarMisRedaccionesDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,814" />
+      <AbsolutePoint location="320,814" />
+      <AbsolutePoint location="320,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/SustituirPublicacionesFrontAction.do,success,publicador.sustituirPublicaciones.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1850,2298" />
+      <AbsolutePoint location="176,2298" />
+      <AbsolutePoint location="176,2350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearEdictoMisRedaccionesFrontAction.do,null,/CrearEdictoMisRedaccionesDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearEdictoMisRedaccionesDo.do,success,publicador.crearEdicto.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1795,338" />
+      <AbsolutePoint location="1795,1074" />
+      <AbsolutePoint location="1730,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/RelacionarPublicacionesDo.do,failure2,publicador.relacionarPublicaciones.error2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ActualizarEdictoPublicadoFrontAction.do,failure,publicador.actualizarEdictoPublicado.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PublicarEdictoMisRedaccionesDo.do,success,publicador.publicarEdictoMisRedacciones.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1162,1814" />
+      <AbsolutePoint location="2283,1814" />
+      <AbsolutePoint location="2283,1799" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PublicarEdictoFrontAction.do,failure,publicador.publicarEdicto.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="738,1674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/SolicitarPublicacionMisRedaccionesDoAction.do,success,publicador.solicitarPublicacion.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="457,1274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/LiberarPublicacionDo.do,failure,publicador.liberarPublicacion.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/SustituirPublicacionesFrontAction.do,failure,publicador.sustituirPublicaciones.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1850,2328" />
+      <AbsolutePoint location="766,2328" />
+      <AbsolutePoint location="766,2350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PublicarEdictoDo.do,success2,publicador.publicarEdicto.correcto2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="268,1794" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/RechazarPublicacionFrontAction.do,null,/RechazarPublicacionDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="904,1194" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarMisRedaccionesDo.do,success,publicador.modificarMisRedacciones.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="279,938" />
+      <AbsolutePoint location="279,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CancelarPublicacionMisRedaccionesDoAction.do,failure2,publicador.cancelarPublicacion.error2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarMisRedaccionesDo.do,failure2,publicador.modificarMisRedacciones.error2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="320,894" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/DarBajaPublicacionDo.do,failure2,publicador.darBajaPublicacion.error2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1952,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CancelarPublicacionMisRedaccionesDoAction.do,success,publicador.cancelarPublicacion.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearEdictoMisRedaccionesDo.do,success2,publicador.crearEdicto.correcto2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1825,338" />
+      <AbsolutePoint location="1825,414" />
+      <AbsolutePoint location="-75,414" />
+      <AbsolutePoint location="-75,1974" />
+      <AbsolutePoint location="50,1974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/RechazarPublicacionDo.do,success,publicador.rechazarPublicacion.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/RelacionarPublicacionesFrontAction.do,success,publicador.relacionarPublicaciones.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2450,2098" />
+      <AbsolutePoint location="181,2098" />
+      <AbsolutePoint location="181,2150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PublicarEdictoMisRedaccionesDo.do,failure2,publicador.publicarEdictoMisRedacciones.error2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="906,1794" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/DarBajaPublicacionFrontAction.do,success,publicador.darBajaPublicacion.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1956,674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/RelacionarPublicacionesFrontAction.do,null,/RelacionarPublicacionesDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2745,2098" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PublicarEdictoCrearDo.do,success,publicador.crearEdicto.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2348,1550" />
+      <AbsolutePoint location="2348,1114" />
+      <AbsolutePoint location="1640,1114" />
+      <AbsolutePoint location="1640,1099" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/DarBajaPublicacionDo.do,success,publicador.darBajaPublicacion.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1957,974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/RechazarPublicacionFrontAction.do,failure,publicador.rechazarPublicacion.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="904,1194" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ActualizarEdictoPublicadoDo.do,success,publicador.actualizarEdictoPublicado.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/SustituirPublicacionesDo.do,failure,publicador.sustituirPublicaciones.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="766,2375" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ActualizarEdictoPublicadoDo.do,failure,publicador.actualizarEdictoPublicado.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PublicarEdictoMisRedaccionesDo.do,success3,publicador.publicarEdictoMisRedacciones.correcto3,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="906,1794" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ActualizarEdictoPublicadoFrontAction.do,null,/ActualizarEdictoPublicadoDo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/VisualizarMisRedaccionesFrontAction.do,success,publicador.visualizarMisRedacciones.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="560,714" />
+      <AbsolutePoint location="1071,714" />
+      <AbsolutePoint location="1071,699" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/LiberarPublicacionFrontAction.do,success,publicador.liberarPublicacion.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/SolicitarPublicacionMisRedaccionesDoAction.do,failure2,publicador.solicitarPublicacion.error2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="152,1374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ModificarMisRedaccionesFrontAction.do,failure,publicador.modificarMisRedacciones.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1163,838" />
+      <AbsolutePoint location="1163,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PublicarEdictoDo.do,success,publicador.publicarEdicto.correcto,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1946,1674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/SustituirPublicacionesFrontAction.do,success,publicador.relacionarPublicaciones.redirect,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2134,2250" />
+      <AbsolutePoint location="2134,2016" />
+      <AbsolutePoint location="2879,2016" />
+      <AbsolutePoint location="2879,1201" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/VisualizarPublicacionesSinAsignarFrontAction.do,success,publicador.visualizarPublicacionesSinAsignar.solicitud,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/PublicarEdictoDo.do,success3,publicador.publicarEdicto.correcto3,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="268,1794" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/SustituirPublicacionesDo.do,success,/MuestraInformacionEdictoFrontAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1227,2398" />
+      <AbsolutePoint location="334,494" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/EliminarMisRedaccionesDo.do,failure2,publicador.eliminarEdicto.error2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1519,638" />
+      <AbsolutePoint location="1519,974" />
+      <AbsolutePoint location="1431,974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AsignarPublicacionPendienteDoAction.do,failure,publicador.asignarPublicacionPendiente.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="938,294" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/SolicitarPublicacionMisRedaccionesDoAction.do,failure,publicador.solicitarPublicacion.error,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1349,1274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CrearEdictoMisRedaccionesDo.do,failure2,publicador.crearEdicto.error2,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1762,338" />
+      <AbsolutePoint location="1762,465" />
+      <AbsolutePoint location="1825,465" />
+      <AbsolutePoint location="1825,1074" />
+      <AbsolutePoint location="1850,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

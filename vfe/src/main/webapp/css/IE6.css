@@ -1,0 +1,29 @@
+/* Estilos IE6 */
+
+.botonera.right {
+	width: 50%;
+}
+.botonera input {
+	padding-top: 1px;
+}
+#contenido dt, #contenido dd {
+	display: inline !important;
+}
+#sidebar-left {
+	margin-left:14px !important;
+}
+#contenido_central {
+	margin-right:14px !important;
+}
+.botonera, .detalle {
+	height:1%;
+}
+#contenido_central .corto {
+	width:78px !important;
+}
+#cabecera {
+	height: 93px !important;
+}
+#cabecera.imagen {
+	height: 109px !important;
+}

@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+ <data-sources/>
+ <form-beans>
+  <form-bean name="MuestraInformacionEdictoPublicoForm" type="es.novasoft.sitae.perfiles.publico.muestraInformacionEdicto.forms.MuestraInformacionEdictoPublicoForm"/>
+  <form-bean name="VisualizarEdictoPublicoForm" type="es.novasoft.sitae.perfiles.publico.visualizarEdicto.forms.VisualizarEdictoPublicoForm"/>
+  <form-bean name="VisualizarEdictoPublicoUltimosForm" type="es.novasoft.sitae.perfiles.publico.visualizarEdictoUltimos.forms.VisualizarEdictoPublicoUltimosForm"/>
+  <form-bean name="SuscripcionForm" type="es.novasoft.sitae.perfiles.publico.interesados.form.SuscripcionForm"/>
+  <form-bean name="BajaSuscripcionForm" type="es.novasoft.sitae.perfiles.publico.interesados.form.BajaSuscripcionForm"/>
+ </form-beans>
+ <global-exceptions/>
+ <global-forwards/>
+ <action-mappings>
+  <!-- USUARIO PUBLICO O FINAL 
+ VISUALIZAR EDICTOS -->
+  <action name="VisualizarEdictoPublicoForm"
+   path="/VisualizarEdictoPublicoFrontAction" scope="session"
+   type="es.novasoft.sitae.perfiles.publico.visualizarEdicto.actions.VisualizarEdictoPublicoFrontAction" validate="false">
+   <forward name="success" path="publico.visualizarEdictosPublico.solicitud"/>
+   <forward name="failure" path="publico.visualizarEdictosPublico.error"/>
+  </action>
+  <!-- MOSTRAR INFORMACION EDICTOS -->
+  <action name="MuestraInformacionEdictoPublicoForm"
+   path="/MuestraInformacionEdictoPublicoFrontAction" scope="session"
+   type="es.novasoft.sitae.perfiles.publico.muestraInformacionEdicto.actions.MuestraInformacionEdictoPublicoFrontAction" validate="false">
+   <forward name="success" path="publico.muestraInformacionEdictosPublico.solicitud"/>
+   <forward name="failure" path="publico.muestraInformacionEdictosPublico.error"/>
+  </action>
+  <!-- VISUALIZAR EDICTOS ULTIMOS-->
+  <action name="VisualizarEdictoPublicoUltimosForm"
+   path="/VisualizarEdictoPublicoUltimosFrontAction" scope="session"
+   type="es.novasoft.sitae.perfiles.publico.visualizarEdictoUltimos.actions.VisualizarEdictoPublicoUltimosFrontAction" validate="false">
+   <forward name="success" path="/jsp/sitae/publico/visualizarEdictosUltimos/formulario.jsp"/>
+   <forward name="failure" path="/jsp/sitae/publico/visualizarEdictosUltimos/error.jsp"/>
+  </action>
+  <action name="SuscripcionForm" path="/AltaSuscripcionFront"
+   scope="session"
+   type="es.novasoft.sitae.perfiles.publico.interesados.actions.AltaSuscripcionFrontAction" validate="false">
+   <forward name="success" path="publico.altasuscripcionfront.solicitud"/>
+   <forward name="failure" path="publico.altasuscripcionfront.error"/>
+  </action>
+  <action input="/AltaSuscripcionFront.do" name="SuscripcionForm"
+   path="/AltaSuscripcionDo" scope="request"
+   type="es.novasoft.sitae.perfiles.publico.interesados.actions.AltaSuscripcionDoAction" validate="true">
+   <forward name="success" path="publico.altasuscripcionfront.correcto"/>
+   <forward name="failure" path="publico.altasuscripcionfront.error"/>
+  </action>
+  <action path="/ConfirmarSuscripcionDo" scope="request"
+   type="es.novasoft.sitae.perfiles.publico.interesados.actions.ConfirmarSuscripcionDoAction" validate="false">
+   <forward name="success" path="publico.confirmarsuscripcionfront.correcto"/>
+   <forward name="failure" path="publico.confirmarsuscripcionfront.error"/>
+  </action>
+  <action name="BajaSuscripcionForm" path="/BajaSuscripcionFront"
+   scope="session"
+   type="es.novasoft.sitae.perfiles.publico.interesados.actions.BajaSuscripcionFrontAction" validate="false">
+   <forward name="success" path="publico.bajasuscripcionfront.solicitud"/>
+   <forward name="failure" path="publico.bajasuscripcionfront.error"/>
+  </action>
+  <action input="/BajaSuscripcionFront.do" name="BajaSuscripcionForm"
+   path="/BajaSuscripcionDo" scope="session"
+   type="es.novasoft.sitae.perfiles.publico.interesados.actions.BajaSuscripcionDoAction" validate="true">
+   <forward name="success" path="publico.bajasuscripcionfront.correcto"/>
+   <forward name="failure" path="publico.bajasuscripcionfront.error"/>
+  </action>
+  <action path="/ConfirmarBajaDo" scope="request"
+   type="es.novasoft.sitae.perfiles.publico.interesados.actions.ConfirmarBajaDoAction" validate="false">
+   <forward name="success" path="publico.confirmarbajafront.correcto"/>
+   <forward name="failure" path="publico.confirmarbajafront.error"/>
+  </action>
+ </action-mappings>
+ <controller nocache="true" processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+</struts-config>

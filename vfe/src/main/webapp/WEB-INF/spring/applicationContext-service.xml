@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	
+	<bean id="OrganismoService"
+		class="es.novasoft.castellon.vfe.business.services.impl.OrganismoServiceImpl">
+		<property name="organismoDAO">
+			<ref bean="OrganismoDAO" />
+		</property>
+	</bean>		
+		
+	<bean id="UsuarioService"
+		class="es.novasoft.castellon.vfe.business.services.impl.UsuarioServiceImpl">
+		<property name="usuarioDAO">
+			<ref bean="UsuarioDAO" />
+		</property>
+	</bean>	
+	<bean id="RegistroDocumentoService"
+		class="es.novasoft.castellon.vfe.business.services.impl.RegistroDocumentoServiceImpl">
+		<property name="registroDocumentoDao">
+			<ref bean="RegistroDocumentoDAO" />
+		</property>
+	</bean>
+	
+	<bean id="SystemFileService"
+		class="es.novasoft.castellon.vfe.business.files.FileSystemService">
+		
+		
+		<property name="patronIdentificacion" value="file:///"/>
+	
+		
+	</bean>
+	<bean id="FactoryFileServices"
+      class="es.novasoft.castellon.vfe.business.files.FactoryFileService">
+    <property name="listadoFileService">
+        <list value-type="es.novasoft.castellon.vfe.business.services.interfaz.FileService">
+            <ref bean="SystemFileService"/>
+        </list>
+    </property>
+</bean>			  
+</beans>

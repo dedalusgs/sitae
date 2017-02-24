@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM ID="#RechazarPublicacionFrontAction" NAME="action0"
+  PATH="/RechazarPublicacionFrontAction" SHAPE="32,17,0,0"
+  TITLE="RechazarPublicacionForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.rechazarPublicacion.error" TARGET="page0"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publicador.rechazarPublicacion.solicitud" TARGET="page1"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#LiberarPublicacionFrontAction" NAME="action1"
+  PATH="/LiberarPublicacionFrontAction" SHAPE="32,561,0,0"
+  TITLE="LiberarPublicacionForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.liberarPublicacion.error" TARGET="page2"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publicador.liberarPublicacion.solicitud" TARGET="page3"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#SustituirPublicacionesFrontAction" NAME="action2"
+  PATH="/SustituirPublicacionesFrontAction" SHAPE="32,1105,0,0"
+  TITLE="SustituirPublicacionesForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.sustituirPublicaciones.error" TARGET="page4"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publicador.sustituirPublicaciones.solicitud" TARGET="page5"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#ActualizarEdictoPublicadoDo" NAME="action3"
+  PATH="/ActualizarEdictoPublicadoDo" SHAPE="32,1937,0,0"
+  TITLE="ActualizarEdictoPublicadoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.actualizarEdictoPublicado.error" TARGET="page6"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publicador.actualizarEdictoPublicado.correcto" TARGET="page7"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#SolicitarPublicacionMisRedaccionesDoAction"
+  NAME="action4" PATH="/SolicitarPublicacionMisRedaccionesDoAction"
+  SHAPE="32,2337,0,0" TITLE="SolicitarPublicacionMisRedaccionesForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.solicitarPublicacion.error" TARGET="page8"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publicador.solicitarPublicacion.correcto" TARGET="page9"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure2" NAME="forward2"
+   PATH="publicador.solicitarPublicacion.error2" TARGET="page10"
+   TITLE="failure2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#DarBajaPublicacionDo" NAME="action5"
+  PATH="/DarBajaPublicacionDo" SHAPE="32,2737,0,0"
+  TITLE="DarBajaPublicacionForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.darBajaPublicacion.error" TARGET="page11"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publicador.darBajaPublicacion.correcto" TARGET="page12"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure2" NAME="forward2"
+   PATH="publicador.darBajaPublicacion.error2" TARGET="page13"
+   TITLE="failure2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#ActualizarEdictoPublicadoFrontAction" NAME="action6"
+  PATH="/ActualizarEdictoPublicadoFrontAction" SHAPE="32,2081,0,0"
+  TITLE="ActualizarEdictoPublicadoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.actualizarEdictoPublicado.error" TARGET="page6"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publicador.actualizarEdictoPublicado.solicitud" TARGET="page14"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#PublicarEdictoCrearDo" NAME="action7"
+  PATH="/PublicarEdictoCrearDo" SHAPE="32,3281,0,0"
+  TITLE="PublicarEdictoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.crearEdicto.error" TARGET="page15" TITLE="failure"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publicador.crearEdicto.correcto" TARGET="page16"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure2" NAME="forward2"
+   PATH="publicador.crearEdicto.error2" TARGET="page17" TITLE="failure2"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#PublicarEdictoDo" NAME="action8"
+  PATH="/PublicarEdictoDo" SHAPE="32,4033,0,0"
+  TITLE="PublicarEdictoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.publicarEdicto.error" TARGET="page18"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success3" NAME="forward1"
+   PATH="publicador.publicarEdicto.correcto3" TARGET="page19"
+   TITLE="success3" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success2" NAME="forward2"
+   PATH="publicador.publicarEdicto.correcto2" TARGET="page20"
+   TITLE="success2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward3"
+   PATH="publicador.publicarEdicto.correcto" TARGET="page21"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure2" NAME="forward4"
+   PATH="publicador.publicarEdicto.error2" TARGET="page22"
+   TITLE="failure2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#CrearEdictoMisRedaccionesDo" NAME="action9"
+  PATH="/CrearEdictoMisRedaccionesDo" SHAPE="32,3457,0,0"
+  TITLE="CrearEdictoMisRedaccionesForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.crearEdicto.error" TARGET="page15" TITLE="failure"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success2" NAME="forward1"
+   PATH="publicador.crearEdicto.correcto2" TARGET="page23"
+   TITLE="success2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward2"
+   PATH="publicador.crearEdicto.correcto" TARGET="page16"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure2" NAME="forward3"
+   PATH="publicador.crearEdicto.error2" TARGET="page17" TITLE="failure2"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#RelacionarPublicacionesFrontAction" NAME="action10"
+  PATH="/RelacionarPublicacionesFrontAction" SHAPE="32,1569,0,0"
+  TITLE="RelacionarPublicacionesForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.relacionarPublicaciones.error" TARGET="page24"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publicador.relacionarPublicaciones.solicitud" TARGET="page25"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#EliminarMisRedaccionesDo" NAME="action11"
+  PATH="/EliminarMisRedaccionesDo" SHAPE="32,4865,0,0"
+  TITLE="EliminarMisRedaccionesForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.eliminarEdicto.error" TARGET="page26"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publicador.eliminarEdicto.correcto" TARGET="page27"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure2" NAME="forward2"
+   PATH="publicador.eliminarEdicto.error2" TARGET="page28"
+   TITLE="failure2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#ModificarMisRedaccionesFrontAction" NAME="action12"
+  PATH="/ModificarMisRedaccionesFrontAction" SHAPE="32,5265,0,0"
+  TITLE="ModificarMisRedaccionesForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.modificarMisRedacciones.error" TARGET="page29"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publicador.modificarMisRedacciones.solicitud" TARGET="page30"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#VisualizarMisRedaccionesFrontAction" NAME="action13"
+  PATH="/VisualizarMisRedaccionesFrontAction" SHAPE="32,5953,0,0"
+  TITLE="VisualizarMisRedaccionesForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="publicador.visualizarMisRedacciones.solicitud" TARGET="page31"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#MuestraInformacionEdictoFrontAction" NAME="action14"
+  PATH="/MuestraInformacionEdictoFrontAction" SHAPE="32,6065,0,0"
+  TITLE="MuestraInformacionEdictoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="publicador.muestraInformacionEdicto.solicitud" TARGET="page32"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#RechazarPublicacionDo" NAME="action15"
+  PATH="/RechazarPublicacionDo" SHAPE="32,161,0,0"
+  TITLE="RechazarPublicacionForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.rechazarPublicacion.error" TARGET="page0"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publicador.rechazarPublicacion.correcto" TARGET="page33"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure2" NAME="forward2"
+   PATH="publicador.rechazarPublicacion.error2" TARGET="page34"
+   TITLE="failure2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#PublicarEdictoFrontAction" NAME="action16"
+  PATH="/PublicarEdictoFrontAction" SHAPE="32,4273,0,0"
+  TITLE="PublicarEdictoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.publicarEdicto.error" TARGET="page18"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publicador.publicarEdicto.solicitud" TARGET="page35"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#AsignarPublicacionPendienteDoAction" NAME="action17"
+  PATH="/AsignarPublicacionPendienteDoAction" SHAPE="32,6177,0,0"
+  TITLE="AsignarPublicacionPendienteForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.asignarPublicacionPendiente.error" TARGET="page36"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publicador.asignarPublicacionPendiente.correcto"
+   TARGET="page37" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#PublicarEdictoMisRedaccionesDo" NAME="action18"
+  PATH="/PublicarEdictoMisRedaccionesDo" SHAPE="32,6433,0,0"
+  TITLE="PublicarEdictoMisRedaccionesForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.publicarEdictoMisRedacciones.error" TARGET="page38"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success3" NAME="forward1"
+   PATH="publicador.publicarEdictoMisRedacciones.correcto3"
+   TARGET="page39" TITLE="success3" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success2" NAME="forward2"
+   PATH="publicador.publicarEdictoMisRedacciones.correcto2"
+   TARGET="page40" TITLE="success2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward3"
+   PATH="publicador.publicarEdictoMisRedacciones.correcto"
+   TARGET="page41" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure2" NAME="forward4"
+   PATH="publicador.publicarEdictoMisRedacciones.error2" TARGET="page42"
+   TITLE="failure2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#VisualizarEdictoPublicadorFrontAction"
+  NAME="action19" PATH="/VisualizarEdictoPublicadorFrontAction"
+  SHAPE="32,7121,0,0" TITLE="VisualizarEdictoPublicadorForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="publicador.visualizarEdictos.solicitud" TARGET="page43"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#RelacionarPublicacionesDo" NAME="action20"
+  PATH="/RelacionarPublicacionesDo" SHAPE="32,1393,0,0"
+  TITLE="RelacionarPublicacionesForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.relacionarPublicaciones.error" TARGET="page24"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publicador.relacionarPublicaciones.redirect" TARGET="page44"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure2" NAME="forward2"
+   PATH="publicador.relacionarPublicaciones.error2" TARGET="page45"
+   TITLE="failure2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#ModificarMisRedaccionesDo" NAME="action21"
+  PATH="/ModificarMisRedaccionesDo" SHAPE="32,5409,0,0"
+  TITLE="ModificarMisRedaccionesForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.modificarMisRedacciones.error" TARGET="page29"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success2" NAME="forward1"
+   PATH="publicador.modificarMisRedacciones.correcto2" TARGET="page46"
+   TITLE="success2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward2"
+   PATH="publicador.modificarMisRedacciones.correcto" TARGET="page47"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure2" NAME="forward3"
+   PATH="publicador.modificarMisRedacciones.error2" TARGET="page48"
+   TITLE="failure2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#CancelarPublicacionMisRedaccionesDoAction"
+  NAME="action22" PATH="/CancelarPublicacionMisRedaccionesDoAction"
+  SHAPE="32,7233,0,0" TITLE="CancelarPublicacionMisRedaccionesForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.cancelarPublicacion.error" TARGET="page49"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publicador.cancelarPublicacion.correcto" TARGET="page50"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure2" NAME="forward2"
+   PATH="publicador.cancelarPublicacion.error2" TARGET="page51"
+   TITLE="failure2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#SustituirPublicacionesDo" NAME="action23"
+  PATH="/SustituirPublicacionesDo" SHAPE="32,1249,0,0"
+  TITLE="SustituirPublicacionesForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.sustituirPublicaciones.error" TARGET="page4"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publicador.relacionarPublicaciones.redirect" TARGET="page44"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#CrearEdictoMisRedaccionesFrontAction"
+  NAME="action24" PATH="/CrearEdictoMisRedaccionesFrontAction"
+  SHAPE="32,3665,0,0" TITLE="CrearEdictoMisRedaccionesForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.crearEdicto.error" TARGET="page15" TITLE="failure"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publicador.crearEdicto.solicitud" TARGET="page52"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#VisualizarPublicacionesSinAsignarFrontAction"
+  NAME="action25" PATH="/VisualizarPublicacionesSinAsignarFrontAction"
+  SHAPE="32,7633,0,0" TITLE="VisualizarPublicacionesSinAsignarForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="publicador.visualizarPublicacionesSinAsignar.solicitud"
+   TARGET="page53" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#LiberarPublicacionDo" NAME="action26"
+  PATH="/LiberarPublicacionDo" SHAPE="32,705,0,0"
+  TITLE="LiberarPublicacionForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.liberarPublicacion.error" TARGET="page2"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publicador.liberarPublicacion.correcto" TARGET="page54"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure2" NAME="forward2"
+   PATH="publicador.liberarPublicacion.error2" TARGET="page55"
+   TITLE="failure2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#DarBajaPublicacionFrontAction" NAME="action27"
+  PATH="/DarBajaPublicacionFrontAction" SHAPE="32,2913,0,0"
+  TITLE="DarBajaPublicacionForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publicador.darBajaPublicacion.error" TARGET="page11"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publicador.darBajaPublicacion.solicitud" TARGET="page56"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page0" PATH="publicador.rechazarPublicacion.error"
+  SHAPE="272,34,0,0" SUBTYPE="tile"
+  TITLE="publicador.rechazarPublicacion.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page1"
+  PATH="publicador.rechazarPublicacion.solicitud" SHAPE="272,466,0,0"
+  SUBTYPE="tile" TITLE="publicador.rechazarPublicacion.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page2" PATH="publicador.liberarPublicacion.error"
+  SHAPE="272,578,0,0" SUBTYPE="tile"
+  TITLE="publicador.liberarPublicacion.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page3"
+  PATH="publicador.liberarPublicacion.solicitud" SHAPE="272,1010,0,0"
+  SUBTYPE="tile" TITLE="publicador.liberarPublicacion.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page4"
+  PATH="publicador.sustituirPublicaciones.error" SHAPE="272,1122,0,0"
+  SUBTYPE="tile" TITLE="publicador.sustituirPublicaciones.error"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page5"
+  PATH="publicador.sustituirPublicaciones.solicitud"
+  SHAPE="272,1842,0,0" SUBTYPE="tile"
+  TITLE="publicador.sustituirPublicaciones.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page6"
+  PATH="publicador.actualizarEdictoPublicado.error" SHAPE="256,1954,0,0"
+  SUBTYPE="tile" TITLE="publicador.actualizarEdictoPublicado.error"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page7"
+  PATH="publicador.actualizarEdictoPublicado.correcto"
+  SHAPE="256,2242,0,0" SUBTYPE="tile"
+  TITLE="publicador.actualizarEdictoPublicado.correcto" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page8" PATH="publicador.solicitarPublicacion.error"
+  SHAPE="272,2354,0,0" SUBTYPE="tile"
+  TITLE="publicador.solicitarPublicacion.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page9"
+  PATH="publicador.solicitarPublicacion.correcto" SHAPE="272,2530,0,0"
+  SUBTYPE="tile" TITLE="publicador.solicitarPublicacion.correcto"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page10"
+  PATH="publicador.solicitarPublicacion.error2" SHAPE="272,2642,0,0"
+  SUBTYPE="tile" TITLE="publicador.solicitarPublicacion.error2"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page11" PATH="publicador.darBajaPublicacion.error"
+  SHAPE="272,2754,0,0" SUBTYPE="tile"
+  TITLE="publicador.darBajaPublicacion.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page12"
+  PATH="publicador.darBajaPublicacion.correcto" SHAPE="272,3074,0,0"
+  SUBTYPE="tile" TITLE="publicador.darBajaPublicacion.correcto"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page13" PATH="publicador.darBajaPublicacion.error2"
+  SHAPE="272,3186,0,0" SUBTYPE="tile"
+  TITLE="publicador.darBajaPublicacion.error2" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page14"
+  PATH="publicador.actualizarEdictoPublicado.solicitud"
+  SHAPE="256,2098,0,0" SUBTYPE="tile"
+  TITLE="publicador.actualizarEdictoPublicado.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page15" PATH="publicador.crearEdicto.error"
+  SHAPE="288,3298,0,0" SUBTYPE="tile"
+  TITLE="publicador.crearEdicto.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page16" PATH="publicador.crearEdicto.correcto"
+  SHAPE="288,3682,0,0" SUBTYPE="tile"
+  TITLE="publicador.crearEdicto.correcto" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page17" PATH="publicador.crearEdicto.error2"
+  SHAPE="288,3826,0,0" SUBTYPE="tile"
+  TITLE="publicador.crearEdicto.error2" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page18" PATH="publicador.publicarEdicto.error"
+  SHAPE="304,4050,0,0" SUBTYPE="tile"
+  TITLE="publicador.publicarEdicto.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page19" PATH="publicador.publicarEdicto.correcto3"
+  SHAPE="304,4434,0,0" SUBTYPE="tile"
+  TITLE="publicador.publicarEdicto.correcto3" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page20" PATH="publicador.publicarEdicto.correcto2"
+  SHAPE="304,4546,0,0" SUBTYPE="tile"
+  TITLE="publicador.publicarEdicto.correcto2" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page21" PATH="publicador.publicarEdicto.correcto"
+  SHAPE="304,4658,0,0" SUBTYPE="tile"
+  TITLE="publicador.publicarEdicto.correcto" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page22" PATH="publicador.publicarEdicto.error2"
+  SHAPE="304,4770,0,0" SUBTYPE="tile"
+  TITLE="publicador.publicarEdicto.error2" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page23" PATH="publicador.crearEdicto.correcto2"
+  SHAPE="288,3474,0,0" SUBTYPE="tile"
+  TITLE="publicador.crearEdicto.correcto2" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page24"
+  PATH="publicador.relacionarPublicaciones.error" SHAPE="272,1410,0,0"
+  SUBTYPE="tile" TITLE="publicador.relacionarPublicaciones.error"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page25"
+  PATH="publicador.relacionarPublicaciones.solicitud"
+  SHAPE="272,1586,0,0" SUBTYPE="tile"
+  TITLE="publicador.relacionarPublicaciones.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page26" PATH="publicador.eliminarEdicto.error"
+  SHAPE="272,4882,0,0" SUBTYPE="tile"
+  TITLE="publicador.eliminarEdicto.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page27" PATH="publicador.eliminarEdicto.correcto"
+  SHAPE="272,5058,0,0" SUBTYPE="tile"
+  TITLE="publicador.eliminarEdicto.correcto" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page28" PATH="publicador.eliminarEdicto.error2"
+  SHAPE="272,5170,0,0" SUBTYPE="tile"
+  TITLE="publicador.eliminarEdicto.error2" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page29"
+  PATH="publicador.modificarMisRedacciones.error" SHAPE="288,5282,0,0"
+  SUBTYPE="tile" TITLE="publicador.modificarMisRedacciones.error"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page30"
+  PATH="publicador.modificarMisRedacciones.solicitud"
+  SHAPE="288,5858,0,0" SUBTYPE="tile"
+  TITLE="publicador.modificarMisRedacciones.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page31"
+  PATH="publicador.visualizarMisRedacciones.solicitud"
+  SHAPE="240,5970,0,0" SUBTYPE="tile"
+  TITLE="publicador.visualizarMisRedacciones.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page32"
+  PATH="publicador.muestraInformacionEdicto.solicitud"
+  SHAPE="240,6082,0,0" SUBTYPE="tile"
+  TITLE="publicador.muestraInformacionEdicto.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page33"
+  PATH="publicador.rechazarPublicacion.correcto" SHAPE="272,178,0,0"
+  SUBTYPE="tile" TITLE="publicador.rechazarPublicacion.correcto"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page34"
+  PATH="publicador.rechazarPublicacion.error2" SHAPE="272,354,0,0"
+  SUBTYPE="tile" TITLE="publicador.rechazarPublicacion.error2"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page35" PATH="publicador.publicarEdicto.solicitud"
+  SHAPE="304,4290,0,0" SUBTYPE="tile"
+  TITLE="publicador.publicarEdicto.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page36"
+  PATH="publicador.asignarPublicacionPendiente.error"
+  SHAPE="256,6194,0,0" SUBTYPE="tile"
+  TITLE="publicador.asignarPublicacionPendiente.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page37"
+  PATH="publicador.asignarPublicacionPendiente.correcto"
+  SHAPE="256,6338,0,0" SUBTYPE="tile"
+  TITLE="publicador.asignarPublicacionPendiente.correcto" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page38"
+  PATH="publicador.publicarEdictoMisRedacciones.error"
+  SHAPE="304,6450,0,0" SUBTYPE="tile"
+  TITLE="publicador.publicarEdictoMisRedacciones.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page39"
+  PATH="publicador.publicarEdictoMisRedacciones.correcto3"
+  SHAPE="304,6690,0,0" SUBTYPE="tile"
+  TITLE="publicador.publicarEdictoMisRedacciones.correcto3" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page40"
+  PATH="publicador.publicarEdictoMisRedacciones.correcto2"
+  SHAPE="304,6802,0,0" SUBTYPE="tile"
+  TITLE="publicador.publicarEdictoMisRedacciones.correcto2" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page41"
+  PATH="publicador.publicarEdictoMisRedacciones.correcto"
+  SHAPE="304,6914,0,0" SUBTYPE="tile"
+  TITLE="publicador.publicarEdictoMisRedacciones.correcto" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page42"
+  PATH="publicador.publicarEdictoMisRedacciones.error2"
+  SHAPE="304,7026,0,0" SUBTYPE="tile"
+  TITLE="publicador.publicarEdictoMisRedacciones.error2" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page43"
+  PATH="publicador.visualizarEdictos.solicitud" SHAPE="240,7138,0,0"
+  SUBTYPE="tile" TITLE="publicador.visualizarEdictos.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page44"
+  PATH="publicador.relacionarPublicaciones.redirect"
+  SHAPE="272,1266,0,0" SUBTYPE="tile"
+  TITLE="publicador.relacionarPublicaciones.redirect" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page45"
+  PATH="publicador.relacionarPublicaciones.error2" SHAPE="272,1730,0,0"
+  SUBTYPE="tile" TITLE="publicador.relacionarPublicaciones.error2"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page46"
+  PATH="publicador.modificarMisRedacciones.correcto2"
+  SHAPE="288,5426,0,0" SUBTYPE="tile"
+  TITLE="publicador.modificarMisRedacciones.correcto2" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page47"
+  PATH="publicador.modificarMisRedacciones.correcto"
+  SHAPE="288,5634,0,0" SUBTYPE="tile"
+  TITLE="publicador.modificarMisRedacciones.correcto" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page48"
+  PATH="publicador.modificarMisRedacciones.error2" SHAPE="288,5746,0,0"
+  SUBTYPE="tile" TITLE="publicador.modificarMisRedacciones.error2"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page49" PATH="publicador.cancelarPublicacion.error"
+  SHAPE="272,7250,0,0" SUBTYPE="tile"
+  TITLE="publicador.cancelarPublicacion.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page50"
+  PATH="publicador.cancelarPublicacion.correcto" SHAPE="272,7426,0,0"
+  SUBTYPE="tile" TITLE="publicador.cancelarPublicacion.correcto"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page51"
+  PATH="publicador.cancelarPublicacion.error2" SHAPE="272,7538,0,0"
+  SUBTYPE="tile" TITLE="publicador.cancelarPublicacion.error2"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page52" PATH="publicador.crearEdicto.solicitud"
+  SHAPE="288,3938,0,0" SUBTYPE="tile"
+  TITLE="publicador.crearEdicto.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page53"
+  PATH="publicador.visualizarPublicacionesSinAsignar.solicitud"
+  SHAPE="240,7650,0,0" SUBTYPE="tile"
+  TITLE="publicador.visualizarPublicacionesSinAsignar.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page54"
+  PATH="publicador.liberarPublicacion.correcto" SHAPE="272,722,0,0"
+  SUBTYPE="tile" TITLE="publicador.liberarPublicacion.correcto"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page55" PATH="publicador.liberarPublicacion.error2"
+  SHAPE="272,898,0,0" SUBTYPE="tile"
+  TITLE="publicador.liberarPublicacion.error2" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page56"
+  PATH="publicador.darBajaPublicacion.solicitud" SHAPE="272,2930,0,0"
+  SUBTYPE="tile" TITLE="publicador.darBajaPublicacion.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+</PROCESS>

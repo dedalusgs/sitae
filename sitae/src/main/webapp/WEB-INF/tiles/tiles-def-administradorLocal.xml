@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN" "http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+
+<tiles-definitions>
+
+	<!-- ============================ LAYOUTS ======================== -->
+
+	<!-- General Layout -->
+	
+	<definition name="layoutExtranet" template="/jsp/layouts/layoutIntranet.jsp">
+		<put name="scripts" value="/jsp/layouts/scripts.jsp" />
+		<put name="titulo" value=""/>
+		<put name="top" value="/jsp/layouts/topExtranet.jsp" />
+	    <put name="cabecera" value="/jsp/layouts/cabeceraExtranet.jsp"/>
+	    <put name="menuSuperior" value="/jsp/layouts/menuSuperiorExtranet.jsp"/>
+	    <put name="migaDePan" value="/jsp/layouts/migaDePan.jsp"/>
+	    <put name="botonera" value="/jsp/layouts/botonera.jsp"/>
+	    <put name="menuPublico" value="/jsp/layouts/menuPublicoExtranet.jsp" />
+	    <put name="menuAdministracion" value="/jsp/layouts/menuAdministracionExtranet.jsp" />
+   	    <put name="cuerpo" value="/VisualizarEdictoPublicoUltimosFrontAction.do"/>
+		<put name="pie" value="/jsp/layouts/pieExtranet.jsp"/>  
+		  
+		
+	</definition>  
+	
+	<definition name="layoutLimpio" template="/jsp/layouts/layoutIntranet.jsp">
+		<put name="scripts" value="/jsp/layouts/scripts.jsp" />
+		<put name="titulo" value=""/>
+		<put name="top" value="/jsp/layouts/topExtranet.jsp" />
+	    <put name="cabecera" value="/jsp/layouts/cabeceraExtranet.jsp"/>
+	    <put name="menuSuperior" value="/jsp/layouts/menuSuperiorExtranet.jsp"/>
+	    <put name="migaDePan" value="/jsp/layouts/migaDePan.jsp"/>
+	    <put name="botonera" value="/jsp/layouts/botonera.jsp"/>
+	    <put name="menuPublico" value="/jsp/layouts/menuPublicoExtranet.jsp" />
+	    <put name="menuAdministracion" value="/jsp/layouts/menuAdministracionExtranet.jsp" />
+   	    <put name="cuerpo" value="/VisualizarEdictoPublicoUltimosFrontAction.do"/>
+		<put name="pie" value="/jsp/layouts/pieExtranet.jsp"/>  
+		  
+		
+	</definition>  
+	
+	
+  	
+	<!-- ADMINISTRADOR LOCAL -->
+		
+	  <!-- GESTION USUARIOS -->
+	  
+		  <!-- ALTA PUBLICADOR Y REDACTOR -->
+			 
+		    <definition name="adminLocal.crearUsuarios.solicitud" extends="layoutExtranet">
+			   	<put name="cuerpo" value="/jsp/sitae/adminLocal/crearUsuarios/formulario.jsp"/>
+		  	</definition>
+		  	
+		  	<definition name="adminLocal.crearUsuarios.correcto" extends="layoutExtranet">
+		    	<put name="cuerpo" value="/jsp/sitae/adminLocal/crearUsuarios/correcto.jsp"/>
+		  	</definition>		  			  	
+		  	
+		  	<definition name="adminLocal.crearUsuarios.error" extends="layoutExtranet">
+		    	<put name="cuerpo" value="/jsp/sitae/adminLocal/crearUsuarios/error.jsp"/>
+		  	</definition>
+	  
+	  <!-- ALTA PUBLICADOR Y REDACTOR  EXT -->
+	<definition name="adminLocal.crearUsuariosExternos.solicitud"
+		extends="layoutExtranet">
+		<put name="cuerpo" value="/jsp/sitae/adminLocal/crearUsuariosExternos/formulario.jsp" />
+	</definition>
+
+	<definition name="adminLocal.crearUsuariosExternos.correcto"
+		extends="layoutExtranet">
+		<put name="cuerpo" value="/jsp/sitae/adminLocal/crearUsuariosExternos/correcto.jsp" />
+	</definition>
+
+	<definition name="adminLocal.crearUsuariosExternos.error" extends="layoutExtranet">
+		<put name="cuerpo" value="/jsp/sitae/adminLocal/crearUsuariosExternos/error.jsp" />
+	</definition>
+	
+	  	<!-- VISUALIZAR USUARIOS PUBLICADOR Y REDACTOR -->
+	 
+			<definition name="adminLocal.visualizarUsuarios.solicitud" extends="layoutExtranet">
+				<put name="cuerpo" value="/jsp/sitae/adminLocal/visualizarUsuarios/formulario.jsp"/>
+			</definition>
+	  
+	  <!-- MOSTRAR INFORMACION USUARIOS PUBLICADOR Y REDACTOR -->
+  			
+  		<definition name="adminLocal.muestraInformacionUsuarios.solicitud" extends="layoutExtranet">
+	   		<put name="cuerpo" value="/jsp/sitae/adminLocal/muestraInformacionUsuarios/formulario.jsp"/>
+  		</definition>
+  		
+  		<definition name="adminLocal.muestraInformacionUsuariosExternos.solicitud" extends="layoutExtranet">
+	   		<put name="cuerpo" value="/jsp/sitae/adminLocal/muestraInformacionUsuariosExternos/formulario.jsp"/>
+  		</definition>
+  		
+  	 	<!-- ELIMINAR USUARIOS PUBLICADOR Y REDACTOR -->
+		 
+	  	<definition name="adminLocal.bajaUsuario.correcto" extends="layoutExtranet">
+	    	<put name="cuerpo" value="/jsp/sitae/adminLocal/eliminarUsuarios/correcto.jsp"/>
+	  	</definition>
+	  	
+	  	 <definition name="adminLocal.bajaUsuario.correcto2" extends="layoutExtranet">
+	    	<put name="cuerpo" value="/jsp/sitae/adminLocal/eliminarUsuarios/correcto2.jsp"/>
+	  	</definition>
+	  	
+	  	<definition name="adminLocal.bajaUsuario.error" extends="layoutExtranet">
+	    	<put name="cuerpo" value="/jsp/sitae/adminLocal/eliminarUsuarios/error.jsp"/>
+	  	</definition>
+	  	
+	  	<!-- MODIFICAR USUARIOS PUBLICADOR Y REDACTOR -->
+
+    	<definition name="adminLocal.modificarUsuarios.solicitud" extends="layoutExtranet">
+	   		<put name="cuerpo" value="/jsp/sitae/adminLocal/modificarUsuarios/formulario.jsp"/>
+  		</definition>
+  	
+  		<definition name="adminLocal.modificarUsuarios.correcto" extends="layoutExtranet">
+    		<put name="cuerpo" value="/jsp/sitae/adminLocal/modificarUsuarios/correcto.jsp"/>
+  		</definition>
+  		
+  		<definition name="adminLocal.modificarUsuarios.correcto2" extends="layoutExtranet">
+    		<put name="cuerpo" value="/jsp/sitae/adminLocal/modificarUsuarios/correcto2.jsp"/>
+  		</definition>
+
+  	
+  		<definition name="adminLocal.modificarUsuarios.error" extends="layoutExtranet">
+    		<put name="cuerpo" value="/jsp/sitae/adminLocal/modificarUsuarios/error.jsp"/>
+  		</definition>
+	  
+	  	<definition name="adminLocal.modificarUsuariosExternos.solicitud"
+		extends="layoutExtranet">
+		<put name="cuerpo" value="/jsp/sitae/adminLocal/modificarUsuariosExternos/formulario.jsp" />
+	</definition>
+
+	<definition name="adminLocal.modificarUsuariosExternos.correcto"
+		extends="layoutExtranet">
+		<put name="cuerpo" value="/jsp/sitae/adminLocal/modificarUsuarios/correcto.jsp" />
+	</definition>
+
+	<definition name="adminLocal.modificarUsuariosExternos.correcto2"
+		extends="layoutExtranet">
+		<put name="cuerpo" value="/jsp/sitae/adminLocal/modificarUsuarios/correcto2.jsp" />
+	</definition>
+
+
+	<definition name="adminLocal.modificarUsuariosExternos.error"
+		extends="layoutExtranet">
+		<put name="cuerpo" value="/jsp/sitae/adminLocal/modificarUsuarios/error.jsp" />
+	</definition>
+	  <!-- FIN GESTION USUARIOS -->
+	  
+	  
+	  <!-- GESTION TIPOS DE EDICTOS -->
+	  
+		  <!-- CREAR TIPO DE EDICTO -->
+			 
+		    <definition name="adminLocal.crearTiposEdictos.solicitud" extends="layoutExtranet">
+			   	<put name="cuerpo" value="/jsp/sitae/adminLocal/crearTiposEdictos/formulario.jsp"/>
+		  	</definition>
+		  	
+		  	<definition name="adminLocal.crearTiposEdictos.correcto" extends="layoutExtranet">
+		    	<put name="cuerpo" value="/jsp/sitae/adminLocal/crearTiposEdictos/correcto.jsp"/>
+		  	</definition>
+		  	
+		  	<definition name="adminLocal.crearTiposEdictos.error" extends="layoutExtranet">
+		    	<put name="cuerpo" value="/jsp/sitae/adminLocal/crearTiposEdictos/error.jsp"/>
+		  	</definition>
+		  	
+		 <!-- ELIMINAR TIPO DE EDICTO -->
+			  	
+		  	<definition name="adminLocal.eliminarTiposEdictos.correcto" extends="layoutExtranet">
+		    	<put name="cuerpo" value="/jsp/sitae/adminLocal/eliminarTiposEdictos/correcto.jsp"/>
+		  	</definition>
+		  	
+		  	<definition name="adminLocal.eliminarTiposEdictos.error" extends="layoutExtranet">
+		    	<put name="cuerpo" value="/jsp/sitae/adminLocal/eliminarTiposEdictos/error.jsp"/>
+		  	</definition>
+	  
+	   	 <!-- MODIFICAR TIPOS DE EDICTOS -->
+	 
+			<definition name="adminLocal.modificarTiposEdictos.solicitud" extends="layoutExtranet">
+				<put name="cuerpo" value="/jsp/sitae/adminLocal/modificarTiposEdictos/formulario.jsp"/>
+			</definition>
+			
+			<definition name="adminLocal.modificarTiposEdictos.correcto" extends="layoutExtranet">
+				<put name="cuerpo" value="/jsp/sitae/adminLocal/modificarTiposEdictos/correcto.jsp"/>
+			</definition>
+			
+			<definition name="adminLocal.modificarTiposEdictos.error" extends="layoutExtranet">
+				<put name="cuerpo" value="/jsp/sitae/adminLocal/modificarTiposEdictos/error.jsp"/>
+			</definition>
+	  
+	  	<!-- VISUALIZAR TIPOS DE EDICTOS -->
+	 
+			<definition name="adminLocal.visualizarTiposEdictos.solicitud" extends="layoutExtranet">
+				<put name="cuerpo" value="/jsp/sitae/adminLocal/visualizarTiposEdictos/formulario.jsp"/>
+			</definition>
+	  
+	  
+	  <!-- FIN GESTION TIPOS DE EDICTOS -->
+	  
+	  
+	  <!-- GESTION CENTROS DE PROCEDENCIA -->
+	    
+	    <!-- ALTA CENTRO DE PROCEDENCIA -->
+		 
+      <definition name="adminLocal.altaCentroProcedencia.solicitud" extends="layoutExtranet">
+	   	  <put name="cuerpo" value="/jsp/sitae/adminLocal/altaCentroProcedencia/altaCentroProcedencia.jsp"/>
+  	  </definition>
+  	
+  	   <definition name="adminLocal.altaCentroProcedencia.correcto" extends="layoutExtranet">
+    	  <put name="cuerpo" value="/jsp/sitae/adminLocal/altaCentroProcedencia/correcto.jsp"/>
+  	   </definition>
+  	
+  	   <definition name="adminLocal.altaCentroProcedencia.error" extends="layoutExtranet">
+    	  <put name="cuerpo" value="/jsp/sitae/adminLocal/altaCentroProcedencia/error.jsp"/>
+  	    </definition>
+  	    
+  	    <!-- BAJA CENTRO DE PROCEDENCIA  -->
+  	
+  	        <definition name="adminLocal.bajaCentro.correcto" extends="layoutExtranet">
+    	       <put name="cuerpo" value="/jsp/sitae/adminLocal/bajaCentroProcedencia/correcto.jsp"/>
+  	        </definition>
+  	
+  	        <definition name="adminLocal.bajaCentro.error" extends="layoutExtranet">
+    	       <put name="cuerpo" value="/jsp/sitae/adminLocal/bajaCentroProcedencia/error.jsp"/>
+  	       </definition>
+  	       
+  	    <!-- MODIFICAR CENTRO DE PROCEDENCIA  -->
+		 
+            <definition name="adminLocal.modificarCentroProcedencia.solicitud" extends="layoutExtranet">
+	   	       <put name="cuerpo" value="/jsp/sitae/adminLocal/modificarCentroProcedencia/formulario.jsp"/>
+  	         </definition>
+  	
+  			<definition name="adminLocal.modificarCentroProcedencia.correcto" extends="layoutExtranet">
+    			<put name="cuerpo" value="/jsp/sitae/adminLocal/modificarCentroProcedencia/correcto.jsp"/>
+  			</definition>
+  	
+  			<definition name="adminLocal.modificarCentroProcedencia.error" extends="layoutExtranet">
+    			<put name="cuerpo" value="/jsp/sitae/adminLocal/modificarCentroProcedencia/error.jsp"/>
+  			</definition>  			
+  	       
+  	     <!-- VISUALIZAR CENTRO DE PROCEDENCIA  -->
+		 
+    		<definition name="adminLocal.visualizarCentroProcedencia.solicitud" extends="layoutExtranet">
+	   			<put name="cuerpo" value="/jsp/sitae/adminLocal/visualizarCentroProcedencia/formulario.jsp"/>
+  			</definition>
+  			
+  		<!-- MOSTRAR CENTRO DE PROCEDENCIA  -->
+  			
+  			<definition name="adminLocal.muestraInformacionCentroProcedencia.solicitud" extends="layoutExtranet">
+	   			<put name="cuerpo" value="/jsp/sitae/adminLocal/muestraInformacionCentroProcedencia/formulario.jsp"/>
+  			</definition>
+	  
+	  <!-- FIN GESTION CENTROS DE PROCEDENCIA -->
+	  
+	  
+	   <!-- GESTION FESTIVOS -->
+	    
+	    <!-- ALTA FESTIVOS -->
+		 
+      <definition name="adminLocal.altaFestivo.solicitud" extends="layoutExtranet">
+	   	  <put name="cuerpo" value="/jsp/sitae/adminLocal/altaFestivo/altaFestivo.jsp"/>
+  	  </definition>
+  	
+  	   <definition name="adminLocal.altaFestivo.correcto" extends="layoutExtranet">
+    	  <put name="cuerpo" value="/jsp/sitae/adminLocal/altaFestivo/correcto.jsp"/>
+  	   </definition>
+  	
+  	   <definition name="adminLocal.altaFestivo.error" extends="layoutExtranet">
+    	  <put name="cuerpo" value="/jsp/sitae/adminLocal/altaFestivo/error.jsp"/>
+  	    </definition>
+  	    
+  	    <!-- BAJA FESTIVO  -->
+  	
+  	        <definition name="adminLocal.eliminarFestivo.correcto" extends="layoutExtranet">
+    	       <put name="cuerpo" value="/jsp/sitae/adminLocal/eliminarFestivo/correcto.jsp"/>
+  	        </definition>
+  	
+  	        <definition name="adminLocal.eliminarFestivo.error" extends="layoutExtranet">
+    	       <put name="cuerpo" value="/jsp/sitae/adminLocal/eliminarFestivo/error.jsp"/>
+  	       </definition>
+  	       
+  	    <!-- MODIFICAR FESTIVO  -->
+		 
+            <definition name="adminLocal.modificarFestivo.solicitud" extends="layoutExtranet">
+	   	       <put name="cuerpo" value="/jsp/sitae/adminLocal/modificarFestivo/formulario.jsp"/>
+  	         </definition>
+  	
+  			<definition name="adminLocal.modificarFestivo.correcto" extends="layoutExtranet">
+    			<put name="cuerpo" value="/jsp/sitae/adminLocal/modificarFestivo/correcto.jsp"/>
+  			</definition>
+  	
+  			<definition name="adminLocal.modificarFestivo.error" extends="layoutExtranet">
+    			<put name="cuerpo" value="/jsp/sitae/adminLocal/modificarFestivo/error.jsp"/>
+  			</definition>  			
+  	       
+  	     <!-- copiar FESTIVO  -->
+		 
+    		<definition name="adminLocal.copiarFestivo.solicitud" extends="layoutExtranet">
+	   			<put name="cuerpo" value="/jsp/sitae/adminLocal/copiarFestivo/correcto.jsp"/>
+  			</definition>
+  			<definition name="adminLocal.copiarFestivo.error" extends="layoutExtranet">
+    			<put name="cuerpo" value="/jsp/sitae/adminLocal/copiarFestivo/error.jsp"/>
+  			</definition> 
+  			<definition name="adminLocal.copiarFestivo.errorNoExistenDias" extends="layoutExtranet">
+    			<put name="cuerpo" value="/jsp/sitae/adminLocal/copiarFestivo/errorNoHayCopias.jsp"/>
+  			</definition>
+  			
+  			
+  			
+  			
+  		<!-- visualizar FESTIVO  -->
+  			
+  			<definition name="adminLocal.visualizarFestivo.solicitud" extends="layoutExtranet">
+	   			<put name="cuerpo" value="/jsp/sitae/adminLocal/visualizarFestivo/formulario.jsp"/>
+  			</definition>
+	  
+	  <!-- FIN FESTIVOS -->
+	  
+	  
+	   <!-- GESTION USUARIOS FIRMANTES -->
+	   
+	   	<!-- VISUALIZAR USUARIOS FIRMANTES -->
+	 
+			<definition name="adminLocal.visualizarUsuariosFirmantes.solicitud" extends="layoutExtranet">
+				<put name="cuerpo" value="/jsp/sitae/adminLocal/visualizarUsuariosFirmantes/formulario.jsp"/>				
+			</definition>
+								
+		<!-- FALTA PAGINA DE ERROR  -->
+		
+		<!-- ALTA USUARIOS FIRMANTES -->
+			
+			 <definition name="adminLocal.crearUsuariosFirmantes.solicitud" extends="layoutExtranet">
+			   	<put name="cuerpo" value="/jsp/sitae/adminLocal/crearUsuariosFirmantes/formulario.jsp"/>
+		  	</definition>
+		  	
+		  	<definition name="adminLocal.crearUsuariosFirmantes.correcto" extends="layoutExtranet">
+		    	<put name="cuerpo" value="/jsp/sitae/adminLocal/crearUsuariosFirmantes/correcto.jsp"/>
+		  	</definition>		  			  	
+		  	
+		  	<definition name="adminLocal.crearUsuariosFirmantes.error" extends="layoutExtranet">
+		    	<put name="cuerpo" value="/jsp/sitae/adminLocal/crearUsuariosFirmantes/error.jsp"/>
+		  	</definition>
+		
+		 <!-- MOSTRAR INFORMACION USUARIOS FIRMANTES -->
+  			
+  		<definition name="adminLocal.muestraInformacionUsuariosFirmantes.solicitud" extends="layoutExtranet">
+	   		<put name="cuerpo" value="/jsp/sitae/adminLocal/muestraInformacionUsuariosFirmantes/formulario.jsp"/>
+  		</definition>
+  		
+  			<!-- MODIFICAR USUARIOS FIRMANTES -->
+
+    	<definition name="adminLocal.modificarUsuariosFirmantes.solicitud" extends="layoutExtranet">
+	   		<put name="cuerpo" value="/jsp/sitae/adminLocal/modificarUsuariosFirmantes/formulario.jsp"/>
+  		</definition>
+  	
+  		<definition name="adminLocal.modificarUsuariosFirmantes.correcto" extends="layoutExtranet">
+    		<put name="cuerpo" value="/jsp/sitae/adminLocal/modificarUsuariosFirmantes/correcto.jsp"/>
+  		</definition>
+  		  		
+  	
+  		<definition name="adminLocal.modificarUsuariosFirmantes.error" extends="layoutExtranet">
+    		<put name="cuerpo" value="/jsp/sitae/adminLocal/modificarUsuariosFirmantes/error.jsp"/>
+  		</definition>
+  		  
+  		 <!-- ELIMINAR USUARIOS FIRMANTES -->
+		 
+	  	<definition name="adminLocal.bajaUsuarioFirmante.correcto" extends="layoutExtranet">
+	    	<put name="cuerpo" value="/jsp/sitae/adminLocal/eliminarUsuariosFirmantes/correcto.jsp"/>
+	  	</definition>
+	  	
+	  	 <definition name="adminLocal.bajaUsuarioFirmante.correcto2" extends="layoutExtranet">
+	    	<put name="cuerpo" value="/jsp/sitae/adminLocal/eliminarUsuariosFirmantes/correcto2.jsp"/>
+	  	</definition>
+	  	
+	  	<definition name="adminLocal.bajaUsuarioFirmante.error" extends="layoutExtranet">
+	    	<put name="cuerpo" value="/jsp/sitae/adminLocal/eliminarUsuariosFirmantes/error.jsp"/>
+	  	</definition> 	
+	   
+		 <!-- FIN GESTION USUARIOS FIRMANTES -->
+		 
+		  <!-- Estadísticas  -->
+  			
+  		<definition name="adminLocal.estadisticasPublicacion.solicitud" extends="layoutExtranet">
+	   			<put name="cuerpo" value="/jsp/sitae/adminLocal/estadisticasPublicacion/formulario.jsp"/>
+  			</definition>
+  			<definition name="adminLocal.estadisticasPublicacion.error" extends="layoutExtranet">
+    			<put name="cuerpo" value="/jsp/sitae/adminLocal/estadisticasPublicacion/error.jsp"/>
+  			</definition> 
+		 
+		 
+		 <!-- REDES SOCIALES  -->
+		 <definition name="adminLocal.visualizarRedes.correcto" extends="layoutExtranet">
+	   		<put name="cuerpo" value="/jsp/sitae/adminLocal/RedesSociales/visualizar.jsp"/>
+  		</definition>
+  		
+  		<definition name="adminLocal.visualizarRedes.error" extends="layoutExtranet">
+	   		<put name="cuerpo" value="/jsp/sitae/adminLocal/RedesSociales/error.jsp"/>
+  		</definition>
+  		
+  		<definition name="adminLocal.configurarFacebook.correcto" extends="layoutExtranet">
+	   		<put name="cuerpo" value="/jsp/sitae/adminLocal/RedesSociales/facebook/configurarFacebook.jsp"/>
+  		</definition>
+  		
+  		<definition name="adminLocal.callbackFacebook.correcto1" template="/jsp/sitae/adminLocal/RedesSociales/facebook/callbackCloseF.jsp"/>
+  		
+  		
+  		<definition name="adminLocal.callbackFacebook.correcto2" extends="layoutExtranet">
+	   		<put name="cuerpo" value="/jsp/sitae/adminLocal/RedesSociales/facebook/callbackFacebook.jsp"/>
+  		</definition>
+  		
+  		<definition name="adminLocal.callbackFacebook.correcto3" extends="layoutExtranet">
+	   		<put name="cuerpo" value="/jsp/sitae/adminLocal/RedesSociales/facebook/facebookAsignado.jsp"/>
+  		</definition>
+  		
+  		<definition name="adminLocal.callbackFacebook.error" extends="layoutExtranet">
+	   		<put name="cuerpo" value="/jsp/sitae/adminLocal/RedesSociales/facebook/errorFacebook.jsp"/>
+  		</definition>
+  		
+  		<definition name="adminLocal.cancelarFacebook.correcto" extends="layoutExtranet">
+	   		<put name="cuerpo" value="/jsp/sitae/adminLocal/RedesSociales/facebook/cancelarFacebookCorrecto.jsp"/>
+  		</definition>
+  		
+  		
+  		
+  		<definition name="adminLocal.configurarTwitter.correcto" extends="layoutExtranet">
+	   		<put name="cuerpo" value="/jsp/sitae/adminLocal/RedesSociales/twitter/configurarTwitter.jsp"/>
+  		</definition>
+  		
+  		<definition name="adminLocal.callbackTwitter.correcto" template="/jsp/sitae/adminLocal/RedesSociales/twitter/callbackTwitter.jsp"/>
+  		  		
+  		<definition name="adminLocal.configurarTwitter.correcto2" extends="layoutExtranet">
+	   		<put name="cuerpo" value="/jsp/sitae/adminLocal/RedesSociales/twitter/twitterAsignado.jsp"/>
+  		</definition>
+  		
+  		<definition name="adminLocal.configurarTwitter.error" extends="layoutExtranet">
+	   		<put name="cuerpo" value="/jsp/sitae/adminLocal/RedesSociales/twitter/errorTwitter.jsp"/>
+  		</definition>
+  		
+  		<definition name="adminLocal.cancelarTwitter.correcto" extends="layoutExtranet">
+	   		<put name="cuerpo" value="/jsp/sitae/adminLocal/RedesSociales/twitter/cancelarTwitterCorrecto.jsp"/>
+  		</definition>
+  		
+  		
+  		<definition name="adminLocal.configurarGooglePlus.correcto" extends="layoutExtranet">
+	   		<put name="cuerpo" value="/jsp/sitae/adminLocal/RedesSociales/googleplus/configurarGooglePlus.jsp"/>
+  		</definition>
+  		<definition name="adminLocal.configurarGooglePlus.correcto2" extends="layoutExtranet">
+	   		<put name="cuerpo" value="/jsp/sitae/adminLocal/RedesSociales/googleplus/googlePlusAsignado.jsp"/>
+  		</definition>
+  		<definition name="adminLocal.configurarGooglePlus.error" extends="layoutExtranet">
+	   		<put name="cuerpo" value="/jsp/sitae/adminLocal/RedesSociales/googleplus/errorGooglePlus.jsp"/>
+  		</definition>  		
+  		  		
+  		<definition name="adminLocal.callbackGooglePlus.correcto"  template="/jsp/sitae/adminLocal/RedesSociales/googleplus/callbackGooglePlus.jsp">
+	   		
+  		</definition>
+  		
+  		
+  		
+  		<definition name="adminLocal.cancelarGooglePlus.correcto" extends="layoutExtranet">
+	   		<put name="cuerpo" value="/jsp/sitae/adminLocal/RedesSociales/googleplus/cancelarGooglePlusCorrecto.jsp"/>
+  		</definition>
+  		
+		
+ 
+</tiles-definitions> 

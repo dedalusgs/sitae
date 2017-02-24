@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+ <data-sources/>
+ <form-beans>
+  <form-bean name="MuestraInformacionEdictoPublicoForm" type="es.novasoft.sitae.perfiles.publico.muestraInformacionEdicto.forms.MuestraInformacionEdictoPublicoForm"/>
+  <form-bean name="VisualizarEdictoPublicoForm" type="es.novasoft.sitae.perfiles.publico.visualizarEdicto.forms.VisualizarEdictoPublicoForm"/>
+  <form-bean name="VisualizarEdictoPublicoUltimosForm" type="es.novasoft.sitae.perfiles.publico.visualizarEdictoUltimos.forms.VisualizarEdictoPublicoUltimosForm"/>
+  <form-bean name="SuscripcionForm" type="es.novasoft.sitae.perfiles.publico.interesados.form.SuscripcionForm"/>
+  <form-bean name="BajaSuscripcionForm" type="es.novasoft.sitae.perfiles.publico.interesados.form.BajaSuscripcionForm"/>
+  <form-bean name="CambiarLenguajeForm" type="es.novasoft.sitae.lenguaje.forms.CambiarLenguajeForm"/>
+  <form-bean name="ServiciosPortalForm" type="es.novasoft.sitae.serviciosportal.forms.ServiciosPortalForm" />
+ </form-beans>
+ <global-exceptions/>
+ <global-forwards/>
+ <action-mappings>
+  <!-- USUARIO PUBLICO O FINAL  VISUALIZAR EDICTOS -->
+  <action name="VisualizarEdictoPublicoForm"
+   path="/mobile/HomeFrontAction" scope="session"   type="es.novasoft.sitae.perfiles.publico.mobile.MobileHomeFrontAction" validate="false">
+   <forward name="success" path="mobile.home"/>
+   <forward name="failure" path="publico.visualizarEdictosPublico.error"/>
+  </action>
+  
+  <action name="VisualizarEdictoPublicoForm"
+   path="/mobile/CambiarLenguajeFrontAction" scope="session"   type="es.novasoft.sitae.perfiles.publico.mobile.MobileCambiarLenguajeDoAction" validate="false">
+   <forward name="success" redirect="true" path="/mobile/HomeFrontAction.do"/>
+   <forward name="failure" path="publico.visualizarEdictosPublico.error"/>
+  </action>
+  
+   <action name="VisualizarEdictoPublicoForm"
+   path="/mobile/VigorFrontAction" scope="session"   type="es.novasoft.sitae.perfiles.publico.mobile.MobileVigorFrontAction" validate="false">
+   <forward name="success" path="mobile.vigor"/>
+   <forward name="failure" path="publico.visualizarEdictosPublico.error"/>
+  </action>
+  <action name="VisualizarEdictoPublicoForm"
+   path="/mobile/HistoricoFrontAction" scope="session"   type="es.novasoft.sitae.perfiles.publico.mobile.MobileHistoricoFrontAction" validate="false">
+   <forward name="success" path="mobile.historico"/>
+   <forward name="failure" path="publico.visualizarEdictosPublico.error"/>
+  </action>
+  
+  <action name="VisualizarEdictoPublicoForm"
+   path="/mobile/BusquedaAvanzadaFrontAction" scope="session"   type="es.novasoft.sitae.perfiles.publico.mobile.MobileBusquedaAvanzadaFrontAction" validate="false">
+   <forward name="success" path="mobile.busqueda.avanzada"/>
+   <forward name="success2" path="mobile.busqueda.avanzada.resultado"/>
+   <forward name="failure" path="publico.visualizarEdictosPublico.error"/>
+  </action>
+  
+  <action name="VisualizarEdictoPublicoForm"
+   path="/mobile/BusquedaAvanzadaFrontAction2" scope="session"   type="es.novasoft.sitae.perfiles.publico.mobile.MobileBusquedaAvanzadaFrontAction" validate="false">
+   <forward name="success" path="mobile.busqueda.avanzada"/>
+   <forward name="success2" path="mobile.busqueda.avanzada.resultado"/>
+   <forward name="failure" path="publico.visualizarEdictosPublico.error"/>
+  </action>
+  
+   <action name="MuestraInformacionEdictoPublicoForm" 
+   path="/mobile/MuestraInfoEdictoFrontAction" scope="session"   type="es.novasoft.sitae.perfiles.publico.mobile.MobileMuestraInformacionEdictoFrontAction" validate="false">
+   <forward name="success" path="mobile.muestra.edicto"/>
+   <forward name="failure" path="publico.visualizarEdictosPublico.error"/>
+  </action>
+  
+  <action name="ServiciosPortalForm"
+			path="/mobile/MobileServiciosPortalFrontAction" scope="request"
+			type="es.novasoft.sitae.perfiles.publico.mobile.MobileServiciosPortalFrontAction"
+			validate="false">
+			<forward name="contacto" path="mobile.contacto.solicitud"></forward>
+			
+			<forward name="avisoLegal_es"
+				path="mobile.avisoLegal_es.solicitud">
+			</forward>
+			<forward name="avisoLegal_va"
+				path="mobile.avisoLegal_va.solicitud">
+			</forward>
+			<forward name="acercaDe_es" path="mobile.acercaDe_es.solicitud"></forward>
+			<forward name="acercaDe_va" path="mobile.acercaDe_va.solicitud"></forward>
+		</action>
+  
+  <!-- MOSTRAR INFORMACION EDICTOS -->
+  <action name="MuestraInformacionEdictoPublicoForm"
+   path="/MuestraInformacionEdictoPublicoFrontAction" scope="session"
+   type="es.novasoft.sitae.perfiles.publico.muestraInformacionEdicto.actions.MuestraInformacionEdictoPublicoFrontAction" validate="false">
+   <forward name="success" path="publico.muestraInformacionEdictosPublico.solicitud"/>
+   <forward name="failure" path="publico.muestraInformacionEdictosPublico.error"/>
+  </action>
+  
+ </action-mappings>
+ <controller nocache="true" processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+</struts-config>

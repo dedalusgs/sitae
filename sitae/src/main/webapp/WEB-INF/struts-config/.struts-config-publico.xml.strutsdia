@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM ID="#MuestraInformacionEdictoPublicoFrontAction"
+  NAME="action0" PATH="/MuestraInformacionEdictoPublicoFrontAction"
+  SHAPE="672,96,252,57" TITLE="MuestraInformacionEdictoPublicoForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publico.muestraInformacionEdictosPublico.error" TARGET="page0"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publico.muestraInformacionEdictosPublico.solicitud"
+   TARGET="page1" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#AltaSuscripcionFront" NAME="action1"
+  PATH="/AltaSuscripcionFront" SHAPE="32,273,0,0"
+  TITLE="SuscripcionForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publico.altasuscripcionfront.error" TARGET="page2"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publico.altasuscripcionfront.solicitud" TARGET="page3"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#VisualizarEdictoPublicoUltimosFrontAction"
+  NAME="action2" PATH="/VisualizarEdictoPublicoUltimosFrontAction"
+  SHAPE="16,48,236,57" TITLE="VisualizarEdictoPublicoUltimosForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="/jsp/sitae/publico/visualizarEdictosUltimos/error.jsp"
+   SHAPE="251,72,272,72,272,112,240,112,240,176,335,176" TARGET="page4"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="/jsp/sitae/publico/visualizarEdictosUltimos/formulario.jsp"
+   TARGET="page5" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#AltaSuscripcionDo" NAME="action3"
+  PATH="/AltaSuscripcionDo" SHAPE="32,417,0,0" TITLE="SuscripcionForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publico.altasuscripcionfront.error" TARGET="page2"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publico.altasuscripcionfront.correcto" TARGET="page6"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#VisualizarEdictoPublicoFrontAction" NAME="action4"
+  PATH="/VisualizarEdictoPublicoFrontAction" SHAPE="32,673,0,0"
+  TITLE="VisualizarEdictoPublicoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publico.visualizarEdictosPublico.error" TARGET="page7"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publico.visualizarEdictosPublico.solicitud" TARGET="page8"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page0"
+  PATH="publico.muestraInformacionEdictosPublico.error"
+  SHAPE="960,32,50,25" SUBTYPE="tile"
+  TITLE="publico.muestraInformacionEdictosPublico.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page1"
+  PATH="publico.muestraInformacionEdictosPublico.solicitud"
+  SHAPE="960,208,50,25" SUBTYPE="tile"
+  TITLE="publico.muestraInformacionEdictosPublico.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page2" PATH="publico.altasuscripcionfront.error"
+  SHAPE="336,368,50,25" SUBTYPE="tile"
+  TITLE="publico.altasuscripcionfront.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page3"
+  PATH="publico.altasuscripcionfront.solicitud" SHAPE="320,296,50,25"
+  SUBTYPE="tile" TITLE="publico.altasuscripcionfront.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page4"
+  PATH="/jsp/sitae/publico/visualizarEdictosUltimos/error.jsp"
+  SHAPE="336,168,50,25" SUBTYPE="jsp" TITLE="error.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page5"
+  PATH="/jsp/sitae/publico/visualizarEdictosUltimos/formulario.jsp"
+  SHAPE="312,32,50,40" SUBTYPE="jsp" TITLE="formulario.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0"
+   PATH="/MuestraInformacionEdictoPublicoFrontAction.do"
+   SUBTYPE="confirmed" TARGET="action0"
+   TITLE="/MuestraInformacionEdictoPublicoFrontAction.do" TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page6" PATH="publico.altasuscripcionfront.correcto"
+  SHAPE="336,456,50,25" SUBTYPE="tile"
+  TITLE="publico.altasuscripcionfront.correcto" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page7"
+  PATH="publico.visualizarEdictosPublico.error" SHAPE="256,690,0,0"
+  SUBTYPE="tile" TITLE="publico.visualizarEdictosPublico.error"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page8"
+  PATH="publico.visualizarEdictosPublico.solicitud" SHAPE="256,834,0,0"
+  SUBTYPE="tile" TITLE="publico.visualizarEdictosPublico.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#ConfirmarSuscripcionDo" NAME="action5"
+  PATH="/ConfirmarSuscripcionDo" SHAPE="648,408,100,25" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="publico.confirmarsuscripcionfront.correcto" TARGET="page9"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward1"
+   PATH="publico.confirmarsuscripcionfront.error" TARGET="page10"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page9"
+  PATH="publico.confirmarsuscripcionfront.correcto" SHAPE="856,408,0,0"
+  SUBTYPE="tile" TITLE="publico.confirmarsuscripcionfront.correcto"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page10"
+  PATH="publico.confirmarsuscripcionfront.error" SHAPE="856,520,0,0"
+  SUBTYPE="tile" TITLE="publico.confirmarsuscripcionfront.error"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#BajaSuscripcionFront" NAME="action6"
+  PATH="/BajaSuscripcionFront" SHAPE="32,561,0,0"
+  TITLE="BajaSuscripcionForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publico.bajasuscripcionfront.error" TARGET="page13"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publico.bajasuscripcionfront.solicitud" TARGET="page14"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#BajaSuscripcionDo" NAME="action7"
+  PATH="/BajaSuscripcionDo" SHAPE="32,561,0,0"
+  TITLE="BajaSuscripcionForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publico.bajasuscripcionfront.error" TARGET="page13"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publico.bajasuscripcionfront.correcto" TARGET="page12"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page12"
+  PATH="publico.bajasuscripcionfront.correcto" SHAPE="448,673,0,0"
+  SUBTYPE="tile" TITLE="publico.bajasuscripcionfront.correcto"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page13" PATH="publico.bajasuscripcionfront.error"
+  SHAPE="240,897,0,0" SUBTYPE="tile"
+  TITLE="publico.bajasuscripcionfront.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page14"
+  PATH="publico.bajasuscripcionfront.solicitud" SHAPE="448,785,0,0"
+  SUBTYPE="tile" TITLE="publico.bajasuscripcionfront.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#ConfirmarBajaDo" NAME="action8"
+  PATH="/ConfirmarBajaDo" SHAPE="656,1089,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publico.confirmarbajafront.error" TARGET="page15"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publico.confirmarbajafront.correcto" TARGET="page11"
+   TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page11" PATH="publico.confirmarbajafront.correcto"
+  SHAPE="864,1089,0,0" SUBTYPE="tile"
+  TITLE="publico.confirmarbajafront.correcto" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page15" PATH="publico.confirmarbajafront.error"
+  SHAPE="864,1201,0,0" SUBTYPE="tile"
+  TITLE="publico.confirmarbajafront.error" TYPE="page" model-entity="StrutsProcessItem"/>
+</PROCESS>

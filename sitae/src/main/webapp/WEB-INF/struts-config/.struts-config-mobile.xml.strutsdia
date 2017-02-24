@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM ID="#MuestraInformacionEdictoPublicoFrontAction"
+  NAME="action0" PATH="/MuestraInformacionEdictoPublicoFrontAction"
+  SHAPE="464,17,0,0" TITLE="MuestraInformacionEdictoPublicoForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publico.muestraInformacionEdictosPublico.error" TARGET="page0"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="publico.muestraInformacionEdictosPublico.solicitud"
+   TARGET="page1" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page0"
+  PATH="publico.muestraInformacionEdictosPublico.error"
+  SHAPE="688,34,0,0" SUBTYPE="tile"
+  TITLE="publico.muestraInformacionEdictosPublico.error" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page1"
+  PATH="publico.muestraInformacionEdictosPublico.solicitud"
+  SHAPE="688,178,0,0" SUBTYPE="tile"
+  TITLE="publico.muestraInformacionEdictosPublico.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page8"
+  PATH="/jsp/sitae/publico/visualizarEdictosUltimos/error.jsp"
+  SHAPE="256,178,0,0" SUBTYPE="jsp" TITLE="error.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page9"
+  PATH="/jsp/sitae/publico/visualizarEdictosUltimos/formulario.jsp"
+  SHAPE="256,34,0,0" SUBTYPE="jsp" TITLE="formulario.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0"
+   PATH="/MuestraInformacionEdictoPublicoFrontAction.do"
+   SUBTYPE="confirmed" TARGET="action0"
+   TITLE="/MuestraInformacionEdictoPublicoFrontAction.do" TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#mobile#HomeFrontAction" NAME="action7"
+  PATH="/mobile/HomeFrontAction" SHAPE="32,1809,0,0"
+  TITLE="VisualizarEdictoPublicoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publico.visualizarEdictosPublico.error" TARGET="page13"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1" PATH="mobile.home"
+   TARGET="page16" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page13"
+  PATH="publico.visualizarEdictosPublico.error" SHAPE="256,1826,0,0"
+  SUBTYPE="tile" TITLE="publico.visualizarEdictosPublico.error"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page16" PATH="mobile.home" SHAPE="448,1809,0,0"
+  SUBTYPE="tile" TITLE="mobile.home" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#mobile#VigorFrontAction" NAME="action9"
+  PATH="/mobile/VigorFrontAction" SHAPE="32,2177,0,0"
+  TITLE="VisualizarEdictoPublicoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publico.visualizarEdictosPublico.error" TARGET="page13"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1" PATH="mobile.vigor"
+   TARGET="page14" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page14" PATH="mobile.vigor" SHAPE="240,2177,0,0"
+  SUBTYPE="tile" TITLE="mobile.vigor" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#mobile#HistoricoFrontAction" NAME="action10"
+  PATH="/mobile/HistoricoFrontAction" SHAPE="32,2177,0,0"
+  TITLE="VisualizarEdictoPublicoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publico.visualizarEdictosPublico.error" TARGET="page13"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="mobile.historico" TARGET="page17" TITLE="success"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page17" PATH="mobile.historico"
+  SHAPE="272,2194,0,0" SUBTYPE="tile" TITLE="mobile.historico"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#mobile#BusquedaAvanzadaFrontAction" NAME="action1"
+  PATH="/mobile/BusquedaAvanzadaFrontAction" SHAPE="32,1985,0,0"
+  TITLE="VisualizarEdictoPublicoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publico.visualizarEdictosPublico.error" TARGET="page13"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="mobile.busqueda.avanzada" TARGET="page2" TITLE="success"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success2" NAME="forward2"
+   PATH="mobile.busqueda.avanzada.resultado" TARGET="page11"
+   TITLE="success2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page2" PATH="mobile.busqueda.avanzada"
+  SHAPE="288,2002,0,0" SUBTYPE="tile" TITLE="mobile.busqueda.avanzada"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#mobile#MuestraInfoEdictoFrontAction" NAME="action2"
+  PATH="/mobile/MuestraInfoEdictoFrontAction" SHAPE="32,1729,0,0"
+  TITLE="MuestraInformacionEdictoPublicoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publico.visualizarEdictosPublico.error" TARGET="page13"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="mobile.muestra.edicto" TARGET="page3" TITLE="success"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page3" PATH="mobile.muestra.edicto"
+  SHAPE="304,1746,0,0" SUBTYPE="tile" TITLE="mobile.muestra.edicto"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#mobile#CambiarLenguajeFrontAction" NAME="action3"
+  PATH="/mobile/CambiarLenguajeFrontAction" SHAPE="32,2161,0,0"
+  TITLE="VisualizarEdictoPublicoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publico.visualizarEdictosPublico.error" TARGET="page13"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="/mobile/HomeFrontAction.do" TARGET="action7" TITLE="success"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#mobile#MobileServiciosPortalFrontAction"
+  NAME="action4" PATH="/mobile/MobileServiciosPortalFrontAction"
+  SHAPE="32,2417,0,0" TITLE="ServiciosPortalForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="contacto" NAME="forward0"
+   PATH="mobile.contacto.solicitud" TARGET="page4" TITLE="contacto"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="acercaDe_va" NAME="forward1"
+   PATH="mobile.acercaDe_va.solicitud" TARGET="page5"
+   TITLE="acercaDe_va" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="acercaDe_es" NAME="forward2"
+   PATH="mobile.acercaDe_es.solicitud" TARGET="page6"
+   TITLE="acercaDe_es" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="avisoLegal_va" NAME="forward3"
+   PATH="mobile.avisoLegal_va.solicitud" TARGET="page7"
+   TITLE="avisoLegal_va" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="avisoLegal_es" NAME="forward4"
+   PATH="mobile.avisoLegal_es.solicitud" TARGET="page10"
+   TITLE="avisoLegal_es" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page4" PATH="mobile.contacto.solicitud"
+  SHAPE="304,2434,0,0" SUBTYPE="tile" TITLE="mobile.contacto.solicitud"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page5" PATH="mobile.acercaDe_va.solicitud"
+  SHAPE="304,2674,0,0" SUBTYPE="tile"
+  TITLE="mobile.acercaDe_va.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page6" PATH="mobile.acercaDe_es.solicitud"
+  SHAPE="304,2786,0,0" SUBTYPE="tile"
+  TITLE="mobile.acercaDe_es.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page7" PATH="mobile.avisoLegal_va.solicitud"
+  SHAPE="304,2898,0,0" SUBTYPE="tile"
+  TITLE="mobile.avisoLegal_va.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page10" PATH="mobile.avisoLegal_es.solicitud"
+  SHAPE="304,3010,0,0" SUBTYPE="tile"
+  TITLE="mobile.avisoLegal_es.solicitud" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page11" PATH="mobile.busqueda.avanzada.resultado"
+  SHAPE="240,2097,0,0" SUBTYPE="tile"
+  TITLE="mobile.busqueda.avanzada.resultado" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#mobile#BusquedaAvanzadaFrontAction2" NAME="action5"
+  PATH="/mobile/BusquedaAvanzadaFrontAction2" SHAPE="32,2193,0,0"
+  TITLE="VisualizarEdictoPublicoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0"
+   PATH="publico.visualizarEdictosPublico.error" TARGET="page13"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success2" NAME="forward1"
+   PATH="mobile.busqueda.avanzada.resultado" TARGET="page11"
+   TITLE="success2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward2"
+   PATH="mobile.busqueda.avanzada" TARGET="page2" TITLE="success"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+</PROCESS>

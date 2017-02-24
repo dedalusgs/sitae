@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	version="2.4"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee   
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+	<display-name>sitae</display-name>
+
+	
+	<!-- Listener Configuration -->
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<!--  Context Param Configuration   -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			/WEB-INF/spring/applicationContext-dao.xml
+			/WEB-INF/spring/applicationContext-transactions.xml
+			/WEB-INF/spring/applicationContext-service.xml
+			/WEB-INF/spring/applicationContext-seguridad.xml
+		</param-value>
+	</context-param>
+
+
+	<!--
+		Listener de la aplicaci?n el cual lee los par?metros de los ficheros
+		de configuraci?n
+	-->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+
+	<listener>
+		<listener-class>es.novasoft.comun.listeners.LoadProperties</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>es.novasoft.comun.listeners.DocumentGeneratorListener</listener-class>
+	</listener>
+
+	<!-- Action Servlet Configuration -->
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>
+		  /WEB-INF/struts-config/struts-config.xml,
+		  /WEB-INF/struts-config/struts-config-administradorGlobal.xml,	
+		  /WEB-INF/struts-config/struts-config-redactor.xml,
+		  /WEB-INF/struts-config/struts-config-publicador.xml,	 
+		  /WEB-INF/struts-config/struts-config-administradorLocal.xml,	  
+		  /WEB-INF/struts-config/struts-config-administradorLocal.xml,
+		  /WEB-INF/struts-config/struts-config-publico.xml,
+		  /WEB-INF/struts-config/struts-config-mobile.xml
+  		 </param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<init-param>
+			<param-name>detail</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+	<!-- Action Servlet Mapping -->
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>SessionExpirationRedirectFilter</filter-name>
+		<filter-class>es.novasoft.comun.utils.SessionExpirationRedirectFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>SessionExpirationRedirectFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>AuthorizationFilter</filter-name>
+		<filter-class>es.novasoft.sitae.autorizacion.AuthorizationFilter</filter-class>
+		<init-param>
+			<param-name>urlNoAuth</param-name>
+			<param-value>./ErrorSinPermisos.do</param-value>
+		</init-param>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>AuthorizationFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	
+	
+	<filter>
+		<filter-name>EncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>EncodingFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>EventosNavegacion</filter-name>
+		<filter-class>es.novasoft.modulos.filters.EventosNavegacion</filter-class>
+	</filter>
+
+
+	<filter-mapping>
+		<filter-name>EventosNavegacion</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+
+<!-- Axis -->
+	<servlet>
+		<display-name>Apache-Axis Servlet</display-name>
+		<servlet-name>AxisServlet</servlet-name>
+		<servlet-class>
+			org.apache.axis.transport.http.AxisServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<display-name>Axis Admin Servlet</display-name>
+		<servlet-name>AdminServlet</servlet-name>
+		<servlet-class>
+			org.apache.axis.transport.http.AdminServlet
+		</servlet-class>
+		<load-on-startup>100</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AxisServlet</servlet-name>
+		<url-pattern>/servlet/AxisServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AxisServlet</servlet-name>
+		<url-pattern>*.jws</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AxisServlet</servlet-name>
+		<url-pattern>/services/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AdminServlet</servlet-name>
+		<url-pattern>/servlet/AdminServlet</url-pattern>
+	</servlet-mapping>
+	<!-- Action Servlet Mapping -->
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+  <display-name>DWR Servlet</display-name>
+  <servlet-name>dwr-invoker</servlet-name>  
+  <servlet-class>org.directwebremoting.servlet.DwrServlet</servlet-class>
+  <init-param>
+     <param-name>debug</param-name>
+     <param-value>true</param-value>
+  </init-param>
+</servlet>
+
+    
+<servlet-mapping>
+  <servlet-name>dwr-invoker</servlet-name>
+  <url-pattern>/dwr/*</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+  <display-name>DownloadFile</display-name>
+  <servlet-name>descargadeAnuncio</servlet-name>  
+  <servlet-class>es.novasoft.sitae.servlet.descarga.DescargaAnuncioServlet</servlet-class>
+  <init-param>
+     <param-name>debug</param-name>
+     <param-value>true</param-value>
+  </init-param>
+</servlet>
+<servlet-mapping>
+  <servlet-name>descargadeAnuncio</servlet-name>
+  <url-pattern>/descargas/descargaAnuncios</url-pattern>
+</servlet-mapping>
+	<!-- Duraci?n de Sesi?n -->
+
+<!--DisplayTag-->
+<filter>
+    <filter-name>ResponseOverrideFilter</filter-name> 
+    <filter-class>org.displaytag.filter.ResponseOverrideFilter</filter-class> 
+</filter>
+<filter-mapping>
+    <filter-name>ResponseOverrideFilter</filter-name> 
+    <url-pattern>*.do</url-pattern>
+</filter-mapping>
+<filter-mapping> 
+    <filter-name>ResponseOverrideFilter</filter-name> 
+    <url-pattern>*.jsp</url-pattern>
+</filter-mapping>
+
+
+<servlet>
+    <servlet-name>
+      chart
+    </servlet-name>
+    <servlet-class>
+      es.novasoft.comun.servlet.CustomChartServlet
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>chart</servlet-name>
+    <url-pattern>/chart</url-pattern> 
+  </servlet-mapping> 
+<!--DisplayTag-->
+
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+
+	<!-- Archivo de bienvenida -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+</web-app>
+

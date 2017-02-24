@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="CSVgetWSDLService" targetNamespace="http://interfaces.muleSN.xaloc.cv.com/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://interfaces.muleSN.xaloc.cv.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:castellon:sigex:alfresco:type:v1.0.0" xmlns:tns="urn:castellon:sigex:alfresco:type:v1.0.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="ArrayOfDocumentVersion">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" name="arrayOfDocumentVersion" type="tns:DocumentVersion"/>
+<xs:element maxOccurs="unbounded" name="errors" type="tns:AlfrescoError"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="ArrayOfDocuments">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" name="arrayOfDocuments" type="tns:DocumentUuid"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="ArrayOfMetadata">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" name="arrayOfMetadata" type="tns:Metadata"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="ArrayOfSigner">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" name="arrayOfSigner" type="tns:Signer"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="AssertionResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="message" type="xs:string"/>
+<xs:element maxOccurs="unbounded" name="errors" type="tns:AlfrescoError"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="CollatedDocumentsResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" name="arrayOfDocuments" type="tns:DocumentUuid"/>
+<xs:element maxOccurs="unbounded" name="errors" type="tns:AlfrescoError"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="ContentDocumentRequest">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="content" type="xs:base64Binary"/>
+<xs:element name="name" type="xs:string"/>
+<xs:element name="mimeType" type="xs:string"/>
+<xs:element maxOccurs="unbounded" name="arrayOfMetadata" type="tns:Metadata"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="ContentDocumentResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="content" type="xs:base64Binary"/>
+<xs:element name="name" type="xs:string"/>
+<xs:element name="mimeType" type="xs:string"/>
+<xs:element maxOccurs="unbounded" name="arrayOfSigner" type="tns:Signer"/>
+<xs:element maxOccurs="unbounded" name="errors" type="tns:AlfrescoError"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="ContentDocumentWithoutSignerResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" name="content" type="tns:ContentDocument"/>
+<xs:element maxOccurs="unbounded" name="errors" type="tns:AlfrescoError"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="ContentSignerResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="signer" type="tns:Signer"/>
+<xs:element maxOccurs="unbounded" name="errors" type="tns:AlfrescoError"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="CreationDocumentUUIDResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="uuid" type="xs:string"/>
+<xs:element maxOccurs="unbounded" name="arrayOfSigner" type="tns:DocumentUuid"/>
+<xs:element maxOccurs="unbounded" name="errors" type="tns:AlfrescoError"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="CreationResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="uuid" type="xs:string"/>
+<xs:element maxOccurs="unbounded" name="errors" type="tns:AlfrescoError"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="CreationSignerResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" name="uuid" type="xs:string"/>
+<xs:element maxOccurs="unbounded" name="errors" type="tns:AlfrescoError"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="DocumentPlace">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="entity" type="xs:string"/>
+<xs:element name="orgUnit" type="xs:string"/>
+<xs:element name="documentType" type="xs:string"/>
+<xs:element name="procedure" type="xs:string"/>
+<xs:element name="year" type="xs:string"/>
+<xs:element name="month" type="xs:string"/>
+<xs:element name="expNumber" type="xs:string"/>
+<xs:element name="type" type="xs:string"/>
+<xs:element name="registerNumber" type="xs:string"/>
+<xs:element maxOccurs="unbounded" name="errors" type="tns:AlfrescoError"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="DraftDocumentsResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" name="arrayOfRequestDocuments" type="tns:DocumentUuid"/>
+<xs:element maxOccurs="unbounded" name="arrayOfAssociatedDocuments" type="tns:DocumentUuid"/>
+<xs:element maxOccurs="unbounded" name="errors" type="tns:AlfrescoError"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="EdictDocumentsResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" name="arrayOfDocuments" type="tns:EdictDocument"/>
+<xs:element maxOccurs="unbounded" name="errors" type="tns:AlfrescoError"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="ExistDocumentResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="exist" type="xs:boolean"/>
+<xs:element maxOccurs="unbounded" name="errors" type="tns:AlfrescoError"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="FilterResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" name="arrayOfUuid" type="tns:DocumentUuid"/>
+<xs:element maxOccurs="unbounded" name="errors" type="tns:AlfrescoError"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="MetadataResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" name="arrayOfMetadata" type="tns:Metadata"/>
+<xs:element maxOccurs="unbounded" name="errors" type="tns:AlfrescoError"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="PersonalDocumentsResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" name="arrayOfDocuments" type="tns:DocumentUuid"/>
+<xs:element maxOccurs="unbounded" name="errors" type="tns:AlfrescoError"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="SearchResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="resultsNumber" type="xs:integer"/>
+<xs:element maxOccurs="unbounded" name="arrayOfUuid" type="tns:DocumentUuid"/>
+<xs:element maxOccurs="unbounded" name="errors" type="tns:AlfrescoError"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="SessionResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="ticket" type="xs:string"/>
+<xs:element name="session" type="xs:string"/>
+<xs:element name="username" type="xs:string"/>
+<xs:element maxOccurs="unbounded" name="errors" type="tns:AlfrescoError"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:complexType name="Signer">
+<xs:sequence>
+<xs:element name="content" type="tns:ContentDocument"/>
+<xs:element name="type" type="xs:string"/>
+<xs:element name="anagram" type="xs:string"/>
+<xs:element name="nif" type="xs:string"/>
+<xs:element name="name" type="xs:string"/>
+<xs:element name="job" type="xs:string"/>
+<xs:element name="date" type="xs:string"/>
+<xs:element name="idAplication" type="xs:string"/>
+<xs:element name="server" type="xs:string"/>
+<xs:element name="idTransaction" type="xs:string"/>
+<xs:element name="signerData" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="ContentDocument">
+<xs:sequence>
+<xs:element name="content" type="xs:base64Binary"/>
+<xs:element name="name" type="xs:string"/>
+<xs:element name="mimeType" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="AlfrescoError">
+<xs:sequence>
+<xs:element name="code" type="xs:string"/>
+<xs:element name="description" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="Metadata">
+<xs:sequence>
+<xs:element name="key" type="xs:string"/>
+<xs:element name="value" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="DocumentVersion">
+<xs:sequence>
+<xs:element name="Name" type="xs:string"/>
+<xs:element name="Uuid" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="DraftDocuments">
+<xs:sequence>
+<xs:element name="requestUUID" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="EdictDocument">
+<xs:sequence>
+<xs:element name="uuid" type="xs:string"/>
+<xs:element maxOccurs="unbounded" name="signers" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="DocumentUuid">
+<xs:sequence>
+<xs:element name="uuid" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://interfaces.muleSN.xaloc.cv.com/" xmlns:ns0="urn:castellon:sigex:alfresco:type:v1.0.0" xmlns:tns="http://interfaces.muleSN.xaloc.cv.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:import namespace="urn:castellon:sigex:alfresco:type:v1.0.0"/>
+<xsd:element name="ValidaDocumentCsvSN" type="tns:ValidaDocumentCsvSN"/>
+<xsd:complexType name="ValidaDocumentCsvSN">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="CSV" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="ValidaDocumentCsvSNResponse" type="tns:ValidaDocumentCsvSNResponse"/>
+<xsd:complexType name="ValidaDocumentCsvSNResponse">
+<xsd:sequence>
+<xsd:element minOccurs="0" ref="ns0:ContentDocumentResponse"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ValidaDocumentCsvSN">
+    <wsdl:part element="tns:ValidaDocumentCsvSN" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ValidaDocumentCsvSNResponse">
+    <wsdl:part element="tns:ValidaDocumentCsvSNResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CSVgetWSDL">
+    <wsdl:operation name="ValidaDocumentCsvSN">
+      <wsdl:input message="tns:ValidaDocumentCsvSN" name="ValidaDocumentCsvSN">
+    </wsdl:input>
+      <wsdl:output message="tns:ValidaDocumentCsvSNResponse" name="ValidaDocumentCsvSNResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CSVgetWSDLServiceSoapBinding" type="tns:CSVgetWSDL">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ValidaDocumentCsvSN">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="ValidaDocumentCsvSN">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ValidaDocumentCsvSNResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CSVgetWSDLService">
+    <wsdl:port binding="tns:CSVgetWSDLServiceSoapBinding" name="CSVgetWSDLPort">
+      <soap:address location="http://195.57.185.22/services/GetDocumentCsvSN"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

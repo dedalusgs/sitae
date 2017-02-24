@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN" "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+
+<taglib>
+  <tlibversion>2.0</tlibversion>
+  <jspversion>1.1</jspversion>
+  <shortname>cm 2.0</shortname>
+  <uri>http://www.ipsoluciones.com/taglibs/cm/cm-2.0</uri>
+  <info></info>
+
+  <tag>
+    <name>loadContent</name>
+    <tagclass>com.ips.cm.client.tag.ContentTag</tagclass>
+    <bodycontent>empty</bodycontent>
+
+    <attribute>
+      <name>contentid</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>contentalias</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>attribute</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>scope</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>typeid</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>loadContentView</name>
+    <tagclass>com.ips.cm.client.tag.ContentViewTag</tagclass>
+    <bodycontent>empty</bodycontent>
+
+    <attribute>
+      <name>attribute</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>scope</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>view</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>currentDate</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>typealias</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>typeid</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>categories</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>categoriesalias</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>keywords</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>pageSize</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>startPage</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>parentid</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>statuslevel</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>folderid</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>publishlevels</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>createdby</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>dateformat</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>createend</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>createstart</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>resetpreviouscategories</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>orderby</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>calendar</name>
+    <tagclass>com.ips.cm.client.tag.CalendarTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>month</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>year</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>helperattribute</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+
+</taglib>

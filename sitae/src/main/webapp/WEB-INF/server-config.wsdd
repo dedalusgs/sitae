@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment xmlns="http://xml.apache.org/axis/wsdd/"
+            xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+ <globalConfiguration>
+  <parameter name="adminPassword" value="admin"/>
+  <parameter name="attachments.Directory" value="./attachments"/>
+  <parameter name="attachments.implementation"
+             value="org.apache.axis.attachments.AttachmentsImpl"/>
+  <parameter name="sendXsiTypes" value="true"/>
+  <parameter name="sendMultiRefs" value="true"/>
+  <parameter name="sendXMLDeclaration" value="true"/>
+  <parameter name="axis.sendMinimizedElements" value="true"/>
+  <requestFlow>
+   <handler type="java:org.apache.axis.handlers.JWSHandler">
+    <parameter name="scope" value="session"/>
+   </handler>
+   <handler type="java:org.apache.axis.handlers.JWSHandler">
+    <parameter name="scope" value="request"/>
+    <parameter name="extension" value=".jwr"/>
+   </handler>
+  </requestFlow>
+ </globalConfiguration>
+ <handler name="LocalResponder"
+          type="java:org.apache.axis.transport.local.LocalResponder"/>
+ <handler name="URLMapper"
+          type="java:org.apache.axis.handlers.http.URLMapper"/>
+ <handler name="Authenticate"
+          type="java:org.apache.axis.handlers.SimpleAuthenticationHandler"/>
+  <!-- Services from AnuncioService WSDL service -->
+
+  <service name="AnuncioService" provider="java:RPC" style="document" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://ttdev.com/ss"/>
+      <parameter name="wsdlServiceElement" value="AnuncioService"/>
+      <parameter name="schemaUnqualified" value="http://ttdev.com/ss"/>
+      <parameter name="wsdlServicePort" value="AnuncioService"/>
+      <parameter name="className" value="es.novasoft.sitae.perfiles.externo.ws.AnuncioServiceSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="AnuncioService"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="publicarAnuncio" qname="publicarAnuncio" returnQName="retNS:publicarResponse" xmlns:retNS="http://ttdev.com/ss" returnType="rtns:>publicarResponse" xmlns:rtns="http://ttdev.com/ss" soapAction="http://ttdev.com/ss/publicarAnuncio" >
+        <parameter qname="pns:publicarRequest" xmlns:pns="http://ttdev.com/ss" type="tns:solicitudRequest" xmlns:tns="http://ttdev.com/ss"/>
+      </operation>
+      <operation name="solicitarPublicacionAnuncio" qname="solicitarPublicacionAnuncio" returnQName="retNS:solicitarPublicacionResponse" xmlns:retNS="http://ttdev.com/ss" returnType="rtns:>solicitarPublicacionResponse" xmlns:rtns="http://ttdev.com/ss" soapAction="http://ttdev.com/ss/solicitarPublicacionAnuncio" >
+        <parameter qname="pns:solicitarPublicacionRequest" xmlns:pns="http://ttdev.com/ss" type="tns:solicitudRequest" xmlns:tns="http://ttdev.com/ss"/>
+      </operation>
+      <operation name="cancelarSolicitudPublicacionAnuncio" qname="cancelarSolicitudPublicacionAnuncio" returnQName="retNS:cancelarSolicitudPublicacionResponse" xmlns:retNS="http://ttdev.com/ss" returnType="rtns:>cancelarSolicitudPublicacionResponse" xmlns:rtns="http://ttdev.com/ss" soapAction="http://ttdev.com/ss/cancelarSolicitudPublicacionAnuncio" >
+        <parameter qname="pns:cancelarSolicitudPublicacionRequest" xmlns:pns="http://ttdev.com/ss" type="tns:cancelarSolicitudRequest" xmlns:tns="http://ttdev.com/ss"/>
+      </operation>
+      <parameter name="allowedMethods" value="publicarAnuncio solicitarPublicacionAnuncio cancelarSolicitudPublicacionAnuncio"/>
+
+      <typeMapping
+        xmlns:ns="http://ttdev.com/ss"
+        qname="ns:>solicitarPublicacionResponse"
+        type="java:es.novasoft.sitae.perfiles.externo.ws.SolicitarPublicacionResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ttdev.com/ss"
+        qname="ns:typeError"
+        type="java:es.novasoft.sitae.perfiles.externo.ws.TypeError"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ttdev.com/ss"
+        qname="ns:>cancelarSolicitudPublicacionResponse"
+        type="java:es.novasoft.sitae.perfiles.externo.ws.CancelarSolicitudPublicacionResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ttdev.com/ss"
+        qname="ns:cancelarSolicitudRequest"
+        type="java:es.novasoft.sitae.perfiles.externo.ws.CancelarSolicitudRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ttdev.com/ss"
+        qname="ns:>publicarResponse"
+        type="java:es.novasoft.sitae.perfiles.externo.ws.PublicarResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ttdev.com/ss"
+        qname="ns:solicitudRequest"
+        type="java:es.novasoft.sitae.perfiles.externo.ws.SolicitudRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+  
+  
+  <service name="SitaeService" provider="java:RPC" style="document" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://ttdev.com/ss"/>
+      <parameter name="wsdlServiceElement" value="SitaeService"/>
+      <parameter name="schemaUnqualified" value="http://novasoft.es/sitae/perfiles/ws"/>
+      <parameter name="wsdlServicePort" value="SitaeService"/>
+      <parameter name="className" value="es.novasoft.sitae.perfiles.ws.SitaeServiceSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="SitaeService"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="publicarAnuncio" qname="publicarAnuncio" returnQName="retNS:publicarResponse" xmlns:retNS="http://novasoft.es/sitae/perfiles/ws" returnType="rtns:>publicarResponse" xmlns:rtns="http://novasoft.es/sitae/perfiles/ws" soapAction="http://novasoft.es/sitae/perfiles/ws/publicarAnuncio" >
+        <parameter qname="pns:publicarRequest" xmlns:pns="http://novasoft.es/sitae/perfiles/ws" type="tns:solicitudRequest" xmlns:tns="http://novasoft.es/sitae/perfiles/ws"/>
+      </operation>
+      <operation name="solicitarPublicacionAnuncio" qname="solicitarPublicacionAnuncio" returnQName="retNS:solicitarPublicacionResponse" xmlns:retNS="http://novasoft.es/sitae/perfiles/ws" returnType="rtns:>solicitarPublicacionResponse" xmlns:rtns="http://novasoft.es/sitae/perfiles/ws" soapAction="http://novasoft.es/sitae/perfiles/ws/solicitarPublicacionAnuncio" >
+        <parameter qname="pns:solicitarPublicacionRequest" xmlns:pns="http://novasoft.es/sitae/perfiles/ws" type="tns:solicitudRequest" xmlns:tns="http://novasoft.es/sitae/perfiles/ws"/>
+      </operation>
+      <operation name="cancelarSolicitudPublicacionAnuncio" qname="cancelarSolicitudPublicacionAnuncio" returnQName="retNS:cancelarSolicitudPublicacionResponse" xmlns:retNS="http://novasoft.es/sitae/perfiles/ws" returnType="rtns:>cancelarSolicitudPublicacionResponse" xmlns:rtns="http://novasoft.es/sitae/perfiles/ws" soapAction="http://novasoft.es/sitae/perfiles/ws/cancelarSolicitudPublicacionAnuncio" >
+        <parameter qname="pns:cancelarSolicitudPublicacionRequest" xmlns:pns="http://novasoft.es/sitae/perfiles/ws" type="tns:cancelarSolicitudRequest" xmlns:tns="http://novasoft.es/sitae/perfiles/ws"/>
+      </operation>
+       <operation name="consultarAnuncio" qname="consultarAnuncio" returnQName="retNS:consultarAnuncioResponse" xmlns:retNS="http://novasoft.es/sitae/perfiles/ws" returnType="rtns:>retNS:consultarAnuncioResponse" xmlns:rtns="http://novasoft.es/sitae/perfiles/ws" soapAction="http://novasoft.es/sitae/perfiles/ws/consultarAnuncio" >
+        <parameter qname="pns:consultarAnuncioRequest" xmlns:pns="http://novasoft.es/sitae/perfiles/ws" type="tns:consultarAnuncioRequest" xmlns:tns="http://novasoft.es/sitae/perfiles/ws"/>
+      </operation>
+      <parameter name="allowedMethods" value="publicarAnuncio solicitarPublicacionAnuncio cancelarSolicitudPublicacionAnuncio consultarAnuncio"/>
+
+      <typeMapping
+        xmlns:ns="http://novasoft.es/sitae/perfiles/ws"
+        qname="ns:>solicitarPublicacionResponse"
+        type="java:es.novasoft.sitae.perfiles.ws.SolicitarPublicacionResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://novasoft.es/sitae/perfiles/ws"
+        qname="ns:typeError"
+        type="java:es.novasoft.sitae.perfiles.ws.TypeError"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://novasoft.es/sitae/perfiles/ws"
+        qname="ns:>cancelarSolicitudPublicacionResponse"
+        type="java:es.novasoft.sitae.perfiles.ws.CancelarSolicitudPublicacionResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://novasoft.es/sitae/perfiles/ws"
+        qname="ns:cancelarSolicitudRequest"
+        type="java:es.novasoft.sitae.perfiles.ws.CancelarSolicitudRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://novasoft.es/sitae/perfiles/ws"
+        qname="ns:>publicarResponse"
+        type="java:es.novasoft.sitae.perfiles.ws.PublicarResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://novasoft.es/sitae/perfiles/ws"
+        qname="ns:solicitudRequest"
+        type="java:es.novasoft.sitae.perfiles.ws.SolicitudRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://novasoft.es/sitae/perfiles/ws"
+        qname="ns:solicitudRequest"
+        type="java:es.novasoft.sitae.perfiles.ws.ConsultarAnuncioRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://novasoft.es/sitae/perfiles/ws"
+        qname="ns:>consultarAnuncioResponse"
+        type="java:es.novasoft.sitae.perfiles.ws.ConsultarAnuncioResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://novasoft.es/sitae/perfiles/ws"
+        qname="ns:infoAnuncio"
+        type="java:es.novasoft.sitae.perfiles.ws.InfoAnuncio"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+<transport name="http">
+  <requestFlow>
+   <handler type="URLMapper"/>
+   <handler type="java:org.apache.axis.handlers.http.HTTPAuthHandler"/>
+  </requestFlow>
+ </transport>
+ <transport name="local">
+  <responseFlow>
+   <handler type="LocalResponder"/>
+  </responseFlow>
+ </transport>
+</deployment>
+

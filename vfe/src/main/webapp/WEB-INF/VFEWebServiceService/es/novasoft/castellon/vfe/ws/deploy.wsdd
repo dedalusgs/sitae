@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from VFEWebServiceService WSDL service -->
+
+  <service name="VFEWebService" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://ws.vfe.castellon.novasoft.es"/>
+      <parameter name="wsdlServiceElement" value="VFEWebServiceService"/>
+      <parameter name="schemaQualified" value="http://ws.vfe.castellon.novasoft.es"/>
+      <parameter name="wsdlServicePort" value="VFEWebService"/>
+      <parameter name="className" value="es.novasoft.castellon.vfe.ws.VFEWebService"/>
+      <parameter name="wsdlPortType" value="VFEWebService"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://ws.vfe.castellon.novasoft.es" xmlns:retNS="http://ws.vfe.castellon.novasoft.es" xmlns:rtns="http://ws.vfe.castellon.novasoft.es" name="eliminarRegistrarDocumento" qname="operNS:eliminarRegistrarDocumento" returnQName="retNS:eliminarRegistrarDocumentoReturn" returnType="rtns:RespuestaRegistro" soapAction="">
+        <parameter xmlns:pns="http://ws.vfe.castellon.novasoft.es" xmlns:tns="http://ws.vfe.castellon.novasoft.es" qname="pns:peticion" type="tns:PeticionRegistro"/>
+      </operation>
+      <operation xmlns:operNS="http://ws.vfe.castellon.novasoft.es" xmlns:retNS="http://ws.vfe.castellon.novasoft.es" xmlns:rtns="http://ws.vfe.castellon.novasoft.es" name="registrarDocumento" qname="operNS:registrarDocumento" returnQName="retNS:registrarDocumentoReturn" returnType="rtns:RespuestaRegistro" soapAction="">
+        <parameter xmlns:pns="http://ws.vfe.castellon.novasoft.es" xmlns:tns="http://ws.vfe.castellon.novasoft.es" qname="pns:peticion" type="tns:PeticionRegistro"/>
+      </operation>
+      <operation xmlns:operNS="http://ws.vfe.castellon.novasoft.es" xmlns:retNS="http://ws.vfe.castellon.novasoft.es" xmlns:rtns="http://ws.vfe.castellon.novasoft.es" name="obtenerDocumentoCSV" qname="operNS:obtenerDocumentoCSV" returnQName="retNS:obtenerDocumentoCSVReturn" returnType="rtns:RespuestaDocumentoCSV" soapAction="">
+        <parameter xmlns:pns="http://ws.vfe.castellon.novasoft.es" xmlns:tns="http://ws.vfe.castellon.novasoft.es" qname="pns:peticion" type="tns:PeticionDocumentoCSV"/>
+      </operation>
+      <parameter name="allowedMethods" value="eliminarRegistrarDocumento registrarDocumento obtenerDocumentoCSV"/>
+
+      <typeMapping xmlns:ns="http://ws.vfe.castellon.novasoft.es" qname="ns:RespuestaRegistro" type="java:es.novasoft.castellon.vfe.ws.RespuestaRegistro" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://ws.vfe.castellon.novasoft.es" qname="ns:PeticionRegistro" type="java:es.novasoft.castellon.vfe.ws.PeticionRegistro" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://ws.vfe.castellon.novasoft.es" qname="ns:PeticionDocumentoCSV" type="java:es.novasoft.castellon.vfe.ws.PeticionDocumentoCSV" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://ws.vfe.castellon.novasoft.es" qname="ns:RespuestaDocumentoCSV" type="java:es.novasoft.castellon.vfe.ws.RespuestaDocumentoCSV" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+  </service>
+</deployment>

@@ -1,0 +1,312 @@
+package es.novasoft.sitae.perfiles.adminGlobal.altaOrganismo.forms;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Date;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts.action.ActionErrors;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.action.ActionMessage;
+import org.apache.struts.upload.FormFile;
+
+import es.novasoft.comun.constantes.Constantes;
+import es.novasoft.comun.constantes.ServiceConstants;
+import es.novasoft.comun.exceptions.DAOException;
+import es.novasoft.comun.exceptions.ServiceException;
+import es.novasoft.comun.factory.spring.Factory;
+import es.novasoft.comun.struts.FormBase;
+import es.novasoft.comun.utils.LenguajeUtil;
+import es.novasoft.comun.utils.TemaVisualizar;
+import es.novasoft.comun.validator.ValidatorUtils;
+import es.novasoft.sitae.business.objects.Organismo;
+import es.novasoft.sitae.business.services.interfaz.OrganismoService;
+
+public class AltaOrganismoForm extends FormBase {
+
+	private static final long serialVersionUID = 1L;
+
+	private Organismo organismo;
+
+	private List<TemaVisualizar> listaTemas;
+
+	private String opcion;
+
+	private FormFile imagen;
+
+	public Organismo getOrganismo() {
+		return organismo;
+	}
+
+	public void setOrganismo(Organismo organismo) {
+		this.organismo = organismo;
+	}
+
+	public AltaOrganismoForm() {
+		this.organismo = new Organismo();
+		this.organismo.setCont_edicto(new Integer(
+				Constantes.NUMERO_INICIAL_CONTADOR_EDICTO));
+		this.organismo.setFecha_edicto(new Date());
+
+	}
+
+	public FormFile getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(FormFile imagen) {
+		this.imagen = imagen;
+	}
+
+	/**
+	 * Función para validar el alta de Organismo
+	 */
+
+	public ActionErrors validate(ActionMapping mapping,
+			HttpServletRequest request) {
+
+		OrganismoService organismoService = (OrganismoService) Factory
+				.getBean(ServiceConstants.ORGANISMO_SERVICIO_BEAN_NAME);
+
+		List listaOrganismo;
+		List listaOrganismo2;
+		ActionErrors errors = new ActionErrors();
+		
+		try {
+			listaOrganismo2 = organismoService.findByCodigo(organismo
+					.getCodigo());
+
+
+
+			if (organismo.getCif().equals("")) {
+				errors
+						.add(null, new ActionMessage("errors.required",
+								LenguajeUtil.getMensaje(request,
+										"datosorganismo.cif")));
+			} else {
+				if (organismo.getCif().length() >= Constantes.TAMANIO_MAX) {
+					errors.add(null, new ActionMessage("errors.maxlength",
+							LenguajeUtil.getMensaje(request,
+									"datosorganismo.cif")));
+				} else {
+					if (!ValidatorUtils.esCIF(organismo.getCif())) {
+						errors.add(null, new ActionMessage("errors.Cif"));
+					} else {
+						try {
+							listaOrganismo = organismoService
+									.findByCif(organismo.getCif());
+							if (!listaOrganismo.isEmpty()) {
+								errors.add(null, new ActionMessage(
+										"errors.cifExistente"));
+							}
+						} catch (DAOException e) {
+							e.printStackTrace();
+						}
+					}
+				}
+			}
+
+			if (organismo.getCodigo().equals("")) {
+				errors.add(null, new ActionMessage("errors.required",
+						LenguajeUtil.getMensaje(request,
+								"datosorganismo.codigo")));
+			} else {
+				if (!listaOrganismo2.isEmpty()) {
+					errors.add(null, new ActionMessage("errors.codigoRepetido",
+							LenguajeUtil.getMensaje(request,
+									"datosorganismo.codigo")));
+				}
+				if (organismo.getCodigo().length() >= Constantes.TAMANIO_MAX)
+					errors.add(null, new ActionMessage("errors.maxlength",
+							LenguajeUtil.getMensaje(request,
+									"datosorganismo.codigo")));
+			}
+
+			if (organismo.getNombre().equals("")) {
+				errors.add(null, new ActionMessage("errors.required",
+						LenguajeUtil.getMensaje(request,
+								"datosorganismo.nombre")));
+			} else {
+				if (organismo.getNombre().length() >= Constantes.TAMANIO_MAX_NOMBRE)
+					errors.add(null, new ActionMessage("errors.maxlength",
+							LenguajeUtil.getMensaje(request,
+									"datosorganismo.nombre")));
+			}
+
+			if (organismo.getNombreVa().equals("")) {
+				errors.add(null, new ActionMessage("errors.required",
+						LenguajeUtil.getMensaje(request,
+								"datosorganismo.nombreVa")));
+			} else {
+				if (organismo.getNombreVa().length() >= Constantes.TAMANIO_MAX_NOMBRE)
+					errors.add(null, new ActionMessage("errors.maxlength",
+							LenguajeUtil.getMensaje(request,
+									"datosorganismo.nombreVa")));
+			}
+
+			if (organismo.getDireccion().equals("")) {
+				errors.add(null, new ActionMessage("errors.required",
+						LenguajeUtil.getMensaje(request,
+								"datosorganismo.direccion")));
+			} else {
+				if (organismo.getDireccion().length() >= Constantes.TAMANIO_MAX)
+					errors.add(null, new ActionMessage("errors.maxlength",
+							LenguajeUtil.getMensaje(request,
+									"datosorganismo.direccion")));
+			}
+
+			if (organismo.getDireccionVa().equals("")) {
+				errors.add(null, new ActionMessage("errors.required",
+						LenguajeUtil.getMensaje(request,
+								"datosorganismo.direccionVa")));
+			} else {
+				if (organismo.getDireccionVa().length() >= Constantes.TAMANIO_MAX)
+					errors.add(null, new ActionMessage("errors.maxlength",
+							LenguajeUtil.getMensaje(request,
+									"datosorganismo.direccionVa")));
+			}
+
+			if (organismo.getTelefono().equals("")) {
+				errors.add(null, new ActionMessage("errors.required",
+						LenguajeUtil.getMensaje(request,
+								"datosorganismo.telefono")));
+			} else if (!ValidatorUtils.isTelefono(organismo.getTelefono(),
+					true, true, "")) {
+				errors.add(null, new ActionMessage("errors.telefono"));
+			}
+
+			if (organismo.getFax().equals("")) {
+				errors
+						.add(null, new ActionMessage("errors.required",
+								LenguajeUtil.getMensaje(request,
+										"datosorganismo.fax")));
+			} else if (!ValidatorUtils.isTelefono(organismo.getFax(), true,
+					true, "")) {
+				errors.add(null, new ActionMessage("errors.fax"));
+			}
+
+			if (organismo.getEmail().equals("")) {
+				errors.add(null, new ActionMessage("errors.required",
+						LenguajeUtil
+								.getMensaje(request, "datosorganismo.email")));
+			} else if (!ValidatorUtils.isEmail(organismo.getEmail())) {
+				errors.add(null, new ActionMessage("errors.email"));
+			}
+
+			if (organismo.getDominio().equals("")) {
+				errors.add(null, new ActionMessage("errors.required",
+						LenguajeUtil.getMensaje(request,
+								"datosorganismo.dominio")));
+			}
+
+			if (organismo.getAliasSello().equals("")) {
+				errors.add(null, new ActionMessage("errors.required",
+						LenguajeUtil.getMensaje(request,
+								"datosorganismo.aliasSello")));
+			}
+			/*
+			 * else if(!ValidatorUtils.isDominio(organismo.getDominio())){
+			 * errors.add(null, new ActionMessage("errors.dominio")); }
+			 */
+
+			if (this.getOpcion().equals("")) {
+				errors.add(null,
+						new ActionMessage("errors.required", LenguajeUtil
+								.getMensaje(request, "datosorganismo.tema")));
+			}
+
+			if (imagen.getFileName().length() > 50) {
+				errors.add(null,
+						new ActionMessage("errors.imagenMaxlength", 50));
+			} else {
+				if (imagen.getFileSize() == 0) {
+					errors.add(null, new ActionMessage("errors.escudo"));
+				} else {
+					// COMPROBAMOS QUE SEA MENOS DE 500KB
+					if (imagen.getFileSize() >= Constantes.TAM_MAX_SIZE) {
+						errors.add(null, new ActionMessage(
+								"errors.tamanioMaximo"));
+					} else {
+
+						try {
+							if (imagen != null
+									&& imagen.getFileData() != null
+									&& imagen.getFileName() != null
+									&& !imagen.getFileName().trim().equals("")
+									&& !imagen.getFileName().subSequence(
+											imagen.getFileName().length() - 3,
+											imagen.getFileName().length())
+											.equals("bmp")
+									&& !imagen.getFileName().subSequence(
+											imagen.getFileName().length() - 3,
+											imagen.getFileName().length())
+											.equals("gif")
+									&& !imagen.getFileName().subSequence(
+											imagen.getFileName().length() - 3,
+											imagen.getFileName().length())
+											.equals("jpg")
+									&& !imagen.getFileName().subSequence(
+											imagen.getFileName().length() - 3,
+											imagen.getFileName().length())
+											.equals("gif")
+									&& !imagen.getFileName().subSequence(
+											imagen.getFileName().length() - 3,
+											imagen.getFileName().length())
+											.equals("jpeg")
+									&& !imagen.getFileName().subSequence(
+											imagen.getFileName().length() - 3,
+											imagen.getFileName().length())
+											.equals("gif")
+									&& !imagen.getFileName().subSequence(
+											imagen.getFileName().length() - 3,
+											imagen.getFileName().length())
+											.equals("gif")) {
+								errors.add(null, new ActionMessage(
+										"errors.formatoImagen"));
+							}
+						} catch (FileNotFoundException ex2) {
+							Logger.getLogger(AltaOrganismoForm.class.getName())
+									.log(Level.SEVERE, null, ex2);
+							errors.add(null, new ActionMessage(
+									"errors.formatoImagen"));
+						} catch (IOException ex2) {
+							Logger.getLogger(AltaOrganismoForm.class.getName())
+									.log(Level.SEVERE, null, ex2);
+							errors.add(null, new ActionMessage(
+									"errors.formatoImagen"));
+						}
+					}
+				}
+			}
+			request.setAttribute("numeroErrores", errors.size());
+		} catch (ServiceException e1) {
+			errors
+			.add(null, new ActionMessage("errors.required",
+					LenguajeUtil.getMensaje(request,
+							"datosorganismo.cif")));
+		}
+		return errors;
+
+	}
+
+	public List<TemaVisualizar> getListaTemas() {
+		return listaTemas;
+	}
+
+	public void setListaTemas(List<TemaVisualizar> listaTemas) {
+		this.listaTemas = listaTemas;
+	}
+
+	public String getOpcion() {
+		return opcion;
+	}
+
+	public void setOpcion(String opcion) {
+		this.opcion = opcion;
+	}
+
+}

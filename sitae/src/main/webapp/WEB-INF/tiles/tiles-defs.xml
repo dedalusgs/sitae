@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE tiles-definitions 
+	PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+	"http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+
+<tiles-definitions>
+
+	<!-- ============================ LAYOUTS ======================== -->
+
+	<!-- General Layout -->
+	<definition name="layoutExtranet" template="/jsp/layouts/layoutExtranet.jsp">
+		<put name="titulo" value="" />
+		<put name="top" value="/jsp/layouts/topExtranet.jsp" />
+		<put name="scripts" value="/jsp/layouts/scripts.jsp" />
+		<put name="cabecera" value="/jsp/layouts/cabeceraExtranet.jsp" />
+		<put name="menuSuperior" value="/jsp/layouts/menuSuperiorExtranetInicio.jsp" />
+		<put name="migaDePan" value="/jsp/layouts/migaDePan.jsp" />
+		<put name="botonera" value="/jsp/layouts/botonera.jsp" />		
+		<put name="menuPublico" value="/jsp/layouts/menuPublicoExtranet.jsp" />
+		<put name="menuAdministracion" value="/jsp/layouts/menuAdministracionExtranet.jsp" />
+		<put name="cuerpo" value="" />
+		<put name="pie" value="/jsp/layouts/pieExtranet.jsp" />
+	</definition>
+	
+	<!-- Punto de Entrada a la aplicacion publica -->
+
+	<definition name="init.pantallaInicio" extends="layoutExtranet"></definition>
+	<definition name="init.pantallaError" path="/error.jsp"></definition>
+	<definition name="init.pantallaError2" path="/error2.jsp"></definition>
+	
+	<!-- Cambio de idioma -->
+	
+	<definition name="lenguaje.pantallaInicio" extends="layoutExtranet"></definition>
+		
+	<!-- Servicios Pie de Pagina -->
+	
+	<definition name="contacto.solicitud" extends="layoutExtranet">
+		<put name="cuerpo" value="/jsp/utils/contacto.jsp" />
+	</definition>
+			
+	  <definition name="ayuda_es.solicitud" extends="layoutExtranet">
+	  	<put name="cuerpo" value="/jsp/utils/ayuda_es.jsp" />
+	  </definition> 
+	  <definition name="ayuda_va.solicitud" extends="layoutExtranet">
+	  	<put name="cuerpo" value="/jsp/utils/ayuda_va.jsp" />
+	  </definition> 
+	  
+	 <definition name="mapaWeb.solicitud" extends="layoutExtranet">
+	 	<put name="cuerpo" value="/jsp/utils/mapaWeb.jsp" />
+	 </definition>
+	 
+	<definition name="accesibilidad_es.solicitud" extends="layoutExtranet">
+	 	<put name="cuerpo" value="/jsp/utils/accesibilidad_es.jsp" />
+	</definition>
+	<definition name="accesibilidad_va.solicitud" extends="layoutExtranet">
+	 	<put name="cuerpo" value="/jsp/utils/accesibilidad_va.jsp" />
+	</definition>
+	
+	<definition name="avisoLegal_es.solicitud" extends="layoutExtranet">
+	 	<put name="cuerpo" value="/jsp/utils/avisoLegal_es.jsp" />
+	</definition>
+	<definition name="avisoLegal_va.solicitud" extends="layoutExtranet">
+	 	<put name="cuerpo" value="/jsp/utils/avisoLegal_va.jsp" />
+	</definition>
+	
+	<definition name="acercaDe_es.solicitud" extends="layoutExtranet">
+	 	<put name="cuerpo" value="/jsp/utils/acercaDe_es.jsp" />
+	</definition>
+	<definition name="acercaDe_va.solicitud" extends="layoutExtranet">
+	 	<put name="cuerpo" value="/jsp/utils/acercaDe_va.jsp" />
+	</definition>
+	
+
+	<!-- Login Layout -->
+	<!-- 
+	<definition name="login" extends="layoutExtranet">
+		<put name="titulo" value="Proyecto SITAE" />
+		<put name="menuSuperior" value="/jsp/layouts/menuSuperiorExtranetInicio.jsp" />
+		<put name="cuerpo" value="/jsp/modulos/login.jsp" />
+	</definition>
+	 
+	<definition name="principal" path="/Extranet.do">
+		<put name="javascript" />
+		<put name="validation" value="" />
+	</definition>
+ 	-->
+	<definition name="errorAcceso" extends="layoutExtranet">
+		<put name="titulo"
+			value="Proyecto SITAE" />
+		<put name="cuerpo" value="/jsp/utils/accesoError.jsp" />
+	</definition>
+
+	<!-- =================== DEFINICIONES DE PÁGINAS ================= -->
+	
+	<!-- LOGIN -->
+	<!--  
+    <definition name="login.solicitud" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/login/formulario.jsp"/>
+  	</definition>
+  	 -->
+  	
+  	<definition name="login.pantallaInicio" extends="layoutExtranet">
+    	<put name="cuerpo" value="/VisualizarEdictoPublicoUltimosFrontAction.do"/>
+  	</definition>
+  	 
+  	<definition name="login.error" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/login/error.jsp"/>
+  	</definition>
+  	 
+  	<definition name="login.error2" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/login/error2.jsp"/>
+  	</definition>
+  	
+  	  	
+  	<definition name="login.indexCertificado" extends="layoutExtranet">
+    	 <put name="cuerpo" value="/jsp/sitae/login/indexCertMiniApplet.jsp"/>
+<!--     	<put name="cuerpo" value="/jsp/sitae/login/loginCertificado.jsp" /> -->
+<!--     	<put name="scripts" value="/jsp/sitae/login/safe-script.jsp" /> -->
+  	</definition>
+  	
+  	<definition name="login.accesoCertificado" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/login/validate_cert_af5.jsp"/>
+  	</definition>
+  	
+  	<definition name="login.errorCert" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/login/errorCert.jsp"/>
+  	</definition>
+  	
+  	<definition name="login.index" extends="layoutExtranet">
+  		<put name="top" value="" />
+		<put name="botonera" value="" />	
+		<put name="menuPublico" value="/jsp/sitae/login/index.jsp" />
+		<put name="menuAdministracion" value="" />
+    	<put name="cuerpo" value="/jsp/sitae/login/indexCuerpo.jsp"/>
+    	
+  	</definition>
+	
+	 <definition name="servlet.error" extends="layoutExtranet">
+    	<put name="cuerpo" value="/jsp/sitae/servlet/error.jsp"/>
+  	</definition>
+	<!-- SERVLETS -->
+	
+	
+
+</tiles-definitions>   

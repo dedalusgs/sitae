@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://struts.apache.org/dtds/struts-config_1_1.dtd">
+<struts-config>
+ <data-sources/>
+ <form-beans>
+  <form-bean name="VisualizarEdictoPublicadorForm" type="es.novasoft.sitae.perfiles.publicador.visualizarEdicto.forms.VisualizarEdictoPublicadorForm"/>
+  <form-bean name="VisualizarPublicacionesSinAsignarForm" type="es.novasoft.sitae.perfiles.publicador.visualizarEdicto.forms.VisualizarPublicacionesSinAsignarForm"/>
+  <form-bean name="VisualizarMisRedaccionesForm" type="es.novasoft.sitae.perfiles.publicador.visualizarEdicto.forms.VisualizarMisRedaccionesForm"/>
+  <form-bean name="AsignarPublicacionPendienteForm" type="es.novasoft.sitae.perfiles.publicador.asignarPublicacionPendiente.forms.AsignarPublicacionPendienteForm"/>
+  <form-bean name="MuestraInformacionEdictoForm" type="es.novasoft.sitae.perfiles.publicador.muestraInformacionEdicto.forms.MuestraInformacionEdictoForm"/>
+  <form-bean name="CrearEdictoMisRedaccionesForm" type="es.novasoft.sitae.perfiles.publicador.crearEdicto.forms.CrearEdictoMisRedaccionesForm"/>
+  <form-bean name="ModificarMisRedaccionesForm" type="es.novasoft.sitae.perfiles.publicador.modificarMisRedacciones.forms.ModificarMisRedaccionesForm"/>
+  <form-bean name="EliminarMisRedaccionesForm" type="es.novasoft.sitae.perfiles.publicador.eliminarMisRedacciones.forms.EliminarMisRedaccionesForm"/>
+  <form-bean name="SolicitarPublicacionMisRedaccionesForm" type="es.novasoft.sitae.perfiles.publicador.solicitarPublicacion.forms.SolicitarPublicacionMisRedaccionesForm"/>
+  <form-bean name="RechazarPublicacionForm" type="es.novasoft.sitae.perfiles.publicador.rechazarPublicacion.forms.RechazarPublicacionForm"/>
+  <form-bean name="LiberarPublicacionForm" type="es.novasoft.sitae.perfiles.publicador.liberarPublicacion.forms.LiberarPublicacionForm"/>
+  <form-bean name="DarBajaPublicacionForm" type="es.novasoft.sitae.perfiles.publicador.darBajaPublicacion.forms.DarBajaPublicacionForm"/>
+  <form-bean name="PublicarEdictoForm" type="es.novasoft.sitae.perfiles.publicador.publicarEdicto.forms.PublicarEdictoForm"/>
+  <form-bean name="PublicarEdictoMisRedaccionesForm" type="es.novasoft.sitae.perfiles.publicador.publicarEdictoMisRedacciones.forms.PublicarEdictoMisRedaccionesForm"/>
+  <form-bean name="ActualizarEdictoPublicadoForm" type="es.novasoft.sitae.perfiles.publicador.actualizarEdictoPublicado.forms.ActualizarEdictoPublicadoForm"/>
+  <form-bean name="RelacionarPublicacionesForm" type="es.novasoft.sitae.perfiles.publicador.relacionarPublicaciones.forms.RelacionarPublicacionesForm"/>
+  <form-bean name="SustituirPublicacionesForm" type="es.novasoft.sitae.perfiles.publicador.sustituirPublicaciones.forms.SustituirPublicacionesForm"/>
+ </form-beans>
+ <global-exceptions/>
+ <global-forwards/>
+ <action-mappings>
+  <!-- PUBLICADOR 
+ ACTUALIZAR EDICTO PUBLICADO-->
+  <action name="ActualizarEdictoPublicadoForm"
+   path="/ActualizarEdictoPublicadoFrontAction" scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.actualizarEdictoPublicado.actions.ActualizarEdictoPublicadoFrontAction" validate="false">
+   <forward name="success" path="publicador.actualizarEdictoPublicado.solicitud"/>
+   <forward name="failure" path="publicador.actualizarEdictoPublicado.error"/>
+  </action>
+  <action input="/ActualizarEdictoPublicadoFrontAction.do"
+   name="ActualizarEdictoPublicadoForm"
+   path="/ActualizarEdictoPublicadoDo" scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.actualizarEdictoPublicado.actions.ActualizarEdictoPublicadoDoAction" validate="true">
+   <forward name="success" path="publicador.actualizarEdictoPublicado.correcto"/>
+   <forward name="failure" path="publicador.actualizarEdictoPublicado.error"/>
+  </action>
+  <!-- DAR BAJA PUBLICACION -->
+  <action name="DarBajaPublicacionForm"
+   path="/DarBajaPublicacionFrontAction" scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.darBajaPublicacion.actions.DarBajaPublicacionFrontAction" validate="false">
+   <forward name="success" path="publicador.darBajaPublicacion.solicitud"/>
+   <forward name="failure" path="publicador.darBajaPublicacion.error"/>
+  </action>
+  <action input="/DarBajaPublicacionFrontAction.do"
+   name="DarBajaPublicacionForm" path="/DarBajaPublicacionDo"
+   scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.darBajaPublicacion.actions.DarBajaPublicacionDoAction" validate="true">
+   <forward name="success" path="publicador.darBajaPublicacion.correcto"/>
+   <forward name="failure" path="publicador.darBajaPublicacion.error"/>
+   <forward name="failure2" path="publicador.darBajaPublicacion.error2"/>
+  </action>
+  <!-- PUBLICAR EDICTOS -->
+  <action name="PublicarEdictoForm" path="/PublicarEdictoFrontAction"
+   scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.publicarEdicto.actions.PublicarEdictoFrontAction" validate="false">
+   <forward name="success" path="publicador.publicarEdicto.solicitud"/>
+   <forward name="failure" path="publicador.publicarEdicto.error"/>
+  </action>
+  <action input="/PublicarEdictoFrontAction.do"
+   name="PublicarEdictoForm" path="/PublicarEdictoDo" scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.publicarEdicto.actions.PublicarEdictoDoAction" validate="false">
+   <forward name="success" path="publicador.publicarEdicto.correcto"/>
+   <forward name="success2" path="publicador.publicarEdicto.correcto2"/>
+   <forward name="success3" path="publicador.publicarEdicto.correcto3"/>
+   <forward name="failure" path="publicador.publicarEdicto.error"/>
+   <forward name="failure2" path="publicador.publicarEdicto.error2"/>
+  </action>
+  <!-- RECHAZAR PUBLICACION EDICTO -->
+  <action name="RechazarPublicacionForm"
+   path="/RechazarPublicacionFrontAction" scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.rechazarPublicacion.actions.RechazarPublicacionFrontAction" validate="false">
+   <forward name="success" path="publicador.rechazarPublicacion.solicitud"/>
+   <forward name="failure" path="publicador.rechazarPublicacion.error"/>
+  </action>
+  <action input="/RechazarPublicacionFrontAction.do"
+   name="RechazarPublicacionForm" path="/RechazarPublicacionDo"
+   scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.rechazarPublicacion.actions.RechazarPublicacionDoAction" validate="true">
+   <forward name="success" path="publicador.rechazarPublicacion.correcto"/>
+   <forward name="failure" path="publicador.rechazarPublicacion.error"/>
+   <forward name="failure2" path="publicador.rechazarPublicacion.error2"/>
+  </action>
+  <!-- RELACIONAR EDICTO -->
+  <action name="RelacionarPublicacionesForm"
+   path="/RelacionarPublicacionesFrontAction" scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.relacionarPublicaciones.actions.RelacionarPublicacionesFrontAction" validate="false">
+   <forward name="success" path="publicador.relacionarPublicaciones.solicitud"/>
+   <forward name="failure" path="publicador.relacionarPublicaciones.error"/>
+  </action>
+  <action input="/RelacionarPublicacionesFrontAction.do"
+   name="RelacionarPublicacionesForm" path="/RelacionarPublicacionesDo"
+   scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.relacionarPublicaciones.actions.RelacionarPublicacionesDoAction" validate="false">
+   <forward name="success" path="publicador.relacionarPublicaciones.redirect"/>
+   <forward name="failure" path="publicador.relacionarPublicaciones.error"/>
+   <forward name="failure2" path="publicador.relacionarPublicaciones.error2"/>
+  </action>
+  <!-- SUSTITUIR EDICTO -->
+  <action name="SustituirPublicacionesForm"
+   path="/SustituirPublicacionesFrontAction" scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.sustituirPublicaciones.actions.SustituirPublicacionesFrontAction" validate="false">
+   <forward name="success" path="publicador.sustituirPublicaciones.solicitud"/>
+   <forward name="failure" path="publicador.sustituirPublicaciones.error"/>
+  </action>
+  <action input="/SustituirPublicacionesFrontAction.do"
+   name="SustituirPublicacionesForm" path="/SustituirPublicacionesDo"
+   scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.sustituirPublicaciones.actions.SustituirPublicacionesDoAction" validate="false">
+   <forward name="success" path="publicador.relacionarPublicaciones.redirect"/>
+   <forward name="failure" path="publicador.sustituirPublicaciones.error"/>
+  </action>
+  <!-- LIBERAR PUBLICACION EDICTO -->
+  <action name="LiberarPublicacionForm"
+   path="/LiberarPublicacionFrontAction" scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.liberarPublicacion.actions.LiberarPublicacionFrontAction" validate="false">
+   <forward name="success" path="publicador.liberarPublicacion.solicitud"/>
+   <forward name="failure" path="publicador.liberarPublicacion.error"/>
+  </action>
+  <action input="/LiberarPublicacionFrontAction.do"
+   name="LiberarPublicacionForm" path="/LiberarPublicacionDo"
+   scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.liberarPublicacion.actions.LiberarPublicacionDoAction" validate="true">
+   <forward name="success" path="publicador.liberarPublicacion.correcto"/>
+   <forward name="failure" path="publicador.liberarPublicacion.error"/>
+   <forward name="failure2" path="publicador.liberarPublicacion.error2"/>
+  </action>
+  <!-- VISUALIZAR EDICTOS -->
+  <action name="VisualizarEdictoPublicadorForm"
+   path="/VisualizarEdictoPublicadorFrontAction" scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.visualizarEdicto.actions.VisualizarEdictoPublicadorFrontAction" validate="false">
+   <forward name="success" path="publicador.visualizarEdictos.solicitud"/>
+  </action>
+  <!-- VISUALIZAR PUBLICACIONES SIN ASIGNAR -->
+  <action name="VisualizarPublicacionesSinAsignarForm"
+   path="/VisualizarPublicacionesSinAsignarFrontAction" scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.visualizarEdicto.actions.VisualizarPublicacionesSinAsignarFrontAction" validate="false">
+   <forward name="success" path="publicador.visualizarPublicacionesSinAsignar.solicitud"/>
+  </action>
+  <!-- ASIGNAR PUBLICACIONES PENDIENTES -->
+  <action name="AsignarPublicacionPendienteForm"
+   path="/AsignarPublicacionPendienteDoAction" scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.asignarPublicacionPendiente.actions.AsignarPublicacionPendienteDoAction" validate="false">
+   <forward name="success" path="publicador.asignarPublicacionPendiente.correcto"/>
+   <forward name="failure" path="publicador.asignarPublicacionPendiente.error"/>
+  </action>
+  <!-- MUESTRA INFORMACION EDICTO -->
+  <action name="MuestraInformacionEdictoForm"
+   path="/MuestraInformacionEdictoFrontAction" scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.muestraInformacionEdicto.actions.MuestraInformacionEdictoFrontAction" validate="false">
+   <forward name="success" path="publicador.muestraInformacionEdicto.solicitud"/>
+  </action>
+  <!-- VISUALIZAR MIS REDACCIONES -->
+  <action name="VisualizarMisRedaccionesForm"
+   path="/VisualizarMisRedaccionesFrontAction" scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.visualizarEdicto.actions.VisualizarMisRedaccionesFrontAction" validate="false">
+   <forward name="success" path="publicador.visualizarMisRedacciones.solicitud"/>
+  </action>
+  <!-- CREAR EDICTO MIS REDACCIONES -->
+  <action name="CrearEdictoMisRedaccionesForm"
+   path="/CrearEdictoMisRedaccionesFrontAction" scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.crearEdicto.actions.CrearEdictoMisRedaccionesFrontAction" validate="false">
+   <forward name="success" path="publicador.crearEdicto.solicitud"/>
+   <forward name="failure" path="publicador.crearEdicto.error"/>
+  </action>
+  <action input="/CrearEdictoMisRedaccionesFrontAction.do"
+   name="CrearEdictoMisRedaccionesForm"
+   path="/CrearEdictoMisRedaccionesDo" scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.crearEdicto.actions.CrearEdictoMisRedaccionesDoAction" validate="true">
+   <forward name="success" path="publicador.crearEdicto.correcto"/>
+   <forward name="success2" path="publicador.crearEdicto.correcto2"/>
+   <forward name="failure" path="publicador.crearEdicto.error"/>
+   <forward name="failure2" path="publicador.crearEdicto.error2"/>
+  </action>
+  <action name="PublicarEdictoForm" path="/PublicarEdictoCrearDo"
+   scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.publicarEdicto.actions.PublicarEdictoCrearDoAction" validate="false">
+   <forward name="success" path="publicador.crearEdicto.correcto"/>
+   <forward name="failure" path="publicador.crearEdicto.error"/>
+   <forward name="failure2" path="publicador.crearEdicto.error2"/>
+  </action>
+  <!-- MODIFICAR MIS REDACCIONES -->
+  <action name="ModificarMisRedaccionesForm"
+   path="/ModificarMisRedaccionesFrontAction" scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.modificarMisRedacciones.actions.ModificarMisRedaccionesFrontAction" validate="false">
+   <forward name="success" path="publicador.modificarMisRedacciones.solicitud"/>
+   <forward name="failure" path="publicador.modificarMisRedacciones.error"/>
+  </action>
+  <action input="/ModificarMisRedaccionesFrontAction.do"
+   name="ModificarMisRedaccionesForm" path="/ModificarMisRedaccionesDo"
+   scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.modificarMisRedacciones.actions.ModificarMisRedaccionesDoAction" validate="true">
+   <forward name="success" path="publicador.modificarMisRedacciones.correcto"/>
+   <forward name="success2" path="publicador.modificarMisRedacciones.correcto2"/>
+   <forward name="failure" path="publicador.modificarMisRedacciones.error"/>
+   <forward name="failure2" path="publicador.modificarMisRedacciones.error2"/>
+  </action>
+  <!-- ELIMINAR MIS REDACCIONES -->
+  <action name="EliminarMisRedaccionesForm"
+   path="/EliminarMisRedaccionesDo" scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.eliminarMisRedacciones.actions.EliminarMisRedaccionesDoAction" validate="false">
+   <forward name="success" path="publicador.eliminarEdicto.correcto"/>
+   <forward name="failure" path="publicador.eliminarEdicto.error"/>
+   <forward name="failure2" path="publicador.eliminarEdicto.error2"/>
+  </action>
+  <!-- SOLICITAR PUBLICACION MIS REDACCIONES -->
+  <action name="SolicitarPublicacionMisRedaccionesForm"
+   path="/SolicitarPublicacionMisRedaccionesDoAction" scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.solicitarPublicacion.actions.SolicitarPublicacionMisRedaccionesDoAction" validate="false">
+   <forward name="success" path="publicador.solicitarPublicacion.correcto"/>
+   <forward name="failure" path="publicador.solicitarPublicacion.error"/>
+   <forward name="failure2" path="publicador.solicitarPublicacion.error2"/>
+  </action>
+  <!-- CANCELAR PUBLICACION MIS REDACCIONES -->
+  <action name="CancelarPublicacionMisRedaccionesForm"
+   path="/CancelarPublicacionMisRedaccionesDoAction" scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.cancelarPublicacionMisRedacciones.actions.CancelarPublicacionMisRedaccionesDoAction" validate="false">
+   <forward name="success" path="publicador.cancelarPublicacion.correcto"/>
+   <forward name="failure" path="publicador.cancelarPublicacion.error"/>
+   <forward name="failure2" path="publicador.cancelarPublicacion.error2"/>
+  </action>
+  <!-- PUBLICAR MIS REDACCIONES -->
+  <action name="PublicarEdictoMisRedaccionesForm"
+   path="/PublicarEdictoMisRedaccionesDo" scope="session"
+   type="es.novasoft.sitae.perfiles.publicador.publicarEdictoMisRedacciones.actions.PublicarEdictoMisRedaccionesDoAction" validate="false">
+   <forward name="success" path="publicador.publicarEdictoMisRedacciones.correcto"/>
+   <forward name="success2" path="publicador.publicarEdictoMisRedacciones.correcto2"/>
+   <forward name="success3" path="publicador.publicarEdictoMisRedacciones.correcto3"/>
+   <forward name="failure" path="publicador.publicarEdictoMisRedacciones.error"/>
+   <forward name="failure2" path="publicador.publicarEdictoMisRedacciones.error2"/>
+  </action>
+ </action-mappings>
+ <controller nocache="true" processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+</struts-config>

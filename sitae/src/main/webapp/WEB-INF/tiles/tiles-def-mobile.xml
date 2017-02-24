@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN" "http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+
+<tiles-definitions>
+
+	<!-- ============================ LAYOUTS ======================== -->
+
+	<!-- General Layout -->
+	
+	<definition name="layoutMobile" template="/mobile/layouts/layout-mobile.jsp">
+		
+		<put name="titulo" value=""/>
+		<put name="top" value="/mobile/layouts/top-mobile.jsp"/>
+	    <put name="cuerpo" value="/mobile/layouts/cuerpo-mobile.jsp"/>
+	    <put name="menu" value="inicio"/>
+	    <put name="menu2" value="/mobile/layouts/menu-mobile2.jsp"/>
+	    <put name="footer" value="/mobile/layouts/footer-mobile.jsp"/>
+	    <put name="popuplang" value="/mobile/layouts/popuplang-mobile.jsp" />	  	
+	</definition>  
+  	
+	<!-- FINAL -->
+		   	
+  	<!-- home  -->
+		 
+    <definition name="mobile.home" extends="layoutMobile">
+    <put name="top" value="/mobile/layouts/top-mobile-inicio.jsp"/>
+     	<put name="menu" value="inicio"/>
+	   	<put name="cuerpo" value="/mobile/sitae/home.jsp"/>
+  	</definition>
+  	
+  	
+  	<definition name="mobile.vigor" extends="layoutMobile">
+  	 <put name="menu" value="vigor"/>
+	   	<put name="cuerpo" value="/mobile/sitae/anuncios-vigor.jsp"/>
+  	</definition>
+  	
+  	<definition name="mobile.historico" extends="layoutMobile">
+  	 <put name="menu" value="historico"/>
+	   	<put name="cuerpo" value="/mobile/sitae/anuncios-historico.jsp"/>
+  	</definition>
+  	
+  	<definition name="mobile.busqueda.avanzada" extends="layoutMobile">
+  	 <put name="menu" value="avanzada"/>
+	   	<put name="cuerpo" value="/mobile/sitae/anuncios-busqueda-avanzada.jsp"/>
+  	</definition>
+  	
+  	<definition name="mobile.busqueda.avanzada.resultado" extends="layoutMobile">
+  	 <put name="menu" value="avanzada"/>
+	   	<put name="cuerpo" value="/mobile/sitae/anuncios-busqueda-avanzada-resultado.jsp"/>
+  	</definition>
+  	
+  	<definition name="mobile.muestra.edicto" extends="layoutMobile">
+  	 <put name="menu" value="avanzada"/>
+	   	<put name="cuerpo" value="/mobile/sitae/anuncios-detalle.jsp"/>
+  	</definition>
+  	
+  	<definition name="publico.visualizarEdictosPublico.error" extends="layoutExtranet">
+		<put name="cuerpo" value="/jsp/sitae/publico/visualizarEdictos/error.jsp"/>
+		<put name="menu" value=""/>
+	</definition>			  		
+	
+  	<!-- MOSTRAR INFORMACION EDICTOS -->
+  			
+  	<definition name="mobile.contacto.solicitud" extends="layoutMobile">
+		<put name="cuerpo" value="/mobile/sitae/contacto.jsp" />
+		<put name="menu" value=""/>
+	</definition>
+			
+		
+	<definition name="mobile.avisoLegal_es.solicitud" extends="layoutMobile">
+	 	<put name="cuerpo" value="/mobile/sitae/avisoLegal_es.jsp" />
+	 	<put name="menu" value=""/>
+	</definition>
+	<definition name="mobile.avisoLegal_va.solicitud" extends="layoutMobile">
+	 	<put name="cuerpo" value="/mobile/sitae/avisoLegal_va.jsp" />
+	 	<put name="menu" value=""/>
+	</definition>
+	
+	<definition name="mobile.acercaDe_es.solicitud" extends="layoutMobile">
+	 	<put name="cuerpo" value="/mobile/sitae/acercaDe_es.jsp" />
+	 	<put name="menu" value=""/>
+	</definition>
+	<definition name="mobile.acercaDe_va.solicitud" extends="layoutMobile">
+	 	<put name="cuerpo" value="/mobile/sitae/acercaDe_va.jsp" />
+	 	<put name="menu" value=""/>
+	</definition>
+  
+</tiles-definitions> 

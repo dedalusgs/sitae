@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN" "http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+
+<tiles-definitions>
+
+	<!-- ============================ LAYOUTS ======================== -->
+
+	<!-- General Layout -->
+	
+	<definition name="layoutExtranet" template="/jsp/layouts/layoutExtranet.jsp">
+		<put name="scripts" value="/jsp/layouts/scripts.jsp" />
+		<put name="titulo" value=""/>
+		<put name="top" value="/jsp/layouts/topExtranet.jsp" />
+	    <put name="cabecera" value="/jsp/layouts/cabeceraExtranet.jsp"/>
+	    <put name="menuSuperior" value="/jsp/layouts/menuSuperiorExtranet.jsp"/>
+	    <put name="migaDePan" value="/jsp/layouts/migaDePan.jsp"/>
+	    <put name="botonera" value="/jsp/layouts/botonera.jsp"/>
+	    <put name="menuPublico" value="/jsp/layouts/menuPublicoExtranet.jsp" />
+	    <put name="menuAdministracion" value="/jsp/layouts/menuAdministracionExtranet.jsp" />
+	    <put name="cuerpo" value="/VisualizarEdictoPublicoUltimosFrontAction.do"/>
+		<put name="pie" value="/jsp/layouts/pieExtranet.jsp"/>  		  	
+	</definition>  
+  	
+	<!-- FINAL -->
+		   	
+  	<!-- VISUALIZAR EDICTOS -->
+		 
+    <definition name="publico.visualizarEdictosPublico.solicitud" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/publico/visualizarEdictos/formulario.jsp"/>
+  	</definition>
+  	
+  	<definition name="publico.visualizarEdictosPublico.error" extends="layoutExtranet">
+		<put name="cuerpo" value="/jsp/sitae/publico/visualizarEdictos/error.jsp"/>
+	</definition>			  		
+	
+  	<!-- MOSTRAR INFORMACION EDICTOS -->
+  			
+  	<definition name="publico.muestraInformacionEdictosPublico.solicitud" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/publico/muestraInformacionEdicto/formulario.jsp"/>
+  	</definition>
+  	
+  	<definition name="publico.muestraInformacionEdictosPublico.error" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/publico/muestraInformacionEdicto/error.jsp"/>
+  	</definition>
+  	
+  	<!-- VISUALIZAR EDICTOS ULTIMOS -->
+  	
+  	<definition name="publico.visualizarEdictosPublicoUltimos.solicitud" >
+	   	<put name="cuerpo" value="/jsp/sitae/publico/visualizarEdictosUltimos/formulario.jsp"/>
+  	</definition>
+  	
+  	<definition name="publico.visualizarEdictosPublicoUltimos.error">
+		<put name="cuerpo" value="/jsp/sitae/publico/visualizarEdictosUltimos/error.jsp"/>
+	</definition>	
+	
+	<!-- SUSCRIPCION-->
+		 
+    <definition name="publico.altasuscripcionfront.solicitud" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/publico/altaInteresados/formulario.jsp"/>
+  	</definition>
+  	
+  	<definition name="publico.altasuscripcionfront.error" extends="layoutExtranet">
+		<put name="cuerpo" value="/jsp/sitae/publico/altaInteresados/error.jsp"/>
+	</definition>		
+	<definition name="publico.altasuscripcionfront.correcto" extends="layoutExtranet">
+		<put name="cuerpo" value="/jsp/sitae/publico/altaInteresados/correcto.jsp"/>
+	</definition>		  		
+  
+  	
+  	<definition name="publico.confirmarsuscripcionfront.error" extends="layoutExtranet">
+		<put name="cuerpo" value="/jsp/sitae/publico/confirmarInteresados/error.jsp"/>
+	</definition>		
+	<definition name="publico.confirmarsuscripcionfront.correcto" extends="layoutExtranet">
+		<put name="cuerpo" value="/jsp/sitae/publico/confirmarInteresados/correcto.jsp"/>
+	</definition>		  		
+	
+	
+	
+	
+	 <definition name="publico.bajasuscripcionfront.solicitud" extends="layoutExtranet">
+	   	<put name="cuerpo" value="/jsp/sitae/publico/bajaInteresados/formulario.jsp"/>
+  	</definition>
+  	
+  	<definition name="publico.bajasuscripcionfront.error" extends="layoutExtranet">
+		<put name="cuerpo" value="/jsp/sitae/publico/bajaInteresados/error.jsp"/>
+	</definition>		
+	<definition name="publico.bajasuscripcionfront.correcto" extends="layoutExtranet">
+		<put name="cuerpo" value="/jsp/sitae/publico/bajaInteresados/correcto.jsp"/>
+	</definition>		  		
+  
+  	
+  	<definition name="publico.confirmarbajafront.error" extends="layoutExtranet">
+		<put name="cuerpo" value="/jsp/sitae/publico/confirmarBajaInteresados/error.jsp"/>
+	</definition>		
+	<definition name="publico.confirmarbajafront.correcto" extends="layoutExtranet">
+		<put name="cuerpo" value="/jsp/sitae/publico/confirmarBajaInteresados/correcto.jsp"/>
+	</definition>		  	
+  
+</tiles-definitions> 

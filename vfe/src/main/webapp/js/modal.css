@@ -1,0 +1,21 @@
+@CHARSET "ISO-8859-1";
+
+.bgtransparent{
+        position:fixed;
+        left:0;
+        top:0;
+        background-color:#808080;
+        opacity:0.6;
+        filter:alpha(opacity=60);
+}
+
+.bgmodal{
+        position:fixed; 
+        font-family:arial;
+        color:black;
+        font-weight:bold;
+        font-size:1.5em;
+        border:0.05em solid black;
+        overflow:hidden;
+        background-color:#E0E0E0;
+}

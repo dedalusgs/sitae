@@ -1,0 +1,10 @@
+/* Estilos IE8 */
+legend {
+	margin:-8px 0 0 0;
+}
+#contenido_central form {
+	margin-top:24px;
+}
+.botonera input {
+	padding-top: 1px;
+}

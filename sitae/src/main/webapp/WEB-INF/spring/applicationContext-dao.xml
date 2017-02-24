@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" -->
+<!--     "http://www.springframework.org/dtd/spring-beans.dtd"> -->
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:jms="http://www.springframework.org/schema/jms"	
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:oxm="http://www.springframework.org/schema/oxm"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans		
+		http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+		http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-2.5.xsd
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd">
+
+<!-- 	<bean id="propertyConfigurer" -->
+<!-- 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"> -->
+<!-- 		<property name="location"> -->
+<!-- 			<value>classpath:/configuracion.properties</value> -->
+<!-- 		</property> -->
+<!-- 	</bean> -->
+
+<!-- JNDI datasource for hibernate -->
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName">
+				<value>java:/comp/env/jdbc/DT_SITAE</value>
+
+		</property>
+	</bean>
+	
+<bean name="databaseConfiguration"
+            class="es.novasoft.comun.constantes.DatabaseConfigurationCustom">
+        <constructor-arg type="javax.sql.DataSource" ref="dataSource"/>
+        <constructor-arg type="java.lang.String" index="1" value="CONFIGURACION"/>
+        <constructor-arg type="java.lang.String" index="2"  value="PARAMETRO"/>
+        <constructor-arg type="java.lang.String" index="3" value="VALOR"/>
+        <constructor-arg type="java.lang.String" index="4" value="ENCRIPTADA"/>
+	</bean>
+	
+	<bean name="commonsConfigurationFactoryBean"
+   		 class="org.springmodules.commons.configuration.CommonsConfigurationFactoryBean">
+		<constructor-arg ref="databaseConfiguration"/>
+		</bean>
+	<bean name="propertyPlaceholderConfigurer"
+            class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+            <property name="properties" ref="commonsConfigurationFactoryBean"/>
+            
+       </bean>
+	
+
+	<!-- Hibernate SessionFactory Definition -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+
+		<property name="dataSource" ref="dataSource" />
+
+		<property name="mappingResources">
+			<list>
+				<value>
+					es/novasoft/sitae/business/objects/Usuario.hbm.xml
+				</value>
+				<value>
+					es/novasoft/sitae/business/objects/Perfil.hbm.xml
+				</value>
+				<value>
+					es/novasoft/sitae/business/objects/Organismo.hbm.xml
+				</value>
+				<value>
+					es/novasoft/sitae/business/objects/OrganismoExterno.hbm.xml
+				</value>
+				<value>
+					es/novasoft/sitae/business/objects/CentroProcedencia.hbm.xml
+				</value>
+				<value>
+					es/novasoft/sitae/business/objects/RelacionUsuOrgCentroPerf.hbm.xml
+				</value>
+				<value>
+					es/novasoft/sitae/business/objects/Funcionalidad.hbm.xml
+				</value>
+				<value>
+					es/novasoft/sitae/business/objects/RelPerfFunc.hbm.xml
+				</value>
+				<value>
+					es/novasoft/sitae/business/objects/RelacionEdictos.hbm.xml
+				</value>
+				<value>
+					es/novasoft/sitae/business/objects/TipoEdicto.hbm.xml
+				</value>
+				<value>
+					es/novasoft/sitae/business/objects/Estado.hbm.xml
+				</value>
+				<value>
+					es/novasoft/sitae/business/objects/Edicto.hbm.xml
+				</value>
+				<value>
+					es/novasoft/sitae/business/objects/UsuarioExterno.hbm.xml
+				</value>
+				<value>
+					es/novasoft/sitae/business/objects/UsuarioFirmante.hbm.xml
+				</value>
+				<value>
+					es/novasoft/sitae/business/objects/TipoFirma.hbm.xml
+				</value>
+				<value>
+					es/novasoft/sitae/business/objects/Festivo.hbm.xml
+				</value>
+				<value>
+					es/novasoft/sitae/business/objects/RedSocial.hbm.xml
+				</value>
+				<value>
+					es/novasoft/sitae/business/objects/Interesado.hbm.xml
+				</value>
+				<value>
+					es/novasoft/sitae/business/objects/PublicacionRedesSociales.hbm.xml
+				</value>
+				<value>
+					es/novasoft/sitae/business/objects/Configuracion.hbm.xml
+				</value>
+			</list>
+		</property>
+
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.OracleDialect
+				</prop>
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.connection.pool_size">40</prop>
+				<prop key="hibernate.bytecode.use_reflection_optimizer">
+					true
+				</prop>
+				<prop key="hibernate.cache.provider_class">
+					org.hibernate.cache.HashtableCacheProvider
+				</prop>
+				<prop key="hibernate.format_sql">false</prop>
+				<prop key="hibernate.max_fetch_depth">1</prop>
+				<prop key="hibernate.default_batch_fetch_size">4</prop>
+				<prop key="hibernate.use_sql_comments">true</prop>
+				<prop key="hibernate.current_session_context_class">thread</prop>
+				<prop key="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</prop>
+
+			</props>
+		</property>
+	</bean>
+
+
+	<!-- DAO'S  -->
+
+	<bean id="UsuarioDAO" class="es.novasoft.sitae.business.dao.impl.UsuarioDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="PerfilDAO" class="es.novasoft.sitae.business.dao.impl.PerfilDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="RelacionUsuOrgCentroPerfDAO"
+		class="es.novasoft.sitae.business.dao.impl.RelacionUsuOrgCentroPerfDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="OrganismoDAO" class="es.novasoft.sitae.business.dao.impl.OrganismoDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="OrganismoExternoDAO"
+		class="es.novasoft.sitae.business.dao.impl.OrganismoExternoDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="CentroProcedenciaDAO"
+		class="es.novasoft.sitae.business.dao.impl.CentroProcedenciaDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="FuncionalidadDAO"
+		class="es.novasoft.sitae.business.dao.impl.FuncionalidadDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="RelPerfFuncDAO" class="es.novasoft.sitae.business.dao.impl.RelPerfFuncDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="RelacionEdictosDAO" class="es.novasoft.sitae.business.dao.impl.RelacionEdictosDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="TipoEdictoDAO" class="es.novasoft.sitae.business.dao.impl.TipoEdictoDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="EstadoDAO" class="es.novasoft.sitae.business.dao.impl.EstadoDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="EdictoDAO" class="es.novasoft.sitae.business.dao.impl.EdictoDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="UsuarioExternoDAO"
+		class="es.novasoft.sitae.business.dao.impl.UsuarioExternoDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="UsuarioFirmanteDAO"
+		class="es.novasoft.sitae.business.dao.impl.UsuarioFirmanteDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="TipoFirmaDAO" class="es.novasoft.sitae.business.dao.impl.TipoFirmaDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="FestivoDAO" class="es.novasoft.sitae.business.dao.impl.FestivoDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="RedSocialDAO" class="es.novasoft.sitae.business.dao.impl.RedSocialDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="InteresadoDAO" class="es.novasoft.sitae.business.dao.impl.InteresadoDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="PublicacionRedesSocialesDAO" class="es.novasoft.sitae.business.dao.impl.PublicacionesRedesSocialesDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	  <bean id="ConfiguracionDAO" class="es.novasoft.sitae.business.dao.impl.ConfiguracionDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+
+	<!-- CRON -->
+
+	<bean name="exampleJob" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="es.novasoft.sitae.cron.BajaPublicacionJob" />
+		<property name="jobDataAsMap">
+			<map>
+				<entry key="timeout" value="5" />
+			</map>
+		</property>
+	</bean>
+
+	<bean name="publicacionJob" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass"
+			value="es.novasoft.sitae.cron.PublicacionJob" />
+		<property name="jobDataAsMap">
+			<map>
+				<entry key="timeout" value="5" />
+			</map>
+		</property>
+	</bean>
+	<bean name="ArchivadoJob" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass"
+			value="es.novasoft.sitae.cron.RefirmadoJob" />
+		<property name="jobDataAsMap">
+			<map>
+				<entry key="timeout" value="5" />
+			</map>
+		</property>
+	</bean>
+	
+
+	<bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="exampleJob" />
+		<property name="cronExpression" value="0 5 0,2,4 * * ?" />
+	</bean>
+	<bean id="cronTrigger3" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="ArchivadoJob" />
+		<property name="cronExpression" value="0 0/5 * * * ?" />
+	</bean>
+
+	<bean id="cronTrigger2" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="publicacionJob" />
+		<property name="cronExpression" value="0 55 0,2,4 * * ?" />
+	</bean>
+
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="cronTrigger" />
+				<ref bean="cronTrigger2" />
+				
+			</list>
+		</property>
+	</bean>
+	
+<!--	Fandango Pre--><!--
+	
+	<bean id="FandangoCliente"
+		class="es.accv.fandango.services.CertificacionPublicacion.ACCVFandangoClientImpl">
+		<property name="endPoint" value="https://sleipnir3.accv.es:8070/fandango/services/CertificacionPublicacion" />
+		<property name="rutaConfig" value="/opt/xaloc/servidores/sipac-apache-tomcat-5.5.27/webapps/sitae/WEB-INF/client-config.wsdd" />
+	</bean>
+
+	
+	<bean id="FandangoCliente"
+		class="es.novasoft.sitae.ws.fandango.MuleFandangoClientImpl">
+		<property name="endPoint" value="http://premule.dipcas.es/services/muleFA/CertificacionPublicacion" />
+	</bean>-->
+
+
+<!--	Fandango Pro -->
+	
+	<bean id="FandangoClienteDirecto"
+		class="es.accv.fandango.services.CertificacionPublicacion.ACCVFandangoClientImpl">
+		<property name="endPoint" value="${fandango.endPointFandango}" />
+		<property name="rutaConfig" value="${sitae.rutaTomcat}/webapps/${sitae.nombreApp}/WEB-INF/${clientWSDD}" />
+	</bean>
+
+	  
+	<bean id="FandangoClienteBus"
+		class="es.novasoft.sitae.ws.fandango.MuleFandangoClientImpl">
+		<property name="endPoint" value="${fandango.endPointBus}" />
+	</bean>
+	
+	
+
+
+	<bean id="FandangoFactory" class="es.novasoft.sitae.ws.fandango.FandangoServiceFactory">
+  
+	  <property name="servicioMule" ref="FandangoClienteBus" /> 
+	  <property name="servicioFandango" ref="FandangoClienteDirecto" />
+	  <property name="seleccion">
+	  <!--  Lo valores pueden ser 'fandangoBus' o 'fandangoDirecto' -->
+	    <value>${fandago.servicio}</value>
+	  </property>
+   </bean>
+   
+   <bean id="FandangoCliente"    factory-bean="FandangoFactory"   factory-method="getInstance"/> 
+     
+     
+     <bean id="ServicioSafe"
+		class="es.novasoft.sitae.login.service.SafeService">
+		<property name="urlSafeBus" value="${muleSAFE.endpoint}" />
+		
+	</bean>
+	
+	 <!-- cliente-safe -->
+     
+    <bean id="messageFactory" class="org.springframework.ws.soap.saaj.SaajSoapMessageFactory"/>
+   	
+	<bean id="clienteSAFE" class="com.cv.xaloc.cliente.safe.services.MuleSAFEServiceImpl" >
+		<property name="muleSAFEWS" ref="muleSAFEWS" />		
+		<property name="marshallerDirecto" ref="marshallerSAFE" />
+		<property name="unmarshallerDirecto" ref="marshallerSAFE" />		
+	</bean>
+	
+	
+   	<bean id="muleSAFEWS" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory"/>
+        <property name="defaultUri" value="${muleSAFE.endpoint}"/> 
+
+        <property name="marshaller" ref="marshallerSAFEBus" />
+        <property name="unmarshaller" ref="marshallerSAFEBus" />
+        
+<!--         <property name="interceptors"> -->
+<!--             <list> -->
+<!--                 <bean class="com.cv.xaloc.utils.ws.SoapFaultInterceptor"></bean> -->
+<!--             </list> -->
+<!--         </property> -->
+	 </bean>
+    
+    <oxm:jaxb2-marshaller id="marshallerSAFE" contextPath="com.cv.xaloc.cliente.safe.data.directo"/>
+    <oxm:jaxb2-marshaller id="marshallerSAFEBus" contextPath="com.cv.xaloc.cliente.safe.data.bus"/>
+     
+</beans> 
+
+
+
+
